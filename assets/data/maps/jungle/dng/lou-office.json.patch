@@ -1,0 +1,232 @@
+[
+    {
+        "type": "ENTER",
+        "index": ["entities",26,"settings"]
+    },
+
+    {
+        "type": "SET_KEY",
+        "index": "npcStates",
+        "content": [
+                    {
+                        "reactType": "FIXED_POS",
+                        "face": "WEST",
+                        "action": [],
+                        "hidden": false,
+                        "condition": "",
+                        "config": "normal",
+                        "event": [
+                            {
+                                "name": {
+                                    "en_US": "Dr. Cretia",
+                                    "langUid": 1,
+                                    "ja_JP": "ドクター・クレツィア<<A<<[CHANGED 2017/12/11]",
+                                    "ko_KR": "크레티아 박사<<A<<[CHANGED 2017/12/12]",
+                                    "zh_CN": "克雷提亚博士<<A<<[CHANGED 2017/12/12]",
+                                    "de_DE": "Dr. Cretia",
+                                    "zh_TW": "克雷提亞博士<<A<<[CHANGED 2017/12/12]"
+                                },
+                                "side": "LEFT",
+                                "order": 0,
+                                "clearSide": false,
+                                "type": "ADD_MSG_PERSON",
+                                "person": {
+                                    "person": "basin.sciene-lady",
+                                    "expression": "DEFAULT"
+                                }
+                            },
+                            {
+                                "side": "RIGHT",
+                                "order": 0,
+                                "clearSide": false,
+                                "type": "ADD_MSG_PERSON",
+                                "person": {
+                                    "person": "main.lea",
+                                    "expression": "DEFAULT"
+                                }
+                            },
+                            {
+                                "message": {
+                                    "en_US": "The good Seeker, what can I do for you?",
+                                    "langUid": 2,
+                                    "ja_JP": "やあ探索者さん、\nなにか用かい？<<A<<[CHANGED 2017/12/11]",
+                                    "ko_KR": "선량한 시커, 무엇을 도와줄까?<<A<<[CHANGED 2017/12/12]",
+                                    "zh_CN": "探索者，你有什么需要吗？<<A<<[CHANGED 2017/12/12]",
+                                    "de_DE": "Ah, der gute Seeker. Was kann ich für dich tun?",
+                                    "zh_TW": "探索者，你有什麼需要嗎？<<A<<[CHANGED 2017/12/12]"
+                                },
+                                "autoContinue": false,
+                                "type": "SHOW_MSG",
+                                "person": {
+                                    "person": "basin.sciene-lady",
+                                    "expression": "DEFAULT"
+                                }
+                            },
+                            {
+                                "message": {
+                                    "en_US": "...",
+                                    "langUid": 3,
+                                    "ja_JP": "...<<A<<[CHANGED 2017/12/11]",
+                                    "ko_KR": "...<<A<<[CHANGED 2017/12/12]",
+                                    "zh_CN": "...<<A<<[CHANGED 2017/12/12]",
+                                    "de_DE": "...",
+                                    "zh_TW": "...<<A<<[CHANGED 2017/12/12]"
+                                },
+                                "autoContinue": false,
+                                "type": "SHOW_MSG",
+                                "person": {
+                                    "person": "main.lea",
+                                    "expression": "SURPRISED_TOWARD"
+                                }
+                            },
+                            {
+                                "message": {
+                                    "en_US": "...Hi?",
+                                    "langUid": 4,
+                                    "ja_JP": "...やぁ？<<A<<[CHANGED 2017/12/11]",
+                                    "ko_KR": "...안녕?<<A<<[CHANGED 2017/12/12]",
+                                    "zh_CN": "...你好?<<A<<[CHANGED 2017/12/12]",
+                                    "de_DE": "... Hi?",
+                                    "zh_TW": "...你好?<<A<<[CHANGED 2017/12/12]"
+                                },
+                                "autoContinue": false,
+                                "type": "SHOW_MSG",
+                                "person": {
+                                    "person": "main.lea",
+                                    "expression": "ANNOYED"
+                                }
+                            },
+                            {
+                                "message": {
+                                    "en_US": "Ah yes, the power plant.",
+                                    "langUid": 5,
+                                    "ja_JP": "ああなるほど、\nパワープラントのことかい。<<A<<[CHANGED 2017/12/11]",
+                                    "ko_KR": "아, 그래. 발전소.<<A<<[CHANGED 2017/12/12]",
+                                    "zh_CN": "哦对，发电站的事。<<A<<[CHANGED 2017/12/12]",
+                                    "de_DE": "Ach ja, das Kraftwerk.",
+                                    "zh_TW": "哦對，發電站的事。<<A<<[CHANGED 2017/12/12]"
+                                },
+                                "autoContinue": false,
+                                "type": "SHOW_MSG",
+                                "person": {
+                                    "person": "basin.sciene-lady",
+                                    "expression": "DEFAULT"
+                                }
+                            },
+                            {
+                                "message": {
+                                    "en_US": "It was built pretty much at the same time we built the city.",
+                                    "langUid": 6,
+                                    "ja_JP": "プラントは街とほとんど\n同時期に建てられたんだ。<<A<<[CHANGED 2018/09/19]",
+                                    "ko_KR": "발전소는 이 도시가 세워지던 시기와 비슷한 시기에 지어졌어.<<A<<[CHANGED 2018/09/19]",
+                                    "zh_CN": "它是和城市同期建造的。<<A<<[CHANGED 2018/09/19]",
+                                    "de_DE": "Es wurde etwa zur gleichen Zeit gebaut wie die Stadt.",
+                                    "zh_TW": "它是和城市同期建造的。<<A<<[CHANGED 2018/09/19]"
+                                },
+                                "autoContinue": false,
+                                "type": "SHOW_MSG",
+                                "person": {
+                                    "person": "basin.sciene-lady",
+                                    "expression": "DEFAULT"
+                                }
+                            },
+                            {
+                                "message": {
+                                    "en_US": "We made sure not to interfere with the track at all.",
+                                    "langUid": 7,
+                                    "ja_JP": "軌跡に干渉することがないように\nしっかり確認してね。<<A<<[CHANGED 2018/09/19]",
+                                    "ko_KR": "우리는 고대인의 길을 절대 방해하지 않도록 고심했지.<<A<<[CHANGED 2018/09/19]",
+                                    "zh_CN": "我们再三确定它没有干扰到先祖之路。<<A<<[CHANGED 2018/09/19]",
+                                    "de_DE": "Wir haben es so konzipiert, dass es den Pfad in keiner Weise beeinträchtigt.",
+                                    "zh_TW": "我們再三確定它沒有干擾到先祖之路。<<A<<[CHANGED 2018/09/19]"
+                                },
+                                "autoContinue": false,
+                                "type": "SHOW_MSG",
+                                "person": {
+                                    "person": "basin.sciene-lady",
+                                    "expression": "DEFAULT"
+                                }
+                            },
+                            {
+                                "message": {
+                                    "en_US": "To put it simply: The plant only absorbs energy that is naturally emitted by the temple.",
+                                    "langUid": 8,
+                                    "ja_JP": "簡単に言うと、プラントは神殿が\n自然に発するエネルギーを\n吸収しているだけなんだ。<<A<<[CHANGED 2018/09/19]",
+                                    "ko_KR": "간단히 말하자면, 발전소는 사원에서 자연적으로 뿜어져 나오는 에너지만을 흡수해.<<A<<[CHANGED 2018/09/19]",
+                                    "zh_CN": "简单来说：发电站只会吸收神庙自然散发出的能量。<<A<<[CHANGED 2018/09/19]",
+                                    "de_DE": "Heißt: Das Kraftwerk absorbiert lediglich die Energie, die natürlicherweise vom Tempel ausgestrahlt wird.",
+                                    "zh_TW": "簡單來說：發電站只會吸收神廟自然散發出的能量。<<A<<[CHANGED 2018/09/19]"
+                                },
+                                "autoContinue": false,
+                                "type": "SHOW_MSG",
+                                "person": {
+                                    "person": "basin.sciene-lady",
+                                    "expression": "DEFAULT"
+                                }
+                            },
+                            {
+                                "message": {
+                                    "en_US": "Simple and clean energy. Quite brilliant if I do say so myself.",
+                                    "langUid": 9,
+                                    "ja_JP": "シンプルでクリーンなエネルギー。\n自分で言うのもなんだけど、\nとても見事なシステムでね。<<A<<[CHANGED 2017/12/11]",
+                                    "ko_KR": "간단명료한 에너지. 이렇게 말하다니 나 너무 똑똑한 것 같아.<<A<<[CHANGED 2017/12/12]",
+                                    "zh_CN": "清洁而易获得的能源。我自己都觉得是天才般的设计。<<A<<[CHANGED 2017/12/12]",
+                                    "de_DE": "Einfache und saubere Energie. Ziemlich brillant, wenn ich mich da mal selbst loben darf.",
+                                    "zh_TW": "清潔而易獲得的能源。我自己都覺得是天才般的設計。<<A<<[CHANGED 2017/12/12]"
+                                },
+                                "autoContinue": false,
+                                "type": "SHOW_MSG",
+                                "person": {
+                                    "person": "basin.sciene-lady",
+                                    "expression": "DEFAULT"
+                                }
+                            },
+                            {
+                                "message": {
+                                    "en_US": "...",
+                                    "langUid": 10,
+                                    "ja_JP": "...<<A<<[CHANGED 2017/12/11]",
+                                    "ko_KR": "...<<A<<[CHANGED 2017/12/12]",
+                                    "zh_CN": "...<<A<<[CHANGED 2017/12/12]",
+                                    "de_DE": "...",
+                                    "zh_TW": "...<<A<<[CHANGED 2017/12/12]"
+                                },
+                                "autoContinue": false,
+                                "type": "SHOW_MSG",
+                                "person": {
+                                    "person": "main.lea",
+                                    "expression": "SMILE"
+                                }
+                            }
+                        ]
+                    }
+                ]
+    },
+        {
+        "type": "EXIT",
+        "count": 2
+    },  
+
+    {
+        "type": "FOR_IN",
+        "keyword": "__INDEX__",
+        "values": [27,29],
+        "body": [{
+            "type": "ENTER",
+            "index": ["__INDEX__",  "settings"]
+        },{
+            "type": "SET_KEY",
+            "index": "startCondition",
+            "content": "false"
+        },{
+            "type": "EXIT",
+            "count": 2
+        }]
+    },
+
+    {
+        "type": "EXIT",
+        "count": 1
+    }    
+    
+]

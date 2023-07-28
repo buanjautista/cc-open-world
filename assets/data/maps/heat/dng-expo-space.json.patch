@@ -1,0 +1,713 @@
+[
+    {
+        "type": "ENTER",
+        "index": ["entities"]
+    },
+
+    {
+        "_comment": "Change plot variables on the cutscene event",
+        "type": "SET_KEY",
+        "index": "4",
+        "content": {
+            "type": "EventTrigger",
+            "x": 504,
+            "y": 460,
+            "level": 1,
+            "settings": {
+                "name": "expoScene",
+                "eventType": "CUTSCENE",
+                "endCondition": "false",
+                "event": [
+                    {
+                        "entity": {
+                            "party": "Member2"
+                        },
+                        "skipEffects": false,
+                        "type": "HIDE_ENTITY"
+                    },
+                    {
+                        "entity": {
+                            "party": "Member3"
+                        },
+                        "skipEffects": false,
+                        "type": "HIDE_ENTITY"
+                    },
+                    {
+                        "alpha": 1,
+                        "time": 0,
+                        "lighter": true,
+                        "type": "SET_OVERLAY",
+                        "color": "white"
+                    },
+                    {
+                        "pos": {
+                            "x": 400,
+                            "y": 728
+                        },
+                        "speed": "IMMEDIATELY",
+                        "transition": "EASE",
+                        "wait": false,
+                        "waitSkip": 0,
+                        "zoom": 1,
+                        "type": "SET_CAMERA_POS"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 0.2
+                    },
+                    {
+                        "zoomType": "LIGHT",
+                        "fadeIn": 0,
+                        "duration": 2,
+                        "fadeOut": 0.5,
+                        "type": "SET_ZOOM_BLUR"
+                    },
+                    {
+                        "alpha": 0,
+                        "time": 2,
+                        "lighter": true,
+                        "type": "SET_OVERLAY",
+                        "color": "white"
+                    },
+                    {
+                        "pos": {
+                            "x": 400,
+                            "y": 380
+                        },
+                        "speed": "SLOWER",
+                        "transition": "EASE_OUT",
+                        "wait": true,
+                        "waitSkip": 0,
+                        "zoom": 1,
+                        "type": "SET_CAMERA_POS"
+                    },
+                    {
+                        "text": {
+                            "en_US": "The everlasting sun \nshines strongest on these lands.",
+                            "de_DE": "Die immerwährende Sonne\nscheint voller Kraft auf diese Lande.",
+                            "fr_FR": "fr_FR",
+                            "zh_CN": "永恒炙阳，\n散播光辉。",
+                            "ja_JP": "この大地には絶えることなく\n力強い陽の光が降り注いでいる。<<A<<[CHANGED 2017/08/03]",
+                            "langUid": 2,
+                            "ko_KR": "영원한 태양이\n이 땅에 가장 강하게 비춥니다.",
+                            "zh_TW": "永恆炙陽，\r\n散播光輝。"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "Its flaming glory bearing\nlife and death alike.",
+                            "de_DE": "Ihre flammende Pracht\nbringt Leben und Tod zugleich.",
+                            "fr_FR": "fr_FR",
+                            "zh_CN": "给与生命，\n带走灵魂。",
+                            "ja_JP": "その燃え盛る恵みは\n生者と死者を問わずに与えられる。<<A<<[CHANGED 2017/08/03]",
+                            "langUid": 24,
+                            "ko_KR": "이 타는듯한 장관에는\n삶과 죽음이 있습니다.<<A<<[CHANGED 2017/07/21]",
+                            "zh_TW": "給與生命，\r\n帶走靈魂。<<A<<[CHANGED 2017/07/07]"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "On this unforgiving path \nyou stayed persistent.",
+                            "de_DE": "Auf diesem unerbitterlichen Pfad\nhast du Beharrlichkeit bewiesen.",
+                            "fr_FR": "fr_FR",
+                            "zh_CN": "于此险路，\n汝心坚定。",
+                            "ja_JP": "この無慈悲な道のりの中でも\n汝はその意思を貫いた。<<A<<[CHANGED 2017/08/03]",
+                            "langUid": 25,
+                            "ko_KR": "이 용서할 수 없는 길에서도\n당신은 견뎌내셨군요.",
+                            "zh_TW": "於此險路，\r\n汝心堅定。"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "With frozen sweeps and strokes\nyou crossed the scorching grounds.",
+                            "de_DE": "Mit eisigen Streichen und Hieben\nhast du die glühenden Gründe überquert.",
+                            "fr_FR": "fr_FR",
+                            "zh_CN": "手驭冰霜，\n足跨焦土。",
+                            "ja_JP": "凍てつく流れと一閃で\n汝はこの焦げ付く地を乗り越えた。<<A<<[CHANGED 2017/08/03]",
+                            "langUid": 26,
+                            "ko_KR": "당신은 얼어붙는 듯한 참격과 타격으로\n불타는 땅을 통과했습니다.",
+                            "zh_TW": "手馭冰霜，\r\n足跨焦土。"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "You, the traveler, \nthe envoy of change.",
+                            "de_DE": "Du, der Reisende,\nder Gesandte des Wandels.",
+                            "fr_FR": "fr_FR",
+                            "zh_CN": "旅行者啊，\n你是变革的使者。",
+                            "ja_JP": "汝、旅人よ、\n変化を司る使者よ。<<A<<[CHANGED 2017/08/03]",
+                            "langUid": 27,
+                            "ko_KR": "여행자여,\n변화의 사절단이여.",
+                            "zh_TW": "旅行者啊，\r\n你是變革的使者。"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "You have proven yourself worthy.",
+                            "de_DE": "Du hast dich als würdig erwiesen.",
+                            "fr_FR": "fr_FR",
+                            "zh_CN": "你已经证明了自己。",
+                            "ja_JP": "汝は自らの価値を証明した。<<A<<[CHANGED 2017/08/03]",
+                            "langUid": 28,
+                            "ko_KR": "당신은 스스로 가치를 증명했습니다.",
+                            "zh_TW": "你已經證明了自己。"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "Take this Shade \nto open the path to the east.",
+                            "de_DE": "Nimm diese Form\nund schreite gen Osten.",
+                            "fr_FR": "fr_FR",
+                            "zh_CN": "接过证印，\n向东前进。",
+                            "ja_JP": "このシェードを手に取り\n東への道を開くがよい。<<A<<[CHANGED 2017/08/03]",
+                            "langUid": 29,
+                            "ko_KR": "동쪽으로의 길을 열어줄\n이 셰이드를 가져가십시오.",
+                            "zh_TW": "接過證印，\r\n向東前進。"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "duration": -1,
+                        "align": "BOTTOM",
+                        "group": "shade",
+                        "wait": false,
+                        "waitSkip": 0,
+                        "type": "SHOW_EFFECT",
+                        "effect": {
+                            "sheet": "map.rh-quest-hub",
+                            "name": "redFlame"
+                        },
+                        "offset": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 48
+                        }
+                    },
+                    {
+                        "pos": {
+                            "x": 400,
+                            "y": 452
+                        },
+                        "speed": "SLOW",
+                        "transition": "EASE_IN_OUT",
+                        "wait": true,
+                        "waitSkip": 0,
+                        "zoom": 1,
+                        "type": "SET_CAMERA_POS"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 1
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "group": "shade",
+                        "type": "CLEAR_EFFECTS"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 0.4
+                    },
+                    {
+                        "item": "230",
+                        "amount": 1,
+                        "skip": true,
+                        "type": "GIVE_ITEM"
+                    },
+                    {
+                        "msgType": "OBTAINED",
+                        "object": {
+                            "en_US": "\\v[item.230.name]",
+                            "de_DE": "Rote Flammenform",
+                            "fr_FR": "fr_FR",
+                            "zh_CN": "\\v[item.230.name]",
+                            "ja_JP": "\\v[item.230.name]<<A<<[CHANGED 2017/08/03]",
+                            "langUid": 22,
+                            "ko_KR": "\\v[item.230.name]",
+                            "zh_TW": "\\v[item.230.name]"
+                        },
+                        "type": "SHOW_GET_MSG"
+                    },
+                    {
+                        "pos": {
+                            "x": 400,
+                            "y": 380
+                        },
+                        "speed": "NORMAL",
+                        "transition": "EASE_IN_OUT",
+                        "wait": true,
+                        "waitSkip": 0,
+                        "zoom": 1,
+                        "type": "SET_CAMERA_POS"
+                    },
+                    {
+                        "text": {
+                            "en_US": "Your resolve is evident\nand deserving a gift of strength.",
+                            "de_DE": "Deine Entschlossenheit ist bewiesen\nund verdient ein Geschenk der Stärke.",
+                            "fr_FR": "fr_FR",
+                            "zh_CN": "可敬可畏，\n以礼侯之。",
+                            "ja_JP": "汝の決意は明らかに\n力を贈られるに値する。<<A<<[CHANGED 2017/08/03]",
+                            "langUid": 23,
+                            "ko_KR": "당신의 결심은 확고하며\n힘의 선물을 받을 자격을 갖추었습니다.",
+                            "zh_TW": "可敬可畏，\r\n以禮侯之。"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "Let me add to your inner flame\nto make its warmth long lasting.",
+                            "de_DE": "Lass mich deine innere Flamme stärken,\num ihre Wärme beständig zu erhalten.",
+                            "fr_FR": "fr_FR",
+                            "zh_CN": "为心添炎，\n不灭明灯。",
+                            "ja_JP": "我が炎を汝の内なる炎に加え\nその暖かさを長く続かせよ。<<A<<[CHANGED 2017/08/03]",
+                            "langUid": 30,
+                            "ko_KR": "당신 안에 있는 불꽃에 추가해\n더 오랫동안 따뜻함을 유지하게 해드리죠.",
+                            "zh_TW": "為心添炎，\r\n不滅明燈。"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "mode": "SLOW_OUT",
+                        "type": "PAUSE_BGM"
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "action": [
+                            {
+                                "value": 12,
+                                "type": "SET_FLOAT_HEIGHT"
+                            },
+                            {
+                                "time": 0.5,
+                                "type": "WAIT"
+                            },
+                            {
+                                "face": "SOUTH",
+                                "rotate": true,
+                                "rotateSpeed": 1,
+                                "type": "SET_FACE"
+                            }
+                        ],
+                        "repeating": false,
+                        "wait": false,
+                        "keepState": true,
+                        "immediately": false,
+                        "type": "DO_ACTION"
+                    },
+                    {
+                        "pos": {
+                            "x": 400,
+                            "y": 468
+                        },
+                        "speed": "SLOW",
+                        "transition": "EASE_IN_OUT",
+                        "wait": true,
+                        "waitSkip": 0,
+                        "zoom": 1,
+                        "type": "SET_CAMERA_POS"
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "action": [
+                            {
+                                "face": "SOUTH",
+                                "rotate": true,
+                                "rotateSpeed": 3,
+                                "type": "SET_FACE"
+                            },
+                            {
+                                "wait": false,
+                                "type": "SHOW_EXTERN_ANIM",
+                                "anim": {
+                                    "sheet": "player-poses",
+                                    "name": "floatEyeClosed"
+                                }
+                            }
+                        ],
+                        "repeating": false,
+                        "wait": false,
+                        "keepState": true,
+                        "immediately": false,
+                        "type": "DO_ACTION"
+                    },
+                    {
+                        "zoom": 1.5,
+                        "duration": 2,
+                        "transition": "EASE_IN_OUT",
+                        "type": "SET_CAMERA_ZOOM"
+                    },
+                    {
+                        "zoomType": "LIGHT",
+                        "fadeIn": 3,
+                        "duration": -1,
+                        "fadeOut": 1,
+                        "name": "blurr",
+                        "type": "SET_ZOOM_BLUR"
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "duration": 0,
+                        "align": "BOTTOM",
+                        "group": "glow",
+                        "wait": true,
+                        "waitSkip": 0,
+                        "type": "SHOW_EFFECT",
+                        "effect": {
+                            "sheet": "scene.upgrade",
+                            "name": "chargeFast"
+                        },
+                        "offset": {
+                            "x": 0,
+                            "y": 4,
+                            "z": 12
+                        }
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "duration": 0,
+                        "align": "BOTTOM",
+                        "group": "glow",
+                        "wait": false,
+                        "waitSkip": 0,
+                        "type": "SHOW_EFFECT",
+                        "effect": {
+                            "sheet": "scene.upgrade",
+                            "name": "chargeBlowFast"
+                        },
+                        "offset": {
+                            "x": 0,
+                            "y": 4,
+                            "z": 12
+                        }
+                    },
+                    {
+                        "name": "blurr",
+                        "fadeOut": 0.2,
+                        "type": "FADE_OUT_ZOOM_BLUR"
+                    },
+                    {
+                        "zoomType": "MEDIUM",
+                        "fadeIn": 0.2,
+                        "duration": 0.2,
+                        "fadeOut": 0.3,
+                        "type": "SET_ZOOM_BLUR"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 1.8
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "action": [
+                            {
+                                "value": 0,
+                                "type": "SET_FLOAT_HEIGHT"
+                            },
+                            {
+                                "type": "WAIT_UNTIL_ON_GROUND"
+                            },
+                            {
+                                "wait": false,
+                                "type": "SHOW_EXTERN_ANIM",
+                                "anim": {
+                                    "sheet": "player-poses",
+                                    "name": "landOnGround"
+                                }
+                            }
+                        ],
+                        "repeating": false,
+                        "wait": false,
+                        "keepState": true,
+                        "immediately": false,
+                        "type": "DO_ACTION"
+                    },
+                    {
+                        "speed": "NORMAL",
+                        "transition": "EASE_IN_OUT",
+                        "wait": true,
+                        "waitSkip": 0,
+                        "type": "RESET_CAMERA"
+                    },
+                    {
+                        "level": "2",
+                        "type": "SET_PLAYER_SP_LEVEL"
+                    },
+                    {
+                        "member": "Emilie",
+                        "level": "2",
+                        "type": "SET_PARTY_MEMBER_SP_LEVEL"
+                    },
+                    {
+                        "member": "Glasses",
+                        "level": "2",
+                        "type": "SET_PARTY_MEMBER_SP_LEVEL"
+                    },
+                    {
+                        "msgType": "EXTENDED",
+                        "object": {
+                            "en_US": "SP Bar",
+                            "de_DE": "SP-Leiste",
+                            "fr_FR": "fr_FR",
+                            "langUid": 3,
+                            "zh_CN": "SP条",
+                            "ja_JP": "SPバー<<A<<[CHANGED 2017/08/03]",
+                            "ko_KR": "SP 바",
+                            "zh_TW": "SP條"
+                        },
+                        "type": "SHOW_GET_MSG"
+                    },
+                    {
+                        "mode": "SLOW",
+                        "type": "RESUME_BGM"
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "action": [
+                            {
+                                "type": "CLEAR_ANIMATION"
+                            }
+                        ],
+                        "repeating": false,
+                        "wait": false,
+                        "keepState": false,
+                        "immediately": false,
+                        "type": "DO_ACTION"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 0.2
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "action": [
+                            {
+                                "face": "NORTH",
+                                "rotate": true,
+                                "rotateSpeed": 3,
+                                "type": "SET_FACE"
+                            }
+                        ],
+                        "repeating": false,
+                        "wait": false,
+                        "keepState": false,
+                        "immediately": false,
+                        "type": "DO_ACTION"
+                    },
+                    {
+                        "pos": {
+                            "x": 400,
+                            "y": 380
+                        },
+                        "speed": "NORMAL",
+                        "transition": "EASE_IN_OUT",
+                        "wait": true,
+                        "waitSkip": 0,
+                        "zoom": 1,
+                        "type": "SET_CAMERA_POS"
+                    },
+                    {
+                        "text": {
+                            "en_US": "Let your every step\nform the path of your growth.",
+                            "de_DE": "Möge jeder deiner Schritte\nden Pfad deines Wachstums ebnen.",
+                            "fr_FR": "fr_FR",
+                            "zh_CN": "纤纤行路，\n步步高升。",
+                            "ja_JP": "一歩一歩進むごとに\n成長のあとを残してゆくがよい。<<A<<[CHANGED 2017/08/03]",
+                            "langUid": 31,
+                            "ko_KR": "모든 걸음이\n성장의 발판이 되기를.",
+                            "zh_TW": "纖纖行路，\r\n步步高升。"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 0.2
+                    },
+                    {
+                        "volume": 1,
+                        "name": "",
+                        "loop": false,
+                        "offset": 0,
+                        "startTime": 0,
+                        "type": "PLAY_SOUND",
+                        "sound": "media/sound/scenes/swoosh-rise-long.ogg"
+                    },
+                    {
+                        "zoom": 3,
+                        "duration": 3,
+                        "transition": "EASE_IN",
+                        "type": "SET_CAMERA_ZOOM"
+                    },
+                    {
+                        "zoomType": "LIGHT",
+                        "fadeIn": 1,
+                        "duration": 2,
+                        "fadeOut": 0,
+                        "type": "SET_ZOOM_BLUR"
+                    },
+                    {
+                        "alpha": 1,
+                        "time": 1.5,
+                        "lighter": true,
+                        "type": "SET_OVERLAY",
+                        "color": "white"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 2
+                    },
+                    {
+                        "lighter": true,
+                        "type": "SET_TELEPORT_COLOR",
+                        "color": "white"
+                    },
+                    {
+                        "type": "CHANGE_VAR_BOOL",
+                        "varName": "plot.heat-dng-end",
+                        "changeType": "set",
+                        "value": true,
+                        "map": ""
+                    },
+                    {
+                        "type": "TELEPORT",
+                        "map": "rookie-harbor.expo-space",
+                        "marker": "start"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 5
+                    }
+                ],
+                "triggerType": "ALWAYS",
+                "mapId": 136
+            }
+        }
+    },
+    {
+        "type": "EXIT",
+        "count": 1
+    }    
+    
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "type": "ENTER",
+        "index": ["entities", 2, "settings"]
+    },
+
+    {
+        "type": "SET_KEY",
+        "index": "blockEventCondition"
+    },
+    {
+        "type": "SET_KEY",
+        "index": "blockEvent"
+    },
+
+    
+    {
+        "type": "EXIT",
+        "count": 3
+    }
+
+]

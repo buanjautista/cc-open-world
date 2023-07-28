@@ -1,0 +1,15 @@
+[
+    {
+        "type": "ENTER",
+        "index": ["commonEvents","shizuka-join","event",6]
+    },
+    {
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "plot.shizuka <= 19500"
+    },
+    {
+        "type": "EXIT",
+        "count": 4
+    }
+]

@@ -1,0 +1,66 @@
+[
+    {
+        "type": "ENTER",
+        "index": ["entities",318,"settings"]
+    },
+
+    {
+        "type": "SET_KEY",
+        "index": "blockEventCondition"
+    },
+    {
+        "type": "SET_KEY",
+        "index": "blockEvent"
+    },
+    {
+        "type": "EXIT",
+        "count": 3
+    },
+    
+    {
+        "type": "ENTER",
+        "index": ["entities"]
+    },
+
+        {
+        "type": "FOR_IN",
+        "keyword": "__INDEX__",
+        "values": [465, 469, 473, 478, 480, 491, 506],
+        "body": [{
+            "type": "ENTER",
+            "index": ["__INDEX__",  "settings"]
+        },{
+            "type": "SET_KEY",
+            "index": "startCondition",
+            "content": "false"
+        },{
+            "type": "EXIT",
+            "count": 2
+        }]
+    },
+
+    {
+        "type": "ENTER",
+            "index": [466, "settings"]
+    },{
+            "type": "SET_KEY",
+            "index": "npcStates",
+            "content": [
+                            {
+                                "reactType": "FIXED_POS",
+                                "face": "WEST",
+                                 "showFx": {
+                                     "sheet": "teleport",
+                                     "name": "showDefault"
+                                 },
+                                    "hidden": true,
+                                  "condition": "",
+                                  "config": "",
+                                  "event": []
+                               }]
+       },
+    {
+        "type": "EXIT",
+        "count": 3
+    }    
+]

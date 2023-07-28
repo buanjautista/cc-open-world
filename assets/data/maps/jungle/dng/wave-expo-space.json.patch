@@ -1,0 +1,410 @@
+[
+    {
+        "type": "ENTER",
+        "index": ["entities"]
+    },
+
+    {
+        "type": "SET_KEY",
+        "index": 4,
+        "content": {
+            "type": "EventTrigger",
+            "x": 504,
+            "y": 460,
+            "level": 1,
+            "settings": {
+                "name": "",
+                "eventType": "CUTSCENE",
+                "endCondition": "false",
+                "event": [
+                    {
+                        "entity": {
+                            "party": "Member2"
+                        },
+                        "skipEffects": false,
+                        "type": "HIDE_ENTITY"
+                    },
+                    {
+                        "entity": {
+                            "party": "Member3"
+                        },
+                        "skipEffects": false,
+                        "type": "HIDE_ENTITY"
+                    },
+                    {
+                        "alpha": 1,
+                        "time": 0,
+                        "lighter": true,
+                        "type": "SET_OVERLAY",
+                        "color": "white"
+                    },
+                    {
+                        "pos": {
+                            "x": 400,
+                            "y": 728
+                        },
+                        "speed": "IMMEDIATELY",
+                        "transition": "EASE",
+                        "wait": false,
+                        "waitSkip": 0,
+                        "zoom": 1,
+                        "type": "SET_CAMERA_POS"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 0.2
+                    },
+                    {
+                        "zoomType": "LIGHT",
+                        "fadeIn": 0,
+                        "duration": 2,
+                        "fadeOut": 0.5,
+                        "type": "SET_ZOOM_BLUR"
+                    },
+                    {
+                        "alpha": 0,
+                        "time": 2,
+                        "lighter": true,
+                        "type": "SET_OVERLAY",
+                        "color": "white"
+                    },
+                    {
+                        "pos": {
+                            "x": 400,
+                            "y": 380
+                        },
+                        "speed": "SLOWER",
+                        "transition": "EASE_OUT",
+                        "wait": true,
+                        "waitSkip": 0,
+                        "zoom": 1,
+                        "type": "SET_CAMERA_POS"
+                    },
+                    {
+                        "text": {
+                            "en_US": "Water rises up to the sky,\nfalls upon the earth, flows into the sea.",
+                            "de_DE": "Wasser steigt zum Himmel auf,\nfällt auf die Erde, fließt in das Meer.",
+                            "zh_CN": "水入云端，\n降下大地，汇入海洋<<A<<[CHANGED 2018/07/09]",
+                            "ja_JP": "水は天へとのぼり、\n地へ降り注ぎ、海へと流れ込む。<<A<<[CHANGED 2018/07/09]",
+                            "ko_KR": "물은 하늘까지 치솟고,\n지면에 떨어져 바다로 흘러갑니다.<<A<<[CHANGED 2018/07/09]",
+                            "langUid": 2,
+                            "zh_TW": "水入雲端，\r\n降下大地，匯入海洋<<A<<[CHANGED 2018/07/09]"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "An everlasting circle painting this world\nin the vivid colors of abundant flora.",
+                            "de_DE": "Ein ewiger Kreislauf, der die opulente Flora \ndieser Welt in lebendige Farben taucht.",
+                            "zh_CN": "永恒循环\n为世界描绘生机盎然的色彩\n<<A<<[CHANGED 2018/07/09]",
+                            "ja_JP": "終わりなき循環は植物に豊かな繁栄を\nもたらし、その鮮やかな色彩は\n世界をいろどる。<<A<<[CHANGED 2018/07/09]",
+                            "ko_KR": "영원한 구가 풍부한 식물군의\n선명한 색상으로 이 세계를 수놓습니다.<<A<<[CHANGED 2018/07/09]",
+                            "langUid": 29,
+                            "zh_TW": "永恆循環\r\n為世界描繪生機盎然的色彩\r\n<<A<<[CHANGED 2018/07/09]"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "Yet under the pressure of deep waters,\nyou stayed persistent.",
+                            "de_DE": "Trotz des Drucks tiefer Gewässer\nhast du Beharrlichkeit bewiesen.",
+                            "zh_CN": "沉于水下，\n仍毅然决然。<<A<<[CHANGED 2018/07/09]",
+                            "ja_JP": "深き水の流れに迫られても、\n汝は不屈をつらぬいた。<<A<<[CHANGED 2018/07/09]",
+                            "ko_KR": "깊은 물 속의 수압에서도\n당신은 끈기 있게 버텼습니다.<<A<<[CHANGED 2018/07/09]",
+                            "langUid": 30,
+                            "zh_TW": "沉於水下，\r\n仍毅然決然。<<A<<[CHANGED 2018/07/09]"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "With lightning fast conduction,\nyou pulled your way through fluid obstacles.",
+                            "de_DE": "Durch blitzschnelle Übertragung hast du dir \ndeinen Weg entlang fließender Hürden geebnet.",
+                            "zh_CN": "迅捷如风，\n以破竹之势扫清障碍。<<A<<[CHANGED 2018/07/09]",
+                            "ja_JP": "水を速く伝わる雷により、\n流れる水の障害も乗り越えてみせた。<<A<<[CHANGED 2018/07/09]",
+                            "ko_KR": "번개의 빠른 전도와 함께\n흐르는 방해물을 헤쳐나갔습니다.<<A<<[CHANGED 2018/07/09]",
+                            "langUid": 31,
+                            "zh_TW": "迅捷如風，\r\n以破竹之勢掃清障礙。<<A<<[CHANGED 2018/07/09]"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "You, the traveler, \nthe envoy of change.",
+                            "de_DE": "Du, der Reisende,\nder Gesandte des Wandels.",
+                            "zh_CN": "旅行者，你\n现为变革使者。<<A<<[CHANGED 2018/07/09]",
+                            "ja_JP": "汝、旅人よ。\n変化を司る使者よ。<<A<<[CHANGED 2018/07/09]",
+                            "ko_KR": "여행자여,\n변화의 사절단이여.<<A<<[CHANGED 2018/07/09]",
+                            "langUid": 25,
+                            "zh_TW": "旅行者，你\r\n現為變革使者。<<A<<[CHANGED 2018/07/09]"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "You have proven yourself worthy.",
+                            "de_DE": "Du hast dich als würdig erwiesen.",
+                            "zh_CN": "你证明了自己的价值。<<A<<[CHANGED 2018/07/09]",
+                            "ja_JP": "汝は自らの価値を証明した。<<A<<[CHANGED 2018/07/09]",
+                            "ko_KR": "당신은 스스로 가치를 증명했습니다.<<A<<[CHANGED 2018/07/09]",
+                            "langUid": 26,
+                            "zh_TW": "你證明了自己的價值。<<A<<[CHANGED 2018/07/09]"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "text": {
+                            "en_US": "Take this Shade, one of a pair,\nto reach the grand tree.",
+                            "de_DE": "Nimm diese Form, eine von zweien,\num zum Großen Baum zu gelangen.",
+                            "zh_CN": "这是双印之一，\n带上它前往巨树。<<A<<[CHANGED 2018/07/09]",
+                            "ja_JP": "このシェードを、2つのうちの片割れを\n手に取り、大樹への道を開くがよい。<<A<<[CHANGED 2018/07/09]",
+                            "ko_KR": "쌍둥이 셰이드 중 이것을 받아\n거대한 나무에 도달하십시오.<<A<<[CHANGED 2018/07/09]",
+                            "langUid": 28,
+                            "zh_TW": "這是雙印之一，\r\n帶上它前往巨樹。<<A<<[CHANGED 2018/07/09]"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "duration": -1,
+                        "align": "BOTTOM",
+                        "group": "shade",
+                        "wait": false,
+                        "waitSkip": 0,
+                        "type": "SHOW_EFFECT",
+                        "effect": {
+                            "sheet": "map.rh-quest-hub",
+                            "name": "azureDrop"
+                        },
+                        "offset": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 48
+                        }
+                    },
+                    {
+                        "pos": {
+                            "x": 400,
+                            "y": 452
+                        },
+                        "speed": "SLOW",
+                        "transition": "EASE_IN_OUT",
+                        "wait": true,
+                        "waitSkip": 0,
+                        "zoom": 1,
+                        "type": "SET_CAMERA_POS"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 1
+                    },
+                    {
+                        "entity": {
+                            "player": true
+                        },
+                        "group": "shade",
+                        "type": "CLEAR_EFFECTS"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 0.4
+                    },
+                    {
+                        "item": "286",
+                        "amount": 1,
+                        "skip": true,
+                        "type": "GIVE_ITEM"
+                    },
+                    {
+                        "msgType": "OBTAINED",
+                        "object": {
+                            "en_US": "\\v[item.286.name]",
+                            "de_DE": "Azurtropfenform",
+                            "zh_CN": "\\v[item.286.name]<<A<<[CHANGED 2018/03/14]",
+                            "ja_JP": "\\v[item.286.name]<<A<<[CHANGED 2018/03/14]",
+                            "ko_KR": "\\v[item.286.name]<<A<<[CHANGED 2018/03/14]",
+                            "langUid": 22,
+                            "zh_TW": "\\v[item.286.name]<<A<<[CHANGED 2018/03/14]"
+                        },
+                        "type": "SHOW_GET_MSG"
+                    },
+                    {
+                        "pos": {
+                            "x": 400,
+                            "y": 380
+                        },
+                        "speed": "SLOW",
+                        "transition": "EASE_IN_OUT",
+                        "wait": true,
+                        "waitSkip": 0,
+                        "zoom": 1,
+                        "type": "SET_CAMERA_POS"
+                    },
+                    {
+                        "text": {
+                            "en_US": "Let your every step\nform the path of your growth.",
+                            "de_DE": "Möge jeder deiner Schritte\nden Pfad deines Wachstums ebnen.",
+                            "fr_FR": "fr_FR",
+                            "zh_CN": "纤纤行路，\n步步高升。<<A<<[CHANGED 2018/03/14]",
+                            "ja_JP": "一歩一歩進むごとに\n 成長のあとを残してゆくがよい。<<A<<[CHANGED 2018/03/14]",
+                            "langUid": 8,
+                            "ko_KR": "모든 걸음이\n성장의 발판이 되기를.<<A<<[CHANGED 2018/03/14]",
+                            "zh_TW": "纖纖行路，\r\n步步高升。<<A<<[CHANGED 2018/03/14]"
+                        },
+                        "entity": {
+                            "global": true,
+                            "name": "hologramNPC"
+                        },
+                        "posType": "TOP",
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "type": "SHOW_DREAM_MSG"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 0.2
+                    },
+                    {
+                        "volume": 1,
+                        "name": "",
+                        "loop": false,
+                        "offset": 0,
+                        "startTime": 0,
+                        "type": "PLAY_SOUND",
+                        "sound": "media/sound/scenes/swoosh-rise-long.ogg"
+                    },
+                    {
+                        "zoom": 3,
+                        "duration": 3,
+                        "transition": "EASE_IN",
+                        "type": "SET_CAMERA_ZOOM"
+                    },
+                    {
+                        "zoomType": "LIGHT",
+                        "fadeIn": 1,
+                        "duration": 2,
+                        "fadeOut": 0,
+                        "type": "SET_ZOOM_BLUR"
+                    },
+                    {
+                        "alpha": 1,
+                        "time": 1.5,
+                        "lighter": true,
+                        "type": "SET_OVERLAY",
+                        "color": "white"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 2
+                    },
+                    {
+                        "changeType": "set",
+                        "type": "CHANGE_VAR_NUMBER",
+                        "varName": "plot.waveLine ",
+                        "value": 700
+                    },
+                    {
+                        "lighter": true,
+                        "type": "SET_TELEPORT_COLOR",
+                        "color": "white"
+                    },
+                    {
+                        "type": "CHANGE_VAR_BOOL",
+                        "varName": "plot.wave-dng-end",
+                        "changeType": "set",
+                        "value": true
+                    },
+                    {
+                        "type": "TELEPORT",
+                        "map": "rookie-harbor.expo-space",
+                        "marker": "start"
+                    },
+                    {
+                        "ignoreSlowDown": false,
+                        "type": "WAIT",
+                        "time": 5
+                    }
+                ],
+                "triggerType": "ALWAYS",
+                "mapId": 136
+            }
+        }
+    },
+    {
+        "type": "EXIT",
+        "count": 1
+    }    
+    
+]
