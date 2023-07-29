@@ -59,7 +59,7 @@
     {
         "_comment": "Make the door accessible even if beta pass",
         "type": "SET_KEY",
-        "index": "condition"
+        "index": "condition",
         "content": ""
     },
     {

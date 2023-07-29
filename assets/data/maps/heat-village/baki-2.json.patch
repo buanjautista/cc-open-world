@@ -103,8 +103,8 @@
         "content": {
                 "mapId": 1242,
                 "size": {
-                    "x": 182,
-                    "y": 92
+                    "x": 472,
+                    "y": 112
                 },
                 "name": "emilieisBack",
                 "startCondition": "plot.heatLine >= 300",

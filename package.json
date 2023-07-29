@@ -1,6 +1,6 @@
 {
 	"name": "open-world",
-	"description": "open world map patches for randomizer",
-	"version": "0.1.0",
+	"description": "Open World map patches for randomizer",
+	"version": "0.1.2",
 	"module": true
 }

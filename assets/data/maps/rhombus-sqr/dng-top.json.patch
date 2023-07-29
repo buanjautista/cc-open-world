@@ -6,7 +6,7 @@
 
 {
         "type": "ENTER",
-        "index": [173, "settings"]
+        "index": [173, "settings"],
         "_comment": "Changes the onEnter event so it enables stats tracking, for NG+ purposes. Also sets plot.version to 5 to avoid most save fixes, and advances plot.shizuka for shizuka fight",
     },
     {

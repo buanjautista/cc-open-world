@@ -63,14 +63,14 @@
         "_comment": "Changing the race continue event 1 to fit heat dungeon progress",
         "type": "SET_KEY",
         "index": "endCondition",
-        "content": "plot.heatDng >= 6150",
+        "content": "plot.heatDng >= 6150"
     },
     {
         "type": "EXIT",
         "count": 2
     },
 
-        {
+    {
         "type": "ENTER",
         "index": [59,"settings"]
     },

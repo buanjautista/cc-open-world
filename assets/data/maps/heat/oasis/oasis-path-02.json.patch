@@ -1,28 +1,2614 @@
-[
-    {
+[{
         "type": "ENTER",
         "index": ["entities"]
     },
 
     {
         "type": "ENTER",
-        "index": [637,"settings"]
+        "index": [637, "settings"]
     },
     {
         "_comment": "Change Bird NPC requirements",
         "type": "SET_KEY",
         "index": "npcStates",
-        "content": [
-                    { "reactType": "FIXED_POS", "face": "SOUTH", "action": [], "hidden": false, "condition": "", "config": "normal", "event": [ { "side": "LEFT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "side": "RIGHT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.lea", "expression": "SHOCKED" } }, { "rumbleType": "HORIZONTAL", "name": "", "duration": 0.3, "power": "STRONGER", "speed": "FASTER", "fade": true, "type": "RUMBLE_SCREEN" }, { "message": { "en_US": "STOP HUMAN!!", "de_DE": "STOP MENSCH!!", "fr_FR": "fr_FR", "zh_CN": "人类！停下！", "ja_JP": "止まれ、人間！<<A<<[CHANGED 2017/08/03]", "langUid": 6, "ko_KR": "멈춰라 인간!!", "zh_TW": "人類！停下！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "SCARED" } }, { "message": { "en_US": "You need \\c[3]Pass from Eldress\\c[0] if you want to enter Cave.", "de_DE": "Du brauchen \\c[3]Pass von Ältester\\c[0], wenn du wollen betreten Höhle.", "fr_FR": "fr_FR", "zh_CN": "想进洞窟，需要\\c[3]女族长的通行证\\c[0]。", "ja_JP": "洞窟の中入りたければ、\n\\c[3]長老からの通行証\\c[0]、必要。<<A<<[CHANGED 2017/08/03]", "langUid": 8, "ko_KR": "동굴에 들어가려면 \\c[3]촌장님의 통행증\\c[0]이 필요하다.", "zh_TW": "想進洞窟，需要\\c[3]女族長的通行證\\c[0]。" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "NERVOUS" } }, { "message": { "en_US": "You find Eldress in \\c[3]Ba'kii Kum\\c[0], Shad village to the \\c[3]west\\c[0]!", "de_DE": "Du finden Älteste in \\c[3]Ba'kii Kum\\c[0], Shad-Dorf im \\c[3]Westen\\c[0]!", "fr_FR": "fr_FR", "zh_CN": "女族长在\\c[3]巴基库姆\\c[0]，沙德村的\\c[3]西边\\c[0]！", "ja_JP": "長老、ここから\\c[3]西\\c[0]に行ったシャッドの村、\n\\c[3]バキーイ・クム\\c[0]におられる！<<A<<[CHANGED 2017/08/03]", "langUid": 9, "ko_KR": "촌장님은 \\c[3]서쪽\\c[0]에 있는 샤드의 마을인 \\c[3]바키 쿰\\c[0]에서 찾을 수 있지!", "zh_TW": "女族長在\\c[3]巴基庫姆\\c[0]，沙德村的\\c[3]西邊\\c[0]！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "...!", "de_DE": "...!", "fr_FR": "fr_FR", "zh_CN": "...!", "ja_JP": "...！<<A<<[CHANGED 2017/08/03]", "langUid": 7, "ko_KR": "...!", "zh_TW": "...!" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "ASTONISHED" } } ] }, { "reactType": "FIXED_POS", "face": "SOUTH", "action": [], "hidden": false, "condition": "quest.maroon-tree-defend.started && item.236.amount >= 1", "config": "normal", "event": { "quest": [ { "side": "LEFT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "side": "RIGHT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.lea", "expression": "SHOCKED" } }, { "rumbleType": "HORIZONTAL", "name": "", "duration": 0.3, "power": "STRONGER", "speed": "FASTER", "fade": true, "type": "RUMBLE_SCREEN" }, { "message": { "en_US": "STOP HUMAN!!", "de_DE": "STOP MENSCH!!", "fr_FR": "fr_FR", "zh_CN": "人类！停下！", "ja_JP": "止まれ、人間！<<A<<[CHANGED 2017/08/03]", "langUid": 10, "ko_KR": "멈춰라 인간!!", "zh_TW": "人類！停下！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "SCARED" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.glasses", "expression": "DEFAULT" } }, { "message": { "en_US": "You need \\c[3]Pass from Eldress\\c[0] if you want to enter Cave.", "de_DE": "Du brauchen \\c[3]Pass von Ältester\\c[0], wenn du wollen betreten Höhle.", "fr_FR": "fr_FR", "zh_CN": "想进洞窟，需要\\c[3]女族长的通行证\\c[0]。", "ja_JP": "洞窟の中入りたければ、\n\\c[3]長老からの通行証\\c[0]、必要。<<A<<[CHANGED 2017/08/03]", "langUid": 11, "ko_KR": "동굴에 들어가려면 \\c[3]촌장님의 통행증\\c[0]이 필요하다.", "zh_TW": "想進洞窟，需要\\c[3]女族長的通行證\\c[0]。" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "side": "RIGHT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.sergey", "expression": "DEFAULT" } }, { "message": { "en_US": "Hey Lea, do you want to tackle the Maroon Tree Quest by yourself now?", "de_DE": "Hey Lea, willst du die Maronenbaum-Quest doch alleine machen?", "fr_FR": "fr_FR", "zh_CN": "呃...莉亚？你打算自己做褐红巨树任务吗？", "ja_JP": "ねえレア、マルーンの木のクエストに\n1人で挑むつもりなのかい？<<A<<[CHANGED 2017/08/03]", "langUid": 82, "ko_KR": "안녕 레아, 지금 너 혼자서 단풍나무 퀘스트를 하려고?", "zh_TW": "呃...莉亞？你打算自己做褐紅巨樹任務嗎？" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.sergey", "expression": "DEFAULT" } }, { "message": { "en_US": "I thought you wanted to meet \\c[3]C'tron\\c[0]?", "de_DE": "Ich dachte, du wolltest \\c[3]C'tron\\c[0] nördlich von \\c[3]Ba'kii Kum\\c[0] treffen?", "fr_FR": "fr_FR", "zh_CN": "你不是说要跟\\c[3]西特隆\\c[0]在\\c[3]巴基库姆\\c[0]北方会合吗？", "ja_JP": "てっきり\\c[3]バキーイ・クム\\c[0]の北で\n\\c[3]シ・トロン\\c[0]と会うものだと思ってたんだけど。<<A<<[CHANGED 2017/12/11]", "langUid": 83, "ko_KR": "난 네가 \\c[3]바키 쿰\\c[0] 북쪽에서 \\c[3]시트론\\c[0]을 만나고 싶어 하는 줄 알았는데.<<A<<TODO 0.9.8", "zh_TW": "你不是說要跟\\c[3]西特隆\\c[0]在\\c[3]巴基庫姆\\c[0]北方會合嗎？<<A<<[CHANGED 2017/12/12]" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.sergey", "expression": "NOTIFYING" } }, { "message": { "en_US": "...!", "de_DE": "...!", "fr_FR": "fr_FR", "zh_CN": "...!", "ja_JP": "...！<<A<<[CHANGED 2017/08/03]", "langUid": 12, "ko_KR": "...!", "zh_TW": "...!" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "SHOCKED" } }, { "message": { "en_US": "You forgot? Better don't let the poor guy wait for too long.", "de_DE": "Du hast es vergessen? Lass den Armen lieber nicht zu lange warten.", "fr_FR": "fr_FR", "zh_CN": "你忘了啊？希望那家伙没等太久...", "ja_JP": "忘れてたのかい？かわいそうに、\n彼をあんまり待たせない方がいいよ。<<A<<[CHANGED 2017/08/03]", "langUid": 84, "ko_KR": "잊었어? 그 불쌍한 녀석을 오래 기다리게 하지는 말라고.", "zh_TW": "你忘了啊？希望那傢伙沒等太久..." }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.sergey", "expression": "ROLL_EYES" } }, { "side": "ALL", "type": "CLEAR_MSG" } ] } }, { "reactType": "FIXED_POS", "face": "SOUTH", "action": [], "hidden": false, "condition": "quest.maroon-tree-defend.started && party.has.Glasses && item.236.amount >= 1", "config": "normal", "event": { "quest": [ { "side": "LEFT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "side": "RIGHT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.lea", "expression": "SHOCKED" } }, { "side": "RIGHT", "order": 5, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.glasses", "expression": "SHOCKED" } }, { "rumbleType": "HORIZONTAL", "name": "", "duration": 0.3, "power": "STRONGER", "speed": "FASTER", "fade": true, "type": "RUMBLE_SCREEN" }, { "message": { "en_US": "STOP HUMAN!!", "de_DE": "STOP MENSCH!!", "fr_FR": "fr_FR", "zh_CN": "人类！停下！", "ja_JP": "止まれ、人間！<<A<<[CHANGED 2017/08/03]", "langUid": 85, "ko_KR": "멈춰라 인간!!", "zh_TW": "人類！停下！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "SCARED" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.glasses", "expression": "DEFAULT" } }, { "message": { "en_US": "You need \\c[3]Pass from Eldress\\c[0] if you want to enter Cave.", "de_DE": "Du brauchen \\c[3]Pass von Ältester\\c[0], wenn du wollen betreten Höhle.", "fr_FR": "fr_FR", "zh_CN": "想进洞窟，需要\\c[3]女族长的通行证\\c[0]。", "ja_JP": "洞窟の中入りたければ、\n\\c[3]長老からの通行証\\c[0]、必要。<<A<<[CHANGED 2017/08/03]", "langUid": 86, "ko_KR": "동굴에 들어가려면 \\c[3]촌장님의 통행증\\c[0]이 필요하다.", "zh_TW": "想進洞窟，需要\\c[3]女族長的通行證\\c[0]。" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "...!", "de_DE": "...!", "fr_FR": "fr_FR", "zh_CN": "...!", "ja_JP": "...！<<A<<[CHANGED 2017/08/03]", "langUid": 87, "ko_KR": "...!", "zh_TW": "...!" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "PROUD" } }, { "rumbleType": "HORIZONTAL", "name": "", "duration": 0.3, "power": "STRONGER", "speed": "FASTER", "fade": true, "type": "RUMBLE_SCREEN" }, { "message": { "en_US": "Oh! Is that the pass?\\. So Human must be here to help \\c[3]defeat Sandworm\\c[0]!", "de_DE": "Oh! Ist das Pass?\\. Also Mensch muss sein hier, um zu helfen \\c[3]Sandwurm besiegen\\c[0]!", "fr_FR": "fr_FR", "zh_CN": "哦，你有通行证啊？\\.那人类一定是来\\c[3]击败沙虫\\c[0]的吧！", "ja_JP": "おや！これは通行証か？\\.では人間、\n\\c[3]サンドワームを倒す\\c[0]手伝いに来てくれたのだな！<<A<<[CHANGED 2017/08/03]", "langUid": 14, "ko_KR": "아, 통행증을 가지고 있나?\\. 그렇다면 \\c[3]갯지렁이를 물리치는 걸\\c[0] 도와주려고 왔구먼!", "zh_TW": "哦，你有通行證啊？\\.那人類一定是來\\c[3]擊敗沙蟲\\c[0]的吧！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "[nods]", "de_DE": "[nickt]", "fr_FR": "fr_FR", "zh_CN": "[点头]", "ja_JP": "[うなずく]<<A<<[CHANGED 2017/08/03]", "langUid": 15, "ko_KR": "[끄덕]", "zh_TW": "[點頭]" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "NOD" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "SHOCKED" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.glasses", "expression": "SHOCKED" } }, { "rumbleType": "HORIZONTAL", "name": "", "duration": 0.3, "power": "STRONGER", "speed": "FASTER", "fade": true, "type": "RUMBLE_SCREEN" }, { "message": { "en_US": "GREAT!! ", "de_DE": "TOLL!!", "fr_FR": "fr_FR", "zh_CN": "太 好 了！", "ja_JP": "すばらしい！！<<A<<[CHANGED 2017/08/03]", "langUid": 16, "ko_KR": "좋아!!", "zh_TW": "太 好 了！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "ANNOYED" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.glasses", "expression": "EMBARRASSED" } }, { "message": { "en_US": "Then please enter Cave and defeat all Sandworm!", "de_DE": "Dann bitte betreten Höhle und besiegen alle Sandwürmer!", "fr_FR": "fr_FR", "zh_CN": "请进入洞穴，然后干掉所有的沙虫！", "ja_JP": "洞窟の中入って、サンドワームすべて、\n倒してくれ！<<A<<[CHANGED 2017/08/03]", "langUid": 17, "ko_KR": "그럼 어서 동굴에 들어가서 갯지렁이를 물리치도록 해!", "zh_TW": "請進入洞穴，然後幹掉所有的沙蟲！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "That is all!", "de_DE": "Das sein alles!", "fr_FR": "fr_FR", "zh_CN": "就这样！", "ja_JP": "以上だ！<<A<<[CHANGED 2017/08/03]", "langUid": 18, "ko_KR": "그거면 돼!", "zh_TW": "就這樣！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "...", "de_DE": "...", "fr_FR": "fr_FR", "zh_CN": "...", "ja_JP": "...<<A<<[CHANGED 2017/08/03]", "langUid": 19, "ko_KR": "...", "zh_TW": "..." }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "SURPRISED_AWAY" } }, { "message": { "en_US": "...!", "de_DE": "...!", "fr_FR": "fr_FR", "zh_CN": "...!", "ja_JP": "...！<<A<<[CHANGED 2017/08/03]", "langUid": 20, "ko_KR": "...!", "zh_TW": "...!" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "PROUD" } }, { "side": "ALL", "type": "CLEAR_MSG" }, { "entity": { "self": true }, "action": [ { "value": true, "type": "SET_SLIP_THROUGH" }, { "target": { "x": 596, "y": 1000, "lvl": "0" }, "precise": true, "type": "MOVE_TO_POINT" }, { "face": "WEST", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "player": true }, "action": [ { "value": true, "type": "SET_SLIP_THROUGH" }, { "time": 0.1, "type": "WAIT" }, { "target": { "x": 572, "y": 1008, "lvl": "0" }, "precise": true, "type": "MOVE_TO_POINT" }, { "face": "NORTH", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "party": "Member2" }, "action": [ { "value": true, "type": "SET_SLIP_THROUGH" }, { "time": 0.1, "type": "WAIT" }, { "target": { "x": 548, "y": 1008, "lvl": "0" }, "precise": true, "type": "MOVE_TO_POINT" }, { "face": "NORTH", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "player": true }, "type": "WAIT_UNTIL_ACTION_DONE" }, { "entity": { "party": "Member2" }, "type": "WAIT_UNTIL_ACTION_DONE" }, { "ignoreSlowDown": false, "type": "WAIT", "time": 0.2 }, { "entity": { "party": "Member2" }, "action": [ { "value": 0.5, "type": "SET_RELATIVE_SPEED" }, { "time": 0.3, "stopBeforeEdge": false, "type": "MOVE_FORWARD" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "player": true }, "action": [ { "value": 0.5, "type": "SET_RELATIVE_SPEED" }, { "time": 0.3, "stopBeforeEdge": false, "type": "MOVE_FORWARD" } ], "repeating": false, "wait": true, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "self": true }, "action": [ { "jumpHeight": "L", "wait": true, "ignoreSounds": false, "type": "JUMP" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "self": true }, "offsetX": 0, "offsetY": 0, "speed": "FAST", "transition": "EASE_IN_OUT", "wait": false, "waitSkip": 0, "zoom": 1, "type": "SET_CAMERA_TARGET" }, { "entity": { "player": true }, "action": [ { "face": "EAST", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "party": "Member2" }, "action": [ { "face": "EAST", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "side": "LEFT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "side": "RIGHT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.lea", "expression": "SHOCKED" } }, { "side": "RIGHT", "order": 5, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.glasses", "expression": "SHOCKED" } }, { "rumbleType": "HORIZONTAL", "name": "", "duration": 0.3, "power": "STRONGER", "speed": "FASTER", "fade": true, "type": "RUMBLE_SCREEN" }, { "message": { "en_US": "WAIT!! ", "de_DE": "WARTEN!!", "fr_FR": "fr_FR", "zh_CN": "等 等 ！", "ja_JP": "待った！<<A<<[CHANGED 2017/08/03]", "langUid": 21, "ko_KR": "잠깐!", "zh_TW": "等 等 ！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "MOPING" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.glasses", "expression": "THOUGHTFUL" } }, { "message": { "en_US": "Shad almost forgot!", "de_DE": "Shad fast vergessen!", "fr_FR": "fr_FR", "zh_CN": "沙德差点忘了！", "ja_JP": "忘れるところだった！<<A<<[CHANGED 2017/08/03]", "langUid": 22, "ko_KR": "잊은 게 있군!", "zh_TW": "沙德差點忘了！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "There is very strong \\c[3]red sandworm\\c[0] in cave!", "de_DE": "Da sein sehr starker \\c[3]roter Sandwurm\\c[0] in Höhle!", "fr_FR": "fr_FR", "zh_CN": "洞穴里头有一条强力的\\c[3]红沙虫\\c[0]！", "ja_JP": "洞窟の中の\\c[3]レッドサンドワーム\\c[0]、\nとても手強いぞ！<<A<<[CHANGED 2017/08/03]", "langUid": 23, "ko_KR": "동굴 안에는 매우 강력한 \\c[3]붉은 갯지렁이\\c[0]가 있다!", "zh_TW": "洞穴裡頭有一條強力的\\c[3]紅沙蟲\\c[0]！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "Please defeat that worm! Most important, because very dangerous to tree!", "de_DE": "Bitte besiegen den Wurm! Am meisten wichtig, weil sehr gefährlich für Baum!", "fr_FR": "fr_FR", "zh_CN": "切记要干掉它！它对树木很危险！", "ja_JP": "そのワーム、倒してくれ！\n木にとって一番重大な脅威だ！<<A<<[CHANGED 2017/08/03]", "langUid": 24, "ko_KR": "그 갯지렁이를 처치해! 그 녀석이 나무에 제일 해롭기 때문에 그 녀석을 처치하는 게 중요해!", "zh_TW": "切記要幹掉它！它對樹木很危險！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "Red Sandworm will also drop \\c[3]strange item\\c[0]! Show me item to prove you defeated red sandworm, ok?", "de_DE": "Roter Sandwurm wird auch geben \\c[3]komisches Item\\c[0]! Zeigen mir Item um beweisen du getötet roten Sandwurm, ok?", "fr_FR": "fr_FR", "zh_CN": "红沙虫还会掉落\\c[3]特殊物品\\c[0]！把它干掉之后拿给我看就行！", "ja_JP": "レッドサンドワーム、\\c[3]妙なアイテム\\c[0]を落とす！\nレッドサンドワームを倒した証に、\nそれ私に見せてくれ。いいか？<<A<<[CHANGED 2017/08/03]", "langUid": 25, "ko_KR": "붉은 갯지렁이를 처치하면 \\c[3]이상한 아이템\\c[0]이 나올 거다! 녀석을 처치했다는 증거로 그 아이템을 나에게 가져오면 된다.<<A<<[CHANGED 2017/07/21]", "zh_TW": "紅沙蟲還會掉落\\c[3]特殊物品\\c[0]！把它幹掉之後拿給我看就行！<<A<<[CHANGED 2017/07/11]" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "[nods]", "de_DE": "[nickt]", "fr_FR": "fr_FR", "zh_CN": "[点头]", "ja_JP": "[うなずく]<<A<<[CHANGED 2017/08/03]", "langUid": 26, "ko_KR": "[끄덕]", "zh_TW": "[點頭]" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "NOD" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "PAIN_EYE_CLOSED" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.glasses", "expression": "PAIN" } }, { "rumbleType": "HORIZONTAL", "name": "", "duration": 0.3, "power": "STRONGER", "speed": "FASTER", "fade": true, "type": "RUMBLE_SCREEN" }, { "message": { "en_US": "ALRIGHT!!", "de_DE": "ALLES KLAR!!", "fr_FR": "fr_FR", "zh_CN": "好 的 ！", "ja_JP": "よし！<<A<<[CHANGED 2017/08/03]", "langUid": 27, "ko_KR": "좋아!!", "zh_TW": "好 的 ！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "Good luck, Human!", "de_DE": "Viel Glück, Mensch!", "fr_FR": "fr_FR", "zh_CN": "祝你好运，人类！", "ja_JP": "武運を祈るぞ、人間！<<A<<[CHANGED 2017/08/03]", "langUid": 28, "ko_KR": "행운을 빌지, 인간!", "zh_TW": "祝你好運，人類！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "changeType": "set", "type": "CHANGE_VAR_BOOL", "varName": "map.caveAccess", "value": true }, { "type": "SOLVE_QUEST_CONDITION", "quest": { "quest": "maroon-tree-defend", "label": "cave-access" } }, { "message": { "en_US": "Gosh...\\. what a loud fellow.", "de_DE": "Oh Mann...\\. was für ein lauter Kerl.", "fr_FR": "fr_FR", "zh_CN": "哇...\\.这家伙说话真大声。", "ja_JP": "まったく...\\.声の大きい人ですね。<<A<<[CHANGED 2017/08/03]", "langUid": 29, "ko_KR": "거 참...\\. 시끄러운 녀석이네.", "zh_TW": "哇...\\.這傢伙說話真大聲。" }, "type": "SHOW_SIDE_MSG", "person": { "person": "main.glasses", "expression": "EMBARRASSED" } } ] } }, { "position": { "x": 596, "y": 1000, "lvl": "0" }, "reactType": "FIXED_POS", "face": "WEST", "action": [], "hidden": false, "condition": "quest.maroon-tree-defend.task.1", "config": "normal", "event": [ { "side": "LEFT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "side": "RIGHT", "order": 5, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.lea", "expression": "DEFAULT" } }, { "message": { "en_US": "Human very nice, always helping us defeating Sandworm!", "de_DE": "Mensch sehr nett, immer helfen uns besiegen Sandwurm!", "fr_FR": "fr_FR", "zh_CN": "人类很友善，一直帮我们清除沙虫！", "ja_JP": "人間、すばらしい。いつもサンドワームを\n倒すのを手伝ってくれる。<<A<<[CHANGED 2017/08/03]", "langUid": 35, "ko_KR": "수고한다, 인간. 항상 갯지렁이를 물리쳐주다니!", "zh_TW": "人類很友善，一直幫我們清除沙蟲！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "But Sandworm always coming back, very pesky!", "de_DE": "Aber Sandwurm immer kommen zurück! Sehr nerven!", "fr_FR": "fr_FR", "zh_CN": "但是沙虫一直会回来！很讨厌！", "ja_JP": "だがサンドワーム、いつでも戻ってくる。とても厄介！<<A<<[CHANGED 2017/08/03]", "langUid": 30, "ko_KR": "하지만 갯지렁이는 다시 나타나지. 아주 성가셔!", "zh_TW": "但是沙蟲一直會回來！很討厭！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "Anyway, together we can protect tree!", "de_DE": "Doch zusammen wir können beschützen Baum!", "fr_FR": "fr_FR", "zh_CN": "总之，人类和沙德一起才能保卫巨树！", "ja_JP": "とにかく、我々で木を守ろう！<<A<<[CHANGED 2017/08/03]", "langUid": 31, "ko_KR": "아무튼, 우리가 함께하면 나무를 보호할 수 있을 거다!", "zh_TW": "總之，人類和沙德一起才能保衛巨樹！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "[nods]", "de_DE": "[nickt]", "fr_FR": "fr_FR", "zh_CN": "[点头]", "ja_JP": "[うなずく]<<A<<[CHANGED 2017/08/03]", "langUid": 32, "ko_KR": "[끄덕]", "zh_TW": "[點頭]" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "NOD" } }, { "rumbleType": "HORIZONTAL", "name": "", "duration": 0.3, "power": "STRONGER", "speed": "FASTER", "fade": true, "type": "RUMBLE_SCREEN" }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "PAIN_EYE_CLOSED" } }, { "message": { "en_US": "THANK YOU, HUMAN!!", "de_DE": "VIELEN DANK, MENSCH!!", "fr_FR": "fr_FR", "zh_CN": "谢 谢 你！人 类！", "ja_JP": "礼を言うぞ、人間！！<<A<<[CHANGED 2017/08/03]", "langUid": 33, "ko_KR": "고맙다, 인간!!", "zh_TW": "謝 謝 你！人 類！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } } ] }, { "position": { "x": 596, "y": 1000, "lvl": "0" }, "reactType": "FIXED_POS", "face": "WEST", "action": [], "hidden": false, "condition": "quest.maroon-tree-defend.task.2 && party.has.Glasses", "config": "normal", "event": { "quest": [ { "type": "SET_MEMBER_LOCKED", "member": "Glasses", "locked": true }, { "side": "LEFT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "side": "RIGHT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.lea", "expression": "PAIN_EYE_CLOSED" } }, { "side": "RIGHT", "order": 5, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.glasses", "expression": "PAIN" } }, { "rumbleType": "HORIZONTAL", "name": "", "duration": 0.3, "power": "STRONGER", "speed": "FASTER", "fade": true, "type": "RUMBLE_SCREEN" }, { "message": { "en_US": "HUMAN!!", "de_DE": "MENSCH!!", "fr_FR": "fr_FR", "zh_CN": "人 类！！", "ja_JP": "人間！！<<A<<[CHANGED 2017/08/03]", "langUid": 37, "ko_KR": "인간!!", "zh_TW": "人 類！！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "ANNOYED" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.glasses", "expression": "EXHAUSTED" } }, { "message": { "en_US": "Did you kill all Sandworm?", "de_DE": "Du töten alle Sandwürmer?", "fr_FR": "fr_FR", "zh_CN": "你把沙虫都消灭了吗？", "ja_JP": "サンドワーム、すべて倒してきたか？<<A<<[CHANGED 2017/08/03]", "langUid": 38, "ko_KR": "갯지렁이를 전부 처치했나?", "zh_TW": "你把沙蟲都消滅了嗎？" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "...!", "de_DE": "...!", "fr_FR": "fr_FR", "zh_CN": "...!", "ja_JP": "...！<<A<<[CHANGED 2017/08/03]", "langUid": 39, "ko_KR": "...!", "zh_TW": "...!" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "PROUD" } }, { "message": { "en_US": "I see you have strange item!\\. Please give me!", "de_DE": "Ich sehen du haben komisches Item!\\. Bitte geben mir!", "fr_FR": "fr_FR", "zh_CN": "我看你已经拿到了特殊物品！\\.请把它交给我！", "ja_JP": "妙なアイテムも持っているようだな！\\.渡してくれ！<<A<<[CHANGED 2017/08/03]", "langUid": 40, "ko_KR": "그 특이한 아이템을 가지고 있군!\\. 나에게 주도록!", "zh_TW": "我看你已經拿到了特殊物品！\\.請把它交給我！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "side": "ALL", "type": "CLEAR_MSG" }, { "item": "362", "amount": 1, "type": "REMOVE_ITEM" }, { "msgType": "REMOVED", "object": { "en_US": "\\v[item.362.name]", "de_DE": "Ti'im-Residuum", "fr_FR": "fr_FR", "zh_CN": "\\v[item.362.name]", "ja_JP": "\\v[item.362.name]<<A<<[CHANGED 2017/08/03]", "langUid": 36, "ko_KR": "\\v[item.362.name]", "zh_TW": "\\v[item.362.name]" }, "type": "SHOW_GET_MSG" }, { "side": "LEFT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "side": "RIGHT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.lea", "expression": "DEFAULT" } }, { "side": "RIGHT", "order": 5, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.glasses", "expression": "DEFAULT" } }, { "message": { "en_US": "Strange item very good for Maroon Tree!\\. Putting in earth helps to grow!", "de_DE": "Komisches Item sehr gut für Maronenbaum!\\. In Erde stecken helfen wachsen!", "fr_FR": "fr_FR", "zh_CN": "特殊物品对巨树很好！\\.放进土里长得更好！", "ja_JP": "妙なアイテム、マルーンの木の役に立つ！\n\\. 土に埋めると成長を助ける！<<A<<[CHANGED 2017/08/03]", "langUid": 41, "ko_KR": "이 아이템은 단풍나무에 아주 좋지!\\. 땅에 뿌리면 성장을 돕는다고!", "zh_TW": "特殊物品對巨樹很好！\\.放進土里長得更好！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "...", "de_DE": "...", "fr_FR": "fr_FR", "zh_CN": "...", "ja_JP": "...<<A<<[CHANGED 2017/08/03]", "langUid": 42, "ko_KR": "...", "zh_TW": "..." }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "SURPRISED_AWAY" } }, { "message": { "en_US": "Wait...\\. so I guess that stuff was...\\. dung?", "de_DE": "Moment...\\. das heißt, das Zeug war...\\. Dung?", "fr_FR": "fr_FR", "zh_CN": "等等...\\.那该不会是...\\.大便吧？", "ja_JP": "待って...\\.ということはそのアイテムは...\n\\.フンなんですか？<<A<<[CHANGED 2017/08/03]", "langUid": 43, "ko_KR": "잠깐...\\. 그럼 그게...\\. 거름이었어?", "zh_TW": "等等...\\.那該不會是...\\.大便吧？" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.glasses", "expression": "THOUGHTFUL" } }, { "message": { "en_US": "...", "de_DE": "...", "fr_FR": "fr_FR", "zh_CN": "...", "ja_JP": "...<<A<<[CHANGED 2017/08/03]", "langUid": 44, "ko_KR": "...", "zh_TW": "..." }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "DISGUSTED" } }, { "message": { "en_US": "Good thing we got rid of it.", "de_DE": "Gut, dass wir das los sind.", "fr_FR": "fr_FR", "zh_CN": "还好给他了，不然带在身上。", "ja_JP": "手放せてよかったですね。<<A<<[CHANGED 2017/08/03]", "langUid": 45, "ko_KR": "처분해서 다행이야.", "zh_TW": "還好給他了，不然帶在身上。" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.glasses", "expression": "EMBARRASSED" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "PAIN_EYE_CLOSED" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.glasses", "expression": "PAIN" } }, { "rumbleType": "HORIZONTAL", "name": "", "duration": 0.3, "power": "STRONGER", "speed": "FASTER", "fade": true, "type": "RUMBLE_SCREEN" }, { "message": { "en_US": "HUMAN!", "de_DE": "MENSCH!", "fr_FR": "fr_FR", "zh_CN": "人 类 ！", "ja_JP": "人間！<<A<<[CHANGED 2017/08/03]", "langUid": 46, "ko_KR": "인간!", "zh_TW": "人 類 ！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "Please hand me pass.", "de_DE": "Bitte geben mir Pass.", "fr_FR": "fr_FR", "zh_CN": "请给我通行证。", "ja_JP": "通行証を渡してくれ。<<A<<[CHANGED 2017/08/03]", "langUid": 47, "ko_KR": "통행증을 주게.", "zh_TW": "請給我通行證。" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "...!", "de_DE": "...!", "fr_FR": "fr_FR", "zh_CN": "...!", "ja_JP": "...！<<A<<[CHANGED 2017/08/03]", "langUid": 48, "ko_KR": "...!", "zh_TW": "...!" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "ANNOYED" } }, { "message": { "en_US": "I make note for Eldress!\\. You can now go and get \\c[3]Shiny Orb\\c[0]!", "de_DE": "Ich machen darauf Notiz für Älteste!\\. Du können nun gehen und empfangen \\c[3]Glänzende Kugel\\c[0]!", "fr_FR": "fr_FR", "zh_CN": "我会在上面说明的！\\.这样你就可以拿到\\c[3]闪光球\\c[0]了！", "ja_JP": "長老向けにメモを書く！\\.彼女のところに行って\n\\c[3]光のオーブ\\c[0]をもらうといい！<<A<<[CHANGED 2017/08/03]", "langUid": 49, "ko_KR": "촌장님에게는 말씀드렸다!\\. 가서 \\c[3]빛나는 구슬\\c[0]을 받으면 돼!<<A<<[CHANGED 2017/07/21]", "zh_TW": "我會在上面說明的！\\.這樣你就可以拿到\\c[3]閃光球\\c[0]了！<<A<<[CHANGED 2017/07/11]" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "changeType": "set", "type": "CHANGE_VAR_BOOL", "varName": "tmp.emilieThere", "value": true }, { "entity": { "global": true, "name": "emilie" }, "action": [ { "target": { "x": 392, "y": 956, "lvl": "1" }, "maxTime": 0, "distance": 0, "precise": false, "planOnly": false, "teleportOnFail": false, "type": "NAVIGATE_TO_POINT" }, { "value": 0.5, "type": "SET_RELATIVE_SPEED" }, { "target": { "x": 408, "y": 1016, "lvl": "1" }, "maxTime": 0, "distance": 0, "precise": true, "planOnly": false, "teleportOnFail": false, "type": "NAVIGATE_TO_POINT" }, { "face": "EAST", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "message": { "en_US": "Thanks a lot for help.", "de_DE": "Vielen Dank für Hilfe.", "fr_FR": "fr_FR", "zh_CN": "感谢你们的帮助。", "ja_JP": "助けてくれて本当にありがとう。<<A<<[CHANGED 2017/08/03]", "langUid": 50, "ko_KR": "도와줘서 고맙군.", "zh_TW": "感謝你們的幫助。" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "...!", "de_DE": "...!", "fr_FR": "fr_FR", "zh_CN": "...!", "ja_JP": "...！<<A<<[CHANGED 2017/08/03]", "langUid": 51, "ko_KR": "...!", "zh_TW": "...!" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "PROUD" } }, { "rumbleType": "HORIZONTAL", "name": "", "duration": 0.3, "power": "STRONGER", "speed": "FASTER", "fade": true, "type": "RUMBLE_SCREEN" }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "PAIN_EYE_CLOSED" } }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.glasses", "expression": "PAIN" } }, { "message": { "en_US": "BYE HUMAN!!", "de_DE": "TSCHÜSS, MENSCH!!", "fr_FR": "fr_FR", "zh_CN": "再 见 ！人 类 ！！", "ja_JP": "さらばだ、人間！！<<A<<[CHANGED 2017/08/03]", "langUid": 52, "ko_KR": "잘 가라, 인간!!", "zh_TW": "再 見 ！人 類 ！！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "side": "ALL", "type": "CLEAR_MSG" }, { "type": "SOLVE_QUEST_CONDITION", "quest": { "quest": "maroon-tree-defend", "label": "item-given" } }, { "mode": "MEDIUM", "type": "PAUSE_BGM" }, { "ignoreSlowDown": false, "type": "WAIT", "time": 0.5 }, { "pos": { "x": 412, "y": 1020 }, "speed": "FAST", "transition": "EASE_IN_OUT", "wait": true, "waitSkip": 0, "zoom": 1, "type": "SET_CAMERA_POS" }, { "entity": { "global": true, "name": "emilie" }, "type": "WAIT_UNTIL_ACTION_DONE" }, { "entity": { "global": true, "name": "emilie" }, "action": [ { "jumpHeight": "XL", "wait": true, "ignoreSounds": false, "type": "JUMP" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "player": true }, "action": [ { "time": 0.2, "type": "WAIT" }, { "face": "WEST", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "party": "Member2" }, "action": [ { "time": 0.3, "type": "WAIT" }, { "face": "WEST", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "side": "LEFT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.emilie", "expression": "SMILE" } }, { "message": { "en_US": "Bonjour!", "de_DE": "Bonjour!", "fr_FR": "fr_FR", "zh_CN": "嗨！", "ja_JP": "ボンジュール！<<A<<[CHANGED 2017/08/03]", "langUid": 53, "ko_KR": "안녕!", "zh_TW": "嗨！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.emilie", "expression": "SMILE" } }, { "side": "ALL", "type": "CLEAR_MSG" }, { "bgm": "casual", "volume": 1, "mode": "IMMEDIATELY", "type": "PLAY_BGM" }, { "pos": { "x": 464, "y": 1016 }, "speed": "NORMAL", "transition": "EASE_IN_OUT", "wait": false, "waitSkip": 0, "zoom": 1, "type": "SET_CAMERA_POS" }, { "entity": { "global": true, "name": "emilie" }, "action": [ { "value": 0.5, "type": "SET_RELATIVE_SPEED" }, { "target": { "x": 436, "y": 1016, "lvl": "1" }, "maxTime": 0, "distance": 0, "precise": true, "planOnly": false, "teleportOnFail": false, "type": "NAVIGATE_TO_POINT" }, { "face": "EAST", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "player": true }, "action": [ { "value": "IGNORE", "type": "SET_COLL_TYPE" }, { "value": 0.5, "type": "SET_RELATIVE_SPEED" }, { "target": { "x": 504, "y": 1000, "lvl": "0" }, "maxTime": 0, "distance": 0, "precise": false, "planOnly": false, "teleportOnFail": false, "type": "NAVIGATE_TO_POINT" }, { "target": { "x": 472, "y": 1000, "lvl": "1" }, "precise": true, "forceTime": false, "type": "MOVE_TO_POINT" }, { "face": "WEST", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "party": "Member2" }, "action": [ { "value": "IGNORE", "type": "SET_COLL_TYPE" }, { "value": 0.5, "type": "SET_RELATIVE_SPEED" }, { "target": { "x": 468, "y": 1032, "lvl": "1" }, "maxTime": 0, "distance": 0, "precise": true, "planOnly": false, "teleportOnFail": false, "type": "NAVIGATE_TO_POINT" }, { "face": "WEST", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "player": true }, "type": "WAIT_UNTIL_ACTION_DONE" }, { "side": "LEFT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.emilie", "expression": "SMILE" } }, { "side": "RIGHT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.lea", "expression": "DEFAULT" } }, { "side": "RIGHT", "order": 5, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.glasses", "expression": "DEFAULT" } }, { "message": { "en_US": "Gotcha, you little runaways!", "de_DE": "Hab ich euch, ihr kleinen Ausreißer!", "fr_FR": "fr_FR", "zh_CN": "逮住你了，你个小鬼精灵！", "ja_JP": "見つけたよ、抜け駆けのお2人さん！<<A<<[CHANGED 2017/08/03]", "langUid": 54, "ko_KR": "잡았다, 어딜 도망가려고!", "zh_TW": "逮住你了，你個小鬼精靈！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.emilie", "expression": "DETERMINED" } }, { "message": { "en_US": "Hi!", "de_DE": "Hi!", "fr_FR": "fr_FR", "zh_CN": "你好！", "ja_JP": "やぁ！<<A<<[CHANGED 2017/08/03]", "langUid": 55, "ko_KR": "안녕!", "zh_TW": "你好！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "PROUD" } }, { "message": { "en_US": "Hi Emilie, it's nice to finally meet you!", "de_DE": "Hallo, Emilie! Schön, dich endlich kennenzulernen!", "fr_FR": "fr_FR", "zh_CN": "你好，艾米莉，总算见到你了。", "ja_JP": "やぁエミリー、ようやく会えて嬉しいです！<<A<<[CHANGED 2017/08/03]", "langUid": 56, "ko_KR": "드디어 널 만나게 되다니, 반가워 에밀리!", "zh_TW": "你好，艾米莉，總算見到你了。<<A<<[CHANGED 2017/06/30]" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.glasses", "expression": "SMILE" } }, { "message": { "en_US": "Oui!\\. Nice to meet you, too!", "de_DE": "Oui!\\. Dito!", "fr_FR": "fr_FR", "zh_CN": "嘿！\\.你好啊！", "ja_JP": "ええ！\\.こっちこそはじめまして！<<A<<[CHANGED 2017/08/03]", "langUid": 57, "ko_KR": "그래!\\. 나도 만나서 반가워!", "zh_TW": "嘿！\\.你好啊！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.emilie", "expression": "SMILE" } }, { "message": { "en_US": "And again...\\. I'm sorry we didn't wait for you.", "de_DE": "Tschuldige nochmal, dass wir nicht auf dich gewartet haben.", "fr_FR": "fr_FR", "zh_CN": "嗯...\\.上次没有等你真是抱歉。", "ja_JP": "それから...\\.先にクエストを\n始めちゃってごめんなさい。<<A<<[CHANGED 2017/08/03]", "langUid": 58, "ko_KR": "그리고...\\. 널 기다려주지 못해서 미안해.", "zh_TW": "嗯...\\.上次沒有等你真是抱歉。" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.glasses", "expression": "EMBARRASSED" } }, { "message": { "en_US": "No really, it's fine.\\. We never made any plans, anyway.", "de_DE": "Nein, das ist wirklich in Ordnung.\\. Das war nur eine lose Verabredung.", "fr_FR": "fr_FR", "zh_CN": "没事啦没事。\\.我们本来就没计划的。", "ja_JP": "いいよ、大丈夫。\\.計画とか立てて\nやったことなんてないしさ。<<A<<[CHANGED 2017/08/03]", "langUid": 59, "ko_KR": "아냐, 괜찮아.\\. 미리 말해놨던 것도 아니고.", "zh_TW": "沒事啦沒事。\\.我們本來就沒計劃的。" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.emilie", "expression": "CURIOUS" } }, { "message": { "en_US": "And I can understand why you'd play ahead.\\. I've been offline for quite some time.", "de_DE": "Und ich verstehe, warum du weitergespielt hast.\\. Ich war jetzt schon eine ganze Weile offline.", "fr_FR": "fr_FR", "zh_CN": "而且我也理解你们俩往前打了。\\.我挺长时间没上线。", "ja_JP": "それに、先にプレイしたのも無理ないよ。\n\\.私、最近オフラインでいることが多かったから。<<A<<[CHANGED 2017/08/03]", "langUid": 60, "ko_KR": "그리고 네가 왜 그렇게 먼저 진행했는지 이해해.\\. 내가 꽤 오랫동안 오프라인이었으니까.", "zh_TW": "而且我也理解你們兩個往前打了。\\.我很長一段時間沒上線。" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.emilie", "expression": "EXHAUSTED" } }, { "message": { "en_US": "It's just that...\\. I really had to wrap up everything for that project.", "de_DE": "Mich ärgert bloß...\\. dass ich wirklich einiges für das Projekt erledigen musste.", "fr_FR": "fr_FR", "zh_CN": "主要是...\\.作业那事忙的脱不开身。", "ja_JP": "なんというか、ほら...\\.課題を全部\n仕上げなくちゃいけなかったからさ。<<A<<[CHANGED 2017/08/03]", "langUid": 61, "ko_KR": "그냥...\\. 프로젝트를 마무리 지어야 할 게 있었거든.", "zh_TW": "主要是...\\.作業的事忙的我脫不開身。" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.emilie", "expression": "MOPING" } }, { "message": { "en_US": "Gosh...\\. Studies keeping you busy, huh?", "de_DE": "Oh Mann...\\. Das Studium hält dich ganz schön auf Trab, was?", "fr_FR": "fr_FR", "zh_CN": "呵...\\.学业在身呐。", "ja_JP": "なんとまあ...\\.勉強でお忙しいんですね。<<A<<[CHANGED 2017/08/03]", "langUid": 62, "ko_KR": "이런...\\. 공부 때문에 바쁜가 봐?", "zh_TW": "呵...\\.學業在身吶。" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.glasses", "expression": "SURPRISED" } }, { "message": { "en_US": "Oui, oui.\\. And you don't even know half of the story yet, isn't that right, Lea?", "de_DE": "Oui, oui.\\. Und du kennst nicht mal die Hälfte der Geschichte, nicht wahr, Lea?", "fr_FR": "fr_FR", "zh_CN": "是呀是呀。\\.而且你还不知道其他那些事呢，对不对，莉亚？", "ja_JP": "そうそう。\\. それに、それだけじゃないんだから。\nでしょ、レア？<<A<<[CHANGED 2017/08/03]", "langUid": 63, "ko_KR": "응, 그렇지.\\. 어느 정도인지 넌 상상도 못 할 거야. 맞지, 레아?", "zh_TW": "是呀是呀。\\.而且你還不知道其他那些事呢，對不對，莉亞？" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.emilie", "expression": "WATCH_OUT_BADASS" } }, { "message": { "en_US": "[nods]", "de_DE": "[nickt]", "fr_FR": "fr_FR", "zh_CN": "[点头]", "ja_JP": "[うなずく]<<A<<[CHANGED 2017/08/03]", "langUid": 64, "ko_KR": "[끄덕]", "zh_TW": "[點頭]" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "NOD" } }, { "message": { "en_US": "Anyway, work is over now and I've got plenty of free time! I'm so ready!!", "de_DE": "Egal! Arbeit fertig, schön viel Zeit und jetzt wird gezockt!!", "fr_FR": "fr_FR", "zh_CN": "总之！我现在弄完了作业，是时候玩到爽啦！", "ja_JP": "ともかく課題は終わったし、\n自由な時間ならたっぷりあるよ！準備は万端！<<A<<[CHANGED 2017/08/03]", "langUid": 65, "ko_KR": "아무튼, 일은 끝냈으니 이제 자유 시간이야! 뭐든지 할 준비가 됐다고!", "zh_TW": "總之！我現在弄完作業了，可以玩到爽啦！<<A<<[CHANGED 2017/07/07]" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.emilie", "expression": "HAPPY" } }, { "message": { "en_US": "I'll try my best to beat that cave as quickly as possible. ", "de_DE": "Ich werd' jetzt den Turbo einlegen und die Höhle so schnell wie möglich erledigen.", "fr_FR": "fr_FR", "zh_CN": "我赶紧先去把树洞任务清了。", "ja_JP": "この洞窟を、できる限りの最速で\nクリアしちゃうんだから。<<A<<[CHANGED 2017/08/03]", "langUid": 66, "ko_KR": "최선을 다해서 최대한 빨리 동굴을 통과하고 말 거야.", "zh_TW": "我快點先去把樹洞任務清了。<<A<<[CHANGED 2017/07/07]" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.emilie", "expression": "DETERMINED" } }, { "message": { "en_US": "No rush! I suggest we meet in \\c[3]Ba'kii Kum\\c[0] in front of the \\c[3]Quest Hub\\c[0] once you're done.\\. Sounds good?", "de_DE": "Kein Grund zur Eile! Ich schlage vor, dass wir vor dem \\c[3]Quest Hub\\c[0] in \\c[3]Ba'kii Kum\\c[0] auf dich warten.\\. Einverstanden?", "fr_FR": "fr_FR", "zh_CN": "没事，不急。等你打完了我们在\\c[3]巴基库姆\\c[0]的\\c[3]任务中心\\c[0]会合。\\.可以吧？", "ja_JP": "急ぐことはないですよ！クエストが終わったら\n\\c[3]バキーイ・クム\\c[0]の\\c[3]クエストハブ\\c[0]の前で\n待ち合わせしませんか。\\.いい案でしょう？<<A<<[CHANGED 2017/08/03]", "langUid": 67, "ko_KR": "서두르진 마! 너 끝나고 나면 \\c[3]바키 쿰\\c[0]의 \\c[3]퀘스트 허브\\c[0] 앞에서 만나는 게 좋겠어.\\. 어때?", "zh_TW": "沒事，不急。等你打完了我們在\\c[3]巴基庫姆\\c[0]的\\c[3]任務中心\\c[0]會合。\\.可以吧？" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.glasses", "expression": "SMILE" } }, { "message": { "en_US": "Oui, très bien! See you soon!", "de_DE": "Oui, très bien! Bis gleich!", "fr_FR": "fr_FR", "zh_CN": "可以，没问题！那再见啦！", "ja_JP": "わあ、トレビアン！じゃあ後でね！<<A<<[CHANGED 2017/08/03]", "langUid": 68, "ko_KR": "그래, 좋아! 이따 보자!", "zh_TW": "可以，沒問題！那再見啦！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.emilie", "expression": "DEFAULT" } }, { "message": { "en_US": "Bye!", "de_DE": "Bye!", "fr_FR": "fr_FR", "zh_CN": "再见！", "ja_JP": "じゃあね！<<A<<[CHANGED 2017/08/03]", "langUid": 69, "ko_KR": "잘 가!", "zh_TW": "再見！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "DEFAULT" } }, { "side": "ALL", "type": "CLEAR_MSG" }, { "pos": { "x": 556, "y": 1008 }, "speed": "NORMAL", "transition": "EASE_IN_OUT", "wait": false, "waitSkip": 0, "zoom": 1, "type": "SET_CAMERA_POS" }, { "entity": { "player": true }, "action": [ { "entity": { "global": true, "name": "emilie" }, "rotate": true, "rotateSpeed": 3, "type": "SET_FACE_TO_ENTITY" } ], "repeating": true, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "party": "Member2" }, "action": [ { "entity": { "global": true, "name": "emilie" }, "rotate": true, "rotateSpeed": 3, "type": "SET_FACE_TO_ENTITY" } ], "repeating": true, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "global": true, "name": "shadGuard" }, "action": [ { "time": 0.5, "type": "WAIT" }, { "value": 1, "type": "SET_RELATIVE_SPEED" }, { "target": { "x": 560, "y": 988, "lvl": "0" }, "maxTime": 0, "distance": 0, "precise": true, "planOnly": false, "teleportOnFail": false, "type": "NAVIGATE_TO_POINT" }, { "face": "SOUTH", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "global": true, "name": "emilie" }, "action": [ { "value": 1, "type": "SET_RELATIVE_SPEED" }, { "target": { "x": 476, "y": 1052, "lvl": "1" }, "maxTime": 0, "distance": 0, "precise": false, "planOnly": false, "teleportOnFail": false, "type": "NAVIGATE_TO_POINT" }, { "target": { "x": 560, "y": 1008, "lvl": "0" }, "maxTime": 0, "distance": 0, "precise": true, "planOnly": false, "teleportOnFail": false, "type": "NAVIGATE_TO_POINT" } ], "repeating": false, "wait": true, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "global": true, "name": "emilie" }, "action": [ { "face": "NORTH", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" }, { "jumpHeight": "S", "wait": true, "ignoreSounds": true, "type": "JUMP" }, { "jumpHeight": "S", "wait": true, "ignoreSounds": true, "type": "JUMP" }, { "jumpHeight": "S", "wait": true, "ignoreSounds": true, "type": "JUMP" }, { "time": 0.3, "type": "WAIT" } ], "repeating": true, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "ignoreSlowDown": false, "type": "WAIT", "time": 0.5 }, { "pos": { "x": 472, "y": 1016 }, "speed": "NORMAL", "transition": "EASE_IN_OUT", "wait": false, "waitSkip": 0, "zoom": 1, "type": "SET_CAMERA_POS" }, { "ignoreSlowDown": false, "type": "WAIT", "time": 0.3 }, { "entity": { "player": true }, "action": [ { "face": "SOUTH", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "entity": { "party": "Member2" }, "action": [ { "face": "NORTH", "rotate": true, "rotateSpeed": 3, "type": "SET_FACE" } ], "repeating": false, "wait": false, "keepState": false, "immediately": false, "type": "DO_ACTION" }, { "side": "RIGHT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.lea", "expression": "DEFAULT" } }, { "side": "LEFT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.glasses", "expression": "EMBARRASSED" } }, { "message": { "en_US": "Wow, she sure is full of energy!", "de_DE": "Wow, die strotzt ja vor Energie!", "fr_FR": "fr_FR", "zh_CN": "她还真是元气型的呢！", "ja_JP": "ふう、彼女って本当に元気いっぱいですね！<<A<<[CHANGED 2017/08/03]", "langUid": 70, "ko_KR": "와, 정말 힘이 넘치는걸!", "zh_TW": "她還真是元氣型的呢！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.glasses", "expression": "EMBARRASSED" } }, { "message": { "en_US": "...", "de_DE": "...", "fr_FR": "fr_FR", "zh_CN": "...", "ja_JP": "...<<A<<[CHANGED 2017/08/03]", "langUid": 71, "ko_KR": "...", "zh_TW": "..." }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "SMILE" } }, { "type": "RESET_NPC", "npc": { "global": true, "name": "shadGuard" } }, { "changeType": "set", "type": "CHANGE_VAR_BOOL", "varName": "tmp.emilieGone", "value": true }, { "type": "RESET_NPC", "npc": { "global": true, "name": "emilie" } }, { "message": { "en_US": "Anyway! There is no reason to hurry, but I guess we can slowly head back to \\c[3]Ba'kii Kum\\c[0], right?", "de_DE": "Also, wir haben zwar noch Zeit, können aber trotzdem schon mal langsam Richtung \\c[3]Ba'kii Kum\\c[0] aufbrechen, oder?", "fr_FR": "fr_FR", "zh_CN": "那现在有的是时间，我们慢慢回\\c[3]巴基库姆\\c[0]，怎么样？", "ja_JP": "とにかく！急ぐ理由もないですし、ゆっくりと\n\\c[3]バキーイ・クム\\c[0]に戻るとしましょうか。<<A<<[CHANGED 2017/08/03]", "langUid": 72, "ko_KR": "아무튼! 서두를 필요는 없지만 슬슬 \\c[3]바키 쿰\\c[0]으로 다시 돌아가는 게 좋을 것 같아.", "zh_TW": "那現在有的是時間，我們慢慢回\\c[3]巴基庫姆\\c[0]，怎麼樣？" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.glasses", "expression": "TOWARD" } }, { "message": { "en_US": "[nods]", "de_DE": "[nickt]", "fr_FR": "fr_FR", "zh_CN": "[点头]", "ja_JP": "[うなずく]<<A<<[CHANGED 2017/08/03]", "langUid": 74, "ko_KR": "[끄덕]", "zh_TW": "[點頭]" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "NOD" } }, { "message": { "en_US": "Let's go then!", "de_DE": "Dann mal los!", "fr_FR": "fr_FR", "zh_CN": "那走吧！", "ja_JP": "さあ、行きましょう！<<A<<[CHANGED 2017/08/03]", "langUid": 81, "ko_KR": "그럼 출발하자!", "zh_TW": "那走吧！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.glasses", "expression": "DEFAULT" } }, { "side": "ALL", "type": "CLEAR_MSG" }, { "changeType": "set", "type": "CHANGE_VAR_NUMBER", "varName": "plot.heatLine", "value": 300 }, { "mode": "SLOW", "delayed": false, "type": "RESUME_DEFAULT_BGM" }, { "task": { "en_US": "You decided to meet up with Emilie in front of the \\c[3]Quest Hub\\c[0] of \\c[3]Ba'kii Kum\\c[0].", "de_DE": "Ihr habt beschlossen, euch mit Emilie vor dem \\c[3]Quest Hub\\c[0] in \\c[3]Ba'kii Kum\\c[0] zu treffen.", "fr_FR": "fr_FR", "zh_CN": "在\\c[3]巴基库姆\\c[0]的\\c[3]任务中心\\c[0]和\\c[3]艾米莉\\c[0]会合。", "ja_JP": "あなたはエミリーと\\c[3]バキーイ・クム\\c[0]の\n\\c[3]クエストハブ\\c[0]の前で待ち合わせることになった。<<A<<[CHANGED 2017/08/03]", "langUid": 88, "ko_KR": "\\c[3]바키 쿰\\c[0]의 \\c[3]퀘스트 허브\\c[0] 앞에서 에밀리를 만나기로 합니다.", "zh_TW": "在\\c[3]巴基庫姆\\c[0]的\\c[3]任務中心\\c[0]和\\c[3]艾米莉\\c[0]會合。" }, "type": "SET_PERMA_TASK" }, { "type": "SAVE" } ] } }, { "position": { "x": 596, "y": 1000, "lvl": "0" }, "reactType": "FIXED_POS", "face": "WEST", "action": [], "hidden": false, "condition": "quest.maroon-tree-defend.currentTask >= 3", "config": "normal", "event": [ { "side": "LEFT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "side": "RIGHT", "order": 5, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.lea", "expression": "DEFAULT" } }, { "message": { "en_US": "Human very nice, always helping us defeating Sandworm!", "de_DE": "Mensch sehr nett, immer helfen uns besiegen Sandwurm!", "fr_FR": "fr_FR", "zh_CN": "人类很友善，一直帮我们清除沙虫！", "ja_JP": "人間、すばらしい。いつもサンドワームを倒すのを手伝ってくれる。<<A<<[CHANGED 2017/08/03]", "langUid": 76, "ko_KR": "잘했어, 인간. 항상 갯지렁이 처치를 도와주는군!", "zh_TW": "人類很友善，一直幫我們清除沙蟲！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "But Sandworm always coming back, very pesky!", "de_DE": "Aber Sandwurm immer kommen zurück! Sehr nerven!", "fr_FR": "fr_FR", "zh_CN": "但是沙虫一直会回来！很讨厌！", "ja_JP": "だがサンドワーム、いつでも戻ってくる。とても厄介！<<A<<[CHANGED 2017/08/03]", "langUid": 77, "ko_KR": "하지만 갯지렁이는 다시 나타나지. 아주 성가셔!", "zh_TW": "但是沙蟲一直會回來！很討厭！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "Anyway, together we can protect tree!", "de_DE": "Doch zusammen wir können beschützen Baum!", "fr_FR": "fr_FR", "zh_CN": "总之，人类和沙德一起才能保卫巨树！", "ja_JP": "とにかく、我々で木を守ろう！<<A<<[CHANGED 2017/08/03]", "langUid": 78, "ko_KR": "아무튼, 우리가 함께하면 나무를 보호할 수 있을 거다!", "zh_TW": "總之，人類和沙德一起才能保衛巨樹！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } }, { "message": { "en_US": "[nods]", "de_DE": "[nickt]", "fr_FR": "fr_FR", "zh_CN": "[点头]", "ja_JP": "[うなずく]<<A<<[CHANGED 2017/08/03]", "langUid": 79, "ko_KR": "[끄덕]", "zh_TW": "[點頭]" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "NOD" } }, { "rumbleType": "HORIZONTAL", "name": "", "duration": 0.3, "power": "STRONGER", "speed": "FASTER", "fade": true, "type": "RUMBLE_SCREEN" }, { "type": "SET_MSG_EXPRESSION", "person": { "person": "main.lea", "expression": "PAIN_EYE_CLOSED" } }, { "message": { "en_US": "THANK YOU, HUMAN!!", "de_DE": "VIELEN DANK, MENSCH!!", "fr_FR": "fr_FR", "zh_CN": "谢 谢 你， 人 类 ！！", "ja_JP": "礼を言うぞ、人間！！<<A<<[CHANGED 2017/08/03]", "langUid": 80, "ko_KR": "고맙다, 인간!!", "zh_TW": "謝 謝 你， 人 類 ！！" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "baki.male-yellow-tall", "expression": "DEFAULT" } } ] }
-        ]
+        "content": [{
+            "reactType": "FIXED_POS",
+            "face": "SOUTH",
+            "action": [],
+            "hidden": false,
+            "condition": "",
+            "config": "normal",
+            "event": [{
+                "side": "LEFT",
+                "order": 0,
+                "clearSide": false,
+                "type": "ADD_MSG_PERSON",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "side": "RIGHT",
+                "order": 0,
+                "clearSide": false,
+                "type": "ADD_MSG_PERSON",
+                "person": {
+                    "person": "main.lea",
+                    "expression": "SHOCKED"
+                }
+            }, {
+                "rumbleType": "HORIZONTAL",
+                "name": "",
+                "duration": 0.3,
+                "power": "STRONGER",
+                "speed": "FASTER",
+                "fade": true,
+                "type": "RUMBLE_SCREEN"
+            }, {
+                "message": {
+                    "en_US": "STOP HUMAN!!",
+                    "de_DE": "STOP MENSCH!!",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "人类！停下！",
+                    "ja_JP": "止まれ、人間！<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 6,
+                    "ko_KR": "멈춰라 인간!!",
+                    "zh_TW": "人類！停下！"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                    "person": "main.lea",
+                    "expression": "SCARED"
+                }
+            }, {
+                "message": {
+                    "en_US": "You need \\c[3]Pass from Eldress\\c[0] if you want to enter Cave.",
+                    "de_DE": "Du brauchen \\c[3]Pass von Ältester\\c[0], wenn du wollen betreten Höhle.",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "想进洞窟，需要\\c[3]女族长的通行证\\c[0]。",
+                    "ja_JP": "洞窟の中入りたければ、\n\\c[3]長老からの通行証\\c[0]、必要。<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 8,
+                    "ko_KR": "동굴에 들어가려면 \\c[3]촌장님의 통행증\\c[0]이 필요하다.",
+                    "zh_TW": "想進洞窟，需要\\c[3]女族長的通行證\\c[0]。"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                    "person": "main.lea",
+                    "expression": "NERVOUS"
+                }
+            }, {
+                "message": {
+                    "en_US": "You find Eldress in \\c[3]Ba'kii Kum\\c[0], Shad village to the \\c[3]west\\c[0]!",
+                    "de_DE": "Du finden Älteste in \\c[3]Ba'kii Kum\\c[0], Shad-Dorf im \\c[3]Westen\\c[0]!",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "女族长在\\c[3]巴基库姆\\c[0]，沙德村的\\c[3]西边\\c[0]！",
+                    "ja_JP": "長老、ここから\\c[3]西\\c[0]に行ったシャッドの村、\n\\c[3]バキーイ・クム\\c[0]におられる！<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 9,
+                    "ko_KR": "촌장님은 \\c[3]서쪽\\c[0]에 있는 샤드의 마을인 \\c[3]바키 쿰\\c[0]에서 찾을 수 있지!",
+                    "zh_TW": "女族長在\\c[3]巴基庫姆\\c[0]，沙德村的\\c[3]西邊\\c[0]！"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "message": {
+                    "en_US": "...!",
+                    "de_DE": "...!",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "...!",
+                    "ja_JP": "...！<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 7,
+                    "ko_KR": "...!",
+                    "zh_TW": "...!"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "main.lea",
+                    "expression": "ASTONISHED"
+                }
+            }]
+        }, {
+            "reactType": "FIXED_POS",
+            "face": "SOUTH",
+            "action": [],
+            "hidden": false,
+            "condition": "quest.maroon-tree-defend.started && item.236.amount >= 1",
+            "config": "normal",
+            "event": {
+                "quest": [{
+                    "side": "LEFT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "RIGHT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "SHOCKED"
+                    }
+                }, {
+                    "rumbleType": "HORIZONTAL",
+                    "name": "",
+                    "duration": 0.3,
+                    "power": "STRONGER",
+                    "speed": "FASTER",
+                    "fade": true,
+                    "type": "RUMBLE_SCREEN"
+                }, {
+                    "message": {
+                        "en_US": "STOP HUMAN!!",
+                        "de_DE": "STOP MENSCH!!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "人类！停下！",
+                        "ja_JP": "止まれ、人間！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 10,
+                        "ko_KR": "멈춰라 인간!!",
+                        "zh_TW": "人類！停下！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "SCARED"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "You need \\c[3]Pass from Eldress\\c[0] if you want to enter Cave.",
+                        "de_DE": "Du brauchen \\c[3]Pass von Ältester\\c[0], wenn du wollen betreten Höhle.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "想进洞窟，需要\\c[3]女族长的通行证\\c[0]。",
+                        "ja_JP": "洞窟の中入りたければ、\n\\c[3]長老からの通行証\\c[0]、必要。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 11,
+                        "ko_KR": "동굴에 들어가려면 \\c[3]촌장님의 통행증\\c[0]이 필요하다.",
+                        "zh_TW": "想進洞窟，需要\\c[3]女族長的通行證\\c[0]。"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "RIGHT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.sergey",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Hey Lea, do you want to tackle the Maroon Tree Quest by yourself now?",
+                        "de_DE": "Hey Lea, willst du die Maronenbaum-Quest doch alleine machen?",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "呃...莉亚？你打算自己做褐红巨树任务吗？",
+                        "ja_JP": "ねえレア、マルーンの木のクエストに\n1人で挑むつもりなのかい？<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 82,
+                        "ko_KR": "안녕 레아, 지금 너 혼자서 단풍나무 퀘스트를 하려고?",
+                        "zh_TW": "呃...莉亞？你打算自己做褐紅巨樹任務嗎？"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.sergey",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "I thought you wanted to meet \\c[3]C'tron\\c[0]?",
+                        "de_DE": "Ich dachte, du wolltest \\c[3]C'tron\\c[0] nördlich von \\c[3]Ba'kii Kum\\c[0] treffen?",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "你不是说要跟\\c[3]西特隆\\c[0]在\\c[3]巴基库姆\\c[0]北方会合吗？",
+                        "ja_JP": "てっきり\\c[3]バキーイ・クム\\c[0]の北で\n\\c[3]シ・トロン\\c[0]と会うものだと思ってたんだけど。<<A<<[CHANGED 2017/12/11]",
+                        "langUid": 83,
+                        "ko_KR": "난 네가 \\c[3]바키 쿰\\c[0] 북쪽에서 \\c[3]시트론\\c[0]을 만나고 싶어 하는 줄 알았는데.<<A<<TODO 0.9.8",
+                        "zh_TW": "你不是說要跟\\c[3]西特隆\\c[0]在\\c[3]巴基庫姆\\c[0]北方會合嗎？<<A<<[CHANGED 2017/12/12]"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.sergey",
+                        "expression": "NOTIFYING"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "...!",
+                        "de_DE": "...!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "...!",
+                        "ja_JP": "...！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 12,
+                        "ko_KR": "...!",
+                        "zh_TW": "...!"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "SHOCKED"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "You forgot? Better don't let the poor guy wait for too long.",
+                        "de_DE": "Du hast es vergessen? Lass den Armen lieber nicht zu lange warten.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "你忘了啊？希望那家伙没等太久...",
+                        "ja_JP": "忘れてたのかい？かわいそうに、\n彼をあんまり待たせない方がいいよ。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 84,
+                        "ko_KR": "잊었어? 그 불쌍한 녀석을 오래 기다리게 하지는 말라고.",
+                        "zh_TW": "你忘了啊？希望那傢伙沒等太久..."
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.sergey",
+                        "expression": "ROLL_EYES"
+                    }
+                }, {
+                    "side": "ALL",
+                    "type": "CLEAR_MSG"
+                }]
+            }
+        }, {
+            "reactType": "FIXED_POS",
+            "face": "SOUTH",
+            "action": [],
+            "hidden": false,
+            "condition": "quest.maroon-tree-defend.started && party.has.Glasses && item.236.amount >= 1",
+            "config": "normal",
+            "event": {
+                "quest": [{
+                    "side": "LEFT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "RIGHT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "SHOCKED"
+                    }
+                }, {
+                    "side": "RIGHT",
+                    "order": 5,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "SHOCKED"
+                    }
+                }, {
+                    "rumbleType": "HORIZONTAL",
+                    "name": "",
+                    "duration": 0.3,
+                    "power": "STRONGER",
+                    "speed": "FASTER",
+                    "fade": true,
+                    "type": "RUMBLE_SCREEN"
+                }, {
+                    "message": {
+                        "en_US": "STOP HUMAN!!",
+                        "de_DE": "STOP MENSCH!!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "人类！停下！",
+                        "ja_JP": "止まれ、人間！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 85,
+                        "ko_KR": "멈춰라 인간!!",
+                        "zh_TW": "人類！停下！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "SCARED"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "You need \\c[3]Pass from Eldress\\c[0] if you want to enter Cave.",
+                        "de_DE": "Du brauchen \\c[3]Pass von Ältester\\c[0], wenn du wollen betreten Höhle.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "想进洞窟，需要\\c[3]女族长的通行证\\c[0]。",
+                        "ja_JP": "洞窟の中入りたければ、\n\\c[3]長老からの通行証\\c[0]、必要。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 86,
+                        "ko_KR": "동굴에 들어가려면 \\c[3]촌장님의 통행증\\c[0]이 필요하다.",
+                        "zh_TW": "想進洞窟，需要\\c[3]女族長的通行證\\c[0]。"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "...!",
+                        "de_DE": "...!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "...!",
+                        "ja_JP": "...！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 87,
+                        "ko_KR": "...!",
+                        "zh_TW": "...!"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "PROUD"
+                    }
+                }, {
+                    "rumbleType": "HORIZONTAL",
+                    "name": "",
+                    "duration": 0.3,
+                    "power": "STRONGER",
+                    "speed": "FASTER",
+                    "fade": true,
+                    "type": "RUMBLE_SCREEN"
+                }, {
+                    "message": {
+                        "en_US": "Oh! Is that the pass?\\. So Human must be here to help \\c[3]defeat Sandworm\\c[0]!",
+                        "de_DE": "Oh! Ist das Pass?\\. Also Mensch muss sein hier, um zu helfen \\c[3]Sandwurm besiegen\\c[0]!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "哦，你有通行证啊？\\.那人类一定是来\\c[3]击败沙虫\\c[0]的吧！",
+                        "ja_JP": "おや！これは通行証か？\\.では人間、\n\\c[3]サンドワームを倒す\\c[0]手伝いに来てくれたのだな！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 14,
+                        "ko_KR": "아, 통행증을 가지고 있나?\\. 그렇다면 \\c[3]갯지렁이를 물리치는 걸\\c[0] 도와주려고 왔구먼!",
+                        "zh_TW": "哦，你有通行證啊？\\.那人類一定是來\\c[3]擊敗沙蟲\\c[0]的吧！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "[nods]",
+                        "de_DE": "[nickt]",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "[点头]",
+                        "ja_JP": "[うなずく]<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 15,
+                        "ko_KR": "[끄덕]",
+                        "zh_TW": "[點頭]"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "NOD"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "SHOCKED"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "SHOCKED"
+                    }
+                }, {
+                    "rumbleType": "HORIZONTAL",
+                    "name": "",
+                    "duration": 0.3,
+                    "power": "STRONGER",
+                    "speed": "FASTER",
+                    "fade": true,
+                    "type": "RUMBLE_SCREEN"
+                }, {
+                    "message": {
+                        "en_US": "GREAT!! ",
+                        "de_DE": "TOLL!!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "太 好 了！",
+                        "ja_JP": "すばらしい！！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 16,
+                        "ko_KR": "좋아!!",
+                        "zh_TW": "太 好 了！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "ANNOYED"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "EMBARRASSED"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Then please enter Cave and defeat all Sandworm!",
+                        "de_DE": "Dann bitte betreten Höhle und besiegen alle Sandwürmer!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "请进入洞穴，然后干掉所有的沙虫！",
+                        "ja_JP": "洞窟の中入って、サンドワームすべて、\n倒してくれ！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 17,
+                        "ko_KR": "그럼 어서 동굴에 들어가서 갯지렁이를 물리치도록 해!",
+                        "zh_TW": "請進入洞穴，然後幹掉所有的沙蟲！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "That is all!",
+                        "de_DE": "Das sein alles!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "就这样！",
+                        "ja_JP": "以上だ！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 18,
+                        "ko_KR": "그거면 돼!",
+                        "zh_TW": "就這樣！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "...",
+                        "de_DE": "...",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "...",
+                        "ja_JP": "...<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 19,
+                        "ko_KR": "...",
+                        "zh_TW": "..."
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "SURPRISED_AWAY"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "...!",
+                        "de_DE": "...!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "...!",
+                        "ja_JP": "...！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 20,
+                        "ko_KR": "...!",
+                        "zh_TW": "...!"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "PROUD"
+                    }
+                }, {
+                    "side": "ALL",
+                    "type": "CLEAR_MSG"
+                }, {
+                    "entity": {
+                        "self": true
+                    },
+                    "action": [{
+                        "value": true,
+                        "type": "SET_SLIP_THROUGH"
+                    }, {
+                        "target": {
+                            "x": 596,
+                            "y": 1000,
+                            "lvl": "0"
+                        },
+                        "precise": true,
+                        "type": "MOVE_TO_POINT"
+                    }, {
+                        "face": "WEST",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "player": true
+                    },
+                    "action": [{
+                        "value": true,
+                        "type": "SET_SLIP_THROUGH"
+                    }, {
+                        "time": 0.1,
+                        "type": "WAIT"
+                    }, {
+                        "target": {
+                            "x": 572,
+                            "y": 1008,
+                            "lvl": "0"
+                        },
+                        "precise": true,
+                        "type": "MOVE_TO_POINT"
+                    }, {
+                        "face": "NORTH",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "party": "Member2"
+                    },
+                    "action": [{
+                        "value": true,
+                        "type": "SET_SLIP_THROUGH"
+                    }, {
+                        "time": 0.1,
+                        "type": "WAIT"
+                    }, {
+                        "target": {
+                            "x": 548,
+                            "y": 1008,
+                            "lvl": "0"
+                        },
+                        "precise": true,
+                        "type": "MOVE_TO_POINT"
+                    }, {
+                        "face": "NORTH",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "player": true
+                    },
+                    "type": "WAIT_UNTIL_ACTION_DONE"
+                }, {
+                    "entity": {
+                        "party": "Member2"
+                    },
+                    "type": "WAIT_UNTIL_ACTION_DONE"
+                }, {
+                    "ignoreSlowDown": false,
+                    "type": "WAIT",
+                    "time": 0.2
+                }, {
+                    "entity": {
+                        "party": "Member2"
+                    },
+                    "action": [{
+                        "value": 0.5,
+                        "type": "SET_RELATIVE_SPEED"
+                    }, {
+                        "time": 0.3,
+                        "stopBeforeEdge": false,
+                        "type": "MOVE_FORWARD"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "player": true
+                    },
+                    "action": [{
+                        "value": 0.5,
+                        "type": "SET_RELATIVE_SPEED"
+                    }, {
+                        "time": 0.3,
+                        "stopBeforeEdge": false,
+                        "type": "MOVE_FORWARD"
+                    }],
+                    "repeating": false,
+                    "wait": true,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "self": true
+                    },
+                    "action": [{
+                        "jumpHeight": "L",
+                        "wait": true,
+                        "ignoreSounds": false,
+                        "type": "JUMP"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "self": true
+                    },
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "speed": "FAST",
+                    "transition": "EASE_IN_OUT",
+                    "wait": false,
+                    "waitSkip": 0,
+                    "zoom": 1,
+                    "type": "SET_CAMERA_TARGET"
+                }, {
+                    "entity": {
+                        "player": true
+                    },
+                    "action": [{
+                        "face": "EAST",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "party": "Member2"
+                    },
+                    "action": [{
+                        "face": "EAST",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "side": "LEFT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "RIGHT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "SHOCKED"
+                    }
+                }, {
+                    "side": "RIGHT",
+                    "order": 5,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "SHOCKED"
+                    }
+                }, {
+                    "rumbleType": "HORIZONTAL",
+                    "name": "",
+                    "duration": 0.3,
+                    "power": "STRONGER",
+                    "speed": "FASTER",
+                    "fade": true,
+                    "type": "RUMBLE_SCREEN"
+                }, {
+                    "message": {
+                        "en_US": "WAIT!! ",
+                        "de_DE": "WARTEN!!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "等 等 ！",
+                        "ja_JP": "待った！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 21,
+                        "ko_KR": "잠깐!",
+                        "zh_TW": "等 等 ！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "MOPING"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "THOUGHTFUL"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Shad almost forgot!",
+                        "de_DE": "Shad fast vergessen!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "沙德差点忘了！",
+                        "ja_JP": "忘れるところだった！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 22,
+                        "ko_KR": "잊은 게 있군!",
+                        "zh_TW": "沙德差點忘了！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "There is very strong \\c[3]red sandworm\\c[0] in cave!",
+                        "de_DE": "Da sein sehr starker \\c[3]roter Sandwurm\\c[0] in Höhle!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "洞穴里头有一条强力的\\c[3]红沙虫\\c[0]！",
+                        "ja_JP": "洞窟の中の\\c[3]レッドサンドワーム\\c[0]、\nとても手強いぞ！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 23,
+                        "ko_KR": "동굴 안에는 매우 강력한 \\c[3]붉은 갯지렁이\\c[0]가 있다!",
+                        "zh_TW": "洞穴裡頭有一條強力的\\c[3]紅沙蟲\\c[0]！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Please defeat that worm! Most important, because very dangerous to tree!",
+                        "de_DE": "Bitte besiegen den Wurm! Am meisten wichtig, weil sehr gefährlich für Baum!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "切记要干掉它！它对树木很危险！",
+                        "ja_JP": "そのワーム、倒してくれ！\n木にとって一番重大な脅威だ！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 24,
+                        "ko_KR": "그 갯지렁이를 처치해! 그 녀석이 나무에 제일 해롭기 때문에 그 녀석을 처치하는 게 중요해!",
+                        "zh_TW": "切記要幹掉它！它對樹木很危險！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Red Sandworm will also drop \\c[3]strange item\\c[0]! Show me item to prove you defeated red sandworm, ok?",
+                        "de_DE": "Roter Sandwurm wird auch geben \\c[3]komisches Item\\c[0]! Zeigen mir Item um beweisen du getötet roten Sandwurm, ok?",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "红沙虫还会掉落\\c[3]特殊物品\\c[0]！把它干掉之后拿给我看就行！",
+                        "ja_JP": "レッドサンドワーム、\\c[3]妙なアイテム\\c[0]を落とす！\nレッドサンドワームを倒した証に、\nそれ私に見せてくれ。いいか？<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 25,
+                        "ko_KR": "붉은 갯지렁이를 처치하면 \\c[3]이상한 아이템\\c[0]이 나올 거다! 녀석을 처치했다는 증거로 그 아이템을 나에게 가져오면 된다.<<A<<[CHANGED 2017/07/21]",
+                        "zh_TW": "紅沙蟲還會掉落\\c[3]特殊物品\\c[0]！把它幹掉之後拿給我看就行！<<A<<[CHANGED 2017/07/11]"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "[nods]",
+                        "de_DE": "[nickt]",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "[点头]",
+                        "ja_JP": "[うなずく]<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 26,
+                        "ko_KR": "[끄덕]",
+                        "zh_TW": "[點頭]"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "NOD"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "PAIN_EYE_CLOSED"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "PAIN"
+                    }
+                }, {
+                    "rumbleType": "HORIZONTAL",
+                    "name": "",
+                    "duration": 0.3,
+                    "power": "STRONGER",
+                    "speed": "FASTER",
+                    "fade": true,
+                    "type": "RUMBLE_SCREEN"
+                }, {
+                    "message": {
+                        "en_US": "ALRIGHT!!",
+                        "de_DE": "ALLES KLAR!!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "好 的 ！",
+                        "ja_JP": "よし！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 27,
+                        "ko_KR": "좋아!!",
+                        "zh_TW": "好 的 ！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Good luck, Human!",
+                        "de_DE": "Viel Glück, Mensch!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "祝你好运，人类！",
+                        "ja_JP": "武運を祈るぞ、人間！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 28,
+                        "ko_KR": "행운을 빌지, 인간!",
+                        "zh_TW": "祝你好運，人類！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "changeType": "set",
+                    "type": "CHANGE_VAR_BOOL",
+                    "varName": "map.caveAccess",
+                    "value": true
+                }, {
+                    "type": "SOLVE_QUEST_CONDITION",
+                    "quest": {
+                        "quest": "maroon-tree-defend",
+                        "label": "cave-access"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Gosh...\\. what a loud fellow.",
+                        "de_DE": "Oh Mann...\\. was für ein lauter Kerl.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "哇...\\.这家伙说话真大声。",
+                        "ja_JP": "まったく...\\.声の大きい人ですね。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 29,
+                        "ko_KR": "거 참...\\. 시끄러운 녀석이네.",
+                        "zh_TW": "哇...\\.這傢伙說話真大聲。"
+                    },
+                    "type": "SHOW_SIDE_MSG",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "EMBARRASSED"
+                    }
+                }]
+            }
+        }, {
+            "position": {
+                "x": 596,
+                "y": 1000,
+                "lvl": "0"
+            },
+            "reactType": "FIXED_POS",
+            "face": "WEST",
+            "action": [],
+            "hidden": false,
+            "condition": "quest.maroon-tree-defend.task.1",
+            "config": "normal",
+            "event": [{
+                "side": "LEFT",
+                "order": 0,
+                "clearSide": false,
+                "type": "ADD_MSG_PERSON",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "side": "RIGHT",
+                "order": 5,
+                "clearSide": false,
+                "type": "ADD_MSG_PERSON",
+                "person": {
+                    "person": "main.lea",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "message": {
+                    "en_US": "Human very nice, always helping us defeating Sandworm!",
+                    "de_DE": "Mensch sehr nett, immer helfen uns besiegen Sandwurm!",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "人类很友善，一直帮我们清除沙虫！",
+                    "ja_JP": "人間、すばらしい。いつもサンドワームを\n倒すのを手伝ってくれる。<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 35,
+                    "ko_KR": "수고한다, 인간. 항상 갯지렁이를 물리쳐주다니!",
+                    "zh_TW": "人類很友善，一直幫我們清除沙蟲！"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "message": {
+                    "en_US": "But Sandworm always coming back, very pesky!",
+                    "de_DE": "Aber Sandwurm immer kommen zurück! Sehr nerven!",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "但是沙虫一直会回来！很讨厌！",
+                    "ja_JP": "だがサンドワーム、いつでも戻ってくる。とても厄介！<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 30,
+                    "ko_KR": "하지만 갯지렁이는 다시 나타나지. 아주 성가셔!",
+                    "zh_TW": "但是沙蟲一直會回來！很討厭！"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "message": {
+                    "en_US": "Anyway, together we can protect tree!",
+                    "de_DE": "Doch zusammen wir können beschützen Baum!",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "总之，人类和沙德一起才能保卫巨树！",
+                    "ja_JP": "とにかく、我々で木を守ろう！<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 31,
+                    "ko_KR": "아무튼, 우리가 함께하면 나무를 보호할 수 있을 거다!",
+                    "zh_TW": "總之，人類和沙德一起才能保衛巨樹！"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "message": {
+                    "en_US": "[nods]",
+                    "de_DE": "[nickt]",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "[点头]",
+                    "ja_JP": "[うなずく]<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 32,
+                    "ko_KR": "[끄덕]",
+                    "zh_TW": "[點頭]"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "main.lea",
+                    "expression": "NOD"
+                }
+            }, {
+                "rumbleType": "HORIZONTAL",
+                "name": "",
+                "duration": 0.3,
+                "power": "STRONGER",
+                "speed": "FASTER",
+                "fade": true,
+                "type": "RUMBLE_SCREEN"
+            }, {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                    "person": "main.lea",
+                    "expression": "PAIN_EYE_CLOSED"
+                }
+            }, {
+                "message": {
+                    "en_US": "THANK YOU, HUMAN!!",
+                    "de_DE": "VIELEN DANK, MENSCH!!",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "谢 谢 你！人 类！",
+                    "ja_JP": "礼を言うぞ、人間！！<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 33,
+                    "ko_KR": "고맙다, 인간!!",
+                    "zh_TW": "謝 謝 你！人 類！"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }]
+        }, {
+            "position": {
+                "x": 596,
+                "y": 1000,
+                "lvl": "0"
+            },
+            "reactType": "FIXED_POS",
+            "face": "WEST",
+            "action": [],
+            "hidden": false,
+            "condition": "quest.maroon-tree-defend.task.2 && party.has.Glasses",
+            "config": "normal",
+            "event": {
+                "quest": [{
+                    "type": "SET_MEMBER_LOCKED",
+                    "member": "Glasses",
+                    "locked": true
+                }, {
+                    "side": "LEFT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "RIGHT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "PAIN_EYE_CLOSED"
+                    }
+                }, {
+                    "side": "RIGHT",
+                    "order": 5,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "PAIN"
+                    }
+                }, {
+                    "rumbleType": "HORIZONTAL",
+                    "name": "",
+                    "duration": 0.3,
+                    "power": "STRONGER",
+                    "speed": "FASTER",
+                    "fade": true,
+                    "type": "RUMBLE_SCREEN"
+                }, {
+                    "message": {
+                        "en_US": "HUMAN!!",
+                        "de_DE": "MENSCH!!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "人 类！！",
+                        "ja_JP": "人間！！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 37,
+                        "ko_KR": "인간!!",
+                        "zh_TW": "人 類！！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "ANNOYED"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "EXHAUSTED"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Did you kill all Sandworm?",
+                        "de_DE": "Du töten alle Sandwürmer?",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "你把沙虫都消灭了吗？",
+                        "ja_JP": "サンドワーム、すべて倒してきたか？<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 38,
+                        "ko_KR": "갯지렁이를 전부 처치했나?",
+                        "zh_TW": "你把沙蟲都消滅了嗎？"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "...!",
+                        "de_DE": "...!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "...!",
+                        "ja_JP": "...！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 39,
+                        "ko_KR": "...!",
+                        "zh_TW": "...!"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "PROUD"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "I see you have strange item!\\. Please give me!",
+                        "de_DE": "Ich sehen du haben komisches Item!\\. Bitte geben mir!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "我看你已经拿到了特殊物品！\\.请把它交给我！",
+                        "ja_JP": "妙なアイテムも持っているようだな！\\.渡してくれ！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 40,
+                        "ko_KR": "그 특이한 아이템을 가지고 있군!\\. 나에게 주도록!",
+                        "zh_TW": "我看你已經拿到了特殊物品！\\.請把它交給我！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "ALL",
+                    "type": "CLEAR_MSG"
+                }, {
+                    "item": "362",
+                    "amount": 1,
+                    "type": "REMOVE_ITEM"
+                }, {
+                    "msgType": "REMOVED",
+                    "object": {
+                        "en_US": "\\v[item.362.name]",
+                        "de_DE": "Ti'im-Residuum",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "\\v[item.362.name]",
+                        "ja_JP": "\\v[item.362.name]<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 36,
+                        "ko_KR": "\\v[item.362.name]",
+                        "zh_TW": "\\v[item.362.name]"
+                    },
+                    "type": "SHOW_GET_MSG"
+                }, {
+                    "side": "LEFT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "RIGHT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "RIGHT",
+                    "order": 5,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Strange item very good for Maroon Tree!\\. Putting in earth helps to grow!",
+                        "de_DE": "Komisches Item sehr gut für Maronenbaum!\\. In Erde stecken helfen wachsen!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "特殊物品对巨树很好！\\.放进土里长得更好！",
+                        "ja_JP": "妙なアイテム、マルーンの木の役に立つ！\n\\. 土に埋めると成長を助ける！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 41,
+                        "ko_KR": "이 아이템은 단풍나무에 아주 좋지!\\. 땅에 뿌리면 성장을 돕는다고!",
+                        "zh_TW": "特殊物品對巨樹很好！\\.放進土里長得更好！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "...",
+                        "de_DE": "...",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "...",
+                        "ja_JP": "...<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 42,
+                        "ko_KR": "...",
+                        "zh_TW": "..."
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "SURPRISED_AWAY"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Wait...\\. so I guess that stuff was...\\. dung?",
+                        "de_DE": "Moment...\\. das heißt, das Zeug war...\\. Dung?",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "等等...\\.那该不会是...\\.大便吧？",
+                        "ja_JP": "待って...\\.ということはそのアイテムは...\n\\.フンなんですか？<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 43,
+                        "ko_KR": "잠깐...\\. 그럼 그게...\\. 거름이었어?",
+                        "zh_TW": "等等...\\.那該不會是...\\.大便吧？"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "THOUGHTFUL"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "...",
+                        "de_DE": "...",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "...",
+                        "ja_JP": "...<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 44,
+                        "ko_KR": "...",
+                        "zh_TW": "..."
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "DISGUSTED"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Good thing we got rid of it.",
+                        "de_DE": "Gut, dass wir das los sind.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "还好给他了，不然带在身上。",
+                        "ja_JP": "手放せてよかったですね。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 45,
+                        "ko_KR": "처분해서 다행이야.",
+                        "zh_TW": "還好給他了，不然帶在身上。"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "EMBARRASSED"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "PAIN_EYE_CLOSED"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "PAIN"
+                    }
+                }, {
+                    "rumbleType": "HORIZONTAL",
+                    "name": "",
+                    "duration": 0.3,
+                    "power": "STRONGER",
+                    "speed": "FASTER",
+                    "fade": true,
+                    "type": "RUMBLE_SCREEN"
+                }, {
+                    "message": {
+                        "en_US": "HUMAN!",
+                        "de_DE": "MENSCH!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "人 类 ！",
+                        "ja_JP": "人間！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 46,
+                        "ko_KR": "인간!",
+                        "zh_TW": "人 類 ！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Please hand me pass.",
+                        "de_DE": "Bitte geben mir Pass.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "请给我通行证。",
+                        "ja_JP": "通行証を渡してくれ。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 47,
+                        "ko_KR": "통행증을 주게.",
+                        "zh_TW": "請給我通行證。"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "...!",
+                        "de_DE": "...!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "...!",
+                        "ja_JP": "...！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 48,
+                        "ko_KR": "...!",
+                        "zh_TW": "...!"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "ANNOYED"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "I make note for Eldress!\\. You can now go and get \\c[3]Shiny Orb\\c[0]!",
+                        "de_DE": "Ich machen darauf Notiz für Älteste!\\. Du können nun gehen und empfangen \\c[3]Glänzende Kugel\\c[0]!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "我会在上面说明的！\\.这样你就可以拿到\\c[3]闪光球\\c[0]了！",
+                        "ja_JP": "長老向けにメモを書く！\\.彼女のところに行って\n\\c[3]光のオーブ\\c[0]をもらうといい！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 49,
+                        "ko_KR": "촌장님에게는 말씀드렸다!\\. 가서 \\c[3]빛나는 구슬\\c[0]을 받으면 돼!<<A<<[CHANGED 2017/07/21]",
+                        "zh_TW": "我會在上面說明的！\\.這樣你就可以拿到\\c[3]閃光球\\c[0]了！<<A<<[CHANGED 2017/07/11]"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "changeType": "set",
+                    "type": "CHANGE_VAR_BOOL",
+                    "varName": "tmp.emilieThere",
+                    "value": true
+                }, {
+                    "entity": {
+                        "global": true,
+                        "name": "emilie"
+                    },
+                    "action": [{
+                        "target": {
+                            "x": 392,
+                            "y": 956,
+                            "lvl": "1"
+                        },
+                        "maxTime": 0,
+                        "distance": 0,
+                        "precise": false,
+                        "planOnly": false,
+                        "teleportOnFail": false,
+                        "type": "NAVIGATE_TO_POINT"
+                    }, {
+                        "value": 0.5,
+                        "type": "SET_RELATIVE_SPEED"
+                    }, {
+                        "target": {
+                            "x": 408,
+                            "y": 1016,
+                            "lvl": "1"
+                        },
+                        "maxTime": 0,
+                        "distance": 0,
+                        "precise": true,
+                        "planOnly": false,
+                        "teleportOnFail": false,
+                        "type": "NAVIGATE_TO_POINT"
+                    }, {
+                        "face": "EAST",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "message": {
+                        "en_US": "Thanks a lot for help.",
+                        "de_DE": "Vielen Dank für Hilfe.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "感谢你们的帮助。",
+                        "ja_JP": "助けてくれて本当にありがとう。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 50,
+                        "ko_KR": "도와줘서 고맙군.",
+                        "zh_TW": "感謝你們的幫助。"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "...!",
+                        "de_DE": "...!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "...!",
+                        "ja_JP": "...！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 51,
+                        "ko_KR": "...!",
+                        "zh_TW": "...!"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "PROUD"
+                    }
+                }, {
+                    "rumbleType": "HORIZONTAL",
+                    "name": "",
+                    "duration": 0.3,
+                    "power": "STRONGER",
+                    "speed": "FASTER",
+                    "fade": true,
+                    "type": "RUMBLE_SCREEN"
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "PAIN_EYE_CLOSED"
+                    }
+                }, {
+                    "type": "SET_MSG_EXPRESSION",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "PAIN"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "BYE HUMAN!!",
+                        "de_DE": "TSCHÜSS, MENSCH!!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "再 见 ！人 类 ！！",
+                        "ja_JP": "さらばだ、人間！！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 52,
+                        "ko_KR": "잘 가라, 인간!!",
+                        "zh_TW": "再 見 ！人 類 ！！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "baki.male-yellow-tall",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "ALL",
+                    "type": "CLEAR_MSG"
+                }, {
+                    "type": "SOLVE_QUEST_CONDITION",
+                    "quest": {
+                        "quest": "maroon-tree-defend",
+                        "label": "item-given"
+                    }
+                }, {
+                    "mode": "MEDIUM",
+                    "type": "PAUSE_BGM"
+                }, {
+                    "ignoreSlowDown": false,
+                    "type": "WAIT",
+                    "time": 0.5
+                }, {
+                    "pos": {
+                        "x": 412,
+                        "y": 1020
+                    },
+                    "speed": "FAST",
+                    "transition": "EASE_IN_OUT",
+                    "wait": true,
+                    "waitSkip": 0,
+                    "zoom": 1,
+                    "type": "SET_CAMERA_POS"
+                }, {
+                    "entity": {
+                        "global": true,
+                        "name": "emilie"
+                    },
+                    "type": "WAIT_UNTIL_ACTION_DONE"
+                }, {
+                    "entity": {
+                        "global": true,
+                        "name": "emilie"
+                    },
+                    "action": [{
+                        "jumpHeight": "XL",
+                        "wait": true,
+                        "ignoreSounds": false,
+                        "type": "JUMP"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "player": true
+                    },
+                    "action": [{
+                        "time": 0.2,
+                        "type": "WAIT"
+                    }, {
+                        "face": "WEST",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "party": "Member2"
+                    },
+                    "action": [{
+                        "time": 0.3,
+                        "type": "WAIT"
+                    }, {
+                        "face": "WEST",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "side": "LEFT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.emilie",
+                        "expression": "SMILE"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Bonjour!",
+                        "de_DE": "Bonjour!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "嗨！",
+                        "ja_JP": "ボンジュール！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 53,
+                        "ko_KR": "안녕!",
+                        "zh_TW": "嗨！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.emilie",
+                        "expression": "SMILE"
+                    }
+                }, {
+                    "side": "ALL",
+                    "type": "CLEAR_MSG"
+                }, {
+                    "bgm": "casual",
+                    "volume": 1,
+                    "mode": "IMMEDIATELY",
+                    "type": "PLAY_BGM"
+                }, {
+                    "pos": {
+                        "x": 464,
+                        "y": 1016
+                    },
+                    "speed": "NORMAL",
+                    "transition": "EASE_IN_OUT",
+                    "wait": false,
+                    "waitSkip": 0,
+                    "zoom": 1,
+                    "type": "SET_CAMERA_POS"
+                }, {
+                    "entity": {
+                        "global": true,
+                        "name": "emilie"
+                    },
+                    "action": [{
+                        "value": 0.5,
+                        "type": "SET_RELATIVE_SPEED"
+                    }, {
+                        "target": {
+                            "x": 436,
+                            "y": 1016,
+                            "lvl": "1"
+                        },
+                        "maxTime": 0,
+                        "distance": 0,
+                        "precise": true,
+                        "planOnly": false,
+                        "teleportOnFail": false,
+                        "type": "NAVIGATE_TO_POINT"
+                    }, {
+                        "face": "EAST",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "player": true
+                    },
+                    "action": [{
+                        "value": "IGNORE",
+                        "type": "SET_COLL_TYPE"
+                    }, {
+                        "value": 0.5,
+                        "type": "SET_RELATIVE_SPEED"
+                    }, {
+                        "target": {
+                            "x": 504,
+                            "y": 1000,
+                            "lvl": "0"
+                        },
+                        "maxTime": 0,
+                        "distance": 0,
+                        "precise": false,
+                        "planOnly": false,
+                        "teleportOnFail": false,
+                        "type": "NAVIGATE_TO_POINT"
+                    }, {
+                        "target": {
+                            "x": 472,
+                            "y": 1000,
+                            "lvl": "1"
+                        },
+                        "precise": true,
+                        "forceTime": false,
+                        "type": "MOVE_TO_POINT"
+                    }, {
+                        "face": "WEST",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "party": "Member2"
+                    },
+                    "action": [{
+                        "value": "IGNORE",
+                        "type": "SET_COLL_TYPE"
+                    }, {
+                        "value": 0.5,
+                        "type": "SET_RELATIVE_SPEED"
+                    }, {
+                        "target": {
+                            "x": 468,
+                            "y": 1032,
+                            "lvl": "1"
+                        },
+                        "maxTime": 0,
+                        "distance": 0,
+                        "precise": true,
+                        "planOnly": false,
+                        "teleportOnFail": false,
+                        "type": "NAVIGATE_TO_POINT"
+                    }, {
+                        "face": "WEST",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "player": true
+                    },
+                    "type": "WAIT_UNTIL_ACTION_DONE"
+                }, {
+                    "side": "LEFT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.emilie",
+                        "expression": "SMILE"
+                    }
+                }, {
+                    "side": "RIGHT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "RIGHT",
+                    "order": 5,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Gotcha, you little runaways!",
+                        "de_DE": "Hab ich euch, ihr kleinen Ausreißer!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "逮住你了，你个小鬼精灵！",
+                        "ja_JP": "見つけたよ、抜け駆けのお2人さん！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 54,
+                        "ko_KR": "잡았다, 어딜 도망가려고!",
+                        "zh_TW": "逮住你了，你個小鬼精靈！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.emilie",
+                        "expression": "DETERMINED"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Hi!",
+                        "de_DE": "Hi!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "你好！",
+                        "ja_JP": "やぁ！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 55,
+                        "ko_KR": "안녕!",
+                        "zh_TW": "你好！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "PROUD"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Hi Emilie, it's nice to finally meet you!",
+                        "de_DE": "Hallo, Emilie! Schön, dich endlich kennenzulernen!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "你好，艾米莉，总算见到你了。",
+                        "ja_JP": "やぁエミリー、ようやく会えて嬉しいです！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 56,
+                        "ko_KR": "드디어 널 만나게 되다니, 반가워 에밀리!",
+                        "zh_TW": "你好，艾米莉，總算見到你了。<<A<<[CHANGED 2017/06/30]"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "SMILE"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Oui!\\. Nice to meet you, too!",
+                        "de_DE": "Oui!\\. Dito!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "嘿！\\.你好啊！",
+                        "ja_JP": "ええ！\\.こっちこそはじめまして！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 57,
+                        "ko_KR": "그래!\\. 나도 만나서 반가워!",
+                        "zh_TW": "嘿！\\.你好啊！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.emilie",
+                        "expression": "SMILE"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "And again...\\. I'm sorry we didn't wait for you.",
+                        "de_DE": "Tschuldige nochmal, dass wir nicht auf dich gewartet haben.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "嗯...\\.上次没有等你真是抱歉。",
+                        "ja_JP": "それから...\\.先にクエストを\n始めちゃってごめんなさい。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 58,
+                        "ko_KR": "그리고...\\. 널 기다려주지 못해서 미안해.",
+                        "zh_TW": "嗯...\\.上次沒有等你真是抱歉。"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "EMBARRASSED"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "No really, it's fine.\\. We never made any plans, anyway.",
+                        "de_DE": "Nein, das ist wirklich in Ordnung.\\. Das war nur eine lose Verabredung.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "没事啦没事。\\.我们本来就没计划的。",
+                        "ja_JP": "いいよ、大丈夫。\\.計画とか立てて\nやったことなんてないしさ。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 59,
+                        "ko_KR": "아냐, 괜찮아.\\. 미리 말해놨던 것도 아니고.",
+                        "zh_TW": "沒事啦沒事。\\.我們本來就沒計劃的。"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.emilie",
+                        "expression": "CURIOUS"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "And I can understand why you'd play ahead.\\. I've been offline for quite some time.",
+                        "de_DE": "Und ich verstehe, warum du weitergespielt hast.\\. Ich war jetzt schon eine ganze Weile offline.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "而且我也理解你们俩往前打了。\\.我挺长时间没上线。",
+                        "ja_JP": "それに、先にプレイしたのも無理ないよ。\n\\.私、最近オフラインでいることが多かったから。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 60,
+                        "ko_KR": "그리고 네가 왜 그렇게 먼저 진행했는지 이해해.\\. 내가 꽤 오랫동안 오프라인이었으니까.",
+                        "zh_TW": "而且我也理解你們兩個往前打了。\\.我很長一段時間沒上線。"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.emilie",
+                        "expression": "EXHAUSTED"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "It's just that...\\. I really had to wrap up everything for that project.",
+                        "de_DE": "Mich ärgert bloß...\\. dass ich wirklich einiges für das Projekt erledigen musste.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "主要是...\\.作业那事忙的脱不开身。",
+                        "ja_JP": "なんというか、ほら...\\.課題を全部\n仕上げなくちゃいけなかったからさ。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 61,
+                        "ko_KR": "그냥...\\. 프로젝트를 마무리 지어야 할 게 있었거든.",
+                        "zh_TW": "主要是...\\.作業的事忙的我脫不開身。"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.emilie",
+                        "expression": "MOPING"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Gosh...\\. Studies keeping you busy, huh?",
+                        "de_DE": "Oh Mann...\\. Das Studium hält dich ganz schön auf Trab, was?",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "呵...\\.学业在身呐。",
+                        "ja_JP": "なんとまあ...\\.勉強でお忙しいんですね。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 62,
+                        "ko_KR": "이런...\\. 공부 때문에 바쁜가 봐?",
+                        "zh_TW": "呵...\\.學業在身吶。"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "SURPRISED"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Oui, oui.\\. And you don't even know half of the story yet, isn't that right, Lea?",
+                        "de_DE": "Oui, oui.\\. Und du kennst nicht mal die Hälfte der Geschichte, nicht wahr, Lea?",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "是呀是呀。\\.而且你还不知道其他那些事呢，对不对，莉亚？",
+                        "ja_JP": "そうそう。\\. それに、それだけじゃないんだから。\nでしょ、レア？<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 63,
+                        "ko_KR": "응, 그렇지.\\. 어느 정도인지 넌 상상도 못 할 거야. 맞지, 레아?",
+                        "zh_TW": "是呀是呀。\\.而且你還不知道其他那些事呢，對不對，莉亞？"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.emilie",
+                        "expression": "WATCH_OUT_BADASS"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "[nods]",
+                        "de_DE": "[nickt]",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "[点头]",
+                        "ja_JP": "[うなずく]<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 64,
+                        "ko_KR": "[끄덕]",
+                        "zh_TW": "[點頭]"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "NOD"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Anyway, work is over now and I've got plenty of free time! I'm so ready!!",
+                        "de_DE": "Egal! Arbeit fertig, schön viel Zeit und jetzt wird gezockt!!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "总之！我现在弄完了作业，是时候玩到爽啦！",
+                        "ja_JP": "ともかく課題は終わったし、\n自由な時間ならたっぷりあるよ！準備は万端！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 65,
+                        "ko_KR": "아무튼, 일은 끝냈으니 이제 자유 시간이야! 뭐든지 할 준비가 됐다고!",
+                        "zh_TW": "總之！我現在弄完作業了，可以玩到爽啦！<<A<<[CHANGED 2017/07/07]"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.emilie",
+                        "expression": "HAPPY"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "I'll try my best to beat that cave as quickly as possible. ",
+                        "de_DE": "Ich werd' jetzt den Turbo einlegen und die Höhle so schnell wie möglich erledigen.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "我赶紧先去把树洞任务清了。",
+                        "ja_JP": "この洞窟を、できる限りの最速で\nクリアしちゃうんだから。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 66,
+                        "ko_KR": "최선을 다해서 최대한 빨리 동굴을 통과하고 말 거야.",
+                        "zh_TW": "我快點先去把樹洞任務清了。<<A<<[CHANGED 2017/07/07]"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.emilie",
+                        "expression": "DETERMINED"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "No rush! I suggest we meet in \\c[3]Ba'kii Kum\\c[0] in front of the \\c[3]Quest Hub\\c[0] once you're done.\\. Sounds good?",
+                        "de_DE": "Kein Grund zur Eile! Ich schlage vor, dass wir vor dem \\c[3]Quest Hub\\c[0] in \\c[3]Ba'kii Kum\\c[0] auf dich warten.\\. Einverstanden?",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "没事，不急。等你打完了我们在\\c[3]巴基库姆\\c[0]的\\c[3]任务中心\\c[0]会合。\\.可以吧？",
+                        "ja_JP": "急ぐことはないですよ！クエストが終わったら\n\\c[3]バキーイ・クム\\c[0]の\\c[3]クエストハブ\\c[0]の前で\n待ち合わせしませんか。\\.いい案でしょう？<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 67,
+                        "ko_KR": "서두르진 마! 너 끝나고 나면 \\c[3]바키 쿰\\c[0]의 \\c[3]퀘스트 허브\\c[0] 앞에서 만나는 게 좋겠어.\\. 어때?",
+                        "zh_TW": "沒事，不急。等你打完了我們在\\c[3]巴基庫姆\\c[0]的\\c[3]任務中心\\c[0]會合。\\.可以吧？"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "SMILE"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Oui, très bien! See you soon!",
+                        "de_DE": "Oui, très bien! Bis gleich!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "可以，没问题！那再见啦！",
+                        "ja_JP": "わあ、トレビアン！じゃあ後でね！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 68,
+                        "ko_KR": "그래, 좋아! 이따 보자!",
+                        "zh_TW": "可以，沒問題！那再見啦！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.emilie",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Bye!",
+                        "de_DE": "Bye!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "再见！",
+                        "ja_JP": "じゃあね！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 69,
+                        "ko_KR": "잘 가!",
+                        "zh_TW": "再見！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "ALL",
+                    "type": "CLEAR_MSG"
+                }, {
+                    "pos": {
+                        "x": 556,
+                        "y": 1008
+                    },
+                    "speed": "NORMAL",
+                    "transition": "EASE_IN_OUT",
+                    "wait": false,
+                    "waitSkip": 0,
+                    "zoom": 1,
+                    "type": "SET_CAMERA_POS"
+                }, {
+                    "entity": {
+                        "player": true
+                    },
+                    "action": [{
+                        "entity": {
+                            "global": true,
+                            "name": "emilie"
+                        },
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE_TO_ENTITY"
+                    }],
+                    "repeating": true,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "party": "Member2"
+                    },
+                    "action": [{
+                        "entity": {
+                            "global": true,
+                            "name": "emilie"
+                        },
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE_TO_ENTITY"
+                    }],
+                    "repeating": true,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "global": true,
+                        "name": "shadGuard"
+                    },
+                    "action": [{
+                        "time": 0.5,
+                        "type": "WAIT"
+                    }, {
+                        "value": 1,
+                        "type": "SET_RELATIVE_SPEED"
+                    }, {
+                        "target": {
+                            "x": 560,
+                            "y": 988,
+                            "lvl": "0"
+                        },
+                        "maxTime": 0,
+                        "distance": 0,
+                        "precise": true,
+                        "planOnly": false,
+                        "teleportOnFail": false,
+                        "type": "NAVIGATE_TO_POINT"
+                    }, {
+                        "face": "SOUTH",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "global": true,
+                        "name": "emilie"
+                    },
+                    "action": [{
+                        "value": 1,
+                        "type": "SET_RELATIVE_SPEED"
+                    }, {
+                        "target": {
+                            "x": 476,
+                            "y": 1052,
+                            "lvl": "1"
+                        },
+                        "maxTime": 0,
+                        "distance": 0,
+                        "precise": false,
+                        "planOnly": false,
+                        "teleportOnFail": false,
+                        "type": "NAVIGATE_TO_POINT"
+                    }, {
+                        "target": {
+                            "x": 560,
+                            "y": 1008,
+                            "lvl": "0"
+                        },
+                        "maxTime": 0,
+                        "distance": 0,
+                        "precise": true,
+                        "planOnly": false,
+                        "teleportOnFail": false,
+                        "type": "NAVIGATE_TO_POINT"
+                    }],
+                    "repeating": false,
+                    "wait": true,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "global": true,
+                        "name": "emilie"
+                    },
+                    "action": [{
+                        "face": "NORTH",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }, {
+                        "jumpHeight": "S",
+                        "wait": true,
+                        "ignoreSounds": true,
+                        "type": "JUMP"
+                    }, {
+                        "jumpHeight": "S",
+                        "wait": true,
+                        "ignoreSounds": true,
+                        "type": "JUMP"
+                    }, {
+                        "jumpHeight": "S",
+                        "wait": true,
+                        "ignoreSounds": true,
+                        "type": "JUMP"
+                    }, {
+                        "time": 0.3,
+                        "type": "WAIT"
+                    }],
+                    "repeating": true,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "ignoreSlowDown": false,
+                    "type": "WAIT",
+                    "time": 0.5
+                }, {
+                    "pos": {
+                        "x": 472,
+                        "y": 1016
+                    },
+                    "speed": "NORMAL",
+                    "transition": "EASE_IN_OUT",
+                    "wait": false,
+                    "waitSkip": 0,
+                    "zoom": 1,
+                    "type": "SET_CAMERA_POS"
+                }, {
+                    "ignoreSlowDown": false,
+                    "type": "WAIT",
+                    "time": 0.3
+                }, {
+                    "entity": {
+                        "player": true
+                    },
+                    "action": [{
+                        "face": "SOUTH",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "entity": {
+                        "party": "Member2"
+                    },
+                    "action": [{
+                        "face": "NORTH",
+                        "rotate": true,
+                        "rotateSpeed": 3,
+                        "type": "SET_FACE"
+                    }],
+                    "repeating": false,
+                    "wait": false,
+                    "keepState": false,
+                    "immediately": false,
+                    "type": "DO_ACTION"
+                }, {
+                    "side": "RIGHT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "LEFT",
+                    "order": 0,
+                    "clearSide": false,
+                    "type": "ADD_MSG_PERSON",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "EMBARRASSED"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Wow, she sure is full of energy!",
+                        "de_DE": "Wow, die strotzt ja vor Energie!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "她还真是元气型的呢！",
+                        "ja_JP": "ふう、彼女って本当に元気いっぱいですね！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 70,
+                        "ko_KR": "와, 정말 힘이 넘치는걸!",
+                        "zh_TW": "她還真是元氣型的呢！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "EMBARRASSED"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "...",
+                        "de_DE": "...",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "...",
+                        "ja_JP": "...<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 71,
+                        "ko_KR": "...",
+                        "zh_TW": "..."
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "SMILE"
+                    }
+                }, {
+                    "type": "RESET_NPC",
+                    "npc": {
+                        "global": true,
+                        "name": "shadGuard"
+                    }
+                }, {
+                    "changeType": "set",
+                    "type": "CHANGE_VAR_BOOL",
+                    "varName": "tmp.emilieGone",
+                    "value": true
+                }, {
+                    "type": "RESET_NPC",
+                    "npc": {
+                        "global": true,
+                        "name": "emilie"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Anyway! There is no reason to hurry, but I guess we can slowly head back to \\c[3]Ba'kii Kum\\c[0], right?",
+                        "de_DE": "Also, wir haben zwar noch Zeit, können aber trotzdem schon mal langsam Richtung \\c[3]Ba'kii Kum\\c[0] aufbrechen, oder?",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "那现在有的是时间，我们慢慢回\\c[3]巴基库姆\\c[0]，怎么样？",
+                        "ja_JP": "とにかく！急ぐ理由もないですし、ゆっくりと\n\\c[3]バキーイ・クム\\c[0]に戻るとしましょうか。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 72,
+                        "ko_KR": "아무튼! 서두를 필요는 없지만 슬슬 \\c[3]바키 쿰\\c[0]으로 다시 돌아가는 게 좋을 것 같아.",
+                        "zh_TW": "那現在有的是時間，我們慢慢回\\c[3]巴基庫姆\\c[0]，怎麼樣？"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "TOWARD"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "[nods]",
+                        "de_DE": "[nickt]",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "[点头]",
+                        "ja_JP": "[うなずく]<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 74,
+                        "ko_KR": "[끄덕]",
+                        "zh_TW": "[點頭]"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.lea",
+                        "expression": "NOD"
+                    }
+                }, {
+                    "message": {
+                        "en_US": "Let's go then!",
+                        "de_DE": "Dann mal los!",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "那走吧！",
+                        "ja_JP": "さあ、行きましょう！<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 81,
+                        "ko_KR": "그럼 출발하자!",
+                        "zh_TW": "那走吧！"
+                    },
+                    "autoContinue": false,
+                    "type": "SHOW_MSG",
+                    "person": {
+                        "person": "main.glasses",
+                        "expression": "DEFAULT"
+                    }
+                }, {
+                    "side": "ALL",
+                    "type": "CLEAR_MSG"
+                }, {
+                    "changeType": "set",
+                    "type": "CHANGE_VAR_NUMBER",
+                    "varName": "plot.heatLine",
+                    "value": 300
+                }, {
+                    "mode": "SLOW",
+                    "delayed": false,
+                    "type": "RESUME_DEFAULT_BGM"
+                }, {
+                    "task": {
+                        "en_US": "You decided to meet up with Emilie in front of the \\c[3]Quest Hub\\c[0] of \\c[3]Ba'kii Kum\\c[0].",
+                        "de_DE": "Ihr habt beschlossen, euch mit Emilie vor dem \\c[3]Quest Hub\\c[0] in \\c[3]Ba'kii Kum\\c[0] zu treffen.",
+                        "fr_FR": "fr_FR",
+                        "zh_CN": "在\\c[3]巴基库姆\\c[0]的\\c[3]任务中心\\c[0]和\\c[3]艾米莉\\c[0]会合。",
+                        "ja_JP": "あなたはエミリーと\\c[3]バキーイ・クム\\c[0]の\n\\c[3]クエストハブ\\c[0]の前で待ち合わせることになった。<<A<<[CHANGED 2017/08/03]",
+                        "langUid": 88,
+                        "ko_KR": "\\c[3]바키 쿰\\c[0]의 \\c[3]퀘스트 허브\\c[0] 앞에서 에밀리를 만나기로 합니다.",
+                        "zh_TW": "在\\c[3]巴基庫姆\\c[0]的\\c[3]任務中心\\c[0]和\\c[3]艾米莉\\c[0]會合。"
+                    },
+                    "type": "SET_PERMA_TASK"
+                }, {
+                    "type": "SAVE"
+                }]
+            }
+        }, {
+            "position": {
+                "x": 596,
+                "y": 1000,
+                "lvl": "0"
+            },
+            "reactType": "FIXED_POS",
+            "face": "WEST",
+            "action": [],
+            "hidden": false,
+            "condition": "quest.maroon-tree-defend.currentTask >= 3",
+            "config": "normal",
+            "event": [{
+                "side": "LEFT",
+                "order": 0,
+                "clearSide": false,
+                "type": "ADD_MSG_PERSON",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "side": "RIGHT",
+                "order": 5,
+                "clearSide": false,
+                "type": "ADD_MSG_PERSON",
+                "person": {
+                    "person": "main.lea",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "message": {
+                    "en_US": "Human very nice, always helping us defeating Sandworm!",
+                    "de_DE": "Mensch sehr nett, immer helfen uns besiegen Sandwurm!",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "人类很友善，一直帮我们清除沙虫！",
+                    "ja_JP": "人間、すばらしい。いつもサンドワームを倒すのを手伝ってくれる。<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 76,
+                    "ko_KR": "잘했어, 인간. 항상 갯지렁이 처치를 도와주는군!",
+                    "zh_TW": "人類很友善，一直幫我們清除沙蟲！"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "message": {
+                    "en_US": "But Sandworm always coming back, very pesky!",
+                    "de_DE": "Aber Sandwurm immer kommen zurück! Sehr nerven!",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "但是沙虫一直会回来！很讨厌！",
+                    "ja_JP": "だがサンドワーム、いつでも戻ってくる。とても厄介！<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 77,
+                    "ko_KR": "하지만 갯지렁이는 다시 나타나지. 아주 성가셔!",
+                    "zh_TW": "但是沙蟲一直會回來！很討厭！"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "message": {
+                    "en_US": "Anyway, together we can protect tree!",
+                    "de_DE": "Doch zusammen wir können beschützen Baum!",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "总之，人类和沙德一起才能保卫巨树！",
+                    "ja_JP": "とにかく、我々で木を守ろう！<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 78,
+                    "ko_KR": "아무튼, 우리가 함께하면 나무를 보호할 수 있을 거다!",
+                    "zh_TW": "總之，人類和沙德一起才能保衛巨樹！"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }, {
+                "message": {
+                    "en_US": "[nods]",
+                    "de_DE": "[nickt]",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "[点头]",
+                    "ja_JP": "[うなずく]<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 79,
+                    "ko_KR": "[끄덕]",
+                    "zh_TW": "[點頭]"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "main.lea",
+                    "expression": "NOD"
+                }
+            }, {
+                "rumbleType": "HORIZONTAL",
+                "name": "",
+                "duration": 0.3,
+                "power": "STRONGER",
+                "speed": "FASTER",
+                "fade": true,
+                "type": "RUMBLE_SCREEN"
+            }, {
+                "type": "SET_MSG_EXPRESSION",
+                "person": {
+                    "person": "main.lea",
+                    "expression": "PAIN_EYE_CLOSED"
+                }
+            }, {
+                "message": {
+                    "en_US": "THANK YOU, HUMAN!!",
+                    "de_DE": "VIELEN DANK, MENSCH!!",
+                    "fr_FR": "fr_FR",
+                    "zh_CN": "谢 谢 你， 人 类 ！！",
+                    "ja_JP": "礼を言うぞ、人間！！<<A<<[CHANGED 2017/08/03]",
+                    "langUid": 80,
+                    "ko_KR": "고맙다, 인간!!",
+                    "zh_TW": "謝 謝 你， 人 類 ！！"
+                },
+                "autoContinue": false,
+                "type": "SHOW_MSG",
+                "person": {
+                    "person": "baki.male-yellow-tall",
+                    "expression": "DEFAULT"
+                }
+            }]
+        }]
     },
     {
         "type": "EXIT",
         "count": 2
-    },  
-    
+    },
+
     {
         "type": "EXIT",
         "count": 1
-    }  
+    }
 ]
