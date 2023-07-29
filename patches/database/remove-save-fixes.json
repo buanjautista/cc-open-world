@@ -1,0 +1,20 @@
+[{
+    "type": "FOR_IN",
+    "_comment": "Cancel start condition for all the story updates",
+    "keyword": "__INDEX__",
+    "values": ["storyUpdateA", "storyUpdateB","storyUpdateC","storyUpdateD"],
+    "body": [{
+            "type": "ENTER",
+            "index": "__INDEX__"
+        },{
+            "type": "SET_KEY",
+            "index": "condition",
+            "content": "false"
+        },{
+            "type": "SET_KEY",
+            "index": "event",
+            "content": []
+        },{
+            "type": "EXIT"
+        }]  
+}]

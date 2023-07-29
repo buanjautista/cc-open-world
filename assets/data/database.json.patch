@@ -1,0 +1,16 @@
+[   
+    {
+        "type": "ENTER",
+        "index": "commonEvents"
+    },
+    {
+        "type": "INCLUDE",
+        "src": "mod:patches/database/enable-party-shizuka.json"
+    },{
+        "type": "INCLUDE",
+        "src": "mod:patches/database/remove-save-fixes.json"
+    },
+    {
+        "type": "EXIT"
+    }
+]  
