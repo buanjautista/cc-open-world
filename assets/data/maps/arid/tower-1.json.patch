@@ -8,7 +8,7 @@
         "type": "FOR_IN",
         "_comment": "Removes story events",
         "keyword": "__INDEX__",
-        "values": [258, 261, 269, 281, 282, 283, 284, 285, 286, 287, 288, 302],
+        "values": [258, 261, 269, 281, 282, 283, 284, 285, 286, 287, 288],
         "body": [{
             "type": "ENTER",
             "index": ["__INDEX__",  "settings"]
