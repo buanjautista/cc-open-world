@@ -1,0 +1,10 @@
+{
+    "id": "open-world",
+    "title": "Open World patches",
+    "description": "Open World map patches for randomizer",
+    "version": "0.1.5",
+    "dependencies": {
+		"item-rando": "^0.4.2"
+	},
+    "plugin": "plugin.js"
+}

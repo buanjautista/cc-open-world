@@ -3,7 +3,6 @@
         "type": "ENTER",
         "index": ["entities"]
     },
-
     {
         "type": "SET_KEY",
         "index": 4,

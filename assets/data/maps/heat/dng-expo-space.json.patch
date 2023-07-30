@@ -3,7 +3,6 @@
         "type": "ENTER",
         "index": ["entities"]
     },
-
     {
         "_comment": "Change plot variables on the cutscene event",
         "type": "SET_KEY",

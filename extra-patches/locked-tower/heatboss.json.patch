@@ -1,5 +1,9 @@
 [
     {
+        "type": "INCLUDE",
+        "src": "mod:assets/data/maps/heat/dng-expo-space.json.patch"
+    },
+    {
         "type": "ENTER",
         "index": "entities"
     },
@@ -17,7 +21,7 @@
                 "event": [
                     {
                         "type": "CHANGE_VAR_BOOL",
-                        "varName": "map.phantomDead",
+                        "varName": "map.magmothDead",
                         "changeType": "set",
                         "value": true,
                         "map": "arid.town-1"

@@ -1,5 +1,9 @@
 [
     {
+        "type": "INCLUDE",
+        "src": "mod:assets/data/maps/jungle/dng/wave-expo-space.json.patch"
+    },
+    {
         "type": "ENTER",
         "index": "entities"
     },

@@ -4,10 +4,10 @@
         "index": ["entities", 4, "settings"]
     },
 
-{
-    "type":"SET_KEY",
-    "index": "event",
-    "content": [
+    {
+        "type":"SET_KEY",
+        "index": "event",
+        "content": [
                     {
                         "entity": {
                             "party": "Member2"
