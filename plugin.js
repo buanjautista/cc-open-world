@@ -39,18 +39,18 @@ function addPatchAssets(mod, cond) {
       if (shadeLockEnabled.enable) {
         // console.log("Shade-boss locks enabled")
         mod.setAsset('data/maps/arid/town-1.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/shadebosslock-vt.json.patch');
-        mod.setAsset('data/maps/cold-dng/g/expo-space.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/coldboss.json.patch');
-        mod.setAsset('data/maps/heat/dng-expo-space.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/heatboss.json.patch');
-        mod.setAsset('data/maps/jungle/dng/wave-expo-space.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/waveboss.json.patch');
-        mod.setAsset('data/maps/jungle/dng/shock-expo-space.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/shockboss.json.patch');
+        // mod.setAsset('data/maps/cold-dng/g/expo-space.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/coldboss.json.patch');
+        // mod.setAsset('data/maps/heat/dng-expo-space.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/heatboss.json.patch');
+        // mod.setAsset('data/maps/jungle/dng/wave-expo-space.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/waveboss.json.patch');
+        // mod.setAsset('data/maps/jungle/dng/shock-expo-space.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/shockboss.json.patch');
       }
       else {
         // console.log("Shade-boss locks disabled")
         mod.setAsset('data/maps/arid/town-1.json.patch', mod.baseDirectory + 'assets/data/maps/arid/town-1.json.patch');
-        mod.setAsset('data/maps/cold-dng/g/expo-space.json.patch', mod.baseDirectory + 'assets/data/maps/cold-dng/g/expo-space.json.patch');
-        mod.setAsset('data/maps/heat/dng-expo-space.json.patch', mod.baseDirectory + 'assets/data/maps/heat/dng-expo-space.json.patch');
-        mod.setAsset('data/maps/jungle/dng/wave-expo-space.json.patch', mod.baseDirectory + 'assets/data/maps/jungle/dng/wave-expo-space.json.patch');
-        mod.setAsset('data/maps/jungle/dng/shock-expo-space.json.patch', mod.baseDirectory + 'assets/data/maps/jungle/dng/shock-expo-space.json.patch');
+        // mod.setAsset('data/maps/cold-dng/g/expo-space.json.patch', mod.baseDirectory + 'assets/data/maps/cold-dng/g/expo-space.json.patch');
+        // mod.setAsset('data/maps/heat/dng-expo-space.json.patch', mod.baseDirectory + 'assets/data/maps/heat/dng-expo-space.json.patch');
+        // mod.setAsset('data/maps/jungle/dng/wave-expo-space.json.patch', mod.baseDirectory + 'assets/data/maps/jungle/dng/wave-expo-space.json.patch');
+        // mod.setAsset('data/maps/jungle/dng/shock-expo-space.json.patch', mod.baseDirectory + 'assets/data/maps/jungle/dng/shock-expo-space.json.patch');
       }
       break
     default:

@@ -2,7 +2,7 @@
     "type": "FOR_IN",
     "_comment": "Cancel start condition for all the story updates",
     "keyword": "__INDEX__",
-    "values": ["storyUpdateA", "storyUpdateB","storyUpdateC","storyUpdateD"],
+    "values": ["storyUpdateA", "storyUpdateB","storyUpdateC","storyUpdateD", "contiunueStoryJungle"],
     "body": [{
             "type": "ENTER",
             "index": "__INDEX__"
