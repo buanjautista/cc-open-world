@@ -1,0 +1,105 @@
+## Map patches for open world : ##
+
+# Main:
+Stats enabled in Rhombus Dungeon entrance (for NG+ purposes). Plot version starts in 5 to avoid most of the save fix prompts.
+Save fixes are entirely removed
+Party window enabled in CrossCentral. You can now invite/manage party members as soon as certain events: 
+Only Apollo 3 duel is active, which unlocks him and Joern as party members if you fight him
+Unlock Emilie on Rookie Harbor Intro
+Unlock C’tron on Maroon Tree quest
+Unlock Shizuka by fighting her in Old Hideout
+Entrance to Rhombus Square now linked to Meteor Shade
+
+# Rookie Harbor:
+Intro with Emilie and Schneider now tied to “plot.autumnIntro” instead of “plot.line”
+Access to North Marketplace not tied to plot.line but to getting Flame Shade (0.0.2)
+
+# Bergen:
+No Apollo 1 sequence
+Bergen Mine Entrance not locked by being past plotline (just needs Mine Pass)
+Bergen Elevator passage to Maroon Valley not locked by plotline
+
+# Maroon Valley:
+Ba’kii kum Eldress quest now tied to its own plotline ("plot.heatLine" instead of “plot.line”)
+Can invite C’tron to party for Maroon Tree quest, or look for him next to West Entrance where he usually is (up until finishing the Maroon Tree quest)
+No Apollo 2 sequence before Faj’ro
+Forced Maroon Tree pass to enter Maroon Tree 
+Forced C’tron and Emilie when returning the Maroon Tree quest until you claim the Sand Shade reward
+
+# Fajro Temple:
+No logout or party member lock after Faj’ro temple
+Disabled the cutscene when you enter the cross room in ground floor
+Removed the movement from cutscene when you enter Cold Room so people dont get softlock by entering from different entrances
+Change in a room in G-Room8 to not allow people exiting the map early (which otherwise leads to softlock / perma battle).
+
+# Autumn’s Fall:
+Added a Green Leaf Shade barrier on Autumn’s Rise entrance (to make the leaf shade slightly more useful later on)
+Sapphire Ridge entrance is not locked anymore until post-kryskajo events
+Gaias Garden entrance is not locked anymore until post-vermillion events
+Finishing seed shade quest does not forces you to do the raid
+Can’t start first raid on Autumn’s Fall to prevent Vermillion plot
+
+
+
+# Vermillion Wasteland:
+Tunnel entrance to Vermillion initially open
+Exit back to Sapphire Ridge also enabled in cliff-1
+Vermillion Tower entrance initially open (need to set up some custom blockades or something)
+
+
+# Gaia’s Garden:
+Chief’s House entrance area not locked
+Chief’s House inside locked so you dont go down for stick quest 
+Basin Keep has no story plot (neither beta pass)
+Optional Apollo 3 fight, finishing it allows you to invite Apollo and Joern to party (plus a lot of questionable expression changes to fit the no-vermillion mood)
+Shock Dungeon and Wave Dungeon accessible without party members or story locks
+Removed stick quest plotline on zir’vitar entrance
+Both shad barriers are gone, and Rite of Passage is initially open
+Krys’kajo entrance doesnt require/change party members, or story progress. (still needs Drop and Bolt shade)
+
+
+# Sapphire Ridge:
+Old Dojo door only accessible with both key, and dojo quest started
+You can invite Shizuka after fighting her in Old Hideout (not added, but patch is there)
+
+
+
+# Keys / Dungeons / Expo Spaces:
+No race tracking for dungeons
+End cutscenes not tied to having party members
+Thief Key and White Key fights entrance barrier not locked when you finish fight (but the exit still requires getting the new key chest for logic reasons)
+Expo space maps not tied to plot.line but to dungeon completion
+(plot.cold-dng-end, plot-heat-dng-end, plot-daft-frobbit-kill, plot.shock-dng-end, plot.wave-dng-end)
+
+
+## VERSION CHANGES ##
+
+# v0.1.6
+- Changed how the shade-boss lock patch in Vermillion Tower works. Extra event patches per dungeon not needed anymore.
+- Fixed a remaining save fix issue that locks landmarks after a certain point of the plot.line
+- Fixed two dungeon end maps that had wrong key info
+- Added a secondary version that doesn't require item-rando as dependency.
+
+# v0.1.5
+- Open World now requires Item Randomizer mod 0.4.3+ to be loaded.
+- Add a optional feature to patch the end of Vermillion Tower to have boss and shade locks.
+- Fix for Basin Keep center not loading patch correctly
+
+# v0.1.4 
+- Fixes a bug with the end cutscene in Vermillion Tower entrance not playing.
+- Fixes a syntax error in Rhombus Dungeon entrance.
+- Adds a few barriers in Vermillion Tower Entrance that require beating the 4 element dungeon bosses and getting each of its shades.
+- Fixes the barrier in Autumn Fall not having visuals
+
+# v0.1.3
+- Removes save fix prompts and story updates.
+- More party invite options and less locked team layouts.
+- Optional duels between Apollo and Shizuka.
+- Vermilion Wasteland access available at any time.
+
+# v0.1.2
+- Fixed few syntax errors that caused certain patches to not load:
+- Basin Keep, Kryskajo Expo Space, Frobbit Expo Space, Cold Room Fajro, Rhombus Square Dungeon Top, Path 08 maroon valley
+- Fixed a few triggers and event that werent added correctly for Sand Shade statue cutscene and Fajro End.
+- Added an extra safety event to allow Ctron and Emilie leave party after Fajro
+
