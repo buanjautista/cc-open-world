@@ -1,0 +1,4 @@
+[{
+	"type": "INCLUDE",
+	"src": "mod:patches/gui/item-rando-patch.json.patch"
+}]

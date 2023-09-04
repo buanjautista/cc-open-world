@@ -1,0 +1,19 @@
+{
+    "labels": {
+        "menu": {
+            "randomizer": {
+                "sets": {
+                    "open-world": "Open World"
+                },
+                "options": {
+                    "descriptions": {
+                        "sblock-enabled": "Entrance to Vermillion Tower locked by 4 element dungeon bosses and shades"
+                    },
+                    "names": {
+                        "sblock-enabled": "Shades and Bosses"
+                    }
+                }
+            }
+        }
+    }
+}
