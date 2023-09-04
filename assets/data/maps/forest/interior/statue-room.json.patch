@@ -58,10 +58,10 @@
         "index": [325, "settings"]
     },
     {
-        "_comment": "Change quest fix for safety purposes",
+        "_comment": "Change quest fix for safety purposes, though this is probably a useless fix for an CC early access fix",
         "type": "SET_KEY",
         "index": "startCondition",
-        "content": "" 
+        "content": "item.434.amount >= 1 && !quest.bug-hunting.solved && quest.bug-hunting.started && plot.dojo-end" 
     },
     {
         "type": "EXIT",
