@@ -1,4 +1,4 @@
 [{
 	"type": "INCLUDE",
-	"src": "mod:patches/gui/item-rando-patch.json.patch"
+	"src": "mod:patches/gui/itemrando-menu-patch.json.patch"
 }]
