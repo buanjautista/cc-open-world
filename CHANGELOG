@@ -40,13 +40,11 @@ Gaias Garden entrance is not locked anymore until post-vermillion events
 Finishing seed shade quest does not forces you to do the raid
 Can’t start first raid on Autumn’s Fall to prevent Vermillion plot
 
-
-
 # Vermillion Wasteland:
 Tunnel entrance to Vermillion initially open
 Exit back to Sapphire Ridge also enabled in cliff-1
 Vermillion Tower entrance initially open (need to set up some custom blockades or something)
-
+Stealth section is locked after the basement area to prevent entering tower from other than the main entrance
 
 # Gaia’s Garden:
 Chief’s House entrance area not locked
@@ -58,12 +56,9 @@ Removed stick quest plotline on zir’vitar entrance
 Both shad barriers are gone, and Rite of Passage is initially open
 Krys’kajo entrance doesnt require/change party members, or story progress. (still needs Drop and Bolt shade)
 
-
 # Sapphire Ridge:
 Old Dojo door only accessible with both key, and dojo quest started
-You can invite Shizuka after fighting her in Old Hideout (not added, but patch is there)
-
-
+You can invite Shizuka after fighting her in Old Hideout
 
 # Keys / Dungeons / Expo Spaces:
 No race tracking for dungeons
@@ -72,12 +67,20 @@ Thief Key and White Key fights entrance barrier not locked when you finish fight
 Expo space maps not tied to plot.line but to dungeon completion
 (plot.cold-dng-end, plot-heat-dng-end, plot-daft-frobbit-kill, plot.shock-dng-end, plot.wave-dng-end)
 
+## EXTRA PATCHES ##
+
+Vermillion Tower Shade and Boss lock:
+- A condition that locks Vermillion Tower entrance until you get all 4 element shades (Azure Drop, Purple Bolt, Blue Ice, and Red Flame Shades), and beaten the 4 element dungeons (Mine, Faj'ro, So'najiz and Zir'vitar). 
+You can activate this from the Randomizer menu in CCItemRandomizer, or through the .yaml settings in the CCMultiworldRandomizer
+
 
 ## VERSION CHANGES ##
 
 # v0.1.7
 - Made access to Guild Area tied to meeting Schneider after getting Mine Pass, and not tied to plot.line
 - Changed Meteor Shade room cutscenes in Sapphire Ridge's Old Dojo to not be tied to plot.line
+- Made the Vermillion Tower stealth section only completable up till the basement to allow grabbing chest, but not enter Vermillion Tower from there
+- Added basic compatibility for extra patches, for CCItemRando, and Archipelago CCMultiworldRandomizer. No more dependency lock yay
 
 # v0.1.6
 - Changed how the shade-boss lock patch in Vermillion Tower works. Extra event patches per dungeon not needed anymore.
