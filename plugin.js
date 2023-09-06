@@ -47,14 +47,11 @@ export default class OpenWorld {
 
   modelChanged(model, msg, data) {
     // Read multiworld connection to check settings variables, to apply optional map patches
-    if (model == sc.multiworld && msg == sc.MULTIWORLD_MSG.CONNECTION_STATUS_CHANGED && data == "Connected") {
-      if (ig.vars.get("vars.mw.options.vtShadeLock") ) {
-        ig.vars.get("vars.mw.options.vtShadeLock") 
+    if (model == sc.multiworld) {
+      if ((msg == sc.MULTIWORLD_MSG.CONNECTION_STATUS_CHANGED && data == "Connected") || (msg == sc.MULTIWORLD_MSG.OPTIONS_PRESENT)) {
+        ig.vars.get("mw.options.vtShadeLock") 
           ? addPatchAssets(mod, "add", "shadeBossLock")
           : addPatchAssets(mod, "default", "shadeBossLock")
-      }
-      else {
-        addPatchAssets(mod, "default", "shadeBossLock")
       }
     }
   }
