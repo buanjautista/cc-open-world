@@ -1,0 +1,27 @@
+[
+    {
+        "type": "ENTER",
+        "index": ["entities"]
+    },
+
+    {
+        "type": "ENTER",
+        "index": [593, "settings", "npcStates", 0]
+    },
+    {
+        "_comment": "Make the guard NPC for Black Market area not lock you out of Sprouting Business, if you have the pass",
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "!map.noPass"
+    },
+    {
+        "type": "EXIT",
+        "count": 4
+    },
+
+    {
+        "type": "EXIT",
+        "count": 1
+    }
+
+]
