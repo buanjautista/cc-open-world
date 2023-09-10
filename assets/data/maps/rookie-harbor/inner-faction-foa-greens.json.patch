@@ -32,7 +32,7 @@
             "_comment": "Replace fajro completion for obtain flame shade for third quest",
             "type": "SET_KEY",
             "index": "condition",
-            "content": "quest.foa-2-tree_defense.solved && item.230.amount >= 1 && !quest.foa-3-buffel_cave.started"
+            "content": "quest.foa-2-tree_defense.solved && (item.230.amount >= 1) && !quest.foa-3-buffel_cave.started"
         },
         {
             "type": "EXIT",

@@ -32,7 +32,7 @@
             "_comment": "Replace fajro completion for obtain flame shade for third quest",
             "type": "SET_KEY",
             "index": "condition",
-            "content": "quest.rhg-2-crate_smuggle.solved && item.230.amount >= 1 && !quest.rhg-3-maritime_smuggle.started"
+            "content": "quest.rhg-2-crate_smuggle.solved && (item.230.amount >= 1) && !quest.rhg-3-maritime_smuggle.started"
         },
         {
             "type": "EXIT",

@@ -365,7 +365,7 @@
             "_comment": "Replace fajro completion for obtain flame shade for third quest",
             "type": "SET_KEY",
             "index": "condition",
-            "content": "quest.rftc-1-collect_trade.solved && item.230.amount >= 1 && quest.bull-arena-1.solved && !quest.rftc-3-metalstuff.started"
+            "content": "quest.rftc-1-collect_trade.solved && (item.230.amount >= 1) && quest.bull-arena-1.solved && !quest.rftc-3-metalstuff.started"
         },
         {
             "type": "EXIT",

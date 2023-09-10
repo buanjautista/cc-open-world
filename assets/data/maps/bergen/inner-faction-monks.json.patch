@@ -17,7 +17,7 @@
             "_comment": "Replace mine completion for obtain ice shade for second quest",
             "type": "SET_KEY",
             "index": "condition",
-            "content": "quest.monks-1-jump_challenge.solved && item.225.amount >= 1 && !quest.monks-2-jump_challenge_2.started"
+            "content": "quest.monks-1-jump_challenge.solved && (item.225.amount >= 1) && !quest.monks-2-jump_challenge_2.started"
         },
         {
             "type": "EXIT",

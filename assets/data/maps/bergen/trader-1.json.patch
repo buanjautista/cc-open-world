@@ -17,7 +17,7 @@
             "_comment": "Replace mine completion for obtain ice shade for second quest",
             "type": "SET_KEY",
             "index": "condition",
-            "content": "quest.bergen-fancy-tophat.solved && item.225.amount >= 1 && !quest.bergtraders-2-hermit_materials.started"
+            "content": "quest.bergen-fancy-tophat.solved && (item.225.amount >= 1) && !quest.bergtraders-2-hermit_materials.started"
         },
         {
             "type": "EXIT",

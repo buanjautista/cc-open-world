@@ -67,6 +67,9 @@ Thief Key and White Key fights entrance barrier not locked when you finish fight
 Expo space maps not tied to plot.line but to dungeon completion
 (plot.cold-dng-end, plot-heat-dng-end, plot-daft-frobbit-kill, plot.shock-dng-end, plot.wave-dng-end)
 
+# Quests
+Subsequent quests in factions, are now unlocked depending on shades, rather than dungeon / plot completion
+
 ## EXTRA PATCHES ##
 
 Vermillion Tower Shade and Boss lock:
@@ -75,6 +78,16 @@ You can activate this from the Randomizer menu in CCItemRandomizer, or through t
 
 
 ## VERSION CHANGES ##
+
+# v0.1.8
+Fixes:
+- Sprouting Business quest is not longer locked if you open the black market barriers first
+Changes:
+- Rookie Harbor quests after Faj'ro Temple, now unlock when you obtain Red Flame Shade
+- Bergen Village quests after Temple Mine, now unlock after obtaining Blue Ice Shade
+- Ba'kii Kum quests after Faj'ro Temple, now unlock after obtaining Red Flame Shade
+- Basin Keep quests after So'najiz and Zir'vitar, now unlock after obtaining Azure Drop Shade and Purple Bolt Shade instead
+- Last Minute Heroes quest unlocked after obtaining Meteor Shade
 
 # v0.1.7
 - Made access to Guild Area tied to meeting Schneider after getting Mine Pass, and not tied to plot.line

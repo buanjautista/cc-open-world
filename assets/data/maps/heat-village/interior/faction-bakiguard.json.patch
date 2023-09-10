@@ -17,7 +17,7 @@
             "_comment": "Replace fajro completion for flame shade for second quest",
             "type": "SET_KEY",
             "index": "condition",
-            "content": "quest.bakiGuard-1-basar_thief_1.solved && item.230.amount >= 1 && !quest.bakiGuard-2-evil_guard.started"
+            "content": "quest.bakiGuard-1-basar_thief_1.solved && (item.230.amount >= 1) && !quest.bakiGuard-2-evil_guard.started"
         },
         {
             "type": "EXIT",
