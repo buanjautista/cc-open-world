@@ -1,14 +1,13 @@
 ## Map patches for open world : ##
 
 # Main:
-Stats enabled in Rhombus Dungeon entrance (for NG+ purposes). Plot version starts in 5 to avoid most of the save fix prompts.
-Save fixes are entirely removed
+Stats enabled in Rhombus Dungeon entrance (for NG+ purposes). 
+Save fixes are entirely removed. Plot version starts in 5 to avoid save fix prompts in case they happen (which shouldn't).
 Party window enabled in CrossCentral. You can now invite/manage party members as soon as certain events: 
-Only Apollo 3 duel is active, which unlocks him and Joern as party members if you fight him
-Unlock Emilie on Rookie Harbor Intro
-Unlock C’tron on Maroon Tree quest
-Unlock Shizuka by fighting her in Old Hideout
-Entrance to Rhombus Square now linked to Meteor Shade
+- Only Apollo 3 duel is active, which unlocks him and Joern as party members if you fight him
+- Unlock Emilie on Rookie Harbor Intro
+- Unlock C’tron on Maroon Tree quest
+- Unlock Shizuka by fighting her in Old Hideout
 
 # Rookie Harbor:
 Intro with Emilie and Schneider now tied to “plot.autumnIntro” instead of “plot.line”
@@ -59,6 +58,7 @@ Krys’kajo entrance doesnt require/change party members, or story progress. (st
 # Sapphire Ridge:
 Old Dojo door only accessible with both key, and dojo quest started
 You can invite Shizuka after fighting her in Old Hideout
+Entrance to Rhombus Square now linked to Meteor Shade
 
 # Keys / Dungeons / Expo Spaces:
 No race tracking for dungeons
