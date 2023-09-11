@@ -1,61 +1,47 @@
 [
     {
         "type": "ENTER",
-        "index": ["entities",508,"settings"]
+        "index": ["entities"]
     },
 
     {
-        "type": "SET_KEY",
-        "index": "spawnCondition",
-        "content": "false"
-    },
-    {
-        "type": "EXIT",
-        "count": 3
-    },
-    {
-        "type": "ENTER",
-        "index": ["entities",509,"settings"]
-    },
-
-    {
-        "type": "SET_KEY",
-        "index": "spawnCondition",
-        "content": "false"
-    },
-    {
-        "type": "EXIT",
-        "count": 3
+        "type": "FOR_IN",
+        "_comment": "Despawn the blocks near the infested area",
+        "keyword": "__INDEX__",
+        "values": [508, 509],
+        "body": [{
+                "type": "ENTER",
+                "index": ["__INDEX__", "settings"]
+            },{
+                "type": "SET_KEY",
+                "index": "spawnCondition",
+                "content": "false"
+            },{
+                "type": "EXIT",
+                "count": 2
+            }]  
     },
 
-
-
     {
-        "type": "ENTER",
-        "index": ["entities",515,"settings"]
+        "type": "FOR_IN",
+        "_comment": "Spawn the platform on the left side",
+        "keyword": "__INDEX__",
+        "values": [515, 92],
+        "body": [{
+                "type": "ENTER",
+                "index": ["__INDEX__", "settings"]
+            },{
+                "type": "SET_KEY",
+                "index": "spawnCondition",
+                "content": ""
+            },{
+                "type": "EXIT",
+                "count": 2
+            }]  
     },
-        {
-        "type": "SET_KEY",
-        "index": "spawnCondition",
-        "content": ""
-    },
-    {
-        "type": "EXIT",
-        "count": 3
-    },    
     
     {
-        "type": "ENTER",
-        "index": ["entities",92,"settings"]
-    },
-        {
-        "type": "SET_KEY",
-        "index": "spawnCondition",
-        "content": ""
-    },
-    {
         "type": "EXIT",
-        "count": 3
-    }    
-    
+        "count": 1
+    }   
 ]
