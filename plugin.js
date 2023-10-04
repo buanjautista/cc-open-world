@@ -93,7 +93,6 @@ function addPatchAssets(mod, state, cond) {
             mod.setAsset('data/maps/arid/town-1.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/shadebosslock-vt.json.patch');
             break
           case "vtSkip":
-            console.log("Patch applied: ", cond)
             mod.setAsset('data/maps/arid-dng/second/f0/center.json.patch', mod.baseDirectory + 'extra-patches/tower-skip/centerf0.json.patch');
             break
           default:
@@ -107,9 +106,8 @@ function addPatchAssets(mod, state, cond) {
           mod.setAsset('data/maps/arid/town-1.json.patch', mod.baseDirectory + 'assets/data/maps/arid/town-1.json.patch');
           break
         case "vtSkip":
-          console.log("Patch default: ", cond)
           mod.setAsset('data/maps/arid-dng/second/f0/center.json.patch', mod.baseDirectory + 'assets/data/maps/arid-dng/second/f0/center.json.patch');
-            break
+          break
         default:
           break
       }
