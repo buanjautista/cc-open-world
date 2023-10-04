@@ -72,16 +72,24 @@ Subsequent quests in factions, are now unlocked depending on shades, rather than
 
 ## EXTRA PATCHES ##
 
-Vermillion Tower Shade and Boss lock:
-- A condition that locks Vermillion Tower entrance until you get all 4 element shades (Azure Drop, Purple Bolt, Blue Ice, and Red Flame Shades), and beaten the 4 element dungeons (Mine, Faj'ro, So'najiz and Zir'vitar). 
-You can activate this from the Randomizer menu in CCItemRandomizer, or through the .yaml settings in the CCMultiworldRandomizer
+You can activate these patches from the Randomizer menu in CCItemRandomizer, or through the .yaml settings in the CCMultiworldRandomizer
 
+# Vermillion Tower Shade and Boss lock:
+- A condition that locks Vermillion Tower entrance until you get all 4 element shades (Azure Drop, Purple Bolt, Blue Ice, and Red Flame Shades), and beaten the 4 element dungeons (Mine, Faj'ro, So'najiz and Zir'vitar). 
+
+# Vermillion Tower floor skips:
+- Enables all Tower floors once you finish the ground floor fight. This allows skipping the entirety of Vermillion Tower up to the last fight before the boss
 
 ## VERSION CHANGES ##
 
 # v0.1.8
+New Patches: 
+- Vermillion Tower floor skips
 Fixes:
 - Sprouting Business quest is not longer locked if you open the black market barriers first
+- Meteor Shade cutscene wasn't tracking conditions properly
+- Added a check to not start Apollo fight if you have a party
+- Extra conditions checks in V'rda Vil area that were missing
 Changes:
 - Rookie Harbor quests after Faj'ro Temple, now unlock when you obtain Red Flame Shade
 - Bergen Village quests after Temple Mine, now unlock after obtaining Blue Ice Shade

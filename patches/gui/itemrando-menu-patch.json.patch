@@ -7,10 +7,12 @@
                 },
                 "options": {
                     "descriptions": {
-                        "sblock-enabled": "Entrance to Vermillion Tower locked by 4 element dungeon bosses and shades"
+                        "sblock-enabled": "Entrance to Vermillion Tower locked by 4 element dungeon bosses and shades",
+                        "vt-skip": "Enables all floors of Vermillion Tower after the first fight"
                     },
                     "names": {
-                        "sblock-enabled": "Shades and Bosses"
+                        "sblock-enabled": "Shades and Bosses",
+                        "vt-skip": "All Tower Floors"
                     }
                 }
             }
