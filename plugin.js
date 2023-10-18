@@ -1,12 +1,11 @@
-var shadeLockEnabled = {
-  enable: false
-}
-var vtSkipEnabled = {
-  enable: false
-}
-
+// Definition for Extra Patches
+const R_SHADELOCK = 0 // Shade barrier for vermillion tower
+const R_VTSKIP = 1 // Skip all Vermillion Tower after first fight
+const R_OPENFAJRO = 2 // Non-linear Upper Fajro
+const R_METEORVW = 3 // Vermillion Wasteland locked behind Meteor Shade
 
 let mod 
+
 export default class OpenWorld {
   async main(){
     mod = activeMods.find(e => e.name == "open-world")
@@ -25,17 +24,13 @@ export default class OpenWorld {
           cost: 0,
           getter: () => {
             var _a, _b;
-            return (_b = (_a = shadeLockEnabled) == null ? void 0 : _a.enable) != null ? _b : true;
+            return (_b = (_a = randoOptionList.shadeLock) == null ? void 0 : _a.enable) != null ? _b : true;
           },
           setter: (value) => {
             var _a;
-            (_a = shadeLockEnabled) != null ? _a : shadeLockEnabled = {
-              enable: true
-            };
-            shadeLockEnabled.enable = value;
-            shadeLockEnabled.enable 
-              ? addPatchAssets(mod, "add", "shadeBossLock") 
-              : addPatchAssets(mod, "default", "shadeBossLock")
+            (_a = randoOptionList.shadeLock) != null ? _a : randoOptionList.shadeLock = { enable: true };
+            randoOptionList.shadeLock.enable = value;
+            addIRPatches(mod)
           }
         };
         RANDOMIZER_OPTIONS['vt-skip'] = {
@@ -43,17 +38,41 @@ export default class OpenWorld {
           cost: 0,
           getter: () => {
             var _a, _b;
-            return (_b = (_a = vtSkipEnabled) == null ? void 0 : _a.enable) != null ? _b : true;
+            return (_b = (_a = randoOptionList.vtSkip) == null ? void 0 : _a.enable) != null ? _b : true;
           },
           setter: (value) => {
             var _a;
-            (_a = vtSkipEnabled) != null ? _a : vtSkipEnabled = {
-              enable: true
-            };
-            vtSkipEnabled.enable = value;
-            vtSkipEnabled.enable 
-              ? addPatchAssets(mod, "add", "vtSkip") 
-              : addPatchAssets(mod, "default", "vtSkip")
+            (_a = randoOptionList.vtSkip) != null ? _a : randoOptionList.vtSkip = { enable: true };
+            randoOptionList.vtSkip.enable = value;
+            addIRPatches(mod)
+          }
+        };
+        RANDOMIZER_OPTIONS['open-fajro'] = {
+          set: "open-world",
+          cost: 0,
+          getter: () => {
+            var _a, _b;
+            return (_b = (_a = randoOptionList.openFajro) == null ? void 0 : _a.enable) != null ? _b : true;
+          },
+          setter: (value) => {
+            var _a;
+            (_a = randoOptionList.openFajro) != null ? _a : randoOptionList.openFajro = { enable: true };
+            randoOptionList.openFajro.enable = value;
+            addIRPatches(mod)
+          }
+        };
+        RANDOMIZER_OPTIONS['meteor-vw'] = {
+          set: "open-world",
+          cost: 0,
+          getter: () => {
+            var _a, _b;
+            return (_b = (_a = randoOptionList.meteorVW) == null ? void 0 : _a.enable) != null ? _b : true;
+          },
+          setter: (value) => {
+            var _a;
+            (_a = randoOptionList.meteorVW) != null ? _a : randoOptionList.meteorVW = { enable: true };
+            randoOptionList.meteorVW.enable = value;
+            addIRPatches(mod)
           }
         };
       }
@@ -67,51 +86,84 @@ export default class OpenWorld {
   }
 
   modelChanged(model, msg, data) {
-    // Read multiworld connection to check settings variables, to apply optional map patches
     if (model == sc.multiworld) {
+      // Read multiworld connection to check settings variables, to apply optional map patches
+      // Might reapply patches several times depending on possible reconnections
       if ((msg == sc.MULTIWORLD_MSG.CONNECTION_STATUS_CHANGED && data == "Connected") || (msg == sc.MULTIWORLD_MSG.OPTIONS_PRESENT)) {
-        ig.vars.get("mw.options.vtShadeLock") 
-          ? addPatchAssets(mod, "add", "shadeBossLock")
-          : addPatchAssets(mod, "default", "shadeBossLock")
-
-        ig.vars.get("mw.options.vtSkip") 
-          ? addPatchAssets(mod, "add", "vtSkip")
-          : addPatchAssets(mod, "default", "vtSkip")
+        mwOptionList = [ig.vars.get("mw.options.vtShadeLock"), ig.vars.get("mw.options.vtSkip"), ig.vars.get("mw.options.openFajro"), ig.vars.get("mw.options.meteorPassage")]
+        addMWPatches(mod, mwOptionList)
       }
     }
   }
-
 }
 
-function addPatchAssets(mod, state, cond) {
-  mod.runtimeAssets = {}
-  switch (state) {
-    case "add":
-      {
-        switch (cond) {
-          case "shadeBossLock": 
-            mod.setAsset('data/maps/arid/town-1.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/shadebosslock-vt.json.patch');
-            break
-          case "vtSkip":
-            mod.setAsset('data/maps/arid-dng/second/f0/center.json.patch', mod.baseDirectory + 'extra-patches/tower-skip/centerf0.json.patch');
-            break
-          default:
-            break
-        }
-      }
-      break
-    default:
-      switch (cond) {
-        case "shadeBossLock": 
-          mod.setAsset('data/maps/arid/town-1.json.patch', mod.baseDirectory + 'assets/data/maps/arid/town-1.json.patch');
-          break
-        case "vtSkip":
-          mod.setAsset('data/maps/arid-dng/second/f0/center.json.patch', mod.baseDirectory + 'assets/data/maps/arid-dng/second/f0/center.json.patch');
-          break
-        default:
-          break
-      }
-      break
-  }
+// Item Rando patching
+let randoOptionList = {
+  "shadeLock": { enable: false }, 
+  "vtSkip": { enable: false },
+  "openFajro": { enable: false },
+  "meteorVW": { enable: false }
+}
 
+function addIRPatches(mod) {
+  // Set this only once, otherwise any repatch gets previous ones removed
+  mod.runtimeAssets = {} 
+
+  // Loop once through all the extra patch settings, and apply corresponding patches
+  for (let x = 0; x < Object.keys(randoOptionList).length; x++) { 
+    handlePatching(Object.values(randoOptionList)[x].enable, x)
+  }
+}
+
+
+// Multiworld Patching
+let mwOptionList = []
+function addMWPatches(mod, optionList) {
+  // Set this only once, otherwise any repatch gets previous ones removed
+  mod.runtimeAssets = {} 
+  
+  if (optionList){ // Checks for MW extra patch list
+    // Loop once through all the extra patch settings, and apply corresponding patches. 
+    for (let x = 0; x < optionList.length; x++) { 
+      handlePatching(optionList[x], x)
+    }
+    return true;
+  }
+}
+
+
+function handlePatching(patchstate, patchname) {
+  // console.log("Patching: ", patchname, " State:", patchstate)
+  if (patchstate) { // Adds patches
+    switch(patchname) {
+      case R_SHADELOCK:
+        mod.setAsset('data/maps/arid/town-1.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/shadebosslock-vt.json.patch');
+        break;
+      case R_VTSKIP:
+        mod.setAsset('data/maps/arid-dng/second/f0/center.json.patch', mod.baseDirectory + 'extra-patches/tower-skip/centerf0.json.patch');
+        break;
+      case R_OPENFAJRO:
+        mod.setAsset('data/maps/arid/town-1.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/shadebosslock-vt.json.patch');
+        break;
+      case R_METEORVW:
+        mod.setAsset('data/maps/forest/path-10-hidden.json.patch', mod.baseDirectory + 'extra-patches/meteor-vw/passage-barrier.json.patch');
+        break;
+      }
+  }
+  else { // Back to default
+    switch(patchname) {
+      case R_SHADELOCK:
+        mod.setAsset('data/maps/arid/town-1.json.patch', mod.baseDirectory + 'assets/data/maps/arid/town-1.json.patch');
+        break;
+      case R_VTSKIP:
+        mod.setAsset('data/maps/arid-dng/second/f0/center.json.patch', mod.baseDirectory + 'assets/data/maps/arid-dng/second/f0/center.json.patch');
+        break;
+      case R_OPENFAJRO:
+        mod.setAsset('data/maps/arid/town-1.json.patch', mod.baseDirectory + 'extra-patches/locked-tower/shadebosslock-vt.json.patch');
+        break;
+      case R_METEORVW:
+        mod.setAsset('data/maps/forest/path-10-hidden.json.patch', mod.baseDirectory + 'assets/data/maps/forest/path-10-hidden.json.patch');
+        break;
+    }
+  }
 }

@@ -13,11 +13,14 @@ Party window enabled in CrossCentral. You can now invite/manage party members as
 Intro with Emilie and Schneider now tied to “plot.autumnIntro” instead of “plot.line”
 Access to North Marketplace not tied to plot.line, but to getting Flame Shade (0.0.2)
 
+# Autumn's Rise / Guild Area
+Guild Town is open only after meeting Schneider for the first time, with him giving you the Guild Pass.
+
 # Bergen:
 No Apollo 1 sequence
 Bergen Mine Entrance not locked by being past plotline (just needs Mine Pass)
 Bergen Elevator passage to Maroon Valley not locked by plotline
-Guild entry plot sequence now tied to its own plot.line ("plot.guildEntry")
+Guild entry plot sequence now tied to its own plot.line ("plot.guildEntry"). This is enabled after obtaining Mine Pass.
 
 # Maroon Valley:
 Ba’kii kum Eldress quest now tied to its own plotline ("plot.heatLine" instead of “plot.line”)
@@ -70,6 +73,8 @@ Expo space maps not tied to plot.line but to dungeon completion
 # Quests
 Subsequent quests in factions, are now unlocked depending on shades, rather than dungeon / plot completion
 
+==========================================================================================
+
 ## EXTRA PATCHES ##
 
 You can activate these patches from the Randomizer menu in CCItemRandomizer, or through the .yaml settings in the CCMultiworldRandomizer
@@ -80,7 +85,28 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 # Vermillion Tower floor skips:
 - Enables all Tower floors once you finish the ground floor fight. This allows skipping the entirety of Vermillion Tower up to the last fight before the boss
 
+# Open Faj'ro Temple:
+- Enables a few extra doors on Upper Faj'ro Temple to make it less linear.
+
+# Meteor Shade Wasteland:
+- Locks Vermillion Wasteland Tunnel behind a Meteor Shade barrier.
+
+==========================================================================================
+
 ## VERSION CHANGES ##
+
+# v0.2.0
+New Patches:
+- Open Faj'ro
+- Meteor Shade Wasteland
+Fixes:
+- Fixed the compatiblity between multiple extra patches, which wasn't working at all since VT Skip patch was added
+- Changed Emilie being Offline after starting the Maroon Tree until you finished it.
+- Fixed a few V'rda Vil mentions about the cat plague
+Changes:
+- Made the VTower-ShadeLock barriers 2 instead of 4 for clarity (and it looked kind of awful to be honest)
+
+----------------------
 
 # v0.1.8
 New Patches: 
