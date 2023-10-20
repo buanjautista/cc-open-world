@@ -103,6 +103,8 @@ Fixes:
 - Fixed the compatiblity between multiple extra patches, which wasn't working at all since VT Skip patch was added
 - Changed Emilie being Offline after starting the Maroon Tree until you finished it.
 - Fixed a few V'rda Vil mentions about the cat plague
+- Fixed a wrong variable that didn't let you start Mr. Nomsworth second quest in Rookie Harbor
+- Fixed the Black Market guard despawning after talking to him once
 Changes:
 - Made the VTower-ShadeLock barriers 2 instead of 4 for clarity (and it looked kind of awful to be honest)
 
