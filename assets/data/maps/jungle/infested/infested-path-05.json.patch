@@ -1,0 +1,20 @@
+[
+    {
+        "type": "ENTER",
+        "index": ["entities",286,"settings","event"]
+    },
+    {
+        "type": "SET_KEY",
+        "_comment": "Change the Sephisloth event to not solve quest condition to avoid crashes",
+        "index": 15,
+        "content": {
+            "ignoreSlowDown": false,
+            "type": "WAIT",
+            "time": 0.1
+        }
+    },
+    {
+        "type": "EXIT",
+        "count": 4
+    }
+]

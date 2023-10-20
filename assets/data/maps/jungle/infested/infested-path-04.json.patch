@@ -1,0 +1,15 @@
+[
+    {
+        "type": "ENTER",
+        "index": ["entities",804,"settings"]
+    },
+    {
+        "type": "SET_KEY",
+        "_comment": "Make Sloth trigger not depend on killing poles or story events",
+        "index": "startCondition"
+    },
+    {
+        "type": "EXIT",
+        "count": 3
+    }
+]
