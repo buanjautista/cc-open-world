@@ -23,6 +23,39 @@
     },
 
     {
+        "type": "ENTER",
+        "_comment": "Hide the bird NPC next to the crates",
+        "index": [497, "settings", "npcStates", 0]
+    },
+    {
+        "type": "SET_KEY",
+        "index": "hidden",
+        "content": "true"
+    },
+    {
+        "type": "EXIT",
+        "count": 4
+    },
+
+    {
+        "type": "FOR_IN",
+        "_comment": "Despawn the cats on the infested area",
+        "keyword": "__INDEX__",
+        "values": [498, 510, 511, 512, 513, 507, 506],
+        "body": [{
+                "type": "ENTER",
+                "index": ["__INDEX__", "settings"]
+            },{
+                "type": "SET_KEY",
+                "index": "spawnCondition",
+                "content": "false"
+            },{
+                "type": "EXIT",
+                "count": 2
+            }]  
+    },
+
+    {
         "type": "FOR_IN",
         "_comment": "Spawn the platform on the left side",
         "keyword": "__INDEX__",
