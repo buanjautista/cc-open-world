@@ -338,7 +338,7 @@
 
     {
         "type": "ENTER",
-        "_comment": "Replace states for trader quest NPC ",
+        "_comment": "Replace states for trader quest NPC",
         "index": [636, "settings", "npcStates"]
     },
 
@@ -350,7 +350,7 @@
             "_comment": "Remove meet apollo plot condition from NPC for second quest",
             "type": "SET_KEY",
             "index": "condition",
-            "content": "quest.rhg-1-pickpocket.solved && !quest.rhg-2-crate_smuggle.started"
+            "content": "quest.rftc-1-collect_trade.solved && !quest.bull-arena-1.started"
         },
         {
             "type": "EXIT",
