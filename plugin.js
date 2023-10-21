@@ -143,7 +143,14 @@ function handlePatching(patchstate, patchname) {
         mod.setAsset('data/maps/arid-dng/second/f0/center.json.patch', mod.baseDirectory + 'extra-patches/tower-skip/centerf0.json.patch');
         break;
       case R_OPENFAJRO:
-        // mod.setAsset('data/maps/heat-dng/f4/room-01.json.patch', mod.baseDirectory + 'data/maps/heat-dng/f4/room-01.json.patch');
+        mod.setAsset('data/maps/heat-dng/f3/room-01-cross.json.patch', mod.baseDirectory + 'extra-patches/open-fajro/f3/room-01-cross.json.patch');
+        mod.setAsset('data/maps/heat-dng/f3/room-02.json.patch', mod.baseDirectory + 'extra-patches/open-fajro/f3/room-02.json.patch');
+        mod.setAsset('data/maps/heat-dng/f3/room-06.json.patch', mod.baseDirectory + 'extra-patches/open-fajro/f3/room-06.json.patch');
+        mod.setAsset('data/maps/heat-dng/f3/room-07.json.patch', mod.baseDirectory + 'extra-patches/open-fajro/f3/room-07.json.patch');
+        mod.setAsset('data/maps/heat-dng/f4/corridor-east.json.patch', mod.baseDirectory + 'extra-patches/open-fajro/f4/corridor-east.json.patch');
+        mod.setAsset('data/maps/heat-dng/f4/room-01.json.patch', mod.baseDirectory + 'extra-patches/open-fajro/f4/room-01.json.patch');
+        mod.setAsset('data/maps/heat-dng/f4/room-03.json.patch', mod.baseDirectory + 'extra-patches/open-fajro/f4/room-03.json.patch');
+        mod.setAsset('data/maps/heat-dng/f4/room-10.json.patch', mod.baseDirectory + 'extra-patches/open-fajro/f4/room-10.json.patch');
         break;
       case R_METEORVW:
         mod.setAsset('data/maps/forest/path-10-hidden.json.patch', mod.baseDirectory + 'extra-patches/meteor-vw/passage-barrier.json.patch');
@@ -159,9 +166,14 @@ function handlePatching(patchstate, patchname) {
         mod.setAsset('data/maps/arid-dng/second/f0/center.json.patch', mod.baseDirectory + 'assets/data/maps/arid-dng/second/f0/center.json.patch');
         break;
       case R_OPENFAJRO:
-        // mod.setAsset('data/maps/heat-dng/f4/room-01.json.patch', mod.baseDirectory + 'assets/data/maps/heat-dng/f4/room-01.json.patch');
-        // mod.setAsset('data/maps/heat-dng/f4/room-03.json.patch', mod.baseDirectory + 'assets/data/maps/heat-dng/f4/room-03.json.patch');
-        // mod.setAsset('data/maps/heat-dng/f4/corridor-east.json.patch', mod.baseDirectory + 'assets/data/maps/heat-dng/f4/corridor-east.json.patch');
+        mod.setAsset('data/maps/heat-dng/f3/room-01-cross.json.patch', mod.baseDirectory + 'assets/data/maps/heat-dng/f3/room-01-cross.json.patch');
+        mod.setAsset('data/maps/heat-dng/f3/room-02.json.patch', mod.baseDirectory + 'assets/data/maps/heat-dng/f3/room-02.json.patch');
+        mod.setAsset('data/maps/heat-dng/f3/room-06.json.patch', mod.baseDirectory + 'assets/data/maps/heat-dng/f3/room-06.json.patch');
+        mod.setAsset('data/maps/heat-dng/f3/room-07.json.patch', mod.baseDirectory + 'assets/data/maps/heat-dng/f3/room-07.json.patch');
+        mod.setAsset('data/maps/heat-dng/f4/corridor-east.json.patch', mod.baseDirectory + 'assets/data/maps/heat-dng/f4/corridor-east.json.patch');
+        mod.setAsset('data/maps/heat-dng/f4/room-01.json.patch', mod.baseDirectory + 'assets/data/maps/heat-dng/f4/room-01.json.patch');
+        mod.setAsset('data/maps/heat-dng/f4/room-03.json.patch', mod.baseDirectory + 'assets/data/maps/heat-dng/f4/room-03.json.patch');
+        mod.setAsset('data/maps/heat-dng/f4/room-10.json.patch', mod.baseDirectory + 'assets/data/maps/heat-dng/f4/room-10.json.patch');
         break;
       case R_METEORVW:
         mod.setAsset('data/maps/forest/path-10-hidden.json.patch', mod.baseDirectory + 'assets/data/maps/forest/path-10-hidden.json.patch');

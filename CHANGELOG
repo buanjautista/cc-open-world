@@ -1,41 +1,49 @@
-## Map patches for open world : ##
+## Map patches for open world :
 
 # Main:
-Stats enabled in Rhombus Dungeon entrance (for NG+ purposes). 
+
+Stats enabled in Rhombus Dungeon entrance (for NG+ purposes).
 Save fixes are entirely removed. Plot version starts in 5 to avoid save fix prompts in case they happen (which shouldn't).
-Party window enabled in CrossCentral. You can now invite/manage party members as soon as certain events: 
+Party window enabled in CrossCentral. You can now invite/manage party members as soon as certain events:
+
 - Only Apollo 3 duel is active, which unlocks him and Joern as party members if you fight him
 - Unlock Emilie on Rookie Harbor Intro
 - Unlock C’tron on Maroon Tree quest
 - Unlock Shizuka by fighting her in Old Hideout
 
 # Rookie Harbor:
+
 Intro with Emilie and Schneider now tied to “plot.autumnIntro” instead of “plot.line”
 Access to North Marketplace not tied to plot.line, but to getting Flame Shade (0.0.2)
 
 # Autumn's Rise / Guild Area
+
 Guild Town is open only after meeting Schneider for the first time, with him giving you the Guild Pass.
 
 # Bergen:
+
 No Apollo 1 sequence
 Bergen Mine Entrance not locked by being past plotline (just needs Mine Pass)
 Bergen Elevator passage to Maroon Valley not locked by plotline
 Guild entry plot sequence now tied to its own plot.line ("plot.guildEntry"). This is enabled after obtaining Mine Pass.
 
 # Maroon Valley:
+
 Ba’kii kum Eldress quest now tied to its own plotline ("plot.heatLine" instead of “plot.line”)
 Can invite C’tron to party for Maroon Tree quest, or look for him next to West Entrance where he usually is (up until finishing the Maroon Tree quest)
 No Apollo 2 sequence before Faj’ro
-Forced Maroon Tree pass to enter Maroon Tree 
+Forced Maroon Tree pass to enter Maroon Tree
 Forced C’tron and Emilie when returning the Maroon Tree quest until you claim the Sand Shade reward
 
 # Fajro Temple:
+
 No logout or party member lock after Faj’ro temple
 Disabled the cutscene when you enter the cross room in ground floor
 Removed the movement from cutscene when you enter Cold Room so people dont get softlock by entering from different entrances
 Change in a room in G-Room8 to not allow people exiting the map early (which otherwise leads to softlock / perma battle).
 
 # Autumn’s Fall:
+
 Added a Green Leaf Shade barrier on Autumn’s Rise entrance (to make the leaf shade slightly more useful later on)
 Sapphire Ridge entrance is not locked anymore until post-kryskajo events
 Gaias Garden entrance is not locked anymore until post-vermillion events
@@ -43,14 +51,16 @@ Finishing seed shade quest does not forces you to do the raid
 Can’t start first raid on Autumn’s Fall to prevent Vermillion plot
 
 # Vermillion Wasteland:
+
 Tunnel entrance to Vermillion initially open
 Exit back to Sapphire Ridge also enabled in cliff-1
 Vermillion Tower entrance initially open (need to set up some custom blockades or something)
 Stealth section is locked after the basement area to prevent entering tower from other than the main entrance
 
 # Gaia’s Garden:
+
 Chief’s House entrance area not locked
-Chief’s House inside locked so you dont go down for stick quest 
+Chief’s House inside locked so you dont go down for stick quest
 Basin Keep has no story plot (neither beta pass)
 Optional Apollo 3 fight, finishing it allows you to invite Apollo and Joern to party (plus a lot of questionable expression changes to fit the no-vermillion mood)
 Shock Dungeon and Wave Dungeon accessible without party members or story locks
@@ -59,11 +69,13 @@ Both shad barriers are gone, and Rite of Passage is initially open
 Krys’kajo entrance doesnt require/change party members, or story progress. (still needs Drop and Bolt shade)
 
 # Sapphire Ridge:
+
 Old Dojo door only accessible with both key, and dojo quest started
 You can invite Shizuka after fighting her in Old Hideout
 Entrance to Rhombus Square now linked to Meteor Shade
 
 # Keys / Dungeons / Expo Spaces:
+
 No race tracking for dungeons
 End cutscenes not tied to having party members
 Thief Key and White Key fights entrance barrier not locked when you finish fight (but the exit still requires getting the new key chest for logic reasons)
@@ -71,55 +83,75 @@ Expo space maps not tied to plot.line but to dungeon completion
 (plot.cold-dng-end, plot-heat-dng-end, plot-daft-frobbit-kill, plot.shock-dng-end, plot.wave-dng-end)
 
 # Quests
+
 Subsequent quests in factions, are now unlocked depending on shades, rather than dungeon / plot completion
 
 ==========================================================================================
 
-## EXTRA PATCHES ##
+## EXTRA PATCHES
 
 You can activate these patches from the Randomizer menu in CCItemRandomizer, or through the .yaml settings in the CCMultiworldRandomizer
 
 # Vermillion Tower Shade and Boss lock:
-- A condition that locks Vermillion Tower entrance until you get all 4 element shades (Azure Drop, Purple Bolt, Blue Ice, and Red Flame Shades), and beaten the 4 element dungeons (Mine, Faj'ro, So'najiz and Zir'vitar). 
+
+- A condition that locks Vermillion Tower entrance until you get all 4 element shades (Azure Drop, Purple Bolt, Blue Ice, and Red Flame Shades), and beaten the 4 element dungeons (Mine, Faj'ro, So'najiz and Zir'vitar).
 
 # Vermillion Tower floor skips:
+
 - Enables all Tower floors once you finish the ground floor fight. This allows skipping the entirety of Vermillion Tower up to the last fight before the boss
 
-# Open Faj'ro Temple:
-- Enables a few extra doors on Upper Faj'ro Temple to make it less linear.
-
 # Meteor Shade Wasteland:
+
 - Locks Vermillion Wasteland Tunnel behind a Meteor Shade barrier.
+
+# Open Faj'ro Temple:
+
+- Enables a few extra passages on Upper Faj'ro Temple to make it less linear. This means most puzzles must be done in reverse order to access certain locations in reverse.
+  This includes:
+
+* F4 South Corridor has no doors locked (you can access Test of Surprise or Test of Memory earlier)
+* F4 East Corridor can now be done in reverse
+* F4 Gateway side doors are now accesible from the top floor
+* F4 East Pathway can now be solved from both sides (from the bottom side, you have to solve the puzzle in reverse to exit up)
+* F3 Test of Wisdom can now be accessed from F3 Bottom Chamber. This means to access F4 East Corridor through F3 Right Chamber, you have to solve the puzzle in reverse
 
 ==========================================================================================
 
-## VERSION CHANGES ##
+## VERSION CHANGES
 
 # v0.2.0
+
 New Patches:
+
 - Open Faj'ro
 - Meteor Shade Wasteland
+
 Fixes:
+
 - Fixed the compatiblity between multiple extra patches, which wasn't working at all since VT Skip patch was added
 - Fixed a few V'rda Vil mentions about the cat plague, and also removed the cat plague outside Elder's House (there's still a few outside K'tara's House lets pretend these are their pets)
 - Fixed a wrong variable that didn't let you start Mr. Nomsworth second quest in Rookie Harbor
 - Fixed the Black Market guard despawning after talking to him once
+
 Changes:
+
 - Made the VTower-ShadeLock barriers 2 instead of 4 for clarity (and it looked kind of awful to be honest)
 - Can explore Sephisloth cave now and beat it
 - Changed Emilie being Offline after starting the Maroon Tree until you finished it.
 
-----------------------
+---
 
 # v0.1.8
-New Patches: 
+
+New Patches:
+
 - Vermillion Tower floor skips
-Fixes:
+  Fixes:
 - Sprouting Business quest is not longer locked if you open the black market barriers first
 - Meteor Shade cutscene wasn't tracking conditions properly
 - Added a check to not start Apollo fight if you have a party
 - Extra conditions checks in V'rda Vil area that were missing
-Changes:
+  Changes:
 - Rookie Harbor quests after Faj'ro Temple, now unlock when you obtain Red Flame Shade
 - Bergen Village quests after Temple Mine, now unlock after obtaining Blue Ice Shade
 - Ba'kii Kum quests after Faj'ro Temple, now unlock after obtaining Red Flame Shade
@@ -127,37 +159,42 @@ Changes:
 - Last Minute Heroes quest unlocked after obtaining Meteor Shade
 
 # v0.1.7
+
 - Made access to Guild Area tied to meeting Schneider after getting Mine Pass, and not tied to plot.line
 - Changed Meteor Shade room cutscenes in Sapphire Ridge's Old Dojo to not be tied to plot.line
 - Made the Vermillion Tower stealth section only completable up till the basement to allow grabbing chest, but not enter Vermillion Tower from there
 - Added basic compatibility for extra patches, for CCItemRando, and Archipelago CCMultiworldRandomizer. No more dependency lock yay
 
 # v0.1.6
+
 - Changed how the shade-boss lock patch in Vermillion Tower works. Extra event patches per dungeon not needed anymore.
 - Fixed a remaining save fix issue that locks landmarks after a certain point of the plot.line
 - Fixed two dungeon end maps that had wrong key info
 - Added a secondary version that doesn't require item-rando as dependency.
 
 # v0.1.5
+
 - Open World now requires Item Randomizer mod 0.4.3+ to be loaded.
 - Add a optional feature to patch the end of Vermillion Tower to have boss and shade locks.
 - Fix for Basin Keep center not loading patch correctly
 
-# v0.1.4 
+# v0.1.4
+
 - Fixes a bug with the end cutscene in Vermillion Tower entrance not playing.
 - Fixes a syntax error in Rhombus Dungeon entrance.
 - Adds a few barriers in Vermillion Tower Entrance that require beating the 4 element dungeon bosses and getting each of its shades.
 - Fixes the barrier in Autumn Fall not having visuals
 
 # v0.1.3
+
 - Removes save fix prompts and story updates.
 - More party invite options and less locked team layouts.
 - Optional duels between Apollo and Shizuka.
 - Vermilion Wasteland access available at any time.
 
 # v0.1.2
+
 - Fixed few syntax errors that caused certain patches to not load:
 - Basin Keep, Kryskajo Expo Space, Frobbit Expo Space, Cold Room Fajro, Rhombus Square Dungeon Top, Path 08 maroon valley
 - Fixed a few triggers and event that werent added correctly for Sand Shade statue cutscene and Fajro End.
 - Added an extra safety event to allow Ctron and Emilie leave party after Fajro
-
