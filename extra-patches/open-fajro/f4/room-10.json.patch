@@ -23,8 +23,8 @@
         "_comment": "Add the barrier for anticheese at the top",
         "content": {
 			"type": "ScalableProp",
-			"x": 540,
-			"y": 200,
+			"x": 528,
+			"y": 198,
 			"level": 1,
 			"settings": {
 				"name": "",

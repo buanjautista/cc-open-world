@@ -19,7 +19,7 @@
 					"y": 16
 				},
 				"mapId": 137,
-				"condition": "map.reverse",
+				"condition": "map.reverse && !map.switchEnd",
 				"name": "reverseBlocker",
 				"blockerType": "diagonalNE"
 			}

@@ -47,7 +47,7 @@
 	{
         "_comment": "Set the variable from this rather than a separate touch trigger",
         "type": "SET_KEY",
-        "index": "blockEventCondition":
+        "index": "blockEventCondition",
 		"content": "!heat-dng.f4.corridor-east && !heat-dng.eastCorridorReverse"
     },
     {
