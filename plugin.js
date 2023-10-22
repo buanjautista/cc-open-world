@@ -1,3 +1,4 @@
+import {defineGUIPlease} from './src/gui-workaround.js'
 // Definition for Extra Patches
 const R_SHADELOCK = 0 // Shade barrier for vermillion tower
 const R_VTSKIP = 1 // Skip all Vermillion Tower after first fight
@@ -75,6 +76,7 @@ export default class OpenWorld {
             addIRPatches(mod)
           }
         };
+        defineGUIPlease()
       }
       if (multiRandoActive) { console.log("Open world will only work with only one instance of either CCItemRandomizer or CCMultiworldRandomizer") }
     }
