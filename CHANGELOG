@@ -14,7 +14,9 @@ Party window enabled in CrossCentral. You can now invite/manage party members as
 # Rookie Harbor:
 
 Intro with Emilie and Schneider now tied to “plot.autumnIntro” instead of “plot.line”
-Access to North Marketplace not tied to plot.line, but to getting Flame Shade (0.0.2)
+Access to North Marketplace not tied to plot.line, but to getting Red Flame Shade (0.0.2)
+Every quest tied to finishing Faj'ro temple is now tied to getting Red Flame Shade
+Master Sensei quest requires both Flame and Ice Shades
 
 # Autumn's Rise / Guild Area
 
@@ -26,6 +28,7 @@ No Apollo 1 sequence
 Bergen Mine Entrance not locked by being past plotline (just needs Mine Pass)
 Bergen Elevator passage to Maroon Valley not locked by plotline
 Guild entry plot sequence now tied to its own plot.line ("plot.guildEntry"). This is enabled after obtaining Mine Pass.
+All second set of quests unlock after obtaining Blue Ice Shade
 
 # Maroon Valley:
 
@@ -131,10 +134,12 @@ Fixes:
 - Fixed the compatiblity between multiple extra patches, which wasn't working at all since VT Skip patch was added
 - Fixed a few V'rda Vil mentions about the cat plague, and also removed the cat plague outside Elder's House (there's still a few outside K'tara's House lets pretend these are their pets)
 - Fixed a wrong variable that didn't let you start Mr. Nomsworth second quest in Rookie Harbor
-- Fixed the Black Market guard despawning after talking to him once
+- Fixed the Black Market guard despawning after talking to him once.
+- Readding Sephisloth area made a barrier in front of Zir'vitar lock you, so that barrier has been removed.
 
 Changes:
 
+- Made the Faj'ro End Cutscene actually be one cutscene instead of 2
 - Made the VTower-ShadeLock barriers 2 instead of 4 for clarity (and it looked kind of awful to be honest)
 - Can explore Sephisloth cave now and beat it
 - Changed Emilie being Offline after starting the Maroon Tree until you finished it.
