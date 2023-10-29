@@ -20,7 +20,7 @@ Certain quests will be tied to getting shades instead of dungeon progress. This 
 
 -------------------
 # Extra Patches #
-These are small patches that you can add to your runs, to slightly modify some places in order to add more variety to the Open World.
+These are small patches that you can add to your runs, to slightly modify some places in order to add more variety to the Open World. You can activate these patches from the Randomizer menu in CCItemRandomizer, or through the .yaml settings in the CCMultiworldRandomizer
 
 ## Vermillion Tower Shade and Boss lock:
 - A condition that locks Vermillion Tower entrance until you get all 4 element shades (Azure Drop, Purple Bolt, Blue Ice, and Red Flame Shades), and beaten the 4 element dungeons (Mine, Faj'ro, So'najiz and Zir'vitar).
