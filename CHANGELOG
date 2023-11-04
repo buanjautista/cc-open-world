@@ -122,6 +122,12 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 
 ## VERSION CHANGES
 
+# v0.2.1
+
+Fixes:
+- Emilie now is not locked anymore if she joins through the guild cutscene in Old Obelisk
+
+
 # v0.2.0
 
 New Patches:
@@ -135,7 +141,7 @@ Fixes:
 - Fixed a few V'rda Vil mentions about the cat plague, and also removed the cat plague outside Elder's House (there's still a few outside K'tara's House lets pretend these are their pets)
 - Fixed a wrong variable that didn't let you start Mr. Nomsworth second quest in Rookie Harbor
 - Fixed the Black Market guard despawning after talking to him once.
-- Readding Sephisloth area made a barrier in front of Zir'vitar lock you, so that barrier has been removed.
+- Re-adding Sephisloth area made a barrier in front of Zir'vitar lock you, so that barrier has been removed.
 
 Changes:
 
