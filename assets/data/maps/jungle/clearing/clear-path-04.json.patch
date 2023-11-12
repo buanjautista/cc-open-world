@@ -25,7 +25,22 @@
     {
         "type": "ENTER",
         "_comment": "Hide the bird NPC next to the crates",
-        "index": [497, "settings", "npcStates", 0]
+        "index": [497]
+    },
+    {
+        "type": "SET_KEY",
+        "index": "x",
+        "content": 100
+    },
+    {
+        "type": "SET_KEY",
+        "index": "y",
+        "content": 100
+    },
+    {
+        "type": "ENTER",
+        "_comment": "Hide the bird NPC next to the crates",
+        "index": ["settings", "npcStates", 0]
     },
     {
         "type": "SET_KEY",
