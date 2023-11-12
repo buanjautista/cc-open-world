@@ -126,6 +126,9 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 
 Fixes:
 - Emilie now is not locked anymore if she joins through the guild cutscene in Old Obelisk
+- Guild intro is now completable
+- Hlin should be present for observatory quest intro in Guild HQ (it was locked to plot being around post-meteor shade events)
+- V'rda Vil NPCs should now hide properly
 
 
 # v0.2.0
