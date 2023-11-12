@@ -1,0 +1,93 @@
+[
+    { "type": "ENTER", "index": ["entities"] },
+
+    {
+        "type": "ENTER",
+        "index": [58, "settings", "npcStates"]
+    },
+    {
+        "type": "FOR_IN",
+        "_comment": "Change conditions in Schneider",
+        "keyword": { "eventIndex": "__INDEX__", "variable": "__VAR__" },
+        "values": [{ "eventIndex": 1, "variable": "plot.guildEntry >= 61"}, { "eventIndex": 2, "variable": "plot.guildEntry >= 70"}, { "eventIndex": 3, "variable": "plot.guildEntry >= 80"}],
+        "body": [
+            { "type": "ENTER", "index": "__INDEX__" },
+            { "type": "SET_KEY", "index": "condition", "content": "__VAR__" },
+            { "type": "EXIT", "count": 1 }
+        ]
+    },
+    {
+        "type": "EXIT",
+        "count": 3
+    },  
+
+    {
+        "type": "ENTER",
+        "index": [58, "settings", "npcStates"]
+    },
+    {
+        "type": "FOR_IN",
+        "_comment": "Change conditions in Buggy",
+        "keyword": { "eventIndex": "__INDEX__", "variable": "__VAR__" },
+        "values": [{ "eventIndex": 1, "variable": "plot.guildEntry >= 61"}, { "eventIndex": 2, "variable": "plot.guildEntry >= 70"}, { "eventIndex": 3, "variable": "plot.guildEntry >= 80"}],
+        "body": [
+            { "type": "ENTER", "index": "__INDEX__" },
+            { "type": "SET_KEY", "index": "condition", "content": "__VAR__" },
+            { "type": "EXIT", "count": 1 }
+        ]
+    },
+    {
+        "type": "EXIT",
+        "count": 3
+    },  
+
+    {
+        "type": "ENTER",
+        "index": [59, "settings"]
+    },
+    {
+        "_comment": "Changing variables around for intro scene",
+        "type": "SET_KEY",
+        "index": "endCondition",
+        "content": "plot.guildEntry >= 70"
+    },
+    {
+        "type": "FOR_IN",
+        "_comment": "Change multiple plot variables inside event",
+        "keyword": { "eventIndex": "__INDEX__", "value": "__VAL__"},
+        "values": [{ "eventIndex": 6, "value": 61 }, { "eventIndex": 16, "value": 63 }, { "eventIndex": 34, "value": 70 }],
+        "body": [
+            { "type": "ENTER", "index": "event" },
+            {
+                "type": "SET_KEY",
+                "index": "__INDEX__",
+                "content": { "changeType": "set", "type": "CHANGE_VAR_NUMBER", "varName": "plot.guildEntry", "value": "__VAL__" }
+            },
+            { "type": "EXIT" }
+        ]
+    },
+    {
+        "type": "EXIT",
+        "count": 2
+    },  
+
+
+    {
+        "type": "ENTER",
+        "index": [60, "settings", "npcStates"]
+    },
+    { "type": "ENTER", "index": 9 },
+    { 
+        "type": "SET_KEY", 
+        "_comment": "Change Hlin observatory condition to post-first meetup at guild",
+        "index": "condition", 
+        "content": "(plot.guildEntry >= 80) && quest.observatory.started && !quest.observatory.solved && !tmp.hlinJustEntered" 
+    },
+    { "type": "EXIT", "count": 1 },
+    {
+        "type": "EXIT",
+        "count": 3
+    }, 
+
+    { "type": "EXIT", "count": 1 }  
+]

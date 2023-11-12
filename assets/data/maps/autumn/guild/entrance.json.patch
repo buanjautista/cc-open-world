@@ -1,0 +1,49 @@
+[
+    { "type": "ENTER", "index": ["entities"] },
+
+    {
+        "type": "ENTER",
+        "index": [180, "settings", "npcStates", 1]
+    },
+    {
+        "_comment": "Schneider hidden post intro event",
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "plot.guildEntry >= 40"
+    },
+    {
+        "type": "EXIT",
+        "count": 4
+    },  
+    
+    {
+        "type": "ENTER",
+        "index": [181, "settings"]
+    },
+    {
+        "type": "SET_KEY",
+        "index": "endCondition",
+        "content": "plot.guildEntry >= 40"
+    },
+    {
+        "type": "ENTER",
+        "index": ["event"]
+    },
+    {
+        "_comment": "Changing variables around",
+        "type": "SET_KEY",
+        "index": 1,
+        "content": {
+						"changeType": "set",
+						"type": "CHANGE_VAR_NUMBER",
+						"varName": "plot.guildEntry",
+						"value": 40
+				}
+    },
+    {
+        "type": "EXIT",
+        "count": 3
+    },  
+
+    { "type": "EXIT", "count": 1 }  
+]

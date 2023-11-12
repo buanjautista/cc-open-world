@@ -17,22 +17,32 @@ To replace stuff, you need to see on what indexes are the things you want to rep
 
 
 # Useful codes
+These are few codes meant for editing many events at once that repeat in a patch. Just edit the "values" properties to match whatever event index or entity index is needed.
 Example loop to neutralize many events at once:
 >{
         "type": "FOR_IN",
         "_comment": "Removes story event triggers",
         "keyword": "__INDEX__",
         "values": [1, 215],
-        "body": [{
-            "type": "ENTER",
-            "index": ["__INDEX__",  "settings"]
-        },{
-            "type": "SET_KEY",
-            "index": "startCondition",
-            "content": "false"
-        },{
-            "type": "EXIT",
-            "count": 2
-        }]
+        "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "startCondition", "content": "false" },{ "type": "EXIT", "count": 2 }]
 >},
 
+Change multiple event conditions inside NPCStates
+>{
+    "type": "FOR_IN",
+    "_comment": "Change multiple conditions in NPC",
+    "keyword": { "eventIndex": "__INDEX__", "variable": "__VAR__" },
+    "values": [{ "eventIndex": 1, "variable": "plot.guildEntry >= 50"}, { "eventIndex": 2, "variable": "plot.guildEntry >= 60"}],
+    "body": [ { "type": "ENTER", "index": "__INDEX__" }, { "type": "SET_KEY", "index": "condition", "content": "__VAR__" }, { "type": "EXIT", "count": 1 } ]
+>}
+
+Replace multiple plot.line variables inside a eventtrigger
+>{
+	"type": "FOR_IN",
+	"_comment": "Change multiple plot variables inside event",
+	"keyword": { "eventIndex": "__INDEX__", "value": "__VAL__"},
+	"values": [{ "eventIndex": 6, "value": 61 }, { "eventIndex": 16, "value": 63 }, { "eventIndex": 34, "value": 70 }],
+	"body": [
+        { "type": "ENTER", "index": ["event"] }, { "type": "SET_KEY", "index": "__INDEX__", "content": { "changeType": "set", "type": "CHANGE_VAR_NUMBER", "varName": "plot.guildEntry", "value": "__VAL__" } }, { "type": "EXIT" }
+	]
+>}

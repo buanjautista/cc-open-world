@@ -1,0 +1,83 @@
+[
+    { "type": "ENTER", "index": ["entities"] },
+
+    {
+        "type": "ENTER",
+        "index": [279, "settings", "npcStates"]
+    },
+    {
+        "type": "FOR_IN",
+        "_comment": "Change conditions in Schneider",
+        "keyword": { "eventIndex": "__INDEX__", "variable": "__VAR__" },
+        "values": [{ "eventIndex": 1, "variable": "plot.guildEntry >= 50"}, { "eventIndex": 2, "variable": "plot.guildEntry >= 60"}],
+        "body": [
+            { "type": "ENTER", "index": "__INDEX__" },
+            { "type": "SET_KEY", "index": "condition", "content": "__VAR__" },
+            { "type": "EXIT", "count": 1 }
+        ]
+    },
+    {
+        "type": "EXIT",
+        "count": 3
+    },  
+    
+    {
+        "type": "ENTER",
+        "index": [281, "settings"]
+    },
+    {
+        "_comment": "Changing variables around for intro",
+        "type": "SET_KEY",
+        "index": "endCondition",
+        "content": "plot.guildEntry >= 50"
+    },
+    { "type": "ENTER", "index": ["event"] },
+    {
+        "type": "SET_KEY",
+        "index": 0,
+        "content": {
+						"changeType": "set",
+						"type": "CHANGE_VAR_NUMBER",
+						"varName": "plot.guildEntry",
+						"value": 50
+				}
+    },
+    {
+        "type": "EXIT",
+        "count": 3
+    },  
+
+    {
+        "type": "ENTER",
+        "index": [283, "settings"]
+    },
+    {
+        "_comment": "Changing variables around for before entering",
+        "type": "SET_KEY",
+        "index": "endCondition",
+        "content": "plot.guildEntry >= 60"
+    },
+    { "type": "ENTER", "index": ["event"] },
+    {
+        "type": "SET_KEY",
+        "index": 31,
+        "content": {
+						"changeType": "set",
+						"type": "CHANGE_VAR_NUMBER",
+						"varName": "plot.guildEntry",
+						"value": 60
+				}
+    },
+    {
+        "type": "EXIT",
+        "count": 3
+    },  
+
+    { "type": "ENTER", "index": [284, "settings", "interact"] },
+    { "_comment": ":0", "type": "SET_KEY", "index": "event",
+        "content": [ { "text": { "en_US": "Thanks for playing rando", "langUid": 66, "ja_JP": "本当に、ここにはなにもないよ。<<A<<[CHANGED 2017/08/03]", "zh_CN": "真的没有，不骗你。<<A<<[CHANGED 2017/10/10]", "de_DE": "Im Ernst, hier ist nichts.", "ko_KR": "아니 정말, 아무것도 없다니까요.<<A<<[CHANGED 2017/10/17]", "zh_TW": "真的沒有，不騙你。<<A<<[CHANGED 2017/10/10]" }, "center": false, "type": "SHOW_BOARD_MSG" }, { "text": { "en_US": "... ", "langUid": 65, "ja_JP": "...<<A<<[CHANGED 2017/08/03]", "zh_CN": "...<<A<<[CHANGED 2017/10/10]", "de_DE": "... ", "ko_KR": "... <<A<<[CHANGED 2017/10/17]", "zh_TW": "...<<A<<[CHANGED 2017/10/10]" }, "center": false, "type": "SHOW_BOARD_MSG" }, { "text": { "en_US": "There's still no easter egg here... ", "langUid": 64, "ja_JP": "...<<A<<[CHANGED 2017/08/03]", "zh_CN": "...<<A<<[CHANGED 2017/10/10]", "de_DE": "... ", "ko_KR": "... <<A<<[CHANGED 2017/10/17]", "zh_TW": "...<<A<<[CHANGED 2017/10/10]" }, "center": false, "type": "SHOW_BOARD_MSG" }, { "text": { "en_US": "... ", "langUid": 64, "ja_JP": "...<<A<<[CHANGED 2017/08/03]", "zh_CN": "...<<A<<[CHANGED 2017/10/10]", "de_DE": "... ", "ko_KR": "... <<A<<[CHANGED 2017/10/17]", "zh_TW": "...<<A<<[CHANGED 2017/10/10]" }, "center": false, "type": "SHOW_BOARD_MSG" }, { "text": { "en_US": "... ", "langUid": 67, "ja_JP": "...<<A<<[CHANGED 2017/08/03]", "zh_CN": "...<<A<<[CHANGED 2017/10/10]", "de_DE": "... ", "ko_KR": "... <<A<<[CHANGED 2017/10/17]", "zh_TW": "...<<A<<[CHANGED 2017/10/10]" }, "center": false, "type": "SHOW_BOARD_MSG" }, { "text": { "en_US": "Sooooo... Bye.", "langUid": 68, "ja_JP": "それじゃ...じゃあね。<<A<<[CHANGED 2017/08/03]", "zh_CN": "呃... 拜拜。<<A<<[CHANGED 2017/10/10]", "de_DE": "Alsoooo.... Bye.", "ko_KR": "그러니까, 음... 안녕히 가세요.<<A<<[CHANGED 2017/10/17]", "zh_TW": "呃... 拜拜。<<A<<[CHANGED 2017/10/10]" }, "center": false, "type": "SHOW_BOARD_MSG" } ]
+    },
+    { "type": "EXIT", "count": 3 },  
+
+    { "type": "EXIT", "count": 1 }  
+]

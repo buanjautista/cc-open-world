@@ -1,0 +1,118 @@
+[
+    {
+        "type": "ENTER",
+        "index": ["entities"]
+    },
+
+    {
+        "type": "ENTER",
+        "index": [60, "settings", "npcStates", 0]
+    },
+    {
+        "_comment": "Make Hlin be up there if havent beat temple mine or have quest active",
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "(item.225.amount < 1) || !party.has.Hlin || !quest.observatory.started"
+    },
+    { "type": "EXIT" },  
+    { "type": "ENTER", "index": 1 },
+    {
+        "_comment": "Make Hlin despawn otherwise",
+        "type": "SET_KEY",
+        "index": "condition"
+    },
+    {
+        "type": "EXIT",
+        "count": 4
+    },  
+    
+    {
+        "type": "ENTER",
+        "index": [67, "settings"]
+    },
+    {
+        "_comment": "Disable plot event after a gaia's dungeon",
+        "type": "SET_KEY",
+        "index": "startCondition",
+        "content": "false"
+    },
+    {
+        "type": "EXIT",
+        "count": 2
+    },  
+
+
+    {
+        "type": "ENTER",
+        "index": [61, "settings"]
+    },
+    {
+        "_comment": "Changing variables around for intro scene",
+        "type": "SET_KEY",
+        "index": "endCondition",
+        "content": "plot.guildEntry >= 80"
+    },
+    {
+        "type": "FOR_IN",
+        "_comment": "Change multiple plot variables inside event",
+        "keyword": { "eventIndex": "__INDEX__", "value": "__VAL__"},
+        "values": [{ "eventIndex": 5, "value": 71 }, { "eventIndex": 162, "value": 80 }, { "eventIndex": 163, "value": 250 }],
+        "body": [
+            { "type": "ENTER", "index": "event" },
+            {
+                "type": "SET_KEY",
+                "index": "__INDEX__",
+                "content": { "changeType": "set", "type": "CHANGE_VAR_NUMBER", "varName": "plot.guildEntry", "value": "__VAL__" }
+            },
+            { "type": "EXIT" }
+        ]
+    },
+    {
+        "type": "EXIT",
+        "count": 2
+    },  
+
+    {
+        "type": "ENTER",
+        "index": [63, "settings", "npcStates"]
+    },
+    { "type": "ENTER", "index": 1 },
+    {
+        "_comment": "Make Schneider be there for cutscene",
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "plot.guildEntry >= 71"
+    },
+    { "type": "EXIT" },  
+    { "type": "ENTER", "index": 2 },
+    {
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "plot.guildEntry >= 80"
+    },
+    { "type": "EXIT" },  
+    {
+        "type": "EXIT",
+        "count": 3
+    },  
+
+    {
+        "type": "ENTER",
+        "index": [62, "settings", "npcStates", 1]
+    },
+    {
+        "_comment": "Hides buggy after intro cutscene",
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "plot.guildEntry >= 80"
+    },
+    {
+        "type": "EXIT",
+        "count": 4
+    },  
+
+    {
+        "type": "EXIT",
+        "count": 1
+    }  
+]
