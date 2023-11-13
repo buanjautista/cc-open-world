@@ -102,8 +102,8 @@
     { "type": "ENTER", "index": [70, "settings"] },
     { "_comment": "Changing searching Albert meetup conditions", "type": "SET_KEY", "index": "startCondition", "content": "plot.line >= 2100" },
     { "type": "SET_KEY", "index": "endCondition", "content": "plot.line >= 2200" },
-    { "type": "ENTER", "index": 118 },
-    { "type": "SET_KEY", "index": "__INDEX__", "content": { "changeType": "set", "type": "CHANGE_VAR_NUMBER", "varName": "plot.shareholder", "value": "2200" } },
+    { "type": "ENTER", "index": "event" },
+    { "type": "SET_KEY", "index": 118, "content": { "changeType": "set", "type": "CHANGE_VAR_NUMBER", "varName": "plot.shareholder", "value": "2200" } },
     { "type": "EXIT" },
     { "type": "EXIT", "count": 2 }, 
 

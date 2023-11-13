@@ -129,6 +129,10 @@ Fixes:
 - Guild intro is now completable
 - Hlin should be present for observatory quest intro in Guild HQ (it was locked to plot being around post-meteor shade events)
 - V'rda Vil NPCs should now hide properly
+- Smelter Digmo only activates when entering the room after having Infected Digmo killed
+
+Changes:
+- All the shareholder events in Rhombus Square can be now done as soon as you gain access to Rhombus Square, and finish the guild intro
 
 
 # v0.2.0
