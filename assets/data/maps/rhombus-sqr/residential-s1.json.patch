@@ -39,5 +39,13 @@
     { "_comment": "Changing trigger conditions", "type": "SET_KEY", "index": "startCondition", "content": "plot.shareholder >= 2700" },
     { "type": "EXIT", "count": 2 }, 
 
+    { "type": "ENTER", "index": [992, "settings"] },
+    { "_comment": "Changing trigger conditions", "type": "SET_KEY", "index": "startCondition", "content": "plot.shareholder >= 2700" },
+    { "_comment": "Changing trigger conditions", "type": "SET_KEY", "index": "endCondition", "content": "plot.shareholder >= 2750" },
+    { "type": "ENTER", "index": "event" },
+    { "type": "SET_KEY", "index": 1, "content": { "changeType": "set", "type": "CHANGE_VAR_NUMBER", "varName": "plot.shareholder", "value": "2750" } },
+    { "type": "EXIT" },
+    { "type": "EXIT", "count": 2 }, 
+
     { "type": "EXIT", "count": 1 }  
 ]

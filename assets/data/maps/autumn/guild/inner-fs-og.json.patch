@@ -6,20 +6,13 @@
 
     {
         "type": "ENTER",
-        "index": [60, "settings", "npcStates", 0]
+        "index": [60, "settings", "npcStates", 3]
     },
     {
-        "_comment": "Make Hlin be up there if havent beat temple mine or have quest active",
+        "_comment": "Make Hlin be up there if have quest active",
         "type": "SET_KEY",
         "index": "condition",
-        "content": "(item.225.amount < 1) || !party.has.Hlin || !quest.observatory.started"
-    },
-    { "type": "EXIT" },  
-    { "type": "ENTER", "index": 1 },
-    {
-        "_comment": "Make Hlin despawn otherwise",
-        "type": "SET_KEY",
-        "index": "condition"
+        "content": "party.has.Hlin || quest.observatory.started || plot.guildEntry >= 80"
     },
     {
         "type": "EXIT",
@@ -100,12 +93,29 @@
     { "type": "EXIT", "count": 4 },  
 
     { "type": "ENTER", "index": [70, "settings"] },
-    { "_comment": "Changing searching Albert meetup conditions", "type": "SET_KEY", "index": "startCondition", "content": "plot.line >= 2100" },
-    { "type": "SET_KEY", "index": "endCondition", "content": "plot.line >= 2200" },
+    { "_comment": "Changing searching Albert meetup conditions", "type": "SET_KEY", "index": "startCondition", "content": "plot.shareholder >= 2100" },
+    { "type": "SET_KEY", "index": "endCondition", "content": "plot.shareholder >= 2200" },
     { "type": "ENTER", "index": "event" },
     { "type": "SET_KEY", "index": 118, "content": { "changeType": "set", "type": "CHANGE_VAR_NUMBER", "varName": "plot.shareholder", "value": "2200" } },
     { "type": "EXIT" },
     { "type": "EXIT", "count": 2 }, 
+
+    { "type": "ENTER", "index": [59, "settings", "npcStates"] },
+    { "type": "ENTER", "index": 1 },
+    {
+        "_comment": "Hides grumpy after shareholder events",
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "plot.line >= 4100 || plot.shareholder < 2000"
+    },
+    { "type": "EXIT" },
+    { "type": "ENTER", "index": 6 },
+    {
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "plot.line >= 17800 || plot.shareholder >= 2100"
+    },
+    { "type": "EXIT", "count": 4 },  
 
 
     {

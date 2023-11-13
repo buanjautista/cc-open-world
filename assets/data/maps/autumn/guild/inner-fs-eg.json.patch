@@ -29,7 +29,7 @@
         "type": "FOR_IN",
         "_comment": "Change conditions in Buggy",
         "keyword": { "eventIndex": "__INDEX__", "variable": "__VAR__" },
-        "values": [{ "eventIndex": 1, "variable": "plot.guildEntry >= 61"}, { "eventIndex": 2, "variable": "plot.guildEntry >= 70"}, { "eventIndex": 3, "variable": "plot.guildEntry >= 80"}],
+        "values": [{ "eventIndex": 1, "variable": "plot.guildEntry >= 63"}, { "eventIndex": 2, "variable": "plot.guildEntry >= 70"}, { "eventIndex": 3, "variable": "plot.guildEntry >= 80"}],
         "body": [
             { "type": "ENTER", "index": "__INDEX__" },
             { "type": "SET_KEY", "index": "condition", "content": "__VAR__" },
