@@ -6,13 +6,35 @@
 
     {
         "type": "ENTER",
-        "index": [60, "settings", "npcStates", 3]
+        "_comment": "Hlin States",
+        "index": [60, "settings", "npcStates", 0]
     },
     {
-        "_comment": "Make Hlin be up there if have quest active",
+        "_comment": "Force Hlin to be there for intro cutscene",
         "type": "SET_KEY",
         "index": "condition",
-        "content": "party.has.Hlin || quest.observatory.started || plot.guildEntry >= 80"
+        "content": ""
+    },
+    { "type": "EXIT" },  
+    { "type": "ENTER", "index": 1 },
+    {
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "false"
+    },
+    { "type": "ENTER", "index": 2 },
+    {
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "(plot.guildEntry >= 250) && (plot.line >= 17500)"
+    },
+    { "type": "EXIT" },  
+    { "type": "ENTER", "index": 3 },
+    {        
+        "_comment": "Make Hlin not be up there if have quest active or plot past Gaia? (might remove)",
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "party.has.Hlin || quest.observatory.started || (plot.guildEntry >= 250) && (plot.line >= 17800)"
     },
     {
         "type": "EXIT",
@@ -49,7 +71,7 @@
         "type": "FOR_IN",
         "_comment": "Change multiple plot variables inside event",
         "keyword": { "eventIndex": "__INDEX__", "value": "__VAL__"},
-        "values": [{ "eventIndex": 5, "value": 71 }, { "eventIndex": 162, "value": 80 }, { "eventIndex": 163, "value": 250 }],
+        "values": [{ "eventIndex": "5", "value": "71" }, { "eventIndex": "162", "value": "80" }, { "eventIndex": "163", "value": "250" }],
         "body": [
             { "type": "ENTER", "index": "event" },
             {
@@ -81,6 +103,13 @@
         "content": "plot.guildEntry >= 80"
     },
     { "type": "EXIT" },  
+    { "type": "ENTER", "index": 4 },
+    {
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "party.has.Schneider"
+    },
+    { "type": "EXIT" },  
     { "type": "EXIT", "count": 3 },  
 
     { "type": "ENTER", "index": [62, "settings", "npcStates", 1] },
@@ -89,6 +118,20 @@
         "type": "SET_KEY",
         "index": "condition",
         "content": "plot.guildEntry >= 80"
+    },
+    { "type": "EXIT" },  
+    { "type": "ENTER", "index": 2 },
+    {
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "(plot.guildEntry >= 80) && (plot.line >= 17500)"
+    },
+    { "type": "EXIT" },  
+    { "type": "ENTER", "index": 3 },
+    {
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "(plot.guildEntry >= 80) && (plot.line >= 17800)"
     },
     { "type": "EXIT", "count": 4 },  
 

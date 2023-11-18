@@ -9,7 +9,7 @@
         "_comment": "Schneider hidden post intro event",
         "type": "SET_KEY",
         "index": "condition",
-        "content": "plot.guildEntry >= 40"
+        "content": "plot.guildEntry >= 41"
     },
     {
         "type": "EXIT",
@@ -23,7 +23,7 @@
     {
         "type": "SET_KEY",
         "index": "endCondition",
-        "content": "plot.guildEntry >= 40"
+        "content": "plot.guildEntry >= 41"
     },
     {
         "type": "ENTER",
@@ -37,7 +37,7 @@
 						"changeType": "set",
 						"type": "CHANGE_VAR_NUMBER",
 						"varName": "plot.guildEntry",
-						"value": 40
+						"value": 41
 				}
     },
     {

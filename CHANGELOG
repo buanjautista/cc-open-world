@@ -101,7 +101,7 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 
 # Vermillion Tower floor skips:
 
-- Enables all Tower floors once you finish the ground floor fight. This allows skipping the entirety of Vermillion Tower up to the last fight before the boss
+- Enables all Tower floors once you finish the ground floor fight. This allows skipping the entirety of Vermillion Tower up to the last fight before the boss.
 
 # Meteor Shade Wasteland:
 
@@ -126,10 +126,11 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 
 Fixes:
 - Emilie now is not locked anymore if she joins through the guild cutscene in Old Obelisk
-- Guild intro is now completable
+- Guild intro can be completable
 - Hlin should be present for observatory quest intro in Guild HQ (it was locked to plot being around post-meteor shade events)
 - V'rda Vil NPCs should now hide properly
 - Smelter Digmo only activates when entering the room after having Infected Digmo killed
+- Removed a trigger from Vermillion Tower that advances plot to a certain point, where lots of other cutscenes start messing up
 
 Changes:
 - All the shareholder events in Rhombus Square can be now done as soon as you gain access to Rhombus Square, and finish the guild intro
