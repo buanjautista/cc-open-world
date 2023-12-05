@@ -23,7 +23,7 @@
 
     {
         "type": "ENTER",
-        "index": [58, "settings", "npcStates"]
+        "index": [57, "settings", "npcStates"]
     },
     {
         "type": "FOR_IN",

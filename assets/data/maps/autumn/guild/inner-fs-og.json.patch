@@ -22,6 +22,7 @@
         "index": "condition",
         "content": "false"
     },
+    { "type": "EXIT" },  
     { "type": "ENTER", "index": 2 },
     {
         "type": "SET_KEY",
