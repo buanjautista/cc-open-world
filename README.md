@@ -10,7 +10,8 @@ For more info on certain changes, you can check the [CHANGELOG](https://raw.gith
 
 # Instalation
 
-Install CCLoader. Just drop the ccmod file from [releases](https://github.com/buanjautista/cc-open-world/releases/tag/0.2.0) inside assets/mods/, and you should be good to go
+Install CCLoader. 
+Then download and drop the .ccmod file from [releases](https://github.com/buanjautista/cc-open-world/releases/tag/0.2.0) inside assets/mods/, and you should be good to go. In case you're using the .zip version, drop the CC-Open-World-version folder inside assets/mods/. Make sure to only have one of these, not both, since it might cause weird replacements and behavior
 
 ## [CCLoader](https://github.com/CCDirectLink/CCLoader/releases)
 You can download CCLoader from this location: https://github.com/CCDirectLink/CCLoader/releases
