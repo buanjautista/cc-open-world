@@ -17,6 +17,17 @@
         ]
     },
     {
+        "type": "FOR_IN",
+        "_comment": "Make sure no plot interaction happens, for no despawn softlock mostly",
+        "keyword": "__INDEX__",
+        "values": [4,5,6,7,8,9,10],
+        "body": [
+            { "type": "ENTER", "index": "__INDEX__" },
+            { "type": "SET_KEY", "index": "condition", "content": "false" },
+            { "type": "EXIT", "count": 1 }
+        ]
+    },
+    {
         "type": "EXIT",
         "count": 3
     },  
@@ -33,6 +44,17 @@
         "body": [
             { "type": "ENTER", "index": "__INDEX__" },
             { "type": "SET_KEY", "index": "condition", "content": "__VAR__" },
+            { "type": "EXIT", "count": 1 }
+        ]
+    },
+    {
+        "type": "FOR_IN",
+        "_comment": "Make sure no plot interaction happens, for no despawn softlock mostly",
+        "keyword": "__INDEX__",
+        "values": [4,5,6,7,8,9,10],
+        "body": [
+            { "type": "ENTER", "index": "__INDEX__" },
+            { "type": "SET_KEY", "index": "condition", "content": "false" },
             { "type": "EXIT", "count": 1 }
         ]
     },
