@@ -4,7 +4,7 @@
         "index": ["entities"]
     },
     {
-        "_comment": "Change plot variables on the cutscene event",
+        "_comment": "Change plot variables on the cutscene event. Also change the SP level to increase by 1 instead of setting to 2",
         "type": "SET_KEY",
         "index": "4",
         "content": {
@@ -534,8 +534,7 @@
                         "type": "RESET_CAMERA"
                     },
                     {
-                        "level": "2",
-                        "type": "SET_PLAYER_SP_LEVEL"
+                        "type": "INCREASE_PLAYER_SP_LEVEL"
                     },
                     {
                         "member": "Emilie",
