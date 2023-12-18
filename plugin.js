@@ -1,4 +1,5 @@
 import {defineGUIPlease} from './src/gui-workaround.js'
+
 // Definition for Extra Patches
 const R_SHADELOCK = 0 // Shade barrier for vermillion tower
 const R_VTSKIP = 1 // Skip all Vermillion Tower after first fight
@@ -15,25 +16,17 @@ export default class OpenWorld {
 
     // Check if either CCItemRando or CCMultiworldRandomizer is active, and add stuff accordingly
     if (itemRandoActive){
+      localStorage.getItem("open-world-settings") && (randoOptionList = JSON.parse(localStorage.getItem("open-world-settings")))
       if (RANDOMIZER_OPTIONS && RANDOMIZER_SETS) {
         RANDOMIZER_SETS['open-world'] = {
           type: "MULTI",
           order: 2E3
         };
-        RANDOMIZER_OPTIONS['sblock-enabled'] = {
-          set: "open-world",
-          cost: 0,
-          getter: () => {
-            var _a, _b;
-            return (_b = (_a = randoOptionList.shadeLock) == null ? void 0 : _a.enable) != null ? _b : true;
-          },
-          setter: (value) => {
-            var _a;
-            (_a = randoOptionList.shadeLock) != null ? _a : randoOptionList.shadeLock = { enable: true };
-            randoOptionList.shadeLock.enable = value;
-            addIRPatches(mod)
-          }
+        RANDOMIZER_SETS['open-world-sblock'] = {
+          type: "MULTI",
+          order: 2E3
         };
+
         RANDOMIZER_OPTIONS['vt-skip'] = {
           set: "open-world",
           cost: 0,
@@ -76,9 +69,70 @@ export default class OpenWorld {
             addIRPatches(mod)
           }
         };
+
+        RANDOMIZER_OPTIONS['sblock-all'] = {
+          set: "open-world-sblock",
+          cost: 0,
+          getter: () => {
+            var _a, _b;
+            return (_b = (_a = randoOptionList.shadeLock) == null ? void 0 : (_a.type == "all")) != null ? _b : (randoOptionList.shadeLock.type == "all");
+          },
+          setter: () => {
+            randoOptionList.shadeLock.enable = true;
+            randoOptionList.shadeLock.type = "all"
+            addIRPatches(mod)
+          }
+        };
+        RANDOMIZER_OPTIONS['sblock-boss'] = {
+          set: "open-world-sblock",
+          cost: 0,
+          getter: () => {
+            var _a, _b;
+            return (_b = (_a = randoOptionList.shadeLock) == null ? void 0 : (_a.type == "bosses")) != null ? _b : (randoOptionList.shadeLock.type == "bosses");
+          },
+          setter: () => {
+            randoOptionList.shadeLock.enable = true;
+            randoOptionList.shadeLock.type = "bosses"
+            addIRPatches(mod)
+          }
+        };
+        RANDOMIZER_OPTIONS['sblock-shades'] = {
+          set: "open-world-sblock",
+          cost: 0,
+          getter: () => {
+            var _a, _b;
+            return (_b = (_a = randoOptionList.shadeLock) == null ? void 0 : (_a.type == "shades")) != null ? _b : (randoOptionList.shadeLock.type == "shades");
+          },
+          setter: () => {
+            randoOptionList.shadeLock.enable = true;
+            randoOptionList.shadeLock.type = "shades"
+            addIRPatches(mod)
+          }
+        };
+        RANDOMIZER_OPTIONS['sblock-none'] = {
+          set: "open-world-sblock",
+          cost: 0,
+          getter: () => {
+            var _a, _b;
+            return (_b = (_a = randoOptionList.shadeLock) == null ? void 0 : !_a.enable) != null ? _b : true;
+          },
+          setter: () => {
+            randoOptionList.shadeLock.enable = false;
+            randoOptionList.shadeLock.type = "none"
+            addIRPatches(mod)
+          }
+        };
         defineGUIPlease()
       }
       if (multiRandoActive) { console.log("Open world will only work with only one instance of either CCItemRandomizer or CCMultiworldRandomizer") }
+
+      ig.Game.inject({
+        loadingComplete() {
+          this.parent();
+  
+          ig.vars.set("open-world.shadeLock", SBL_TYPE[randoOptionList.shadeLock.type])
+        },}
+      );
     }
 
     else if (multiRandoActive) {
@@ -101,17 +155,20 @@ export default class OpenWorld {
 
 // Item Rando patching
 let randoOptionList = {
-  "shadeLock": { enable: false }, 
+  "shadeLock": { enable: false, type: "none" }, 
   "vtSkip": { enable: false },
   "openFajro": { enable: false },
   "meteorVW": { enable: false }
 }
+
+const SBL_TYPE = { "none": 0, "all": 1, "shades": 2, "bosses": 3 }
 
 function addIRPatches(mod) {
   // Set this only once, otherwise any repatch gets previous ones removed
   mod.runtimeAssets = {} 
 
   // Loop once through all the extra patch settings, and apply corresponding patches
+  localStorage.setItem("open-world-settings", JSON.stringify(randoOptionList))
   for (let x = 0; x < Object.keys(randoOptionList).length; x++) { 
     handlePatching(Object.values(randoOptionList)[x].enable, x)
   }

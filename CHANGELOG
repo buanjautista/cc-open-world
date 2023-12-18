@@ -4,6 +4,7 @@
 
 Stats enabled in Rhombus Dungeon entrance (for NG+ purposes).
 Save fixes are entirely removed. Plot version starts in 5 to avoid save fix prompts in case they happen (which shouldn't).
+SP Upgrades are now incremental instead of fixed (2SP in Faj'ro, 3SP in Krys'kajo, 4SP in beach)
 Party window enabled in CrossCentral. You can now invite/manage party members as soon as certain events:
 
 - Only Apollo 3 duel is active, which unlocks him and Joern as party members if you fight him
@@ -121,6 +122,15 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 ==========================================================================================
 
 ## VERSION CHANGES
+
+# v0.2.2
+
+Fixes:
+- More guild fixes (hopefully) to prevent softlocks due to NPCs not spawning
+
+Changes: 
+- All SP upgrades are now incremental instead of fixed
+- VT Boss&Shade barrier can now be set to be only boss, only shades or both
 
 # v0.2.1
 
