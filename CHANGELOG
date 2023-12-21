@@ -98,7 +98,7 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 
 # Vermillion Tower Shade and Boss lock:
 
-- A condition that locks Vermillion Tower entrance until you get all 4 element shades (Azure Drop, Purple Bolt, Blue Ice, and Red Flame Shades), and beaten the 4 element dungeons (Mine, Faj'ro, So'najiz and Zir'vitar).
+- A condition that locks Vermillion Tower entrance until you get all 4 element shades (Azure Drop, Purple Bolt, Blue Ice, and Red Flame Shades), and beaten the 4 element dungeons (Mine, Faj'ro, So'najiz and Zir'vitar). You can also make the condition only require the bosses, or the shades.
 
 # Vermillion Tower floor skips:
 
@@ -129,8 +129,13 @@ Fixes:
 - More guild fixes (hopefully) to prevent softlocks due to NPCs not spawning
 
 Changes: 
+- A NPC to remove any party-locks has been introduced in Rookie Harbor - Info Hub GF
 - All SP upgrades are now incremental instead of fixed
+- Kit quest (An unfortunate series of features) can now be started with party
 - VT Boss&Shade barrier can now be set to be only boss, only shades or both
+
+CC-Item-Randomizer specific:
+- Any toggles are now saved into storage
 
 # v0.2.1
 

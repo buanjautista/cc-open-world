@@ -2,7 +2,7 @@
     "id": "open-world",
     "title": "Open World patches",
     "description": "Open World map patches for randomizer",
-    "version": "0.2.1",
+    "version": "0.2.2",
 
     "plugin": "plugin.js"
 }
