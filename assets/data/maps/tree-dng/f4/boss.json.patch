@@ -3,7 +3,7 @@
 
     { "type": "ENTER", "index": [26, "settings"] },
     {
-        "_comment": "Change conditions for spUpgrade tied to finishing the bossfight/dungeon instead of just having the star shade",
+        "_comment": "Remove condition so the star shade cutscene handles the SP upgrade!!! (Change conditions for spUpgrade tied to finishing the bossfight/dungeon instead of just having the star shade)",
         "type": "SET_KEY",
         "index": "endCondition",
         "content": "map.upgradeObtained || player.maxSp >= 16"
@@ -11,7 +11,7 @@
     {
         "type": "SET_KEY",
         "index": "startCondition",
-        "content": "dungeons.tree.beaten"
+        "content": "false"
     },
     { "type": "ENTER", "index": "event" },
     {
