@@ -139,8 +139,37 @@ export default class OpenWorld {
       // Adds a check to start extra patching on multiworld connection
       sc.Model.addObserver(sc.multiworld, this)
     }
-  }
 
+    // "fix" for increase_player_sp_level
+    ig.EVENT_STEP.INCREASE_PLAYER_SP_LEVEL.inject({
+      start() {
+        sc.model.player.setSpLevel("" + (Number(sc.model.player.spLevel) + 1));
+      },
+    });
+    
+    // New event step to sync specific party member's SP level 
+        ig.module("game.feature.party.party-steps2") .requires( "impact.base.action", "impact.base.event", "game.feature.party.party-steps", "game.feature.model.model-steps").defines(function () {
+          ig.EVENT_STEP.SYNC_PARTY_MEMBER_SP_LEVEL = ig.EventStepBase.extend({
+            _wm: new ig.Config({
+              attributes: {
+                member: {
+                  _type: "String",
+                  _info: "Party member to add",
+                  _select: sc.PARTY_OPTIONS,
+                },
+              },
+            }),
+            init: function (a) {
+              this.member = a.member;
+              console.log(a)
+            },
+            start: function () {
+              sc.party.getPartyMemberModel(this.member).setSpLevel(sc.model.player.spLevel);
+            },
+          });
+        }
+        );
+  }
   modelChanged(model, msg, data) {
     if (model == sc.multiworld) {
       // Read multiworld connection to check settings variables, to apply optional map patches
