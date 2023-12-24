@@ -275,7 +275,7 @@ export function defineGUIPlease() {
   ig.lang.labels.sc.gui.menu.randomizer.options.descriptions["vt-skip"] = "Enables all floors of Vermillion Tower after the first fight";
   ig.lang.labels.sc.gui.menu.randomizer.options.descriptions["meteor-vw"] = "Locks Vermillion Wasteland behind a Meteor Shade barrier";
   ig.lang.labels.sc.gui.menu.randomizer.options.descriptions["open-fajro"] = "Opens up some locked doors in Upper Faj'ro Temple";
-  ig.lang.labels.sc.gui.menu.randomizer.options.names["vt-skip"] = "Skip Vermillion Tower floors";
+  ig.lang.labels.sc.gui.menu.randomizer.options.names["vt-skip"] = "Skip Tower floors";
   ig.lang.labels.sc.gui.menu.randomizer.options.names["meteor-vw"] = "Locked Wasteland";
   ig.lang.labels.sc.gui.menu.randomizer.options.names["open-fajro"] = "Open Fajro";
   ig.lang.labels.sc.gui.menu.randomizer.sets["open-world-sblock"] = "Open World - Vermillion Tower entry barrier";
