@@ -77,6 +77,7 @@ Krys’kajo entrance doesnt require/change party members, or story progress. (st
 Old Dojo door only accessible with both key, and dojo quest started
 You can invite Shizuka after fighting her in Old Hideout
 Entrance to Rhombus Square now linked to Meteor Shade
+Kit quest is now doable with a party
 
 # Keys / Dungeons / Expo Spaces:
 
@@ -130,7 +131,7 @@ Fixes:
 
 Changes: 
 - A NPC to remove any party-locks has been introduced in Rookie Harbor - Info Hub GF
-- All SP upgrades are now incremental instead of fixed
+- All SP upgrades are now incremental instead of fixed (which also includes a small "fix" of game code)
 - Kit quest (An unfortunate series of features) can now be started with party
 - VT Boss&Shade barrier can now be set to be only boss, only shades or both
 
