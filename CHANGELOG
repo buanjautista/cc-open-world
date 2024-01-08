@@ -124,6 +124,10 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 
 ## VERSION CHANGES
 
+# v0.2.3
+Changes:
+- Lower puzzle in Sinus Transmit room in Zir'vitar doesn't hard-require heat and cold anymore, and can be solved with any element (elements spawned by default)
+
 # v0.2.2
 
 Fixes:
