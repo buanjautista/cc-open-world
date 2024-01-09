@@ -1,0 +1,20 @@
+[
+  { "type": "ENTER", "index": [ "entities" ] },
+  {
+    "type": "FOR_IN",
+    "_comment": "Removes story event need for teleport to beach, but still make it need DLC active for compat reasons",
+    "keyword": "__INDEX__",
+    "values": [1183, 1184, 1186, 1187, 1188, 1189],
+    "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "spawnCondition", "content": "extension.post-game.active" },{ "type": "EXIT", "count": 2 }]
+  },
+
+  {
+    "type": "FOR_IN",
+    "_comment": "Removes the barriers in front of the tp with dlc active",
+    "keyword": "__INDEX__",
+    "values": [1190, 1191],
+    "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "spawnCondition", "content": "!extension.post-game.active" },{ "type": "EXIT", "count": 2 }]
+  },
+  { "type": "ENTER", "index": [1279,  "settings"] },{ "type": "SET_KEY", "index": "startCondition", "content": "false" },{ "type": "EXIT", "count": 2 },
+  { "type": "EXIT", "count": 1 }
+]

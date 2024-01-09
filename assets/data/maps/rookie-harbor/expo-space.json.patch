@@ -258,6 +258,34 @@
   },
 
   {
+    "type": "ENTER",
+    "_comment": "Ancient Shade cutscene",
+    "index": [17, "settings"]
+  },
+  {
+    "type": "SET_KEY",
+    "index": "endCondition",
+    "content": "map.beachDone"
+  },
+  {
+    "type": "SET_KEY",
+    "index": "startCondition",
+    "content": "plot.ancientShadeFight"
+  },
+  {
+    "type": "ENTER",
+    "index": "event"
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": { "type": "CHANGE_VAR_BOOL", "varName": "map.beachDone", "changeType": "set", "value": true }
+  },
+  {
+    "type": "EXIT",
+    "count": 3
+  },
+
+  {
     "type": "EXIT"
   }
 ]

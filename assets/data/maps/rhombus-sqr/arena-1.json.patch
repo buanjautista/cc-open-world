@@ -1,0 +1,29 @@
+[
+    { "type": "ENTER", "index": ["entities"] },
+
+    {
+      "type": "FOR_IN",
+      "_comment": "Removes the barriers in front of the dlc exits with dlc active",
+      "keyword": "__INDEX__",
+      "values": [481,483,627],
+      "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "blockEventCondition", "content": "!extension.post-game.active" },{ "type": "EXIT", "count": 2 }]
+    },
+  
+      {
+          "type": "FOR_IN",
+          "_comment": "Removes the barriers in front of the dlc exits with dlc active",
+          "keyword": "__INDEX__",
+          "values": [485,480],
+          "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "spawnCondition", "content": "!extension.post-game.active" },{ "type": "EXIT", "count": 2 }]
+      },
+
+      {
+        "type": "FOR_IN",
+        "_comment": "OL barrier deactivated fx when dlc",
+        "keyword": "__INDEX__",
+        "values": [821,822],
+        "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "spawnCondition", "content": "extension.post-game.active" },{ "type": "EXIT", "count": 2 }]
+    },
+
+    { "type": "EXIT", "count": 1 }  
+]

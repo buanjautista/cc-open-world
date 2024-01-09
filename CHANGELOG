@@ -14,7 +14,7 @@ Party window enabled in CrossCentral. You can now invite/manage party members as
 
 # Rookie Harbor:
 
-Intro with Emilie and Schneider now tied to “plot.autumnIntro” instead of “plot.line”
+Intro with Emilie and Schneider now tied to its own plot sequence
 Access to North Marketplace not tied to plot.line, but to getting Red Flame Shade (0.0.2)
 Every quest tied to finishing Faj'ro temple is now tied to getting Red Flame Shade
 Master Sensei quest requires both Flame and Ice Shades
@@ -28,12 +28,12 @@ Guild Town is open only after meeting Schneider for the first time, with him giv
 No Apollo 1 sequence
 Bergen Mine Entrance not locked by being past plotline (just needs Mine Pass)
 Bergen Elevator passage to Maroon Valley not locked by plotline
-Guild entry plot sequence now tied to its own plot.line ("plot.guildEntry"). This is enabled after obtaining Mine Pass.
+Guild entry plot sequence now tied to its own plot.line. This is enabled after obtaining Mine Pass.
 All second set of quests unlock after obtaining Blue Ice Shade
 
 # Maroon Valley:
 
-Ba’kii kum Eldress quest now tied to its own plotline ("plot.heatLine" instead of “plot.line”)
+Ba’kii kum Eldress quest now tied to its own plotline
 Can invite C’tron to party for Maroon Tree quest, or look for him next to West Entrance where he usually is (up until finishing the Maroon Tree quest)
 No Apollo 2 sequence before Faj’ro
 Forced Maroon Tree pass to enter Maroon Tree
@@ -85,11 +85,15 @@ No race tracking for dungeons
 End cutscenes not tied to having party members
 Thief Key and White Key fights entrance barrier not locked when you finish fight (but the exit still requires getting the new key chest for logic reasons)
 Expo space maps not tied to plot.line but to dungeon completion
-(plot.cold-dng-end, plot-heat-dng-end, plot-daft-frobbit-kill, plot.shock-dng-end, plot.wave-dng-end)
 
 # Quests
 
 Subsequent quests in factions, are now unlocked depending on shades, rather than dungeon / plot completion
+
+
+# DLC
+
+DLC areas are active by default when DLC is active (Beach, Homestedt, Upgraded shops and North of Rhombus Square, and Ku'lero Dungeon)
 
 ==========================================================================================
 
@@ -124,11 +128,17 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 
 ## VERSION CHANGES
 
-# v0.2.3
+# v0.3.0
+
+New:
+- DLC areas access first implementation. Now you should be able to get to these areas as soon as you gain access to their locations
+
 Changes:
 - Lower puzzle in Sinus Transmit room in Zir'vitar doesn't hard-require heat and cold anymore, and can be solved with any element (elements spawned by default)
-- More visuals to determine when VT barrier is locked by boss or shades
+- Added visuals to determine when VT barrier is locked by boss or shades
 - Less clutter in Expo space for easier maintenance later
+
+---
 
 # v0.2.2
 

@@ -23,5 +23,29 @@
         "count": 3
     }, 
 
+    {
+        "type": "FOR_IN",
+        "_comment": "Removes the barriers in front of the dlc exits with dlc active",
+        "keyword": "__INDEX__",
+        "values": [154,301,679],
+        "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "blockEventCondition", "content": "!extension.post-game.active" },{ "type": "EXIT", "count": 2 }]
+      },
+  
+      {
+          "type": "FOR_IN",
+          "_comment": "Removes the barriers in front of the dlc exits with dlc active",
+          "keyword": "__INDEX__",
+          "values": [590,591],
+          "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "spawnCondition", "content": "!extension.post-game.active" },{ "type": "EXIT", "count": 2 }]
+      },
+
+      {
+        "type": "FOR_IN",
+        "_comment": "Shows the OLs in front of the dlc exits with dlc active",
+        "keyword": "__INDEX__",
+        "values": [676,677],
+        "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "spawnCondition", "content": "extension.post-game.active" },{ "type": "EXIT", "count": 2 }]
+    },
+
     { "type": "EXIT", "count": 1 }  
 ]

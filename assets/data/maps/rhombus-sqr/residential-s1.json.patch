@@ -47,5 +47,29 @@
     { "type": "EXIT" },
     { "type": "EXIT", "count": 2 }, 
 
+    {
+      "type": "FOR_IN",
+      "_comment": "Removes the barriers in front of the beach exit with dlc active",
+      "keyword": "__INDEX__",
+      "values": [792,793,794],
+      "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "blockEventCondition", "content": "!extension.post-game.active" },{ "type": "EXIT", "count": 2 }]
+    },
+
+    {
+        "type": "FOR_IN",
+        "_comment": "Removes the barriers in front of the beach exit with dlc active",
+        "keyword": "__INDEX__",
+        "values": [895,896,897],
+        "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "spawnCondition", "content": "!extension.post-game.active" },{ "type": "EXIT", "count": 2 }]
+    },
+
+    {
+        "type": "FOR_IN",
+        "_comment": "Shows the OLs barrier fx in front of the beach exit with dlc active",
+        "keyword": "__INDEX__",
+        "values": [1005, 1006, 1007],
+        "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "spawnCondition", "content": "extension.post-game.active" },{ "type": "EXIT", "count": 2 }]
+    },
+
     { "type": "EXIT", "count": 1 }  
 ]
