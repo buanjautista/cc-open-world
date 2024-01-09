@@ -88,42 +88,42 @@
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Shade Icons 1 props",
-        "content": { "type": "Prop", "x": 608, "y": 212, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1SignA", "mapId": 713, "propType": { "sheet": "autumn", "name": "barrierSignFlame" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock != 3) || (mw.options.vtShadeLock != 3 && mw.options.vtShadeLock)" } }
+        "content": { "type": "Prop", "x": 608, "y": 212, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1SignA", "mapId": 713, "propType": { "sheet": "autumn", "name": "barrierSignFlame" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock > 0 && open-world.shadeLock != 3) || (mw.options.vtShadeLock != 3 && mw.options.vtShadeLock)" } }
     }, 
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Shade Icons 1 props",
-        "content": { "type": "Prop", "x": 608, "y": 188, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1SignA", "mapId": 744, "propType": { "sheet": "autumn", "name": "barrierSignFlame" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock == 2) || (mw.options.vtShadeLock == 2 && mw.options.vtShadeLock)" } }
+        "content": { "type": "Prop", "x": 608, "y": 188, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1SignA", "mapId": 744, "propType": { "sheet": "autumn", "name": "barrierSignFlame" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock > 0 && open-world.shadeLock == 2) || (mw.options.vtShadeLock == 2 && mw.options.vtShadeLock)" } }
     }, 
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Shade Icons 1 props",
-        "content": { "type": "Prop", "x": 608, "y": 188, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1BossA", "mapId": 734, "propType": { "sheet": "bossshades", "name": "barrierSignMoth" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock != 2) || (mw.options.vtShadeLock != 2 && mw.options.vtShadeLock)" } }
+        "content": { "type": "Prop", "x": 608, "y": 188, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1BossA", "mapId": 734, "propType": { "sheet": "bossshades", "name": "barrierSignMoth" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock > 0 && open-world.shadeLock != 2) || (mw.options.vtShadeLock != 2 && mw.options.vtShadeLock)" } }
     }, 
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Shade Icons 1 props",
-        "content": { "type": "Prop", "x": 608, "y": 212, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1BossA", "mapId": 745, "propType": { "sheet": "bossshades", "name": "barrierSignMoth" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock == 3) || (mw.options.vtShadeLock == 3 && mw.options.vtShadeLock)" } }
+        "content": { "type": "Prop", "x": 608, "y": 212, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1BossA", "mapId": 745, "propType": { "sheet": "bossshades", "name": "barrierSignMoth" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock > 0 && open-world.shadeLock == 3) || (mw.options.vtShadeLock == 3 && mw.options.vtShadeLock)" } }
     }, 
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Shade Icons 1 props",
-        "content": { "type": "Prop", "x": 776, "y": 212, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1SignB", "mapId": 742, "propType": { "sheet": "bergen-trail", "name": "barrierSign" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock != 3) || (mw.options.vtShadeLock != 3 && mw.options.vtShadeLock)" } }
+        "content": { "type": "Prop", "x": 776, "y": 212, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1SignB", "mapId": 742, "propType": { "sheet": "bergen-trail", "name": "barrierSign" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock > 0 && open-world.shadeLock != 3) || (mw.options.vtShadeLock != 3 && mw.options.vtShadeLock)" } }
     }, 
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Shade Icons 1 props",
-        "content": { "type": "Prop", "x": 776, "y": 188, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1SignB", "mapId": 747, "propType": { "sheet": "bergen-trail", "name": "barrierSign" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock == 2) || (mw.options.vtShadeLock == 2 && mw.options.vtShadeLock)" } }
+        "content": { "type": "Prop", "x": 776, "y": 188, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1SignB", "mapId": 747, "propType": { "sheet": "bergen-trail", "name": "barrierSign" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock > 0 && open-world.shadeLock == 2) || (mw.options.vtShadeLock == 2 && mw.options.vtShadeLock)" } }
     }, 
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Shade Icons 1 props",
-        "content": { "type": "Prop", "x": 776, "y": 188, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1BossB", "mapId": 741, "propType": { "sheet": "bossshades", "name": "barrierSignDriller" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock != 2) || (mw.options.vtShadeLock != 2 && mw.options.vtShadeLock)" } }
+        "content": { "type": "Prop", "x": 776, "y": 188, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1BossB", "mapId": 741, "propType": { "sheet": "bossshades", "name": "barrierSignDriller" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock > 0 && open-world.shadeLock != 2) || (mw.options.vtShadeLock != 2 && mw.options.vtShadeLock)" } }
     }, 
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Shade Icons 1 props",
-        "content": { "type": "Prop", "x": 776, "y": 212, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1BossB", "mapId": 746, "propType": { "sheet": "bossshades", "name": "barrierSignDriller" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock == 3) || (mw.options.vtShadeLock == 3 && mw.options.vtShadeLock)" } }
+        "content": { "type": "Prop", "x": 776, "y": 212, "level": { "level": 2, "offset": 8 }, "settings": { "name": "barrier1BossB", "mapId": 746, "propType": { "sheet": "bossshades", "name": "barrierSignDriller" }, "propAnim": "off", "condAnims": [ { "0": " ", "condition": "map.barrier1Open", "anim": "on" } ], "spawnCondition": "(open-world.shadeLock > 0 && open-world.shadeLock == 3) || (mw.options.vtShadeLock == 3 && mw.options.vtShadeLock)" } }
     }, 
 
     {
