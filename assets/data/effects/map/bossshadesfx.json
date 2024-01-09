@@ -98,7 +98,7 @@
   "EFFECTS": {
     "drillerBarrier": [
       {
-        "volume": 0.3,
+        "volume": 0.5,
         "global": true,
         "loop": false,
         "sound": "media/sound/upgrade/appear.ogg",
@@ -206,7 +206,7 @@
     ],
     "mothBarrier": [
       {
-        "volume": 0.3,
+        "volume": 0.5,
         "global": true,
         "loop": false,
         "sound": "media/sound/upgrade/appear.ogg",
@@ -314,7 +314,7 @@
     ],
     "blobBarrier": [
       {
-        "volume": 0.3,
+        "volume": 0.5,
         "global": true,
         "loop": false,
         "sound": "media/sound/upgrade/appear.ogg",
@@ -422,7 +422,7 @@
     ],
     "phantomBarrier": [
       {
-        "volume": 0.3,
+        "volume": 0.5,
         "global": true,
         "loop": false,
         "sound": "media/sound/upgrade/appear.ogg",
