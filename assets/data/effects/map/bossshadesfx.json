@@ -98,7 +98,7 @@
   "EFFECTS": {
     "drillerBarrier": [
       {
-        "volume": 0.8,
+        "volume": 0.3,
         "global": true,
         "loop": false,
         "sound": "media/sound/upgrade/appear.ogg",
@@ -154,7 +154,7 @@
         "type": "LIGHT"
       },
       {
-        "volume": 0.7,
+        "volume": 0.2,
         "global": true,
         "loop": true,
         "sound": "media/sound/upgrade/floating.ogg",
@@ -206,7 +206,7 @@
     ],
     "mothBarrier": [
       {
-        "volume": 0.8,
+        "volume": 0.3,
         "global": true,
         "loop": false,
         "sound": "media/sound/upgrade/appear.ogg",
@@ -262,7 +262,7 @@
         "type": "LIGHT"
       },
       {
-        "volume": 0.7,
+        "volume": 0.2,
         "global": true,
         "loop": true,
         "sound": "media/sound/upgrade/floating.ogg",
@@ -314,7 +314,7 @@
     ],
     "blobBarrier": [
       {
-        "volume": 0.8,
+        "volume": 0.3,
         "global": true,
         "loop": false,
         "sound": "media/sound/upgrade/appear.ogg",
@@ -370,7 +370,7 @@
         "type": "LIGHT"
       },
       {
-        "volume": 0.7,
+        "volume": 0.2,
         "global": true,
         "loop": true,
         "sound": "media/sound/upgrade/floating.ogg",
@@ -422,7 +422,7 @@
     ],
     "phantomBarrier": [
       {
-        "volume": 0.8,
+        "volume": 0.3,
         "global": true,
         "loop": false,
         "sound": "media/sound/upgrade/appear.ogg",
@@ -478,7 +478,7 @@
         "type": "LIGHT"
       },
       {
-        "volume": 0.7,
+        "volume": 0.2,
         "global": true,
         "loop": true,
         "sound": "media/sound/upgrade/floating.ogg",
