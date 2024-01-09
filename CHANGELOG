@@ -127,6 +127,8 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 # v0.2.3
 Changes:
 - Lower puzzle in Sinus Transmit room in Zir'vitar doesn't hard-require heat and cold anymore, and can be solved with any element (elements spawned by default)
+- More visuals to determine when VT barrier is locked by boss or shades
+- Less clutter in Expo space for easier maintenance later
 
 # v0.2.2
 
