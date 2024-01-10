@@ -1,0 +1,58 @@
+[{
+        "type": "ENTER",
+        "index": "entities"
+    },
+
+    {
+        "type": "FOR_IN",
+        "_comment": "Disable all guildies from entrance cutscene",
+        "keyword": "__INDEX__",
+        "values": [796,797,798,799,800,801,802,803,804],
+        "body": [{
+                "type": "ENTER",
+                "index": ["__INDEX__", "settings"]
+            },{
+                "type": "SET_KEY",
+                "index": "npcStates",
+                "content": [
+                                {
+                                    "reactType": "FIXED_POS",
+                                    "face": "WEST",
+                                    "showFx": {
+                                        "sheet": "teleport",
+                                        "name": "showDefault"
+                                    },
+                                    "hidden": true,
+                                    "condition": "",
+                                    "config": "",
+                                    "event": []
+                                }]
+            },{
+                "type": "EXIT",
+                "count": 2
+            }]  
+    },
+
+    {
+        "type": "ENTER",
+        "index": [794, "settings"],
+        "_comment": "Make dungeon door only accesible with ancient shade and DLC active"
+        },
+        
+        {
+            "type": "SET_KEY",
+            "index": "condition",
+            "content": "extension.post-game.active && item.627.amount >= 1"
+        },
+
+        {
+        "type": "EXIT",
+        "count": 2
+    },
+
+
+    {
+    "type": "EXIT",
+    "count": 1
+}
+]

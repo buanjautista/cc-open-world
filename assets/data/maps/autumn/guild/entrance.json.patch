@@ -21,6 +21,12 @@
         "index": [181, "settings"]
     },
     {
+        "_comment": "Make sure you don't skip the previous cutscene losing the pickup",
+        "type": "SET_KEY",
+        "index": "startCondition",
+        "content": "plot.guildEntry >= 10"
+    },
+    {
         "type": "SET_KEY",
         "index": "endCondition",
         "content": "plot.guildEntry >= 41"
