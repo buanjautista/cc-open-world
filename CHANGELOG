@@ -131,12 +131,14 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 # v0.3.0
 
 New:
-- DLC areas access first implementation. Now you should be able to get to these areas as soon as you gain access to their locations
+- DLC areas access first implementation. Now you should be able to get to these areas as soon as you gain access to their locations. This also includes being able to do the raid (for no reason yet)
 
 Changes:
-- Lower puzzle in Sinus Transmit room in Zir'vitar doesn't hard-require heat and cold anymore, and can be solved with any element (elements spawned by default)
 - Added visuals to determine when VT barrier is locked by boss or shades
-- Less clutter in Expo space for easier maintenance later
+- Less clutter in Expo Space for easier maintenance later
+- Lower puzzle in Sinus Transmit room in Zir'vitar doesn't hard-require heat and cold anymore, and can be solved with any element (elements spawned by default)
+- Entrances to So'najiz and Zir'vitar are active by default
+- Temple Mine B3 and B4 key locks only require 1 key each instead of 3 and 4 keys respectively
 
 ---
 
