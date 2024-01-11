@@ -1,0 +1,30 @@
+[
+    { "type": "ENTER", "index": ["entities"] },
+
+    { "type": "ENTER", "index": [9, "settings","event",8,"0"] },
+    {
+        "_comment": "Reset shareholder events for good ending (replaces vermillion tp removal)",
+        "type": "SET_KEY",
+        "index": "14",
+        "content": { "changeType": "set", "type": "CHANGE_VAR_NUMBER", "varName": "plot.shareholder", "value": 0 }
+    },
+    {
+        "_comment": "Replace barrier getting closed to Vermillion",
+        "type": "SET_KEY",
+        "index": "23",
+        "content": { "ignoreSlowDown": false, "type": "WAIT", "time": 1 }
+    },
+    {
+        "_comment": "Redirect teleport to guild to CrossCentral",
+        "type": "SET_KEY",
+        "index": "25",
+        "content": {
+            "type": "TELEPORT",
+            "map": "rhombus-sqr.central-inner",
+            "marker": "balconyExit"
+          }
+    },
+    { "type": "EXIT", "count": 5 },
+
+    { "type": "EXIT", "count": 1 }
+]

@@ -142,6 +142,10 @@ Changes:
 - Temple Mine B3 and B4 key locks only require 1 key each instead of 3 and 4 keys respectively
 - So'najiz Trial of Persistence only uses a key to open both South and North hallways
 
+Fixes:
+- Meta Space (after finishing the game), will send you back to CrossCentral instead of guild to avoid any weird potential issues
+- Removed extra unnecessary story events from Guild HQ 
+
 ---
 
 # v0.2.2

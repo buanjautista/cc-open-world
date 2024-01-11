@@ -146,5 +146,23 @@
     { "type": "EXIT" },
     { "type": "EXIT", "count": 2 },  
 
+    {
+        "type": "FOR_IN",
+        "_comment": "Disable unnecessary story events",
+        "keyword": "__INDEX__",
+        "values": [61,64,67,68,69,70,71,72,74],
+        "body": [{
+            "type": "ENTER",
+            "index": ["__INDEX__", "settings"]
+        },{
+            "type": "SET_KEY",
+            "index": "startCondition",
+            "content": "false"
+        },{
+            "type": "EXIT",
+            "count": 2
+        }]
+    },
+
     { "type": "EXIT", "count": 1 }  
 ]
