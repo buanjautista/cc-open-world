@@ -85,6 +85,7 @@ No race tracking for dungeons
 End cutscenes not tied to having party members
 Thief Key and White Key fights entrance barrier not locked when you finish fight (but the exit still requires getting the new key chest for logic reasons)
 Expo space maps not tied to plot.line but to dungeon completion
+Dungeons will have less key usage so spare keys lead to easier/faster traversal for randomizers (less need to gather that many keys)
 
 # Quests
 
@@ -139,6 +140,7 @@ Changes:
 - Lower puzzle in Sinus Transmit room in Zir'vitar doesn't hard-require heat and cold anymore, and can be solved with any element (elements spawned by default)
 - Entrances to So'najiz and Zir'vitar are active by default
 - Temple Mine B3 and B4 key locks only require 1 key each instead of 3 and 4 keys respectively
+- So'najiz Trial of Persistence only uses a key to open both South and North hallways
 
 ---
 
