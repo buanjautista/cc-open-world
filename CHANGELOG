@@ -145,6 +145,9 @@ Changes:
 Fixes:
 - Meta Space (after finishing the game), will send you back to CrossCentral instead of guild to avoid any weird potential issues
 - Removed extra unnecessary story events from Guild HQ 
+- Fixed a locked door in Vermillion Wasteland Lea's Room (not a softlock but its inconvenient)
+- Hide Apollo cutscene in Autumn's Rise if you already done/meet him on Gaia's Garden
+- Hide Emilie on Bergen Trail entrance
 
 ---
 
