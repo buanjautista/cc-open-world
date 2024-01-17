@@ -1,12 +1,1 @@
-[
-    { "type": "ENTER", "index": "entities" },
-
-    {
-        "type": "FOR_IN",
-        "_comment": "Remove the first and second key barriers",
-        "keyword": "__INDEX__",
-        "values": [14,15,16,17,18,19,20,21],
-        "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "spawnCondition", "content": "false" },{ "type": "EXIT", "count": 2 }]
-    },
-    { "type": "EXIT", "count": 1 }
-]
+[ { "type": "ENTER", "index": "entities" }, { "type": "FOR_IN", "_comment": "Rename all regular key pillars and add cutscene variables", "keyword": "__INDEX__", "values": [ 14, 15, 29 ], "body": [ { "type": "ENTER", "index": [ "__INDEX__", "settings" ] }, { "type": "SET_KEY", "index": "name", "content": "pillar-__INDEX__" }, { "type": "SET_KEY", "index": "onDestructIncrease", "content": "map.keysUsed" }, { "type": "EXIT", "count": 2 } ] }, { "type": "ADD_ARRAY_ELEMENT", "_comment": "Add event to open both pillars at once", "content": { "type": "EventTrigger", "x": 2408, "y": 320, "level": 1, "settings": { "size": { "x": 16, "y": 16 }, "mapId": 718, "event": [ { "type": "DESTROY_DESTRUCTIBLE", "entity": { "global": true, "name": "pillar-14" } }, { "type": "WAIT", "time": 0.25 }, { "type": "DESTROY_DESTRUCTIBLE", "entity": { "global": true, "name": "pillar-29" } }, { "type": "WAIT", "time": 1.0 }, { "changeType": "set", "type": "CHANGE_VAR_BOOL", "varName": "map.pillarsOpen", "value": true } ], "name": "keyOpener", "eventType": "CUTSCENE", "startCondition": "map.keysUsed", "triggerType": "ALWAYS", "endCondition": "map.pillarsOpen" } } }, { "type": "EXIT", "count": 1 } ]
