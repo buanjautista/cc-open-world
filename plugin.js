@@ -18,14 +18,8 @@ export default class OpenWorld {
     if (itemRandoActive){
       localStorage.getItem("open-world-settings") && (randoOptionList = JSON.parse(localStorage.getItem("open-world-settings")))
       if (RANDOMIZER_OPTIONS && RANDOMIZER_SETS) {
-        RANDOMIZER_SETS['open-world'] = {
-          type: "MULTI",
-          order: 2E3
-        };
-        RANDOMIZER_SETS['open-world-sblock'] = {
-          type: "MULTI",
-          order: 2E3
-        };
+        RANDOMIZER_SETS['open-world'] = { type: "MULTI", order: 2E3 };
+        RANDOMIZER_SETS['open-world-sblock'] = { type: "MULTI", order: 2E3 };
 
         RANDOMIZER_OPTIONS['vt-skip'] = {
           set: "open-world",
@@ -140,6 +134,10 @@ export default class OpenWorld {
       sc.Model.addObserver(sc.multiworld, this)
     }
 
+    // *********** //
+    /* EVENT STEPS */
+    // *********** //
+
     // "fix" for increase_player_sp_level
     ig.EVENT_STEP.INCREASE_PLAYER_SP_LEVEL.inject({
       start() {
@@ -147,79 +145,59 @@ export default class OpenWorld {
       },
     });
 
+    // fix for to not show landmarks on enhanced skip beginning
     sc.TopMsgHudGui.inject({
       modelChanged: function(model, event, data) {
-	if (model == sc.map && event == sc.MAP_EVENT.LANDMARK_ADDED) {
-	  if (ig.game.mapName == "newgame") {
-	    return;
-	  }
-	}
-	return this.parent(model, event, data);
+      if (model == sc.map && event == sc.MAP_EVENT.LANDMARK_ADDED) {
+        if (ig.game.mapName == "newgame") {
+          return;
+        }
       }
+      return this.parent(model, event, data);
+          }
     });
-    // New event to equip an item, for enhanced skip beginning
-    ig.module("game.feature.player.rando-utils")
-      .requires(
-	"impact.base.action",
-	"impact.base.event",
-	"game.feature.player.player-model",
-	"game.feature.model.game-model"
-      ).defines(function () {
-	ig.EVENT_STEP.EQUIP_ITEM = ig.EventStepBase.extend({
-	  part: null,
-	  item: null,
-	  _wm: new ig.Config({
-	    attributes: {
-	      part: {
-		_type: "Number",
-		_info: "Where does the equip go",
-		_select: sc.MENU_EQUIP_BODYPART,
-	      },
-	      item: {
-		_type: "Number",
-		_info: "ID of item to equip",
-	      },
-	    },
-	  }),
-	  init: function (a) {
-	    this.part = Number(a.part);
-	    this.item = Number(a.item);
-	  },
-	  start: function () {
-	    sc.model.player.setEquipment(this.part, this.item)
-	  },
-	});
+
+        // New event to equip an item, for enhanced skip beginning
+      ig.module("game.feature.player.rando-utils") .requires( "impact.base.action", "impact.base.event", "game.feature.player.player-model", "game.feature.model.game-model" ).defines(function () {
+        ig.EVENT_STEP.EQUIP_ITEM = ig.EventStepBase.extend({
+          part: null,
+          item: null,
+          _wm: new ig.Config({
+            attributes: {
+              part: { _type: "Number", _info: "Where does the equip go", _select: sc.MENU_EQUIP_BODYPART, },
+              item: { _type: "Number", _info: "ID of item to equip", },
+            },
+          }),
+          init: function (a) {
+            this.part = Number(a.part);
+            this.item = Number(a.item);
+          },
+          start: function () {
+            sc.model.player.setEquipment(this.part, this.item)
+          },
+        });
       });
 
-    // New event to mark an area as visited, for enhanced skip beginning
-    ig.module("game.feature.menu.rando-utils")
-      .requires(
-	"impact.base.action",
-	"impact.base.event",
-	"game.feature.menu.map-model"
-      ).defines(function () {
-	ig.EVENT_STEP.UPDATE_VISITED_AREA = ig.EventStepBase.extend({
-	  _wm: new ig.Config({
-	    attributes: {
-	      area: {
-		_type: "String",
-		_info: "Area to mark as visited",
-	      }
-	    }
-	  }),
+      // New event to mark an area as visited, for enhanced skip beginning
+      ig.module("game.feature.menu.rando-utils") .requires( "impact.base.action", "impact.base.event", "game.feature.menu.map-model" ).defines(function () {
+        ig.EVENT_STEP.UPDATE_VISITED_AREA = ig.EventStepBase.extend({
+          _wm: new ig.Config({
+            attributes: {
+              area: { _type: "String", _info: "Area to mark as visited", } }
+        }),
 
-	  init: function (settings) {
-	    this.area = settings.area;
-	  },
+        init: function (settings) {
+          this.area = settings.area;
+        },
 
-	  start: function() {
-	    sc.map.updateVisitedArea(this.area);
-	  }
-	});
+        start: function() {
+          sc.map.updateVisitedArea(this.area);
+        }
+      });
       });
 
     // New event step to sync specific party member's SP level 
-        ig.module("game.feature.party.party-steps2") .requires( "impact.base.action", "impact.base.event", "game.feature.party.party-steps", "game.feature.model.model-steps").defines(function () {
+    ig.module("game.feature.party.party-steps2") .requires( "impact.base.action", "impact.base.event", "game.feature.party.party-steps", "game.feature.model.model-steps").defines(function () {
           ig.EVENT_STEP.SYNC_PARTY_MEMBER_SP_LEVEL = ig.EventStepBase.extend({
             _wm: new ig.Config({
               attributes: {
@@ -241,6 +219,10 @@ export default class OpenWorld {
         }
         );
   }
+
+  // *********** //
+  /* CC-MWR patching */
+  // *********** //
 
   modelChanged(model, msg, data) {
     if (model == sc.multiworld) {
