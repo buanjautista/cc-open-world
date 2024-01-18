@@ -2,6 +2,7 @@
 
 # Main:
 
+Skip Beginning has been rehauled to start right away from Rookie Harbor, with anything before Rhombus Dungeon already tracked.
 Stats enabled in Rhombus Dungeon entrance (for NG+ purposes).
 Save fixes are entirely removed. Plot version starts in 5 to avoid save fix prompts in case they happen (which shouldn't).
 SP Upgrades are now incremental instead of fixed (2SP in Faj'ro, 3SP in Krys'kajo, 4SP in beach)
@@ -133,6 +134,7 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 
 New:
 - DLC areas access first implementation. Now you should be able to get to these areas as soon as you gain access to their locations. This also includes being able to do the raid (for no reason yet)
+- Enhanced Skip Beginning: Allows skipping Rhombus Dungeon and start right away in Rookie Harbor quest hub.
 
 Changes:
 - Added visuals to determine when VT barrier is locked by boss or shades

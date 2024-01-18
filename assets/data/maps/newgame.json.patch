@@ -24,17 +24,42 @@
 		}
 	},
 	{
+		"_comment": "Set Lea to level 4, as long as keep level isnt a thing",
+		"type": "ADD_ARRAY_ELEMENT",
+		"content": {
+				"type": "SET_PLAYER_LEVEL_DEBUG",
+				"level": "4"
+			}
+	},
+	{
+		"_comment": "Add circuit points (only if keep level isnt a thing)",
+		"type": "FOR_IN",
+		"keyword": "__ELEMENT__",
+		"values": [ "NEUTRAL","HEAT","COLD","WAVE","SHOCK" ],
+		"body": [
+			{
+				"type": "ADD_ARRAY_ELEMENT",
+				"content": { "type": "IF", "withElse": false, "condition": "!newgame.keep-level", "thenStep": [{
+					"type": "ADD_CP",
+					"element": "__ELEMENT__",
+					"amount": 3
+				}]}
+			}]
+		
+	},
+	{
+		"_comment": "Enable NG+ carry data",
+		"type": "ADD_ARRAY_ELEMENT",
+		"content": {
+			"type": "APPLY_NEW_GAME_DATA",
+			"atRhombus": false
+		}
+	},
+	{
 		"_comment": "Enable all of the player core values acquired during Rhombus Dungeon.",
 		"type": "FOR_IN",
 		"keyword": "__CORE__",
-		"values": [
-			"MENU",
-			"QUICK_MENU",
-			"SPECIAL",
-			"COMBAT_RANK",
-			"EXP",
-			"MODIFIER"
-		],
+		"values": [ "MENU", "QUICK_MENU", "SPECIAL", "COMBAT_RANK", "EXP", "MODIFIER" ],
 		"body": [
 			{
 				"type": "ADD_ARRAY_ELEMENT",
@@ -119,10 +144,7 @@
 		"_comment": "Mark all of the previous areas as visited",
 		"type": "FOR_IN",
 		"keyword": "__AREA__",
-		"values": [
-			"rhombus-dng",
-			"rhombus-sqr"
-		],
+		"values": [ "rhombus-dng", "rhombus-sqr" ],
 		"body": [
 			{
 				"type": "ADD_ARRAY_ELEMENT",

@@ -1,4 +1,8 @@
 [{
 	"type": "INCLUDE",
 	"src": "mod:patches/gui/itemrando-menu-patch.json.patch"
+},
+{
+	"type": "INCLUDE",
+	"src": "mod:patches/gui/enhanced-skip-beginning.json.patch"
 }]
