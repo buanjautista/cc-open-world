@@ -45,15 +45,6 @@
 					"amount": 3
 				}]}
 			}]
-		
-	},
-	{
-		"_comment": "Enable NG+ carry data",
-		"type": "ADD_ARRAY_ELEMENT",
-		"content": {
-			"type": "APPLY_NEW_GAME_DATA",
-			"atRhombus": false
-		}
 	},
 	{
 		"_comment": "Enable all of the player core values acquired during Rhombus Dungeon.",
@@ -200,31 +191,6 @@
 		}
 	},
 	{
-		"_comment": "Add equipment",
-		"type": "FOR_IN",
-		"keyword": {
-			"part": "__PART__",
-			"equip": "__EQUIP__"
-		},
-		"values": [
-			{ "part": 1, "equip": 23 },
-			{ "part": 2, "equip": 24 },
-			{ "part": 3, "equip": 24 },
-			{ "part": 4, "equip": 26 },
-			{ "part": 5, "equip": 25 }
-		],
-		"body": [
-			{
-				"type": "ADD_ARRAY_ELEMENT",
-				"content": {
-					"type": "EQUIP_ITEM",
-					"part": "__PART__",
-					"item": "__EQUIP__"
-				}
-			}
-		]
-	},
-	{
 		"_comment": "Makes sure the map will say 6/6 chests in Rhombus Dungeon.",
 		"type": "ADD_ARRAY_ELEMENT",
 		"content": {
@@ -278,6 +244,53 @@
 					"type": "UNLOCK_ENEMY",
 					"enemy": "__ENEMY__",
 					"asSpecial": true
+				}
+			}
+		]
+	},
+	{
+		"_comment": "Enable NG+ carry data",
+		"type": "ADD_ARRAY_ELEMENT",
+		"content": {
+			"type": "APPLY_NEW_GAME_DATA",
+			"atRhombus": false
+		}
+	},
+	{
+		"_comment": "Add equipment",
+		"type": "FOR_IN",
+		"keyword": {
+			"part": "__PART__",
+			"equip": "__EQUIP__"
+		},
+		"values": [ { "part": 1, "equip": 23 }, { "part": 2, "equip": 24 }, { "part": 3, "equip": 24 }, { "part": 4, "equip": 26 }, { "part": 5, "equip": 25 } ],
+		"body": [
+			{
+				"type": "ADD_ARRAY_ELEMENT",
+				"content": { "type": "IF", "withElse": false, "condition": "!newgame.keep-equipment", "thenStep": [
+					{
+						"type": "EQUIP_ITEM",
+						"part": "__PART__",
+						"item": "__EQUIP__"
+					}
+				]}
+			}
+		]
+	},
+	{
+		"_comment": "Disable all elements so it doesn't show in circuit tree",
+		"type": "FOR_IN",
+		"keyword": "__CORE__",
+		"values": [ "HEAT", "COLD", "WAVE", "SHOCK" ],
+		"body": [
+			{
+				"type": "ADD_ARRAY_ELEMENT",
+				"content": { "type": "IF", "withElse": false, "condition": "!newgame.keep-elements", "thenStep": [
+					{
+					"type": "SET_PLAYER_CORE",
+					"core": "ELEMENT___CORE__",
+					"value": false
+					}]
 				}
 			}
 		]
