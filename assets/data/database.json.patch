@@ -12,5 +12,15 @@
     },
     {
         "type": "EXIT"
+    },
+    {
+        "type": "ENTER",
+        "index": "shops"
+    },{
+        "type": "INCLUDE",
+        "src": "mod:patches/database/shop-conditions.json"
+    },
+    {
+        "type": "EXIT"
     }
 ]  
