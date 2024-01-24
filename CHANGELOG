@@ -143,6 +143,8 @@ Changes:
 - Entrances to So'najiz and Zir'vitar are active by default
 - Temple Mine B3 and B4 key locks only require 1 key each instead of 3 and 4 keys respectively
 - So'najiz Trial of Persistence only uses a key to open both South and North hallways
+- Changed certain shop conditions for shop randomizer purposes
+- Added a Meteor Shade prop to show Rhombus Square also opens with the shade
 
 Fixes:
 - Meta Space (after finishing the game), will send you back to CrossCentral instead of guild to avoid any weird potential issues

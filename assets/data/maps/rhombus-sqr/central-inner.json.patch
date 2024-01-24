@@ -27,6 +27,12 @@
         }
     },
 
+    {
+        "type": "ADD_ARRAY_ELEMENT",
+        "_comment": "Adds a Meteor Shade prop to indicate barrier open",
+        "content": { "type": "Prop", "x": 740, "y": 1285, "level": 0, "settings": { "mapId": 294, "propType": { "sheet": "forest", "name": "barrierSignMeteor" }, "condAnims": [ { "0": " ", "condition": "map.rhombusSquareOpen", "anim": "on" } ], "name": "barrierSignA" } }
+    },
+
 
     {
         "type": "FOR_IN",
