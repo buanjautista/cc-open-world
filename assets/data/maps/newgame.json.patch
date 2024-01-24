@@ -285,11 +285,22 @@
 		"body": [
 			{
 				"type": "ADD_ARRAY_ELEMENT",
-				"content": { "type": "IF", "withElse": false, "condition": "!newgame.keep-elements", "thenStep": [
+				"content": { "type": "IF", "withElse": true, "condition": "!newgame.keep-elements", "thenStep": [
 					{
 					"type": "SET_PLAYER_CORE",
 					"core": "ELEMENT___CORE__",
 					"value": false
+					}],
+					"elseStep": [
+						{
+						"type": "SET_PLAYER_CORE",
+						"core": "ELEMENT___CORE__",
+						"value": true
+					},
+					{
+						"type": "SET_PLAYER_CORE",
+						"core": "ELEMENT_CHANGE",
+						"value": true
 					}]
 				}
 			}
