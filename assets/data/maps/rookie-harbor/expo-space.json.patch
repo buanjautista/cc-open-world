@@ -178,7 +178,7 @@
   {
     "type": "SET_KEY",
     "index": "startCondition",
-    "content": "plot.dojo-end"
+    "content": "plot.meteorShade >= 2"
   },
   {
     "type": "ENTER",
