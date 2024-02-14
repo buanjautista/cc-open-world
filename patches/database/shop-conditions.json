@@ -2,7 +2,7 @@
     {
         "type": "ENTER",
         "_comment": "Rookie Harbor items",
-        "index": ["rookieHarborItems","pages","content"]
+        "index": ["rookieHarborItems","pages",0,"content"]
     },
     {
     "type": "FOR_IN",
@@ -32,11 +32,11 @@
         "values": [12,13,14],
         "body": [{ "type": "ENTER", "index": "__INDEX__" },{ "type": "SET_KEY", "index": "condition", "content": "item.376.amount >= 1" },{ "type": "EXIT" }]  
     },
-    { "type": "EXIT", "count": 3 },
+    { "type": "EXIT", "count": 4 },
     {
         "type": "ENTER",
         "_comment": "Rookie Harbor Weapons",
-        "index": ["rookieHarborWeapons","pages","content"]
+        "index": ["rookieHarborWeapons","pages",0,"content"]
     },
     {
         "type": "FOR_IN",
@@ -52,11 +52,11 @@
         "values": [8,9,10,11],
         "body": [{ "type": "ENTER", "index": "__INDEX__" },{ "type": "SET_KEY", "index": "condition", "content": "item.230.amount >= 1" },{ "type": "EXIT" }]  
     },
-    { "type": "EXIT", "count": 3 },
+    { "type": "EXIT", "count": 4 },
     {
         "type": "ENTER",
         "_comment": "Bergen Village items",
-        "index": ["bergenVillageItems","pages","content"]
+        "index": ["bergenVillageItems","pages",0,"content"]
     },
     {
         "type": "FOR_IN",
@@ -79,11 +79,11 @@
         "values": [12,13,14],
         "body": [{ "type": "ENTER", "index": "__INDEX__" },{ "type": "SET_KEY", "index": "condition", "content": "item.376.amount >= 1" },{ "type": "EXIT" }]  
     },
-    { "type": "EXIT", "count": 3 },
+    { "type": "EXIT", "count": 4 },
     {
         "type": "ENTER",
         "_comment": "Bakii Items",
-        "index": ["bakiiItems","pages","content"]
+        "index": ["bakiItems","pages",0,"content"]
     },
     {
         "type": "FOR_IN",
@@ -99,12 +99,12 @@
         "values": [12,13,14],
         "body": [{ "type": "ENTER", "index": "__INDEX__" },{ "type": "SET_KEY", "index": "condition", "content": "item.376.amount >= 1" },{ "type": "EXIT" }]  
     },
-    { "type": "EXIT", "count": 3 },
+    { "type": "EXIT", "count": 4 },
 
     {
         "type": "ENTER",
         "_comment": "Rhombus Square Weapons",
-        "index": ["rhombusWeapons1","pages","content"]
+        "index": ["rhombusWeapons1","pages",0,"content"]
     },
     {
         "type": "FOR_IN",
@@ -120,5 +120,5 @@
         "values": [8,9,10,11],
         "body": [{ "type": "ENTER", "index": "__INDEX__" },{ "type": "SET_KEY", "index": "condition", "content": "extension.post-game.active" },{ "type": "EXIT" }]  
     },
-    { "type": "EXIT", "count": 3 }
+    { "type": "EXIT", "count": 4 }
 ]
