@@ -130,6 +130,14 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 
 ## VERSION CHANGES
 
+# v0.3.1
+
+Fixes:
+- Weird collision issues with barrier blocks in Autumn's Fall entrance 
+- Made the DLC maps requirements dependant on randomizer DLC activate options, for any possible dlc applications in the future
+- Fixed the Meteor Shade cutscene having wrong conditions which made the player softlock in RH expo space
+- Added a emergency exit NPC on Rookie Harbor expo space in case player gets stuck there
+
 # v0.3.0
 
 New:
