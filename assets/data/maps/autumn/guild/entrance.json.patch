@@ -9,7 +9,7 @@
         "_comment": "Schneider hidden post intro event",
         "type": "SET_KEY",
         "index": "condition",
-        "content": "plot.guildEntry >= 41"
+        "content": "plot.guildEntry >= 41 || plot.guildEntry <= 9"
     },
     {
         "type": "EXIT",

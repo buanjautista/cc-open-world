@@ -1,0 +1,14 @@
+[
+    { "type": "ENTER", "index": ["entities"] },
+
+    { "type": "ENTER", "index": [63,"settings", "npcStates", 0] },
+    {
+        "type": "SET_KEY",
+        "index": "condition",
+        "_comment": "Change Addi to require all 4 trailblazing quests instead",
+        "content": "quest.trailblaze-autumn.solved && quest.trailblaze-bergen.solved && quest.trailblaze-maroon.solved && quest.trailblaze-jungle.solved"
+    },
+    { "type": "EXIT", "count": 4 },    
+
+    { "type": "EXIT" }    
+]

@@ -1,0 +1,14 @@
+[
+    { "type": "ENTER", "index": ["entities"] },
+
+    { "type": "ENTER", "index": [16,"settings", "npcStates", 0] },
+    {
+        "type": "SET_KEY",
+        "index": "condition",
+        "_comment": "Change Dkar to need all 4 prerequisites",
+        "content": "quest.unknown-warrior-1.solved && quest.unknown-warrior-2.solved && quest.unknown-warrior-3.solved && quest.unknown-warrior-4.solved"
+    },
+    { "type": "EXIT", "count": 4 },    
+
+    { "type": "EXIT" }    
+]

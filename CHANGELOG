@@ -130,6 +130,18 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 
 ## VERSION CHANGES
 
+# v0.3.2
+Minor update related to upcoming Mod Manager compatibility
+
+Fixes:
+- Schneider doesn't spawn and fall into the void in Vermillion Basement
+- Building a Base quest now correctly requires Mine Pass to start
+
+Changes:
+- Henry quest (Bergen, Maroon, Gaia) and Promise is a Promise (Bergen, Maroon, Gaia) quests can be started without the prerequisites
+- Moved the trigger that doesn't let you enter Guild HQ to First Scholars area instead of the whole guilds area. This allows doing Last Minute Heroes quest without issues
+- a secret
+
 # v0.3.1
 
 Fixes:
