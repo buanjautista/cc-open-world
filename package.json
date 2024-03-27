@@ -1,0 +1,20 @@
+{
+  "name": "cc-open-world",
+  "version": "0.3.3",
+  "description": "A mod for CrossCode that opens up areas and changes plot for Randomizer",
+  "main": "plugin.js",
+  "scripts": {
+    "build": "esbuild ",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buanjautista/cc-open-world.git"
+  },
+  "author": "Juanba",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buanjautista/cc-open-world/issues"
+  },
+  "homepage": "https://github.com/buanjautista/cc-open-world#readme"
+}

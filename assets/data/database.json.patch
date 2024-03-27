@@ -11,6 +11,10 @@
         "src": "mod:patches/database/remove-save-fixes.json"
     },
     {
+        "type": "INCLUDE",
+        "src": "mod:patches/database/extra-commonEvents.json"
+    },
+    {
         "type": "EXIT"
     },
     {

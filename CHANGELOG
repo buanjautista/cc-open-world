@@ -135,7 +135,6 @@ Minor update related to upcoming Mod Manager compatibility
 
 Fixes:
 - Schneider doesn't spawn and fall into the void in Vermillion Basement
-- Building a Base quest now correctly requires Mine Pass to start
 
 Changes:
 - Henry quest (Bergen, Maroon, Gaia) and Promise is a Promise (Bergen, Maroon, Gaia) quests can be started without the prerequisites
