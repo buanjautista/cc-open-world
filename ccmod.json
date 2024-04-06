@@ -6,6 +6,5 @@
     "repository": "https://github.com/buanjautista/cc-open-world",
     "tags": ["maps"],
     "authors": "buanjautista",
-    "prestart": "prestart.js",
     "plugin": "plugin.js"
 }

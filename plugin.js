@@ -1,4 +1,8 @@
+import { defineGUIPlease } from './src/gui-workaround.js';
+import { addMWPatches, addIRPatches } from './src/patch-handling.js'
+import { assignSteps } from './src/custom-steps.js'
 let mod 
+let mwOptionList = []
 
 export default class OpenWorld {
   async main(){
@@ -110,7 +114,7 @@ export default class OpenWorld {
         };
         setTimeout(defineGUIPlease,"1000");
       }
-      if (multiRandoActive) { console.log("Open world will only work with only one instance of either CCItemRandomizer or CCMultiworldRandomizer") }
+      if (multiRandoActive) { console.log("CCOpenWorld will only work correctly with only one instance of either CCItemRandomizer or CCMultiworldRandomizer") }
 
       ig.Game.inject({
         loadingComplete() {
@@ -125,6 +129,9 @@ export default class OpenWorld {
       // Adds a check to start extra patching on multiworld connection
       sc.Model.addObserver(sc.multiworld, this)
     }
+  }
+  prestart() {
+    assignSteps();
   }
 
   // *********** //

@@ -14,35 +14,33 @@ let randoOptionList = {
 
 const SBL_TYPE = { "none": 0, "all": 1, "shades": 2, "bosses": 3 }
 
-function addIRPatches(mod) {
+export function addIRPatches(mod) {
   // Set this only once, otherwise any repatch gets previous ones removed
   mod.runtimeAssets = {} 
-
   // Loop once through all the extra patch settings, and apply corresponding patches
   localStorage.setItem("open-world-settings", JSON.stringify(randoOptionList))
   for (let x = 0; x < Object.keys(randoOptionList).length; x++) { 
-    handlePatching(Object.values(randoOptionList)[x].enable, x)
+    handlePatching(Object.values(randoOptionList)[x].enable, x, mod)
   }
 }
 
 
 // Multiworld Patching
-let mwOptionList = []
-function addMWPatches(mod, optionList) {
+export function addMWPatches(mod, optionList) {
   // Set this only once, otherwise any repatch gets previous ones removed
   mod.runtimeAssets = {} 
   
   if (optionList){ // Checks for MW extra patch list
     // Loop once through all the extra patch settings, and apply corresponding patches. 
     for (let x = 0; x < optionList.length; x++) { 
-      handlePatching(optionList[x], x)
+      handlePatching(optionList[x], x, mod)
     }
     return true;
   }
 }
 
 
-function handlePatching(patchstate, patchname) {
+function handlePatching(patchstate, patchname, mod) {
   // console.log("Patching: ", patchname, " State:", patchstate)
   if (patchstate) { // Adds patches
     switch(patchname) {
