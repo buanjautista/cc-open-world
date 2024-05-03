@@ -1,8 +1,17 @@
 import { defineGUIPlease } from './src/gui-workaround.js';
-import { addMWPatches, addIRPatches } from './src/patch-handling.js'
+// import { addMWPatches, addIRPatches  } from './src/patch-handling.js'
 import { assignSteps } from './src/custom-steps.js'
 let mod 
 let mwOptionList = []
+let randoOptionList = {
+  "shadeLock": { enable: false, type: "none" }, 
+  "vtSkip": { enable: false },
+  "openFajro": { enable: false },
+  "meteorVW": { enable: false },
+  "extraBarriers": { enable: false }
+}
+// Item Rando patching
+const SBL_TYPE = { "none": 0, "all": 1, "shades": 2, "bosses": 3 }
 
 export default class OpenWorld {
   async main(){
@@ -10,9 +19,14 @@ export default class OpenWorld {
     let itemRandoActive = activeMods.find(e => e.name == "item-rando")
     let multiRandoActive = activeMods.find(e => e.name == "mw-rando")
 
+    try {
+      localStorage.getItem("open-world-settings") && (randoOptionList = JSON.parse(localStorage.getItem("open-world-settings")))
+    }
+    catch(e){
+      console.log('invalid settings')
+    }
     // Check if either CCItemRando or CCMultiworldRandomizer is active, and add stuff accordingly
     if (itemRandoActive){
-      localStorage.getItem("open-world-settings") && (randoOptionList = JSON.parse(localStorage.getItem("open-world-settings")))
       if (RANDOMIZER_OPTIONS && RANDOMIZER_SETS) {
         RANDOMIZER_SETS['open-world'] = { type: "MULTI", order: 2E3 };
         RANDOMIZER_SETS['open-world-sblock'] = { type: "MULTI", order: 2E3 };
@@ -28,7 +42,7 @@ export default class OpenWorld {
             var _a;
             (_a = randoOptionList.vtSkip) != null ? _a : randoOptionList.vtSkip = { enable: true };
             randoOptionList.vtSkip.enable = value;
-            addIRPatches(mod)
+            addIRPatches(randoOptionList)
           }
         };
         RANDOMIZER_OPTIONS['open-fajro'] = {
@@ -42,7 +56,7 @@ export default class OpenWorld {
             var _a;
             (_a = randoOptionList.openFajro) != null ? _a : randoOptionList.openFajro = { enable: true };
             randoOptionList.openFajro.enable = value;
-            addIRPatches(mod)
+            addIRPatches(randoOptionList)
           }
         };
         RANDOMIZER_OPTIONS['meteor-vw'] = {
@@ -56,7 +70,7 @@ export default class OpenWorld {
             var _a;
             (_a = randoOptionList.meteorVW) != null ? _a : randoOptionList.meteorVW = { enable: true };
             randoOptionList.meteorVW.enable = value;
-            addIRPatches(mod)
+            addIRPatches(randoOptionList)
           }
         };
 
@@ -70,7 +84,7 @@ export default class OpenWorld {
           setter: () => {
             randoOptionList.shadeLock.enable = true;
             randoOptionList.shadeLock.type = "all"
-            addIRPatches(mod)
+            addIRPatches(randoOptionList)
           }
         };
         RANDOMIZER_OPTIONS['sblock-boss'] = {
@@ -83,7 +97,7 @@ export default class OpenWorld {
           setter: () => {
             randoOptionList.shadeLock.enable = true;
             randoOptionList.shadeLock.type = "bosses"
-            addIRPatches(mod)
+            addIRPatches(randoOptionList)
           }
         };
         RANDOMIZER_OPTIONS['sblock-shades'] = {
@@ -96,7 +110,7 @@ export default class OpenWorld {
           setter: () => {
             randoOptionList.shadeLock.enable = true;
             randoOptionList.shadeLock.type = "shades"
-            addIRPatches(mod)
+            addIRPatches(randoOptionList)
           }
         };
         RANDOMIZER_OPTIONS['sblock-none'] = {
@@ -109,7 +123,7 @@ export default class OpenWorld {
           setter: () => {
             randoOptionList.shadeLock.enable = false;
             randoOptionList.shadeLock.type = "none"
-            addIRPatches(mod)
+            addIRPatches(randoOptionList)
           }
         };
         setTimeout(defineGUIPlease,"1000");
@@ -118,10 +132,15 @@ export default class OpenWorld {
 
       ig.Game.inject({
         loadingComplete() {
-          this.parent();
-  
-          ig.vars.set("open-world.shadeLock", SBL_TYPE[randoOptionList.shadeLock.type])
-        },}
+          this.parent();  
+          
+          addIRPatches(randoOptionList)
+        },
+        teleport(mapName, marker, hint, clearCache, reloadCache) {
+          if (hint == "LOAD") { addIRPatches(randoOptionList) }
+          return this.parent(mapName, marker, hint, clearCache, reloadCache);
+        },
+      }
       );
     }
 
@@ -142,9 +161,65 @@ export default class OpenWorld {
       // Read multiworld connection to check settings variables, to apply optional map patches
       // Might reapply patches several times depending on possible reconnections
       if ((msg == sc.MULTIWORLD_MSG.CONNECTION_STATUS_CHANGED && data == "Connected") || (msg == sc.MULTIWORLD_MSG.OPTIONS_PRESENT)) {
-        mwOptionList = [ig.vars.get("mw.options.vtShadeLock"), ig.vars.get("mw.options.vtSkip"), ig.vars.get("mw.options.openFajro"), ig.vars.get("mw.options.meteorPassage")]
-        addMWPatches(mod, mwOptionList)
+        mwOptionList = [ig.vars.get("mw.options.vtShadeLock"), ig.vars.get("mw.options.vtSkip"), ig.vars.get("mw.options.openFajro"), ig.vars.get("mw.options.meteorPassage"), ig.vars.get("mw.options.extraBarriers")]
+        addMWPatches(mwOptionList)
       }
     }
+  }
+}
+
+
+// Definition for Extra Patches
+const R_SHADELOCK = 0 // Shade barrier for vermillion tower
+const R_VTSKIP = 1 // Skip all Vermillion Tower after first fight
+const R_OPENFAJRO = 2 // Non-linear Upper Fajro
+const R_METEORVW = 3 // Vermillion Wasteland locked behind Meteor Shade
+const R_EXTRABARRIER = 4; // Extra barriers and shade-accesible teleport in CrossCentral
+
+// Item rando patching
+export function addIRPatches() {
+  // Loop once through all the extra patch settings, and apply corresponding patches
+  localStorage.setItem("open-world-settings", JSON.stringify(randoOptionList))
+  for (let x = 0; x < Object.keys(randoOptionList).length; x++) { 
+    handlePatching(Object.values(randoOptionList)[x].enable, x)
+  }
+}
+
+
+// Multiworld Patching
+export function addMWPatches(optionList) {
+  if (optionList){ // Checks for MW extra patch list
+    // Loop once through all the extra patch settings, and apply corresponding patches. 
+
+    for (let x = 0; x < optionList.length; x++) {
+      // Convert vars from mw.options into the general mod vars 
+      optionList[x] ? randoOptionList[Object.keys(randoOptionList)[x]].enable = optionList[x] : randoOptionList[Object.keys(randoOptionList)[x]].enable = false
+      handlePatching(Object.values(randoOptionList)[x].enable, x)
+    }
+    localStorage.setItem("open-world-settings", JSON.stringify(randoOptionList))
+    return true;
+  }
+}
+
+function handlePatching(patchstate, patchname) {
+  if (patchstate) { // Adds patches
+    switch(patchname) {
+      case R_SHADELOCK:
+        if (patchstate > 0) { ig.vars.set("open-world.shadeLock", SBL_TYPE[randoOptionList.shadeLock.type]) }
+        ig.vars.set("open-world.towerLock", patchstate);
+        break;
+      case R_VTSKIP:
+        ig.vars.set("open-world.towerSkip", patchstate);
+        break;
+      case R_OPENFAJRO:
+        ig.vars.set("open-world.openFajro", patchstate);
+        break;
+      case R_METEORVW:
+        ig.vars.set("open-world.meteorPassage", patchstate);
+        break;
+      case R_EXTRABARRIER:
+        ig.vars.set("open-world.extraBarriers", patchstate);
+        break;
+      } 
   }
 }

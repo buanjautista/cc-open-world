@@ -1,10 +1,13 @@
 {
     "id": "open-world",
-    "version": "0.3.3",
+    "version": "0.4.0",
     "title": "Open World patches",
     "description": "Open World map patches for randomizer",
     "repository": "https://github.com/buanjautista/cc-open-world",
     "tags": ["maps"],
     "authors": "buanjautista",
-    "plugin": "plugin.js"
+    "plugin": "plugin.js",
+    "dependencies": {
+		"cc-alybox": ">=1.0.0"
+	}
 }

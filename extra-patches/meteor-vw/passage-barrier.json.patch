@@ -1,10 +1,5 @@
 [
     {
-        "type": "INCLUDE",
-        "src": "mod:assets/data/maps/forest/path-10-hidden.json.patch"
-    },
-
-    {
         "type": "ENTER",
         "index": "entities"
     },

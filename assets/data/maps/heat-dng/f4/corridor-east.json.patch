@@ -1,5 +1,14 @@
 [
   {
+    "type": "IF",
+    "_comment": "Adds corresponding patch if Open Fajro is on",
+    "cond": "sc.options.get('open-world.openFajro') >= 1",
+    "thenSteps": [{
+    "type": "INCLUDE",
+    "src": "mod:extra-patches/open-fajro/f4/corridor-east.json.patch"
+    }]
+  },
+  {
     "type": "ENTER",
     "index": ["entities"]
   },
