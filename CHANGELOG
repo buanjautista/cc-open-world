@@ -34,6 +34,7 @@ All second set of quests unlock after obtaining Blue Ice Shade
 
 # Maroon Valley:
 
+Added a Green Leaf Shade barrier on entrance (for shade randomizer compat)
 Ba’kii kum Eldress quest now tied to its own plotline
 Can invite C’tron to party for Maroon Tree quest, or look for him next to West Entrance where he usually is (up until finishing the Maroon Tree quest)
 No Apollo 2 sequence before Faj’ro
@@ -54,6 +55,7 @@ Sapphire Ridge entrance is not locked anymore until post-kryskajo events
 Gaias Garden entrance is not locked anymore until post-vermillion events
 Finishing seed shade quest does not forces you to do the raid
 Can’t start first raid on Autumn’s Fall to prevent Vermillion plot
+Removed Green Seed Shade requirement from Para Island entrance
 
 # Vermillion Wasteland:
 
@@ -64,6 +66,7 @@ Stealth section is locked after the basement area to prevent entering tower from
 
 # Gaia’s Garden:
 
+Added a Red Flame Shade barrier on entrance (for shade randomizer compat)
 Chief’s House entrance area not locked
 Chief’s House inside locked so you dont go down for stick quest
 Basin Keep has no story plot (neither beta pass)
@@ -75,6 +78,7 @@ Krys’kajo entrance doesnt require/change party members, or story progress. (st
 
 # Sapphire Ridge:
 
+Added a Red Flame Shade barrier on entrance (for shade randomizer compat)
 Old Dojo door only accessible with both key, and dojo quest started
 You can invite Shizuka after fighting her in Old Hideout
 Entrance to Rhombus Square now linked to Meteor Shade
@@ -129,6 +133,18 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 ==========================================================================================
 
 ## VERSION CHANGES
+
+# v0.4.0
+Reworked code and added cc-alybox / logic-steps as a dependency for easier patching from now on.
+
+Changes: 
+- Removed Green Seed Shade requirement from Para Island entrance
+- Old Dojo can be entered without quest now as long as you have the key.
+- Trial of Golden Bug quest is now separate from Dojo entry and fights, so its easier to check it's pickup on randomizers
+- Autumn's Falls holo-bunny barriers are open by default
+
+Add:
+- Extra Shade barriers on Sapphire Ridge and Gaia's Garden, leading to Autumn's Fall; and Maroon Valley leading to Bergen Trail 
 
 # v0.3.2
 Minor update related to upcoming Mod Manager compatibility
