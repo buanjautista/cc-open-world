@@ -15,4 +15,7 @@ export function defineGUIPlease() {
   ig.lang.labels.sc.gui.menu.randomizer.options.descriptions["sblock-shades"] = "Block Vermillion Tower behind the four element shades";
   ig.lang.labels.sc.gui.menu.randomizer.options.names["sblock-none"] = "Disable VT barrier";
   ig.lang.labels.sc.gui.menu.randomizer.options.descriptions["sblock-none"] = "Vermillion Tower is accessible at any time";
+
+  ig.lang.labels.sc.gui.options.headers["cc-open-world"] = "Open World";
+  ig.lang.labels.sc.gui.options["openworld-visitedmaps"] = {"name": "Enable Visited Maps", "description": "Show all maps and areas as visited by default"};
 }

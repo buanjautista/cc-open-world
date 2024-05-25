@@ -8,10 +8,14 @@ let randoOptionList = {
   "vtSkip": { enable: false },
   "openFajro": { enable: false },
   "meteorVW": { enable: false },
-  "extraBarriers": { enable: false }
+  "extraBarriers": { enable: false },
+  "randomizedShades": { enable: false, shades: {
+    "fall": "flame", "valley": "ice", "jungle": "seed", "ridge": "star", "trail": "leaf", "kajo1": "bolt", "kajo2": "drop" 
+  }}
 }
 // Item Rando patching
 const SBL_TYPE = { "none": 0, "all": 1, "shades": 2, "bosses": 3 }
+const RSH_ITEM = { "leaf":145, "ice":225, "flame":230, "seed":376, "star": 410, "meteor":434, "bolt":286, "drop": 231, "ancient": 627 }
 
 export default class OpenWorld {
   async main(){
@@ -126,10 +130,9 @@ export default class OpenWorld {
             addIRPatches(randoOptionList)
           }
         };
-        setTimeout(defineGUIPlease,"1000");
       }
       if (multiRandoActive) { console.log("CCOpenWorld will only work correctly with only one instance of either CCItemRandomizer or CCMultiworldRandomizer") }
-
+      
       ig.Game.inject({
         loadingComplete() {
           this.parent();  
@@ -148,9 +151,18 @@ export default class OpenWorld {
       // Adds a check to start extra patching on multiworld connection
       sc.Model.addObserver(sc.multiworld, this)
     }
+    setTimeout(defineGUIPlease,"1000");
   }
   prestart() {
     assignSteps();
+
+    sc.OPTIONS_DEFINITION["openworld-visitedmaps"] = {
+      type: "CHECKBOX",
+      init: false,
+      cat: sc.OPTION_CATEGORY.GENERAL,
+      hasDivider: true,
+      header: "cc-open-world",
+    };
   }
 
   // *********** //
@@ -161,7 +173,12 @@ export default class OpenWorld {
       // Read multiworld connection to check settings variables, to apply optional map patches
       // Might reapply patches several times depending on possible reconnections
       if ((msg == sc.MULTIWORLD_MSG.CONNECTION_STATUS_CHANGED && data == "Connected") || (msg == sc.MULTIWORLD_MSG.OPTIONS_PRESENT)) {
-        mwOptionList = [ig.vars.get("mw.options.vtShadeLock"), ig.vars.get("mw.options.vtSkip"), ig.vars.get("mw.options.openFajro"), ig.vars.get("mw.options.meteorPassage"), ig.vars.get("mw.options.extraBarriers")]
+        mwOptionList = [
+          ig.vars.get("mw.options.vtShadeLock"), 
+          ig.vars.get("mw.options.vtSkip"), 
+          ig.vars.get("mw.options.openFajro"), 
+          ig.vars.get("mw.options.meteorPassage"), 
+          ig.vars.get("mw.options.extraBarriers")]
         addMWPatches(mwOptionList)
       }
     }
@@ -189,8 +206,6 @@ export function addIRPatches() {
 // Multiworld Patching
 export function addMWPatches(optionList) {
   if (optionList){ // Checks for MW extra patch list
-    // Loop once through all the extra patch settings, and apply corresponding patches. 
-
     for (let x = 0; x < optionList.length; x++) {
       // Convert vars from mw.options into the general mod vars 
       optionList[x] ? randoOptionList[Object.keys(randoOptionList)[x]].enable = optionList[x] : randoOptionList[Object.keys(randoOptionList)[x]].enable = false

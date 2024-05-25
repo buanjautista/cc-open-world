@@ -13,10 +13,5 @@
         "index": "blockEvent"
     },
 
-    
-    {
-        "type": "EXIT",
-        "count": 3
-    }
-
+    { "type": "EXIT" }
 ]

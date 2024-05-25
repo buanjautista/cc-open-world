@@ -147,6 +147,18 @@
 		]
 	},
 	{
+		"type": "IF",
+		"_comment": "Add the patch that marks maps and areas as visited if the option is enabled",
+		"cond": "sc.options.get('openworld-visitedmaps') >= 1",
+		"thenSteps": [
+			{
+				"_comment": "",
+				"type": "INCLUDE",
+				"src": "mod:extra-patches/visited-maps/newgame_visitedmaps.json.patch"
+			}
+		]
+	},
+	{
 		"_comment": "Activate landmarks that would have been encountered.",
 		"type": "FOR_IN",
 		"keyword": {
