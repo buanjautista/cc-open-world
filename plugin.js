@@ -100,8 +100,8 @@ export default class OpenWorld {
           },
           setter: () => {
             randoOptionList.shadeLock.enable = true;
-            randoOptionList.shadeLock.type = "bosses"
-            addIRPatches(randoOptionList)
+            randoOptionList.shadeLock.type = "bosses";
+            addIRPatches(randoOptionList);
           }
         };
         RANDOMIZER_OPTIONS['sblock-shades'] = {
@@ -113,8 +113,8 @@ export default class OpenWorld {
           },
           setter: () => {
             randoOptionList.shadeLock.enable = true;
-            randoOptionList.shadeLock.type = "shades"
-            addIRPatches(randoOptionList)
+            randoOptionList.shadeLock.type = "shades";
+            addIRPatches(randoOptionList);
           }
         };
         RANDOMIZER_OPTIONS['sblock-none'] = {
@@ -126,19 +126,14 @@ export default class OpenWorld {
           },
           setter: () => {
             randoOptionList.shadeLock.enable = false;
-            randoOptionList.shadeLock.type = "none"
-            addIRPatches(randoOptionList)
+            randoOptionList.shadeLock.type = "none";
+            addIRPatches(randoOptionList);
           }
         };
       }
       if (multiRandoActive) { console.log("CCOpenWorld will only work correctly with only one instance of either CCItemRandomizer or CCMultiworldRandomizer") }
       
       ig.Game.inject({
-        loadingComplete() {
-          this.parent();  
-          
-          addIRPatches(randoOptionList)
-        },
         teleport(mapName, marker, hint, clearCache, reloadCache) {
           if (hint == "LOAD") { addIRPatches(randoOptionList) }
           return this.parent(mapName, marker, hint, clearCache, reloadCache);
@@ -220,17 +215,33 @@ function handlePatching(patchstate, patchname) {
   if (patchstate) { // Adds patches
     switch(patchname) {
       case R_SHADELOCK:
-        if (patchstate > 0) { ig.vars.set("open-world.shadeLock", SBL_TYPE[randoOptionList.shadeLock.type]) }
-        ig.vars.set("open-world.towerLock", patchstate);
+        mod.addPatch('data/maps/arid/town-1.json', mod.baseDirectory + 'assets/data/maps/arid/town-1.json.patch');
+        if (patchstate > 0) { 
+          ig.vars.set("open-world.shadeLock", patchstate);
+          ig.vars.set("open-world.towerLock", 1);
+          mod.addPatch('data/maps/arid/town-1.json', mod.baseDirectory + 'extra-patches/locked-tower/shadebosslock-vt.json.patch');
+        }
+        else { ig.vars.set("open-world.towerLock", 0); }
         break;
       case R_VTSKIP:
         ig.vars.set("open-world.towerSkip", patchstate);
+        mod.addPatch('data/maps/arid-dng/second/f0/center.json', mod.baseDirectory + 'extra-patches/tower-skip/centerf0.json.patch');
         break;
       case R_OPENFAJRO:
         ig.vars.set("open-world.openFajro", patchstate);
+        mod.addPatch('data/maps/heat-dng/f3/room-01-cross.json', mod.baseDirectory + 'extra-patches/open-fajro/f3/room-01-cross.json.patch');
+        mod.addPatch('data/maps/heat-dng/f3/room-02.json', mod.baseDirectory + 'extra-patches/open-fajro/f3/room-02.json.patch');
+        mod.addPatch('data/maps/heat-dng/f3/room-06.json', mod.baseDirectory + 'extra-patches/open-fajro/f3/room-06.json.patch');
+        mod.addPatch('data/maps/heat-dng/f3/room-07.json', mod.baseDirectory + 'extra-patches/open-fajro/f3/room-07.json.patch');
+        mod.addPatch('data/maps/heat-dng/f4/corridor-east.json', mod.baseDirectory + 'extra-patches/open-fajro/f4/corridor-east.json.patch');
+        mod.addPatch('data/maps/heat-dng/f4/room-01.json', mod.baseDirectory + 'extra-patches/open-fajro/f4/room-01.json.patch');
+        mod.addPatch('data/maps/heat-dng/f4/room-03.json', mod.baseDirectory + 'extra-patches/open-fajro/f4/room-03.json.patch');
+        mod.addPatch('data/maps/heat-dng/f4/room-10.json', mod.baseDirectory + 'extra-patches/open-fajro/f4/room-10.json.patch');
         break;
       case R_METEORVW:
         ig.vars.set("open-world.meteorPassage", patchstate);
+        mod.addPatch('data/maps/forest/path-10-hidden.json', mod.baseDirectory + 'assets/data/maps/forest/path-10-hidden.json.patch');
+        mod.addPatch('data/maps/forest/path-10-hidden.json', mod.baseDirectory + 'extra-patches/meteor-vw/passage-barrier.json.patch');
         break;
       case R_EXTRABARRIER:
         ig.vars.set("open-world.extraBarriers", patchstate);

@@ -62,16 +62,5 @@
     {
         "type": "EXIT",
         "count": 1
-    },
-    {
-        "type": "IF",
-        "_comment": "Adds corresponding patch if Shade Lock barrier in VT",
-        "cond": "ig.vars.get('open-world.towerLock') >= 1",
-        "thenSteps": [
-            {
-                "type": "INCLUDE",
-                "src": "mod:extra-patches/locked-tower/shadebosslock-vt.json.patch"
-            }
-        ]
     }
 ]

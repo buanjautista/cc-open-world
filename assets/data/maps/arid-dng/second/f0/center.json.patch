@@ -1,14 +1,5 @@
 [
     {
-        "type": "IF",
-        "_comment": "Adds corresponding patch if Tower Skip is on",
-        "cond": "ig.vars.get('open-world.towerSkip') >= 1",
-        "thenSteps": [{
-        "type": "INCLUDE",
-        "src": "mod:extra-patches/tower-skip/centerf0.json.patch"
-        }]
-    },
-    {
         "type": "ENTER",
         "index": ["entities"]
     },
