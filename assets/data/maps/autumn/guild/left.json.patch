@@ -106,6 +106,8 @@
         "type": "EXIT",
         "count": 2
     },
-
+    { 
+        "_comment": "Extra Sandwich", "type": "ADD_ARRAY_ELEMENT", "content": {"type":"Chest","x":177,"y":232,"level":1,"settings":{"name":"","chestType":"Default","item":"1","amount":2,"mapId":5000}} 
+    },
     { "type": "EXIT", "count": 1 }  
 ]

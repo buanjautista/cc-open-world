@@ -32,6 +32,9 @@
 	},
 	{ "type": "EXIT", "count": 3 },
 	
+	{ 
+        "_comment": "Extra Sandwich", "type": "ADD_ARRAY_ELEMENT", "content": {"type":"Chest","x":608,"y":618,"level":3,"settings":{"name":"","chestType":"Silver","item":"1","amount":2,"mapId":5000}} 
+  },
 
 	{ "type": "EXIT", "count": 1 }
 ]
