@@ -9,10 +9,10 @@
         "content": { "changeType": "set", "type": "CHANGE_VAR_NUMBER", "varName": "plot.shareholder", "value": 0 }
     },
     {
-        "_comment": "Replace barrier getting closed to Vermillion",
+        "_comment": "Replace barrier getting closed to Vermillion with mobility block removal",
         "type": "SET_KEY",
         "index": "23",
-        "content": { "ignoreSlowDown": false, "type": "WAIT", "time": 1 }
+        "content": { "type": "SET_MOBILITY_BLOCK", "value": "none" }
     },
     {
         "_comment": "Redirect teleport to guild to CrossCentral",
@@ -22,7 +22,7 @@
             "type": "TELEPORT",
             "map": "rhombus-sqr.central-inner",
             "marker": "balconyExit"
-          }
+        }
     },
     { "type": "EXIT", "count": 5 },
 
