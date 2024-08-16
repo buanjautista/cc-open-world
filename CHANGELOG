@@ -7,6 +7,7 @@ There's now an option to have all maps and areas visited beforehand.
 Stats enabled in Rhombus Dungeon entrance (for NG+ purposes).
 Save fixes are entirely removed.
 SP Upgrades are now incremental instead of fixed (2SP in Faj'ro, 3SP in Krys'kajo, 4SP in beach)
+Added a few extra chests in the maps :)
 Party window enabled in CrossCentral. You can now invite/manage party members as soon as certain events:
 
 - Only Apollo 3 duel is active, which unlocks him and Joern as party members if you fight him
@@ -136,7 +137,7 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 ## VERSION CHANGES
 
 # v0.4.0
-Reworked code and added cc-alybox / logic-steps as a dependency for easier patching from now on.
+Reworked code and requiring CCLoader v2.24 or higher due to improved patching.
 
 Changes: 
 - Removed Green Seed Shade requirement from Para Island entrance
@@ -144,10 +145,14 @@ Changes:
 - Trial of Golden Bug quest is now separate from Dojo entry and fights, so its easier to check it's pickup on randomizers
 - Autumn's Falls holo-bunny barriers are open by default
 - Actual fix for Smelter fight (map patch was wrongly named)
+- Fixed Ba'kii Kum NPC bird using wrong requirement for quests (dungeon instead of shade, compared to the other npcs)
+- Fixed not being able to use certain functions after returning back to the past.
 
 Add:
 - Extra Shade barriers on Sapphire Ridge and Gaia's Garden, leading to Autumn's Fall; and Maroon Valley leading to Bergen Trail 
 - There's now an option to have all maps and areas visited beforehand.
+- Added an option to the Open World NPC in RH Info Hub to fix any quick menu limitations
+- Added extra sandwiches :)
 
 # v0.3.2
 Minor update related to upcoming Mod Manager compatibility
