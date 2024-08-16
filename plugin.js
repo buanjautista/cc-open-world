@@ -3,6 +3,7 @@ import { defineGUIPlease } from './src/gui-workaround.js';
 import { assignSteps } from './src/custom-steps.js'
 let mod 
 let mwOptionList = []
+let lastOptionList;
 let randoOptionList = {
   "shadeLock": { enable: false, type: "none" }, 
   "vtSkip": { enable: false },
@@ -190,23 +191,31 @@ const R_EXTRABARRIER = 4; // Extra barriers and shade-accesible teleport in Cros
 
 // Item rando patching
 export function addIRPatches() {
+  if (lastOptionList != randoOptionList) {
+    mod.runtimeAssets = {}
+  }
   // Loop once through all the extra patch settings, and apply corresponding patches
   localStorage.setItem("open-world-settings", JSON.stringify(randoOptionList))
   for (let x = 0; x < Object.keys(randoOptionList).length; x++) { 
     handlePatching(Object.values(randoOptionList)[x].enable, x)
   }
+  lastOptionList = randoOptionList;
 }
 
 
 // Multiworld Patching
 export function addMWPatches(optionList) {
   if (optionList){ // Checks for MW extra patch list
+    if (lastOptionList != optionList) {
+      mod.runtimeAssets = {}
+    }
     for (let x = 0; x < optionList.length; x++) {
       // Convert vars from mw.options into the general mod vars 
       optionList[x] ? randoOptionList[Object.keys(randoOptionList)[x]].enable = optionList[x] : randoOptionList[Object.keys(randoOptionList)[x]].enable = false
       handlePatching(Object.values(randoOptionList)[x].enable, x)
     }
     localStorage.setItem("open-world-settings", JSON.stringify(randoOptionList))
+    lastOptionList = optionList;
     return true;
   }
 }

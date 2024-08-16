@@ -147,6 +147,7 @@ Changes:
 - Actual fix for Smelter fight (map patch was wrongly named)
 - Fixed Ba'kii Kum NPC bird using wrong requirement for quests (dungeon instead of shade, compared to the other npcs)
 - Fixed not being able to use certain functions after returning back to the past.
+- Fixed a shop with wrong requirements in database
 
 Add:
 - Extra Shade barriers on Sapphire Ridge and Gaia's Garden, leading to Autumn's Fall; and Maroon Valley leading to Bergen Trail 
