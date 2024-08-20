@@ -24,7 +24,7 @@
         "_comment": "Make sure you don't skip the previous cutscene losing the pickup",
         "type": "SET_KEY",
         "index": "startCondition",
-        "content": "plot.guildEntry >= 10"
+        "content": "plot.guildEntry >= 29"
     },
     {
         "type": "SET_KEY",
