@@ -136,6 +136,17 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 
 ## VERSION CHANGES
 
+# v0.4.1
+Fixes: 
+- Having Emilie in party on the Rookie Harbor intro cutscene would softlock the game.
+- Steamy Booze and Steaks second quest now requires Flame Shade instead of Faj'ro.
+- D'kar 5th quest requirements now properly work.
+- Fixed typo on Temple Mine key intro cutscene.
+- Temple Mine B3 being exitable during the fight if you had Heat.
+
+Changes:
+- Added some extra quick details 
+
 # v0.4.0
 Reworked code and requiring CCLoader v2.24 or higher due to improved patching.
 
