@@ -25,5 +25,9 @@
         "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "spawnCondition", "content": "extension.post-game.active && (mw.options.dlcActive || open-world.dlcActive)" },{ "type": "EXIT", "count": 2 }]
     },
 
+    { 
+        "_comment": "Extra Sandwich", "type": "ADD_ARRAY_ELEMENT", "content": {"type":"Chest","x":268,"y":396,"level":2,"settings":{"name":"","chestType":"Default","item":"1","amount":2,"mapId":5000}} 
+    },
+
     { "type": "EXIT", "count": 1 }  
 ]

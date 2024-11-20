@@ -1,8 +1,5 @@
 [
-    {
-        "type": "ENTER",
-        "index": ["entities"]
-    },
+    { "type": "ENTER", "index": ["entities"] },
 
     {
         "type": "ENTER",
@@ -29,9 +26,14 @@
         "count": 3
     },
 
+    { "type": "EXIT" },
     {
-        "type": "EXIT",
-        "count": 1
-    }
-
+      "type": "IF",
+      "_comment": "Adds corresponding patch if Extra Barriers is active",
+      "cond": "ig.vars.get('open-world.extraBarriers') >= 1",
+      "thenSteps": [{
+      "type": "INCLUDE",
+      "src": "mod:extra-patches/extra-barriers/forest-entrance.json.patch"
+      }]
+  }
 ]

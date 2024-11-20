@@ -117,10 +117,31 @@
         "count": 2
     },
 
-
+    { "type": "ENTER", "index": [691, "settings","event"] },
     {
-        "type": "EXIT",
-        "count": 1
-    }
+            "type": "ADD_ARRAY_ELEMENT",
+            "_comment": "All bunny steps in a row",
+            "index": "npcStates",
+            "content": { "changeType": "set", "type": "CHANGE_VAR_BOOL", "varName": "tmp.bunny2", "value": true }
+    },
+    { "type": "EXIT", "count": 3 },
+    { "type": "ENTER", "index": [693, "settings","event"] },
+    {
+            "type": "ADD_ARRAY_ELEMENT",
+            "_comment": "All bunny steps in a row",
+            "index": "npcStates",
+            "content": { "changeType": "set", "type": "CHANGE_VAR_BOOL", "varName": "tmp.bunny3", "value": true }
+    },
+    { "type": "EXIT", "count": 3 },
 
+    { "type": "ENTER", "index": [695, "settings","event"] },
+    {
+            "type": "ADD_ARRAY_ELEMENT",
+            "_comment": "All bunny steps in a row",
+            "index": "npcStates",
+            "content": { "changeType": "set", "type": "CHANGE_VAR_BOOL", "varName": "tmp.bunny4", "value": true }
+    },
+    { "type": "EXIT", "count": 3 },
+
+    { "type": "EXIT" }
 ]

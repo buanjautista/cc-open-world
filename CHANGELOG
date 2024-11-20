@@ -3,9 +3,11 @@
 # Main:
 
 Skip Beginning has been rehauled to start right away from Rookie Harbor, with anything before Rhombus Dungeon already tracked.
+There's now an option to have all maps and areas visited beforehand.
 Stats enabled in Rhombus Dungeon entrance (for NG+ purposes).
-Save fixes are entirely removed. Plot version starts in 5 to avoid save fix prompts in case they happen (which shouldn't).
+Save fixes are entirely removed.
 SP Upgrades are now incremental instead of fixed (2SP in Faj'ro, 3SP in Krys'kajo, 4SP in beach)
+Added a few extra chests in the maps :)
 Party window enabled in CrossCentral. You can now invite/manage party members as soon as certain events:
 
 - Only Apollo 3 duel is active, which unlocks him and Joern as party members if you fight him
@@ -34,6 +36,7 @@ All second set of quests unlock after obtaining Blue Ice Shade
 
 # Maroon Valley:
 
+Added a Green Leaf Shade barrier on entrance (for shade randomizer compat)
 Ba’kii kum Eldress quest now tied to its own plotline
 Can invite C’tron to party for Maroon Tree quest, or look for him next to West Entrance where he usually is (up until finishing the Maroon Tree quest)
 No Apollo 2 sequence before Faj’ro
@@ -54,6 +57,7 @@ Sapphire Ridge entrance is not locked anymore until post-kryskajo events
 Gaias Garden entrance is not locked anymore until post-vermillion events
 Finishing seed shade quest does not forces you to do the raid
 Can’t start first raid on Autumn’s Fall to prevent Vermillion plot
+Removed Green Seed Shade requirement from Para Island entrance
 
 # Vermillion Wasteland:
 
@@ -64,6 +68,7 @@ Stealth section is locked after the basement area to prevent entering tower from
 
 # Gaia’s Garden:
 
+Added a Red Flame Shade barrier on entrance (for shade randomizer compat)
 Chief’s House entrance area not locked
 Chief’s House inside locked so you dont go down for stick quest
 Basin Keep has no story plot (neither beta pass)
@@ -75,6 +80,7 @@ Krys’kajo entrance doesnt require/change party members, or story progress. (st
 
 # Sapphire Ridge:
 
+Added a Red Flame Shade barrier on entrance (for shade randomizer compat)
 Old Dojo door only accessible with both key, and dojo quest started
 You can invite Shizuka after fighting her in Old Hideout
 Entrance to Rhombus Square now linked to Meteor Shade
@@ -129,6 +135,37 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 ==========================================================================================
 
 ## VERSION CHANGES
+
+# v0.4.1
+Fixes: 
+- Having Emilie in party on the Rookie Harbor intro cutscene would softlock the game.
+- Steamy Booze and Steaks second quest now requires Flame Shade instead of Faj'ro.
+- D'kar 5th quest requirements now properly work.
+- Fixed typo on Temple Mine key intro cutscene.
+- Temple Mine B3 being exitable during the fight if you had Heat.
+
+Changes:
+- Added some extra quick details 
+
+# v0.4.0
+Reworked code and requiring CCLoader v2.24 or higher due to improved patching.
+
+Changes: 
+- Removed Green Seed Shade requirement from Para Island entrance
+- Old Dojo can be entered without quest now as long as you have the key.
+- Trial of Golden Bug quest is now separate from Dojo entry and fights, so its easier to check it's pickup on randomizers
+- Autumn's Falls holo-bunny barriers are open by default
+- Actual fix for Smelter fight (map patch was wrongly named)
+- Fixed Ba'kii Kum NPC bird using wrong requirement for quests (dungeon instead of shade, compared to the other npcs)
+- Fixed not being able to use certain functions after returning back to the past.
+- Fixed a shop with wrong requirements in database
+
+Add:
+- Extra Shade barriers on Sapphire Ridge and Gaia's Garden, leading to Autumn's Fall; and Maroon Valley leading to Bergen Trail 
+- There's now an option to have all maps and areas visited beforehand.
+- Added an option to the Open World NPC in RH Info Hub to fix any quick menu limitations
+- Added extra sandwiches :)
+- Added a new cutscene to show the lower keys requirement in Temple Mine 
 
 # v0.3.2
 Minor update related to upcoming Mod Manager compatibility

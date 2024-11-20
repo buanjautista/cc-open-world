@@ -109,9 +109,9 @@
     {
         "type": "FOR_IN",
         "keyword": "__INDEX__",
-        "_comment": "Change pre-beach limit to DLC active",
+        "_comment": "Change pre-beach limit to not depend on plot-line",
         "values": [0,1,2,3],
-        "body": [{ "type": "ENTER", "index": "__INDEX__" },{ "type": "SET_KEY", "index": "condition", "content": "extension.post-game.active" },{ "type": "EXIT" }]  
+        "body": [{ "type": "ENTER", "index": "__INDEX__" },{ "type": "SET_KEY", "index": "condition" },{ "type": "EXIT" }]  
     },
     {
         "type": "FOR_IN",

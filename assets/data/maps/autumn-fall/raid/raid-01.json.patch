@@ -169,5 +169,23 @@
     "count": 4
   },
 
+  { "type": "ENTER", "index": [ 16, "settings" ] },
+  {
+    "type": "SET_KEY",
+    "_comment": "Disables barrier",
+    "index": "startCondition",
+    "content": "false"
+  },
+  { "type": "EXIT", "count": 2 },
+
+  { "type": "ENTER", "index": [ 12, "settings" ] },
+  {
+    "type": "SET_KEY",
+    "_comment": "Disables barrier",
+    "index": "spawnCondition",
+    "content": "false"
+  },
+  { "type": "EXIT", "count": 2 },
+
   { "type": "EXIT", "count": 1 }
 ]

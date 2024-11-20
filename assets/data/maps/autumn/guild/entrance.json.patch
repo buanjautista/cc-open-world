@@ -24,7 +24,7 @@
         "_comment": "Make sure you don't skip the previous cutscene losing the pickup",
         "type": "SET_KEY",
         "index": "startCondition",
-        "content": "plot.guildEntry >= 10"
+        "content": "plot.guildEntry >= 29"
     },
     {
         "type": "SET_KEY",
@@ -50,6 +50,11 @@
         "type": "EXIT",
         "count": 3
     },  
-
+    { 
+        "_comment": "Extra Sandwich", "type": "ADD_ARRAY_ELEMENT", "content": {"type":"Chest","x":164,"y":288,"level":2,"settings":{"name":"","chestType":"Silver","item":"1","amount":2,"mapId":5000}} 
+    },
+    { 
+        "_comment": "Extra Sandwich", "type": "ADD_ARRAY_ELEMENT", "content": {"type":"Chest","x":277,"y":89,"level":2,"settings":{"name":"","chestType":"Gold","item":"1","amount":2,"mapId":5001}} 
+    },
     { "type": "EXIT", "count": 1 }  
 ]

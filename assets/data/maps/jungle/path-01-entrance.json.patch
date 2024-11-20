@@ -1,7 +1,11 @@
 [
     {
         "type": "ENTER",
-        "index": ["entities",563,"settings"]
+        "index": ["entities"]
+    },
+    {
+        "type": "ENTER",
+        "index": [563,"settings"]
     },
     {
         "type": "SET_KEY",
@@ -11,12 +15,12 @@
     },
     {
         "type": "EXIT",
-        "count": 3
+        "count": 2
     },
 
     {
         "type": "ENTER",
-        "index": ["entities",564,"settings"]
+        "index": [564,"settings"]
     },
     {
         "type": "SET_KEY",
@@ -26,12 +30,12 @@
     },
     {
         "type": "EXIT",
-        "count": 3
+        "count": 2
     },
 
     {
         "type": "ENTER",
-        "index": ["entities",566]
+        "index": 566
     },
     {
         "type": "SET_KEY",
@@ -43,12 +47,12 @@
     },
     {
         "type": "EXIT",
-        "count": 2
+        "count": 1
     },
 
     {
         "type": "ENTER",
-        "index": ["entities",577]
+        "index": 577
     },
     {
         "type": "SET_KEY",
@@ -58,13 +62,13 @@
     },
     {
         "type": "EXIT",
-        "count": 2
+        "count": 1
     },
 
 
     {
         "type": "ENTER",
-        "index": ["entities",565,"settings"]
+        "index": [565,"settings"]
     },
     {
         "type": "SET_KEY",
@@ -77,12 +81,12 @@
     },
     {
         "type": "EXIT",
-        "count": 3
+        "count": 2
     },    
 
     {
         "type": "ENTER",
-        "index": ["entities",576,"settings"]
+        "index": [576,"settings"]
     },
     {
         "type": "SET_KEY",
@@ -92,14 +96,14 @@
     },
     {
         "type": "EXIT",
-        "count": 3
+        "count": 2
     },
 
 
 
     {
         "type": "ENTER",
-        "index": ["entities",578]
+        "index": 578
     },
     {
         "type": "SET_KEY",
@@ -109,13 +113,7 @@
     },
     {
         "type": "EXIT",
-        "count": 2
-    },
-
-
-    {
-        "type": "ENTER",
-        "index": ["entities"]
+        "count": 1
     },
 
         {
@@ -134,8 +132,15 @@
                 "count": 2
             }]
     },  
+
+    { "type": "EXIT", "count": 1 },
     {
-        "type": "EXIT"
-    }    
-    
+        "type": "IF",
+        "_comment": "Adds corresponding patch if Extra Barriers is active",
+        "cond": "ig.vars.get('open-world.extraBarriers') >= 1",
+        "thenSteps": [{
+        "type": "INCLUDE",
+        "src": "mod:extra-patches/extra-barriers/jungle-entrance.json.patch"
+        }]
+    }
 ]

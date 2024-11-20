@@ -1,8 +1,8 @@
-[{
+[
+    {
         "type": "ENTER",
         "index": "entities"
     },
-
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Adds a trigger that lets you enter Rhombus Square with Meteor Shade",
