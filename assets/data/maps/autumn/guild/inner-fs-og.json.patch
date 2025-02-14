@@ -35,7 +35,7 @@
         "_comment": "Make Hlin not be up there if have quest active or plot past Gaia? (might remove)",
         "type": "SET_KEY",
         "index": "condition",
-        "content": "party.has.Hlin || quest.observatory.started || (plot.guildEntry >= 250) && (plot.line >= 17800)"
+        "content": "party.has.Hlin || quest.observatory.started"
     },
     {
         "type": "EXIT",
@@ -43,50 +43,22 @@
     },  
     
     {
-        "type": "ENTER",
-        "index": [67, "settings"]
-    },
-    {
-        "_comment": "Disable plot event after a gaia's dungeon",
-        "type": "SET_KEY",
-        "index": "startCondition",
-        "content": "false"
-    },
-    {
-        "type": "EXIT",
-        "count": 2
-    },  
-
-
-    {
-        "type": "ENTER",
-        "index": [61, "settings"]
-    },
-    {
-        "_comment": "Changing variables around for intro scene",
-        "type": "SET_KEY",
-        "index": "endCondition",
-        "content": "plot.guildEntry >= 80"
-    },
-    {
         "type": "FOR_IN",
-        "_comment": "Change multiple plot variables inside event",
-        "keyword": { "eventIndex": "__INDEX__", "value": "__VAL__"},
-        "values": [{ "eventIndex": "5", "value": "71" }, { "eventIndex": "162", "value": "80" }, { "eventIndex": "163", "value": "250" }],
-        "body": [
-            { "type": "ENTER", "index": "event" },
-            {
-                "type": "SET_KEY",
-                "index": "__INDEX__",
-                "content": { "changeType": "set", "type": "CHANGE_VAR_NUMBER", "varName": "plot.guildEntry", "value": "__VAL__" }
-            },
-            { "type": "EXIT" }
-        ]
+        "_comment": "Disable unnecessary story events",
+        "keyword": "__INDEX__",
+        "values": [61,67],
+        "body": [{
+            "type": "ENTER",
+            "index": ["__INDEX__", "settings"]
+        },{
+            "type": "SET_KEY",
+            "index": "startCondition",
+            "content": "false"
+        },{
+            "type": "EXIT",
+            "count": 2
+        }]
     },
-    {
-        "type": "EXIT",
-        "count": 2
-    },  
 
     { "type": "ENTER", "index": [63, "settings", "npcStates"] },
     { "type": "ENTER", "index": 1 },
@@ -94,14 +66,14 @@
         "_comment": "Make Schneider be there for cutscene",
         "type": "SET_KEY",
         "index": "condition",
-        "content": "plot.guildEntry >= 71"
+        "content": "false"
     },
     { "type": "EXIT" },
     { "type": "ENTER", "index": 2 },
     {
         "type": "SET_KEY",
         "index": "condition",
-        "content": "plot.guildEntry >= 80"
+        "content": "false"
     },
     { "type": "EXIT" },  
     { "type": "ENTER", "index": 4 },
@@ -113,28 +85,25 @@
     { "type": "EXIT" },  
     { "type": "EXIT", "count": 3 },  
 
-    { "type": "ENTER", "index": [62, "settings", "npcStates", 1] },
+    { "type": "ENTER", "index": [62, "settings", "npcStates"] },
     {
-        "_comment": "Hides buggy after intro cutscene",
-        "type": "SET_KEY",
-        "index": "condition",
-        "content": "plot.guildEntry >= 80"
+        "type": "FOR_IN",
+        "_comment": "Hides buggy entirely",
+        "keyword": "__INDEX__",
+        "values": [0,1,2,3],
+        "body": [{
+            "type": "ENTER",
+            "index": ["__INDEX__"]
+        }, {
+            "type": "SET_KEY",
+            "index": "condition",
+            "content": "false"
+        },{
+            "type": "EXIT",
+            "count": 1
+        }]
     },
-    { "type": "EXIT" },  
-    { "type": "ENTER", "index": 2 },
-    {
-        "type": "SET_KEY",
-        "index": "condition",
-        "content": "(plot.guildEntry >= 80) && (plot.line >= 17500)"
-    },
-    { "type": "EXIT" },  
-    { "type": "ENTER", "index": 3 },
-    {
-        "type": "SET_KEY",
-        "index": "condition",
-        "content": "(plot.guildEntry >= 80) && (plot.line >= 17800)"
-    },
-    { "type": "EXIT", "count": 4 },  
+    { "type": "EXIT", "count": 3 },  
 
     { "type": "ENTER", "index": [70, "settings"] },
     { "_comment": "Changing searching Albert meetup conditions", "type": "SET_KEY", "index": "startCondition", "content": "plot.shareholder >= 2100" },

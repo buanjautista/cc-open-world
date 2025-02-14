@@ -6,10 +6,23 @@
         "index": [180, "settings", "npcStates", 1]
     },
     {
-        "_comment": "Schneider hidden post intro event",
+        "_comment": "Schneider hidden",
         "type": "SET_KEY",
         "index": "condition",
-        "content": "plot.guildEntry >= 41 || plot.guildEntry <= 9"
+        "content": "false"
+    },
+    {
+        "type": "EXIT"
+    },  
+    {
+        "type": "ENTER",
+        "index": [0]
+    },
+    {
+        "_comment": "Schneider hidden",
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "false"
     },
     {
         "type": "EXIT",
@@ -24,12 +37,12 @@
         "_comment": "Make sure you don't skip the previous cutscene losing the pickup",
         "type": "SET_KEY",
         "index": "startCondition",
-        "content": "plot.guildEntry >= 29"
+        "content": "false"
     },
     {
         "type": "SET_KEY",
         "index": "endCondition",
-        "content": "plot.guildEntry >= 41"
+        "content": "false"
     },
     {
         "type": "ENTER",

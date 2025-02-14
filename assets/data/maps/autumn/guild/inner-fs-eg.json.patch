@@ -9,7 +9,7 @@
         "type": "FOR_IN",
         "_comment": "Change conditions in Schneider",
         "keyword": { "eventIndex": "__INDEX__", "variable": "__VAR__" },
-        "values": [{ "eventIndex": 1, "variable": "plot.guildEntry >= 61"}, { "eventIndex": 2, "variable": "plot.guildEntry >= 70"}, { "eventIndex": 3, "variable": "plot.guildEntry >= 80"}],
+        "values": [{ "eventIndex": 1, "variable": "false"}, { "eventIndex": 2, "variable": "false"}, { "eventIndex": 3, "variable": "false"}],
         "body": [
             { "type": "ENTER", "index": "__INDEX__" },
             { "type": "SET_KEY", "index": "condition", "content": "__VAR__" },
@@ -40,7 +40,7 @@
         "type": "FOR_IN",
         "_comment": "Change conditions in Buggy",
         "keyword": { "eventIndex": "__INDEX__", "variable": "__VAR__" },
-        "values": [{ "eventIndex": "1", "variable": "plot.guildEntry >= 63"}, { "eventIndex": "2", "variable": "plot.guildEntry >= 70"}, { "eventIndex": "3", "variable": "plot.guildEntry >= 80"}],
+        "values": [{ "eventIndex": "1", "variable": "false"}, { "eventIndex": "2", "variable": "false"}, { "eventIndex": "3", "variable": "false"}],
         "body": [
             { "type": "ENTER", "index": "__INDEX__" },
             { "type": "SET_KEY", "index": "condition", "content": "__VAR__" },
@@ -71,7 +71,7 @@
         "_comment": "Changing variables around for intro scene",
         "type": "SET_KEY",
         "index": "endCondition",
-        "content": "plot.guildEntry >= 70"
+        "content": "false"
     },
     {
         "type": "FOR_IN",
@@ -103,14 +103,14 @@
         "type": "SET_KEY", 
         "_comment": "Change Hlin observatory condition to post-first meetup at guild",
         "index": "condition", 
-        "content": "(plot.guildEntry >= 80) && quest.observatory.started && !quest.observatory.solved && !tmp.hlinJustEntered" 
+        "content": "quest.observatory.started && !quest.observatory.solved && !tmp.hlinJustEntered" 
     },
     { "type": "EXIT", "count": 1 },
     {
         "type": "FOR_IN",
         "_comment": "Make sure no plot interaction happens, for no despawn softlock mostly",
         "keyword": "__INDEX__",
-        "values": [3,4,5,6,7,8],
+        "values": [0,1,2,3,4,5,6,7,8],
         "body": [
             { "type": "ENTER", "index": "__INDEX__" },
             { "type": "SET_KEY", "index": "condition", "content": "false" },
@@ -150,7 +150,7 @@
         "type": "FOR_IN",
         "_comment": "Disable unnecessary story events",
         "keyword": "__INDEX__",
-        "values": [61,64,67,68,69,70,71,72,74],
+        "values": [59,61,64,67,68,69,70,71,72,74],
         "body": [{
             "type": "ENTER",
             "index": ["__INDEX__", "settings"]
