@@ -152,13 +152,15 @@ export default class OpenWorld {
   prestart() {
     assignSteps();
 
-    sc.OPTIONS_DEFINITION["openworld-visitedmaps"] = {
-      type: "CHECKBOX",
-      init: false,
-      cat: sc.OPTION_CATEGORY.GENERAL,
-      hasDivider: true,
-      header: "cc-open-world",
-    };
+    if (!multiRandoActive) {
+      sc.OPTIONS_DEFINITION["openworld-visitedmaps"] = {
+        type: "CHECKBOX",
+        init: false,
+        cat: sc.OPTION_CATEGORY.GENERAL,
+        hasDivider: true,
+        header: "cc-open-world",
+      };
+    }
   }
 
   // *********** //
