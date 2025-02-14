@@ -1,0 +1,20 @@
+[
+  {
+  "type": "ENTER",
+  "index": [ "entities" ]
+  },
+  {
+    "_comment": "Anti Softlock on chest",
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {"type":"TouchTrigger","x":736,"y":480,"level":1,"settings":{"size":{"x":64,"y":32},"mapId":977,"type":"WHILE_TOUCH_TRUE","shape":"RECTANGLE","zHeight":16,"variable":"map.wallDown1","name":"antiSoftlockWarriors"}}
+  },
+  {
+    "_comment": "Anti Softlock on chest",
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {"type":"TouchTrigger","x":728,"y":664,"level":1,"settings":{"size":{"x":64,"y":32},"mapId":978,"type":"WHILE_TOUCH_TRUE","shape":"RECTANGLE","zHeight":16,"variable":"map.wallDown1","name":"antiSoftlockWarriors"}}
+  },
+  {
+    "type": "EXIT",
+    "count": 1
+  }
+]
