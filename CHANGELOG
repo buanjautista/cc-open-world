@@ -24,7 +24,7 @@ Master Sensei quest requires both Flame and Ice Shades
 
 # Autumn's Rise / Guild Area
 
-Guild Town is open only after meeting Schneider for the first time, with him giving you the Guild Pass.
+First Scholars building is open only after meeting Schneider for the first time, with him giving you the Guild Pass.
 
 # Bergen:
 
@@ -135,6 +135,16 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 ==========================================================================================
 
 ## VERSION CHANGES
+
+# v0.4.2
+Fixes: 
+- Fixed getting stuck on the chest in Maroon Valley's Torn Road if you don't have the corresponding lock.
+- Made the visuals for Para Island barrier actually correlate to the barrier deactivated.
+- Removed Schneider interactions on guild area to avoid softlocking the Guild Pass check. Guild area should still be accesible with Guild Pass, and First Scholars with Guild Pass and Schneider check (which requires Mine Pass).
+- Removed the Quiz and some remainders from First Scholars. It will be more flat than before sorry about that.
+
+Add: 
+- Having maps visited by default should now be an option toggeable in Options for CCItemRandomizer, and a yaml setting for Archipelago CCMultiworldRandomizer.
 
 # v0.4.1
 Fixes: 
