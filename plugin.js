@@ -10,6 +10,8 @@ let randoOptionList = {
   "openFajro": { enable: false },
   "meteorVW": { enable: false },
   "extraBarriers": { enable: false },
+  "closedGaia": { enable: false },
+  "dlcActive": { enable: false },
   "randomizedShades": { enable: false, shades: {
     "fall": "flame", "valley": "ice", "jungle": "seed", "ridge": "star", "trail": "leaf", "kajo1": "bolt", "kajo2": "drop" 
   }}
@@ -31,6 +33,15 @@ export default class OpenWorld {
       console.log('invalid settings')
     }
     // Check if either CCItemRando or CCMultiworldRandomizer is active, and add stuff accordingly
+    if (!multiRandoActive) {
+      sc.OPTIONS_DEFINITION["openworld-visitedmaps"] = {
+        type: "CHECKBOX",
+        init: false,
+        cat: sc.OPTION_CATEGORY.GENERAL,
+        hasDivider: true,
+        header: "cc-open-world",
+      };
+    }
     if (itemRandoActive){
       if (RANDOMIZER_OPTIONS && RANDOMIZER_SETS) {
         RANDOMIZER_SETS['open-world'] = { type: "MULTI", order: 2E3 };
@@ -151,16 +162,6 @@ export default class OpenWorld {
   }
   prestart() {
     assignSteps();
-
-    if (!multiRandoActive) {
-      sc.OPTIONS_DEFINITION["openworld-visitedmaps"] = {
-        type: "CHECKBOX",
-        init: false,
-        cat: sc.OPTION_CATEGORY.GENERAL,
-        hasDivider: true,
-        header: "cc-open-world",
-      };
-    }
   }
 
   // *********** //
@@ -175,8 +176,10 @@ export default class OpenWorld {
           ig.vars.get("mw.options.vtShadeLock"), 
           ig.vars.get("mw.options.vtSkip"), 
           ig.vars.get("mw.options.openFajro"), 
-          ig.vars.get("mw.options.meteorPassage"), 
-          ig.vars.get("mw.options.extraBarriers")]
+          ig.vars.get("mw.options.meteorPassage"),
+          ig.vars.get("mw.options.extraBarriers"),
+          ig.vars.get("mw.options.closedGaia"),
+          ig.vars.get("mw.options.dlcActive")]
         addMWPatches(mwOptionList)
       }
     }
@@ -190,6 +193,7 @@ const R_VTSKIP = 1 // Skip all Vermillion Tower after first fight
 const R_OPENFAJRO = 2 // Non-linear Upper Fajro
 const R_METEORVW = 3 // Vermillion Wasteland locked behind Meteor Shade
 const R_EXTRABARRIER = 4; // Extra barriers and shade-accesible teleport in CrossCentral
+const R_CLOSEDGAIA = 5; // Extra barriers in Gaia's Garden
 
 // Item rando patching
 export function addIRPatches() {
@@ -256,6 +260,12 @@ function handlePatching(patchstate, patchname) {
         break;
       case R_EXTRABARRIER:
         ig.vars.set("open-world.extraBarriers", patchstate);
+        break;
+      case R_CLOSEDGAIA:
+        ig.vars.set("open-world.closedGaia", patchstate);
+        break;
+      case R_DLCACTIVE:
+        ig.vars.set("open-world.dlcActive", patchstate);
         break;
       } 
   }
