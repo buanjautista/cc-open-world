@@ -26,7 +26,6 @@ export default class OpenWorld {
   async main(){
     mod = activeMods.find(e => e.name == "open-world")
     let itemRandoActive = activeMods.find(e => e.name == "item-rando")
-    let multiRandoActive = activeMods.find(e => e.name == "mw-rando")
     randoOptionList = DEFAULT_OPTIONS;
 
     // Check if either CCItemRando or CCMultiworldRandomizer is active, and add stuff accordingly
@@ -172,28 +171,6 @@ export default class OpenWorld {
   prestart() {
     assignSteps();
   }
-
-  // *********** //
-  /* CC-MWR patching */
-  // *********** //
-  modelChanged(model, msg, data) {
-    if (model == sc.multiworld) {
-      // Read multiworld connection to check settings variables, to apply optional map patches
-      // Might reapply patches several times depending on possible reconnections
-      if ((msg == sc.MULTIWORLD_MSG.CONNECTION_STATUS_CHANGED && data == "Connected") || (msg == sc.MULTIWORLD_MSG.OPTIONS_PRESENT)) {
-        mwOptionList = [
-          ig.vars.get("mw.options.vtShadeLock"), 
-          ig.vars.get("mw.options.vtSkip"), 
-          ig.vars.get("mw.options.openFajro"), 
-          ig.vars.get("mw.options.meteorPassage"),
-          ig.vars.get("mw.options.extraBarriers"),
-          ig.vars.get("mw.options.closedGaia"),
-          ig.vars.get("mw.options.dlcActive")]
-        console.log(mwOptionList);
-        addMWPatches(mwOptionList)
-      }
-    }
-  }
 }
 
 
@@ -217,33 +194,6 @@ export function addIRPatches() {
     handlePatching(Object.values(randoOptionList)[x].enable, x)
   }
   lastOptionList = randoOptionList;
-}
-
-
-// Multiworld Patching
-export function addMWPatches(optionList) {
-  randoOptionList = DEFAULT_OPTIONS
-  if (optionList){ // Checks for MW extra patch list
-    if (lastOptionList != optionList) {
-      mod.runtimeAssets = {}
-    }
-    for (let x = 0; x < optionList.length; x++) {
-      // Convert vars from mw.options into the general mod vars 
-      // console.log(Object.keys(randoOptionList)[x], " ", optionList, randoOptionList)
-      try {
-        optionList[x] 
-          ? randoOptionList[Object.keys(randoOptionList)[x]].enable = optionList[x] 
-          : randoOptionList[Object.keys(randoOptionList)[x]].enable = false
-      }
-      catch (error) { 
-        console.log(error); 
-      }
-      handlePatching(Object.values(randoOptionList)[x].enable, x)
-    }
-    localStorage.setItem("open-world-settings", JSON.stringify(randoOptionList))
-    lastOptionList = optionList;
-    return true;
-  }
 }
 
 function handlePatching(patchstate, patchname) {
