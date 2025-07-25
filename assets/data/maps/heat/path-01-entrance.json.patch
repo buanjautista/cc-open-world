@@ -11,15 +11,5 @@
         }
     },
     { "type": "EXIT", "count": 1 },  
-    { "type": "EXIT" },
-
-    {
-        "type": "IF",
-        "_comment": "Adds corresponding patch if Extra Barriers is active",
-        "cond": "ig.vars.get('open-world.extraBarriers') >= 1",
-        "thenSteps": [{
-        "type": "INCLUDE",
-        "src": "mod:extra-patches/extra-barriers/valley-entrance.json.patch"
-        }]
-    }
+    { "type": "EXIT" }
 ]

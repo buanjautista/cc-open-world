@@ -399,5 +399,12 @@
     {
         "type": "EXIT",
         "count": 1
-    }  
+    },
+
+    { 
+        "type": "IF", 
+        "_comment": "Adds corresponding patch if Extra Barriers is on", 
+        "cond": "ig.vars.get('open-world.extra-barriers') >= 1", 
+        "thenSteps": [{ "type": "INCLUDE", "src": "mod:extra-patches/extra-barriers/bergen-elevator.json.patch" }] 
+    }
 ]
