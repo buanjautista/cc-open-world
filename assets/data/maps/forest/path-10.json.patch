@@ -56,52 +56,40 @@
     {
         "type": "ENTER",
         "index": [164, "settings"],
-        "_comment": "Make dojo only accesible with both key and quest, to prevent crashes"
-        },
-        
-        {
-            "type": "SET_KEY",
-            "index": "condition",
-            "content": "item.439.amount >= 1 && quest.bug-hunting.started"
-        },
-
-        {
-        "type": "EXIT",
-        "count": 2
+        "_comment": "Make dojo accessible with key, no quest need"
     },
+    {
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "item.439.amount >= 1"
+    },
+    { "type": "EXIT", "count": 2 },
 
     {
         "type": "ENTER",
         "index": [783, "settings"],
         "_comment": "Make teleport accesible after Shizuka fight"
-        },
-        
-        {
-            "type": "SET_KEY",
-            "index": "spawnCondition",
-            "content": "plot.shizuka >= 20300"
-        },
-
-        {
-        "type": "EXIT",
-        "count": 2
     },
+    
+    {
+        "type": "SET_KEY",
+        "index": "spawnCondition",
+        "content": "plot.shizuka >= 20300"
+    },
+
+    { "type": "EXIT", "count": 2 },
 
     {
         "type": "ENTER",
         "index": [753, "settings"],
         "_comment": "Disable object and collision that blocks Hidden Passage"
-        },
-    
-        {
+    },
+    {
         "type": "SET_KEY",
         "index": "spawnCondition",
         "content": "false"
-        },
-        {
-        "type": "EXIT",
-        "count": 2
     },
+    { "type": "EXIT", "count": 2 },
 
     {
     "type": "EXIT",

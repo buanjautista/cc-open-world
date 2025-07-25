@@ -18,6 +18,10 @@
         "type": "EXIT"
     },
     {
+        "type": "INCLUDE",
+        "src": "mod:patches/database/quest-fixes.json"
+    },
+    {
         "type": "ENTER",
         "index": "shops"
     },{
