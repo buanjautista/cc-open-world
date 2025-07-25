@@ -4,20 +4,22 @@ import { assignSteps } from './src/custom-steps.js'
 let mod 
 let mwOptionList = []
 let lastOptionList;
-let randoOptionList = {
+const DEFAULT_OPTIONS = {
   "shadeLock": { enable: false, type: "none" }, 
   "vtSkip": { enable: false },
   "openFajro": { enable: false },
   "meteorVW": { enable: false },
   "extraBarriers": { enable: false },
-  "closedGaia": { enable: false },
+  "closedGaia": { enable: false, type: "none"  },
   "dlcActive": { enable: false },
   "randomizedShades": { enable: false, shades: {
     "fall": "flame", "valley": "ice", "jungle": "seed", "ridge": "star", "trail": "leaf", "kajo1": "bolt", "kajo2": "drop" 
   }}
 }
+let randoOptionList = DEFAULT_OPTIONS;
 // Item Rando patching
-const SBL_TYPE = { "none": 0, "all": 1, "shades": 2, "bosses": 3 }
+const SBL_TYPE = { "none": 0, "all": 1, "shades": 2, "bosses": 3 } // vt shade lock
+const CGA_TYPE = { "none": 0, "minimal": 1, "full": 2 } // closed gaia
 const RSH_ITEM = { "leaf":145, "ice":225, "flame":230, "seed":376, "star": 410, "meteor":434, "bolt":286, "drop": 231, "ancient": 627 }
 
 export default class OpenWorld {
@@ -25,15 +27,22 @@ export default class OpenWorld {
     mod = activeMods.find(e => e.name == "open-world")
     let itemRandoActive = activeMods.find(e => e.name == "item-rando")
     let multiRandoActive = activeMods.find(e => e.name == "mw-rando")
+    randoOptionList = DEFAULT_OPTIONS;
 
-    try {
-      localStorage.getItem("open-world-settings") && (randoOptionList = JSON.parse(localStorage.getItem("open-world-settings")))
-    }
-    catch(e){
-      console.log('invalid settings')
-    }
     // Check if either CCItemRando or CCMultiworldRandomizer is active, and add stuff accordingly
     if (!multiRandoActive) {
+      try {
+        if(localStorage.getItem("open-world-settings")) {
+          let storedSettings = JSON.parse(localStorage.getItem("open-world-settings"))
+          console.log(randoOptionList, ": ", randoOptionList.length, " --- ", storedSettings, ": ", storedSettings.length)
+          if (randoOptionList.length == storedSettings.length) {
+            randoOptionList = storedSettings
+          }
+        }
+      }
+      catch(e){
+        console.log('invalid settings, resetting to default')
+      }
       sc.OPTIONS_DEFINITION["openworld-visitedmaps"] = {
         type: "CHECKBOX",
         init: false,
@@ -180,6 +189,7 @@ export default class OpenWorld {
           ig.vars.get("mw.options.extraBarriers"),
           ig.vars.get("mw.options.closedGaia"),
           ig.vars.get("mw.options.dlcActive")]
+        console.log(mwOptionList);
         addMWPatches(mwOptionList)
       }
     }
@@ -194,6 +204,7 @@ const R_OPENFAJRO = 2 // Non-linear Upper Fajro
 const R_METEORVW = 3 // Vermillion Wasteland locked behind Meteor Shade
 const R_EXTRABARRIER = 4; // Extra barriers and shade-accesible teleport in CrossCentral
 const R_CLOSEDGAIA = 5; // Extra barriers in Gaia's Garden
+const R_DLCACTIVE = 6; // DLC Features
 
 // Item rando patching
 export function addIRPatches() {
@@ -211,13 +222,22 @@ export function addIRPatches() {
 
 // Multiworld Patching
 export function addMWPatches(optionList) {
+  randoOptionList = DEFAULT_OPTIONS
   if (optionList){ // Checks for MW extra patch list
     if (lastOptionList != optionList) {
       mod.runtimeAssets = {}
     }
     for (let x = 0; x < optionList.length; x++) {
       // Convert vars from mw.options into the general mod vars 
-      optionList[x] ? randoOptionList[Object.keys(randoOptionList)[x]].enable = optionList[x] : randoOptionList[Object.keys(randoOptionList)[x]].enable = false
+      // console.log(Object.keys(randoOptionList)[x], " ", optionList, randoOptionList)
+      try {
+        optionList[x] 
+          ? randoOptionList[Object.keys(randoOptionList)[x]].enable = optionList[x] 
+          : randoOptionList[Object.keys(randoOptionList)[x]].enable = false
+      }
+      catch (error) { 
+        console.log(error); 
+      }
       handlePatching(Object.values(randoOptionList)[x].enable, x)
     }
     localStorage.setItem("open-world-settings", JSON.stringify(randoOptionList))
@@ -227,6 +247,7 @@ export function addMWPatches(optionList) {
 }
 
 function handlePatching(patchstate, patchname) {
+  // console.log("patching: ", Object.keys(DEFAULT_OPTIONS)[patchname], patchstate)
   if (patchstate) { // Adds patches
     switch(patchname) {
       case R_SHADELOCK:
