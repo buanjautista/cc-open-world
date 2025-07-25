@@ -1,22 +1,21 @@
 import { defineGUIPlease } from './src/gui-workaround.js';
-// import { addMWPatches, addIRPatches  } from './src/patch-handling.js'
 import { assignSteps } from './src/custom-steps.js'
 let mod 
 let mwOptionList = []
 let lastOptionList;
 const DEFAULT_OPTIONS = {
-  "shadeLock": { enable: false, type: "none" }, 
-  "vtSkip": { enable: false },
-  "openFajro": { enable: false },
-  "meteorVW": { enable: false },
-  "extraBarriers": { enable: false },
-  "closedGaia": { enable: false, type: "none"  },
-  "dlcActive": { enable: false },
+  "shadeLock": { state: false, type: "none" }, 
+  "vtSkip": { state: false },
+  "openFajro": { state: false },
+  "meteorVW": { state: false },
+  "extraBarriers": { state: false },
+  "closedGaia": { state: false, type: "none"  },
+  "dlcActive": { state: false },
   "randomizedShades": { enable: false, shades: {
     "fall": "flame", "valley": "ice", "jungle": "seed", "ridge": "star", "trail": "leaf", "kajo1": "bolt", "kajo2": "drop" 
   }}
 }
-let randoOptionList = DEFAULT_OPTIONS;
+let randoOptionList;
 // Item Rando patching
 const SBL_TYPE = { "none": 0, "all": 1, "shades": 2, "bosses": 3 } // vt shade lock
 const CGA_TYPE = { "none": 0, "minimal": 1, "full": 2 } // closed gaia
@@ -25,24 +24,9 @@ const RSH_ITEM = { "leaf":145, "ice":225, "flame":230, "seed":376, "star": 410, 
 export default class OpenWorld {
   async main(){
     mod = activeMods.find(e => e.name == "open-world")
-    let itemRandoActive = activeMods.find(e => e.name == "item-rando")
     let multiRandoActive = activeMods.find(e => e.name == "mw-rando")
     randoOptionList = DEFAULT_OPTIONS;
 
-    // Check if either CCItemRando or CCMultiworldRandomizer is active, and add stuff accordingly
-    if (!multiRandoActive) {
-      try {
-        if(localStorage.getItem("open-world-settings")) {
-          let storedSettings = JSON.parse(localStorage.getItem("open-world-settings"))
-          console.log(randoOptionList, ": ", randoOptionList.length, " --- ", storedSettings, ": ", storedSettings.length)
-          if (randoOptionList.length == storedSettings.length) {
-            randoOptionList = storedSettings
-          }
-        }
-      }
-      catch(e){
-        console.log('invalid settings, resetting to default')
-      }
       sc.OPTIONS_DEFINITION["openworld-visitedmaps"] = {
         type: "CHECKBOX",
         init: false,
@@ -50,123 +34,11 @@ export default class OpenWorld {
         hasDivider: true,
         header: "cc-open-world",
       };
-    }
-    if (itemRandoActive){
-      if (RANDOMIZER_OPTIONS && RANDOMIZER_SETS) {
-        RANDOMIZER_SETS['open-world'] = { type: "MULTI", order: 2E3 };
-        RANDOMIZER_SETS['open-world-sblock'] = { type: "MULTI", order: 2E3 };
 
-        RANDOMIZER_OPTIONS['vt-skip'] = {
-          set: "open-world",
-          cost: 0,
-          getter: () => {
-            var _a, _b;
-            return (_b = (_a = randoOptionList.vtSkip) == null ? void 0 : _a.enable) != null ? _b : true;
-          },
-          setter: (value) => {
-            var _a;
-            (_a = randoOptionList.vtSkip) != null ? _a : randoOptionList.vtSkip = { enable: true };
-            randoOptionList.vtSkip.enable = value;
-            addIRPatches(randoOptionList)
-          }
-        };
-        RANDOMIZER_OPTIONS['open-fajro'] = {
-          set: "open-world",
-          cost: 0,
-          getter: () => {
-            var _a, _b;
-            return (_b = (_a = randoOptionList.openFajro) == null ? void 0 : _a.enable) != null ? _b : true;
-          },
-          setter: (value) => {
-            var _a;
-            (_a = randoOptionList.openFajro) != null ? _a : randoOptionList.openFajro = { enable: true };
-            randoOptionList.openFajro.enable = value;
-            addIRPatches(randoOptionList)
-          }
-        };
-        RANDOMIZER_OPTIONS['meteor-vw'] = {
-          set: "open-world",
-          cost: 0,
-          getter: () => {
-            var _a, _b;
-            return (_b = (_a = randoOptionList.meteorVW) == null ? void 0 : _a.enable) != null ? _b : true;
-          },
-          setter: (value) => {
-            var _a;
-            (_a = randoOptionList.meteorVW) != null ? _a : randoOptionList.meteorVW = { enable: true };
-            randoOptionList.meteorVW.enable = value;
-            addIRPatches(randoOptionList)
-          }
-        };
-
-        RANDOMIZER_OPTIONS['sblock-all'] = {
-          set: "open-world-sblock",
-          cost: 0,
-          getter: () => {
-            var _a, _b;
-            return (_b = (_a = randoOptionList.shadeLock) == null ? void 0 : (_a.type == "all")) != null ? _b : (randoOptionList.shadeLock.type == "all");
-          },
-          setter: () => {
-            randoOptionList.shadeLock.enable = true;
-            randoOptionList.shadeLock.type = "all"
-            addIRPatches(randoOptionList)
-          }
-        };
-        RANDOMIZER_OPTIONS['sblock-boss'] = {
-          set: "open-world-sblock",
-          cost: 0,
-          getter: () => {
-            var _a, _b;
-            return (_b = (_a = randoOptionList.shadeLock) == null ? void 0 : (_a.type == "bosses")) != null ? _b : (randoOptionList.shadeLock.type == "bosses");
-          },
-          setter: () => {
-            randoOptionList.shadeLock.enable = true;
-            randoOptionList.shadeLock.type = "bosses";
-            addIRPatches(randoOptionList);
-          }
-        };
-        RANDOMIZER_OPTIONS['sblock-shades'] = {
-          set: "open-world-sblock",
-          cost: 0,
-          getter: () => {
-            var _a, _b;
-            return (_b = (_a = randoOptionList.shadeLock) == null ? void 0 : (_a.type == "shades")) != null ? _b : (randoOptionList.shadeLock.type == "shades");
-          },
-          setter: () => {
-            randoOptionList.shadeLock.enable = true;
-            randoOptionList.shadeLock.type = "shades";
-            addIRPatches(randoOptionList);
-          }
-        };
-        RANDOMIZER_OPTIONS['sblock-none'] = {
-          set: "open-world-sblock",
-          cost: 0,
-          getter: () => {
-            var _a, _b;
-            return (_b = (_a = randoOptionList.shadeLock) == null ? void 0 : !_a.enable) != null ? _b : true;
-          },
-          setter: () => {
-            randoOptionList.shadeLock.enable = false;
-            randoOptionList.shadeLock.type = "none";
-            addIRPatches(randoOptionList);
-          }
-        };
-      }
-      if (multiRandoActive) { console.log("CCOpenWorld will only work correctly with only one instance of either CCItemRandomizer or CCMultiworldRandomizer") }
-      
-      ig.Game.inject({
-        teleport(mapName, marker, hint, clearCache, reloadCache) {
-          if (hint == "LOAD") { addIRPatches(randoOptionList) }
-          return this.parent(mapName, marker, hint, clearCache, reloadCache);
-        },
-      }
-      );
-    }
-
-    else if (multiRandoActive) {
+      if (multiRandoActive) {
       // Adds a check to start extra patching on multiworld connection
-      sc.Model.addObserver(sc.multiworld, this)
-    }
+        sc.Model.addObserver(sc.multiworld, this)
+      }
     setTimeout(defineGUIPlease,"1000");
   }
   prestart() {
@@ -189,7 +61,6 @@ export default class OpenWorld {
           ig.vars.get("mw.options.extraBarriers"),
           ig.vars.get("mw.options.closedGaia"),
           ig.vars.get("mw.options.dlcActive")]
-        console.log(mwOptionList);
         addMWPatches(mwOptionList)
       }
     }
@@ -206,39 +77,20 @@ const R_EXTRABARRIER = 4; // Extra barriers and shade-accesible teleport in Cros
 const R_CLOSEDGAIA = 5; // Extra barriers in Gaia's Garden
 const R_DLCACTIVE = 6; // DLC Features
 
-// Item rando patching
-export function addIRPatches() {
-  if (lastOptionList != randoOptionList) {
-    mod.runtimeAssets = {}
-  }
-  // Loop once through all the extra patch settings, and apply corresponding patches
-  localStorage.setItem("open-world-settings", JSON.stringify(randoOptionList))
-  for (let x = 0; x < Object.keys(randoOptionList).length; x++) { 
-    handlePatching(Object.values(randoOptionList)[x].enable, x)
-  }
-  lastOptionList = randoOptionList;
-}
-
 
 // Multiworld Patching
 export function addMWPatches(optionList) {
-  randoOptionList = DEFAULT_OPTIONS
+
   if (optionList){ // Checks for MW extra patch list
     if (lastOptionList != optionList) {
       mod.runtimeAssets = {}
     }
     for (let x = 0; x < optionList.length; x++) {
-      // Convert vars from mw.options into the general mod vars 
-      // console.log(Object.keys(randoOptionList)[x], " ", optionList, randoOptionList)
-      try {
-        optionList[x] 
-          ? randoOptionList[Object.keys(randoOptionList)[x]].enable = optionList[x] 
-          : randoOptionList[Object.keys(randoOptionList)[x]].enable = false
-      }
-      catch (error) { 
-        console.log(error); 
-      }
-      handlePatching(Object.values(randoOptionList)[x].enable, x)
+      // Convert vars from mw.options into the open-world vars 
+      optionList[x] 
+        ? randoOptionList[Object.keys(randoOptionList)[x]].state = optionList[x] 
+        : randoOptionList[Object.keys(randoOptionList)[x]].state = false
+      handlePatching(Object.values(randoOptionList)[x].state, x)
     }
     localStorage.setItem("open-world-settings", JSON.stringify(randoOptionList))
     lastOptionList = optionList;
