@@ -196,6 +196,15 @@
   },
   { "type": "EXIT", "count": 2 },
 
+  { "type": "ENTER", "index": [ 17, "settings" ] },
+  {
+    "type": "SET_KEY",
+    "_comment": "Disables barrier open event",
+    "index": "startCondition",
+    "content": "false"
+  },
+  { "type": "EXIT", "count": 2 },
+
   {
     "type": "ADD_ARRAY_ELEMENT",
     "_comment": "Remove Barrier visually",
