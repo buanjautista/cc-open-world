@@ -81,10 +81,11 @@ Krys’kajo entrance doesnt require/change party members, or story progress. (st
 # Sapphire Ridge:
 
 Added a Red Flame Shade barrier on entrance (for shade randomizer compat)
-Old Dojo door only accessible with both key, and dojo quest started
+Old Dojo door accessible key, no need to start quest
 You can invite Shizuka after fighting her in Old Hideout
 Entrance to Rhombus Square now linked to Meteor Shade
 Kit quest is now doable with a party
+Golden Bug quests are now separated from the Vagabond quest, which requires now 4 Golden Bug items instead of trial completion
 
 # Keys / Dungeons / Expo Spaces:
 
@@ -135,6 +136,26 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 ==========================================================================================
 
 ## VERSION CHANGES
+
+# v0.5.0
+New:
+- Golden Bug quests are now separated from the Vagabond quest, which requires now 4 Golden Bug items instead of trial completion.
+- Fixed option to enable all maps as visited on new game. (In Options -> General)
+
+Fixes:
+- Maroon Valley chest which respawned on room entry
+- Removed barrier event in Para Island since barrier has been removed
+- Vermillion Wasteland Hub is not inaccessible until a use is given to it (also to prevent crashes)
+- So'najiz Temple gauntlet barrier now opens after the fight instead of after opening the chests
+
+Extra Patches:
+- Extra Barriers: Adds new ways to move around from Rhombus Square, also adding reverse barriers to make some shades more usable from the get go
+- Closed Gaia: Adds more options to divide Gaia's Garden areas with the new East/West Gaia Passes, and the Azure Drop / Purple Bolt Shades
+- DLC: Base DLC (mostly dungeon) compatbility prepared for future patches
+
+Compatibility:
+- Re-added CC-Alybox as dependency
+- Separated CCItemRandomizer compatibility into its own branch
 
 # v0.4.2
 Fixes: 
