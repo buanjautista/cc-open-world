@@ -37,6 +37,9 @@
       }
     }
   },
+  { "type": "ENTER", "_comment": "Make end barrier be there until gauntlet fight ends", "index": [ 243, "settings" ] }, 
+  { "type": "SET_KEY", "index": "spawnCondition", "content": "!map.keyPanelThere2" }, 
+  { "type": "EXIT", "count": 2 },
   {
     "type": "EXIT",
     "count": 1
