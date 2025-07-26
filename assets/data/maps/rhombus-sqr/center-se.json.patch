@@ -33,8 +33,13 @@
 	{ "type": "EXIT", "count": 3 },
 	
 	{ 
+    "type": "IF", 
+    "_comment": "Adds corresponding patch if Extra Sandwich is on", 
+    "cond": "ig.vars.get('open-world.extra-sandwich') >= 1", 
+    "thenSteps": [{ 
         "_comment": "Extra Sandwich", "type": "ADD_ARRAY_ELEMENT", "content": {"type":"Chest","x":608,"y":618,"level":3,"settings":{"name":"","chestType":"Silver","item":"1","amount":2,"mapId":5000}} 
-  },
+ 	 }]
+	},
 
 	{ "type": "EXIT", "count": 1 }
 ]

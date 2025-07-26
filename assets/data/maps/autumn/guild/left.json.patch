@@ -131,7 +131,11 @@
         "type": "EXIT",
         "count": 2
     },
-    {
+    { 
+    "type": "IF", 
+    "_comment": "Adds corresponding patch if Extra Sandwich is on", 
+    "cond": "ig.vars.get('open-world.extra-sandwich') >= 1", 
+    "thenSteps": [{
         "_comment": "Extra Sandwich",
         "type": "ADD_ARRAY_ELEMENT",
         "content": {
@@ -147,7 +151,7 @@
                 "mapId": 5000
             }
         }
-    },
+    }]},
     {
         "type": "EXIT",
         "count": 1
