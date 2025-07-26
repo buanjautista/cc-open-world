@@ -22,6 +22,20 @@
     },
 
     {
+        "type": "ENTER",
+        "index": [151, "settings"]
+    },
+    {
+        "type": "SET_KEY",
+        "index": "map",
+        "content": "forest.caves.exit-cave-03"
+    },
+    {
+        "type": "EXIT",
+        "count": 2
+    },
+
+    {
         "type": "FOR_IN",
         "keyword": "__INDEX__",
         "values": [160, 162, 164],
