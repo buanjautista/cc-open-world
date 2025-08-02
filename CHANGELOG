@@ -108,7 +108,7 @@ DLC areas are active by default when DLC is active (Beach, Homestedt, Upgraded s
 
 ## EXTRA PATCHES
 
-You can activate these patches from the Randomizer menu in CCItemRandomizer, or through the .yaml settings in the CCMultiworldRandomizer
+You can activate these patches through the .yaml settings in the CCMultiworldRandomizer
 
 # Vermillion Tower Shade and Boss lock:
 
@@ -121,6 +121,11 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 # Meteor Shade Wasteland:
 
 - Locks Vermillion Wasteland Tunnel behind a Meteor Shade barrier.
+
+# Closed Gaia:
+
+- Locks the Left and Right side of Gaia's Garden via West and East passes, obtained after fighting Apollo in Gaia's Garden entrance. These passes also include respective side dungeons.
+- Can further lock Grove and Infested areas by selecting the 'Full' option.
 
 # Open Faj'ro Temple:
 
@@ -141,12 +146,15 @@ You can activate these patches from the Randomizer menu in CCItemRandomizer, or 
 New:
 - Golden Bug quests are now separated from the Vagabond quest, which requires now 4 Golden Bug items instead of trial completion.
 - Fixed option to enable all maps as visited on new game. (In Options -> General)
+- Compat for DLC Quests
+- Option to disable Open World tips
 
 Fixes:
 - Maroon Valley chest which respawned on room entry
 - Removed barrier event in Para Island since barrier has been removed
 - Vermillion Wasteland Hub is not inaccessible until a use is given to it (also to prevent crashes)
 - So'najiz Temple gauntlet barrier now opens after the fight instead of after opening the chests
+- Visited maps option now works, on creating a new save file
 
 Extra Patches:
 - Extra Barriers: Adds new ways to move around from Rhombus Square, also adding reverse barriers to make some shades more usable from the get go
@@ -155,6 +163,7 @@ Extra Patches:
 
 Compatibility:
 - Re-added CC-Alybox as dependency
+- Added Item-Api as dependency for handling custom items (ex. new Gaia Passes)
 - Separated CCItemRandomizer compatibility into its own branch
 
 # v0.4.2
