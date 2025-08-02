@@ -1,5 +1,6 @@
 import { defineGUIPlease } from './src/gui-workaround.js';
 import { assignSteps } from './src/custom-steps.js'
+import { enableHubLaterQuests } from './src/show-quest-hub.js'
 let mod 
 let mwOptionList = []
 let lastOptionList;
@@ -34,6 +35,13 @@ export default class OpenWorld {
         hasDivider: true,
         header: "cc-open-world",
       };
+      sc.OPTIONS_DEFINITION["openworld-disabledtips"] = {
+        type: "CHECKBOX",
+        init: false,
+        cat: sc.OPTION_CATEGORY.GENERAL,
+        hasDivider: true,
+        header: "cc-open-world",
+      };
 
       if (multiRandoActive) {
       // Adds a check to start extra patching on multiworld connection
@@ -43,6 +51,7 @@ export default class OpenWorld {
   }
   prestart() {
     assignSteps();
+    enableHubLaterQuests();
   }
 
   // *********** //
