@@ -17,5 +17,6 @@ export function defineGUIPlease() {
   ig.lang.labels.sc.gui.menu.randomizer.options.descriptions["sblock-none"] = "Vermillion Tower is accessible at any time";
 
   ig.lang.labels.sc.gui.options.headers["cc-open-world"] = "Open World";
-  ig.lang.labels.sc.gui.options["openworld-visitedmaps"] = {"name": "Enable Visited Maps", "description": "Show all maps and areas as visited by default"};
+  ig.lang.labels.sc.gui.options["openworld-visitedMaps"] = {"name": "Enable Visited Maps", "description": "Show all maps and areas as visited by default"};
+  ig.lang.labels.sc.gui.options["openworld-disabledTips"] = {"name": "Disable Area Tips", "description": "Remove the Open World tips when unlocking certain areas"};
 }

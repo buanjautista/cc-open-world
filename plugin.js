@@ -28,18 +28,18 @@ export default class OpenWorld {
     let multiRandoActive = activeMods.find(e => e.name == "mw-rando")
     randoOptionList = DEFAULT_OPTIONS;
 
-      sc.OPTIONS_DEFINITION["openworld-visitedmaps"] = {
+      sc.OPTIONS_DEFINITION["openworld-visitedMaps"] = {
         type: "CHECKBOX",
         init: false,
         cat: sc.OPTION_CATEGORY.GENERAL,
         hasDivider: true,
         header: "cc-open-world",
       };
-      sc.OPTIONS_DEFINITION["openworld-disabledtips"] = {
+      sc.OPTIONS_DEFINITION["openworld-disabledTips"] = {
         type: "CHECKBOX",
         init: false,
         cat: sc.OPTION_CATEGORY.GENERAL,
-        hasDivider: true,
+        hasDivider: false,
         header: "cc-open-world",
       };
 
