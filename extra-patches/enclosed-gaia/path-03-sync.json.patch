@@ -9,7 +9,7 @@
         "_comment": "Change bottom-left door entry conditions",
         "type": "SET_KEY",
         "index": "blockEventCondition",
-        "content": "item.20.amount < 1"
+        "content": "item.east-gaia-pass.amount < 1"
     },
     {
         "_comment": "Change bottom-left door entry conditions",
@@ -50,12 +50,12 @@
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Add Barrier",
-        "content": {"type":"ObjectLayerView","x":1748,"y":908,"level":1,"settings":{"size":{"x":8,"y":96},"mapId":869,"layer":"object3","collType":"NONE","zHeight":0,"terrain":"NORMAL","heightShape":"NONE","shape":"RECTANGLE","spawnCondition":"item.20.amount >= 1","name":"barrierBlock"}}
+        "content": {"type":"ObjectLayerView","x":1748,"y":908,"level":1,"settings":{"size":{"x":8,"y":96},"mapId":869,"layer":"object3","collType":"NONE","zHeight":0,"terrain":"NORMAL","heightShape":"NONE","shape":"RECTANGLE","spawnCondition":"item.east-gaia-pass.amount >= 1","name":"barrierBlock"}}
     },
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Add Barrier",
-        "content": {"type":"ScalableProp","x":1748,"y":912,"level":1,"settings":{"size":{"x":8,"y":112},"mapId":868,"patternOffset":{"x":0,"y":0},"propConfig":{"sheet":"dungeon-ar","name":"blockWallV","ends":{"south":"SOUTH_END","north":"NORTH_EAST_END"}},"spawnCondition":"item.20.amount < 1","name":"barrier"}}
+        "content": {"type":"ScalableProp","x":1748,"y":912,"level":1,"settings":{"size":{"x":8,"y":112},"mapId":868,"patternOffset":{"x":0,"y":0},"propConfig":{"sheet":"dungeon-ar","name":"blockWallV","ends":{"south":"SOUTH_END","north":"NORTH_EAST_END"}},"spawnCondition":"item.east-gaia-pass.amount < 1","name":"barrier"}}
     },
     {
         "type": "EXIT"

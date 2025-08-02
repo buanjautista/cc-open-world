@@ -10,6 +10,7 @@
   "dependencies": {
 		"ccloader": ">=2.24.0",
 		"crosscode": ">=1.4.0",
-    "cc-alybox": ">=1.0.0"
+    "cc-alybox": ">=1.0.0",
+    "item-api": "^0.4.0"
 	}
 }

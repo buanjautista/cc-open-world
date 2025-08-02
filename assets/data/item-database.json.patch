@@ -6,10 +6,10 @@
 
     {
         "_comment": "Add new keys",
-        "type": "SET_KEY",
-        "index": 19,
+        "type": "ADD_ARRAY_ELEMENT",
         "content": {
-                "order": 92,
+                "order": 3434,
+                "customItem": "west-gaia-pass",
                 "name": {
                     "en_US": "West Gaia Pass",
                     "de_DE": "West Gaia Pass",
@@ -45,10 +45,10 @@
     },
     {
         "_comment": "Add new keys",
-        "type": "SET_KEY",
-        "index": 20,
+        "type": "ADD_ARRAY_ELEMENT",
         "content": {
-                "order": 92,
+                "order": 3435,
+                "customItem": "east-gaia-pass",
                 "name": {
                     "en_US": "East Gaia Pass",
                     "de_DE": "East Gaia Pass",

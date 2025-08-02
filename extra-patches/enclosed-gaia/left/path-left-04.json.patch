@@ -21,7 +21,7 @@
             "_comment": "Change top door entry conditions",
             "type": "SET_KEY",
             "index": "blockEventCondition",
-            "content": "item.19.amount < 1"
+            "content": "item.west-gaia-pass.amount < 1"
         },
         {
             "_comment": "Change top door entry conditions",
@@ -70,7 +70,7 @@
         "_comment": "Change bottom-left door entry conditions",
         "type": "SET_KEY",
         "index": "blockEventCondition",
-        "content": "item.19.amount < 1"
+        "content": "item.west-gaia-pass.amount < 1"
     },
     {
         "_comment": "Change bottom-left door entry conditions",
@@ -135,12 +135,12 @@
         "thenSteps": [{
             "type": "ADD_ARRAY_ELEMENT",
             "_comment": "Add North Barrier",
-            "content": { "type": "ScalableProp", "x": 624, "y": 8, "level": 1, "settings": { "size": { "x": 112, "y": 4 }, "mapId": 1183, "patternOffset": { "x": 0, "y": 0 }, "propConfig": { "sheet": "dungeon-ar", "name": "blockWallH" }, "spawnCondition": "item.19.amount < 1" } }
+            "content": { "type": "ScalableProp", "x": 624, "y": 8, "level": 1, "settings": { "size": { "x": 112, "y": 4 }, "mapId": 1183, "patternOffset": { "x": 0, "y": 0 }, "propConfig": { "sheet": "dungeon-ar", "name": "blockWallH" }, "spawnCondition": "item.west-gaia-pass.amount < 1" } }
         },
         {
             "type": "ADD_ARRAY_ELEMENT",
             "_comment": "Add North Barrier",
-            "content": { "type": "ObjectLayerView", "x": 624, "y": 8, "level": 1, "settings": { "size": { "x": 112, "y": 8 }, "mapId": 1184, "layer": "object3", "collType": "NONE", "terrain": "NORMAL", "heightShape": "NONE", "shape": "RECTANGLE", "spawnCondition": "item.19.amount >= 1", "name": "barrierFloor" } }
+            "content": { "type": "ObjectLayerView", "x": 624, "y": 8, "level": 1, "settings": { "size": { "x": 112, "y": 8 }, "mapId": 1184, "layer": "object3", "collType": "NONE", "terrain": "NORMAL", "heightShape": "NONE", "shape": "RECTANGLE", "spawnCondition": "item.west-gaia-pass.amount >= 1", "name": "barrierFloor" } }
         }]
     },
     {
@@ -161,12 +161,12 @@
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Add South Barrier",
-        "content": {"type":"ScalableProp","x":320,"y":1272,"level":1,"settings":{"size":{"x":112,"y":4},"mapId":1186,"patternOffset":{"x":0,"y":0},"propConfig":{"sheet":"dungeon-ar","name":"blockWallH"},"spawnCondition":"item.19.amount < 1"}}
+        "content": {"type":"ScalableProp","x":320,"y":1272,"level":1,"settings":{"size":{"x":112,"y":4},"mapId":1186,"patternOffset":{"x":0,"y":0},"propConfig":{"sheet":"dungeon-ar","name":"blockWallH"},"spawnCondition":"item.west-gaia-pass.amount < 1"}}
     },
     {
         "type": "ADD_ARRAY_ELEMENT",
         "_comment": "Add South Barrier",
-        "content": {"type":"ObjectLayerView","x":320,"y":1272,"level":1,"settings":{"size":{"x":112,"y":8},"mapId":1185,"layer":"object3","collType":"NONE","terrain":"NORMAL","heightShape":"NONE","shape":"RECTANGLE","spawnCondition":"item.19.amount >= 1","name":"southbarrierFloor"}}
+        "content": {"type":"ObjectLayerView","x":320,"y":1272,"level":1,"settings":{"size":{"x":112,"y":8},"mapId":1185,"layer":"object3","collType":"NONE","terrain":"NORMAL","heightShape":"NONE","shape":"RECTANGLE","spawnCondition":"item.west-gaia-pass.amount >= 1","name":"southbarrierFloor"}}
     },
 
     {

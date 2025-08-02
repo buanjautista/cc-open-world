@@ -11,12 +11,12 @@
     {
 		"type": "SET_KEY",
         "index": 48,
-		"content": { "type": "GIVE_ITEM", "item": "19", "amount": 1 }
+		"content": { "type": "GIVE_ITEM", "item": "west-gaia-pass", "amount": 1 }
 	},
     {
 		"type": "SET_KEY",
         "index": 49,
-		"content": { "type": "GIVE_ITEM", "item": "20", "amount": 1 }
+		"content": { "type": "GIVE_ITEM", "item": "east-gaia-pass", "amount": 1 }
 	},
     { "type": "EXIT", "count": 3},
     { "type": "EXIT" }
