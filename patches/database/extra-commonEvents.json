@@ -6,7 +6,7 @@
     "content": {
       "frequency": "ALWAYS",
       "repeat": "ONCE",
-      "condition": "area.jungle.isCurrent && !open-world.disabledTips",
+      "condition": "area.jungle.isCurrent && open-world.closedgaia <= 0 && !option.openworld-disabledTips",
       "eventType": "CUTSCENE",
       "overrideSideMessage": false,
       "event": [
@@ -58,7 +58,7 @@
         {
           "type": "SHOW_OW_AR_MSG",
           "entity": { "player": true },
-          "text": { "en_US": "So'najiz and Zir'vitar Temples are now accesible", "de_DE": "So'najiz and Zir'vitar Temples are now accesible", "ja_JP": "So'najiz and Zir'vitar Temples are now accesible", "ko_KR": "So'najiz and Zir'vitar Temples are now accesible", "zh_CN": "So'najiz and Zir'vitar Temples are now accesible", "zh_TW": "So'najiz and Zir'vitar Temples are now accesible", "langUid": 23343 },
+          "text": { "en_US": "So'najiz and Zir'vitar Temples are now accessible", "de_DE": "So'najiz and Zir'vitar Temples are now accessible", "ja_JP": "So'najiz and Zir'vitar Temples are now accessible", "ko_KR": "So'najiz and Zir'vitar Temples are now accessible", "zh_CN": "So'najiz and Zir'vitar Temples are now accessible", "zh_TW": "So'najiz and Zir'vitar Temples are now accessible", "langUid": 23343 },
           "time": 3,
           "mode": "LINE_FILL",
           "color": "BLUE",
@@ -77,7 +77,7 @@
     "content": {
       "frequency": "ALWAYS",
       "repeat": "ONCE",
-      "condition": "area.forest.isCurrent && !open-world.disabledTips",
+      "condition": "area.forest.isCurrent && !option.openworld-disabledTips",
       "eventType": "CUTSCENE",
       "overrideSideMessage": false,
       "event": [
