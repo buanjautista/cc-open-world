@@ -1,7 +1,7 @@
 [
     { "type": "ENTER", "index": ["entities"] },
     
-    { "type": "ENTER", "index": [4, "settings","event",8,"0"] },
+    { "type": "ENTER", "index": [4, "settings","event"] },
     {
         "type": "FOR_IN",
         "_comment": "Replace events where party gets locked",
@@ -10,10 +10,10 @@
         "body": [{
             "type": "SET_KEY",
             "index": "__INDEX__",
-            "content": { "ignoreSlowDown": false, "type": "WAIT", "time": 0.2 }
+            "content": { "ignoreSlowDown": false, "type": "WAIT", "time": 0.1 }
         }]
     },
-    { "type": "EXIT", "count": 5 },
+    { "type": "EXIT", "count": 3 },
 
     { "type": "ENTER", "index": [9, "settings","event",8,"0"] },
     {

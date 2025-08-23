@@ -155,6 +155,8 @@ Fixes:
 - Vermillion Wasteland Hub is not inaccessible until a use is given to it (also to prevent crashes)
 - So'najiz Temple gauntlet barrier now opens after the fight instead of after opening the chests
 - Visited maps option now works, on creating a new save file
+- Fixed a lock inside Zir'vitar that happens by triggering the Sloth cutscene in Gaia's Garden
+- Meta Space patches not loading due to bad index
 
 Extra Patches:
 - Extra Barriers: Adds new ways to move around from Rhombus Square, also adding reverse barriers to make some shades more usable from the get go
