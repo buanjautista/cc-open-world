@@ -17,10 +17,10 @@ const DEFAULT_OPTIONS = {
   }}
 }
 let randoOptionList;
-// Item Rando patching
-const SBL_TYPE = { "none": 0, "all": 1, "shades": 2, "bosses": 3 } // vt shade lock
-const CGA_TYPE = { "none": 0, "minimal": 1, "full": 2 } // closed gaia
-const RSH_ITEM = { "leaf":145, "ice":225, "flame":230, "seed":376, "star": 410, "meteor":434, "bolt":286, "drop": 231, "ancient": 627 }
+
+const MENU_OW_CUSTOM = {
+  QUEST_HUB: 700,
+};
 
 export default class OpenWorld {
   async main(){
@@ -42,6 +42,13 @@ export default class OpenWorld {
         hasDivider: false,
         header: "cc-open-world",
       };
+      sc.OPTIONS_DEFINITION["openworld-fullQuestHub"] = {
+        type: "CHECKBOX",
+        init: false,
+        cat: sc.OPTION_CATEGORY.GENERAL,
+        hasDivider: false,
+        header: "cc-open-world",
+      };
 
       if (multiRandoActive) {
       // Adds a check to start extra patching on multiworld connection
@@ -51,7 +58,7 @@ export default class OpenWorld {
   }
   prestart() {
     assignSteps();
-    enableHubLaterQuests();
+    enableHubLaterQuests(MENU_OW_CUSTOM.QUEST_HUB);
   }
 
   // *********** //

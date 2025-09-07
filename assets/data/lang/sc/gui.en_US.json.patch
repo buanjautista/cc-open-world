@@ -5,4 +5,8 @@
 {
 	"type": "INCLUDE",
 	"src": "mod:patches/gui/enhanced-skip-beginning.json.patch"
+},
+{
+	"type": "INCLUDE",
+	"src": "mod:patches/gui/quest-hub.json.patch"
 }]

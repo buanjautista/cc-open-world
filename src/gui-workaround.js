@@ -19,4 +19,9 @@ export function defineGUIPlease() {
   ig.lang.labels.sc.gui.options.headers["cc-open-world"] = "Open World";
   ig.lang.labels.sc.gui.options["openworld-visitedMaps"] = {"name": "Enable Visited Maps", "description": "Show all maps and areas as visited by default"};
   ig.lang.labels.sc.gui.options["openworld-disabledTips"] = {"name": "Disable Area Tips", "description": "Remove the Open World tips when unlocking certain areas"};
+  ig.lang.labels.sc.gui.options["openworld-fullQuestHub"] = {"name": "Show Full Quest Hub", "description": "Shows any available or unavailable area quests in quest hubs"};
+
+  ig.lang.labels.sc.gui.menu.questHub["unavailable"] = "Unavailable";
+  ig.lang.labels.sc.gui.menu.hub.descriptions["unavailable"] = "Unavailable";
+  ig.lang.labels.sc.gui.menu.hub.titles["unavailable"] = "Unavailable";
 }
