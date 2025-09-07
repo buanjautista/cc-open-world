@@ -1,0 +1,109 @@
+[
+	{
+		"type": "ENTER",
+		"index": "quests"
+	},
+
+	{ "type": "ENTER", "index": ["ape-battle", "hub-settings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "Son of the Beach",
+		"index": "condition",
+		"content": "open-world.dlcActive"
+	},
+	{ "type": "EXIT", "count": 2 },
+
+	{ "type": "ENTER", "index": ["bg-3-goat_final", "hub-settings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "Wrath of Goat",
+		"index": "condition",
+		"content": "open-world.dlcActive && quest.bg-2-goat_cave_1.solved && quest.jungleGuard-2-crate_rooftop_1.solved"
+	},
+	{ "type": "EXIT", "count": 2 },
+
+	{ "type": "ENTER", "index": ["monks-3-jump_challenge_3", "hub-settings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "Trial of Ascension",
+		"index": "condition",
+		"content": "open-world.dlcActive && quest.monks-2-jump_challenge_2.solved && player.core.12"
+	},
+	{ "type": "EXIT", "count": 2 },
+
+	{ "type": "ENTER", "index": ["monks-jump_3_bonus", "hub-settings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "Challenge of Ascension",
+		"index": "condition",
+		"content": "open-world.dlcActive && quest.monks-3-jump_challenge_3.solved"
+	},
+	{ "type": "EXIT", "count": 2 },
+
+	{ "type": "ENTER", "index": ["bakiTrader-3-brewing_ghosts_1", "hub-settings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "Spiritual Drinks",
+		"index": "condition",
+		"content": "open-world.dlcActive && quest.bakiTrader-2-brewing_fun_1.solved && quest.bakiTrader-2-brewing_challenge_1.solved"
+	},
+	{ "type": "EXIT", "count": 2 },
+
+	{ "type": "ENTER", "index": ["jungleGuard-3-papagang_goats_1", "hub-settings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "",
+		"index": "condition",
+		"content": "open-world.dlcActive && quest.jungleGuard-2-crate_rooftop_1.solved && quest.bg-3-goat_final.task.2 "
+	},
+	{ "type": "EXIT", "count": 2 },
+
+	{ "type": "ENTER", "index": ["jungleTrader-3-shad_fridge_1", "hub-settings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "Riches with Fridges",
+		"index": "condition",
+		"content": "open-world.dlcActive && quest.jungleTrader-2-snowman_thief_2.solved"
+	},
+	{ "type": "EXIT", "count": 2 },
+
+	{ "type": "ENTER", "index": ["seizui-quest", "hub-settings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "Lost and On the Run",
+		"index": "condition",
+		"content": "open-world.dlcActive"
+	},
+	{ "type": "EXIT", "count": 2 },
+
+	{ "type": "ENTER", "index": ["autobahn", "hub-settings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "Trouble on the Highway",
+		"index": "condition",
+		"content": "open-world.dlcActive"
+	},
+	{ "type": "EXIT", "count": 2 },
+
+	{ "type": "ENTER", "index": ["tremor-1", "hub-settings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "Tremors of the Past",
+		"index": "condition",
+		"content": "open-world.dlcActive"
+	},
+	{ "type": "EXIT", "count": 2 },
+
+	{ "type": "ENTER", "index": ["rhg-4-maritime_smuggle_2", "hub-settings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "Wetter Work",
+		"index": "condition",
+		"content": "open-world.dlcActive && quest.rhg-3-maritime_smuggle.solved"
+	},
+	{ "type": "EXIT", "count": 2 },
+
+	{
+		"type": "EXIT"
+	}
+]
