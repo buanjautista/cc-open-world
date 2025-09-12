@@ -1195,7 +1195,7 @@
         "condAnims": [
           {
             "0": " ",
-            "condition": "map.barrier1Open",
+            "condition": "map.barrier2Open",
             "anim": "on"
           }
         ],
@@ -1225,7 +1225,7 @@
         "condAnims": [
           {
             "0": " ",
-            "condition": "map.barrier1Open",
+            "condition": "map.barrier2Open",
             "anim": "on"
           }
         ],
@@ -1315,7 +1315,7 @@
         "condAnims": [
           {
             "0": " ",
-            "condition": "map.barrier1Open",
+            "condition": "map.barrier2Open",
             "anim": "on"
           }
         ],
@@ -1345,7 +1345,7 @@
         "condAnims": [
           {
             "0": " ",
-            "condition": "map.barrier1Open",
+            "condition": "map.barrier2Open",
             "anim": "on"
           }
         ],
