@@ -22,9 +22,14 @@
         "src": "mod:patches/database/quest-fixes.json"
     },
     {
+        "type": "INCLUDE",
+        "src": "mod:extra-patches/extra-quests/database/quests.json.patch"
+    },
+    {
         "type": "ENTER",
         "index": "shops"
-    },{
+    },
+    {
         "type": "INCLUDE",
         "src": "mod:patches/database/shop-conditions.json"
     },

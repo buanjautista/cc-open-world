@@ -1,5 +1,9 @@
 [
     {
+        "type": "INCLUDE",
+        "src": "mod:extra-patches/extra-quests/database/items.json.patch"
+    },
+    {
         "type": "ENTER",
         "index": "items"
     },
