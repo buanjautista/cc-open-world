@@ -74,7 +74,7 @@ export default class OpenWorld {
           ig.vars.get("mw.options.vtSkip"), 
           ig.vars.get("mw.options.openFajro"), 
           ig.vars.get("mw.options.meteorPassage"),
-          ig.vars.get("mw.options.extraBarriers"),
+          ig.vars.get("mw.options.rhombusHubUnlock"),
           ig.vars.get("mw.options.closedGaia"),
           ig.vars.get("mw.options.dlcActive")]
         addMWPatches(mwOptionList)
@@ -148,7 +148,7 @@ function handlePatching(patchstate, patchname) {
         mod.addPatch('data/maps/forest/path-10-hidden.json', mod.baseDirectory + 'extra-patches/meteor-vw/passage-barrier.json.patch');
         break;
       case R_EXTRABARRIER:
-        ig.vars.set("open-world.extraBarriers", patchstate);
+        ig.vars.set("open-world.rhombusHubUnlock", patchstate);
         break;
       case R_CLOSEDGAIA:
         ig.vars.set("open-world.closedGaia", patchstate);
