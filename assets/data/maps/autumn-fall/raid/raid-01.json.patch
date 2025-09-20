@@ -1,10 +1,5 @@
 [
-  {
-    "type": "ENTER",
-    "index": [
-      "entities"
-    ]
-  },
+  { "type": "ENTER", "index": "entities" },
   {
     "type": "ENTER",
     "index": [ 57, "settings" ]
@@ -169,45 +164,24 @@
     "count": 4
   },
 
-  { "type": "ENTER", "index": [ 16, "settings" ] },
   {
-    "type": "SET_KEY",
-    "_comment": "Disables barrier",
-    "index": "startCondition",
-    "content": "false"
-  },
-  { "type": "EXIT", "count": 2 },
-
-  { "type": "ENTER", "index": [ 12, "settings" ] },
+		"type": "FOR_IN",
+		"_comment": "Removes barrier events",
+		"keyword": "__INDEX__",
+		"values": [ 16, 17 ],
+		"body": [ { "type": "ENTER", "index": [ "__INDEX__", "settings" ] }, { "type": "SET_KEY", "index": "startCondition", "content": "false" }, { "type": "EXIT", "count": 2 } ]
+	},
   {
-    "type": "SET_KEY",
-    "_comment": "Disables barrier",
-    "index": "spawnCondition",
-    "content": "false"
-  },
-  { "type": "EXIT", "count": 2 },
-
-  { "type": "ENTER", "index": [ 15, "settings" ] },
-  {
-    "type": "SET_KEY",
-    "_comment": "Disables barrier floor details",
-    "index": "spawnCondition",
-    "content": "false"
-  },
-  { "type": "EXIT", "count": 2 },
-
-  { "type": "ENTER", "index": [ 17, "settings" ] },
-  {
-    "type": "SET_KEY",
-    "_comment": "Disables barrier open event",
-    "index": "startCondition",
-    "content": "false"
-  },
-  { "type": "EXIT", "count": 2 },
+		"type": "FOR_IN",
+		"_comment": "Removes barrier props",
+		"keyword": "__INDEX__",
+		"values": [ 12, 15, 10, 11 ],
+		"body": [ { "type": "ENTER", "index": [ "__INDEX__", "settings" ] }, { "type": "SET_KEY", "index": "spawnCondition", "content": "false" }, { "type": "EXIT", "count": 2 } ]
+	},
 
   {
     "type": "ADD_ARRAY_ELEMENT",
-    "_comment": "Remove Barrier visually",
+    "_comment": "Remove Barrier visually (object layer janks)",
     "content": {
       "type": "ObjectLayerView",
       "x": 712,
@@ -220,9 +194,7 @@
   { "type": "EXIT", "count": 1 },
   {
     "type": "ENTER",
-    "index": [
-      "layer"
-    ]
+    "index": [ "layer" ]
   },
   {
     "type": "ADD_ARRAY_ELEMENT",
