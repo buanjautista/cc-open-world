@@ -23,19 +23,6 @@
     },
 
     {
-		"type": "ENTER",
-		"index": [ 287, "settings" ]
-	},
-    {
-            "type": "SET_KEY",
-            "index": "blockEventCondition",
-            "content": "true"
-    },
-    {
-        "type": "EXIT",
-        "count": 2
-    },
-    {
         "type": "EXIT",
         "count": 1
     }
