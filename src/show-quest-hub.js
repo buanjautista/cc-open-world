@@ -4,8 +4,7 @@ export function enableHubLaterQuests(quest_hub_menu) {
 		init: function () {
 			this.parent();
 
-			// this.addTab("locked", 3, { type: 3 });
-			this.addTab("open", 3, { type: 3 });
+			this.addTab("locked", 3, { type: 3 });
 		},
 		collectQuests: function (b, a) {
 			var d = ig.database.get("questHubs")[sc.menu.questHubID];
