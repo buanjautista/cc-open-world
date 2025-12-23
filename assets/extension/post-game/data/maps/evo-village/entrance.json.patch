@@ -58,19 +58,6 @@
                 "value": true
             },
             {
-                "msgType": "OBTAINED",
-                "object": {
-                    "en_US": "Full Rhombus Pass",
-                    "langUid": 373,
-                    "zh_TW": "羅姆布斯廣場准入許可<<A<<[CHANGED 2020/06/15]",
-                    "ko_KR": "마름모 전체 통행증<<A<<[CHANGED 2020/06/17]",
-                    "ja_JP": "完全なロンバス・パス<<A<<[CHANGED 2020/06/17]",
-                    "zh_CN": "罗姆布斯广场准入许可<<A<<[CHANGED 2020/06/17]",
-                    "de_DE": "Rhombus-Pass"
-                },
-                "type": "SHOW_GET_MSG"
-            },
-            {
                 "person": { "person": "main.sergey", "expression": "DEFAULT" },
                 "message": {
                     "en_US": "I hope it's useful.",

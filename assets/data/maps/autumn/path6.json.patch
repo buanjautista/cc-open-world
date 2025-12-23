@@ -13,7 +13,7 @@
                 "name": "ShowPath",
                 "eventType": "PARALLEL",
                 "triggerType": "ONCE_PER_ENTRY",
-                "startCondition": "open-world.dlcActive",
+                "startCondition": "extension.post-game.active && open-world.dlcActive",
                 "endCondition": "map.showPath",
                 "event": [
                     {
@@ -25,7 +25,8 @@
                 ]
             }
         }
-    }, {
+    },
+    {
         "type": "ADD_ARRAY_ELEMENT",
         "content": {
             "type": "Prop",
@@ -53,7 +54,8 @@
                 ]
             }
         }
-    }, {
+    },
+    {
         "type": "ADD_ARRAY_ELEMENT",
         "content": {
             "type": "Prop",
@@ -81,7 +83,8 @@
                 ]
             }
         }
-    }, {
+    },
+    {
         "type": "ADD_ARRAY_ELEMENT",
         "content": {
             "type": "TouchTrigger",
@@ -102,7 +105,8 @@
                 "startCondition": "item.170.amount >= 1"
             }
         }
-    }, {
+    },
+    {
         "type": "ADD_ARRAY_ELEMENT",
         "content": {
             "type": "EventTrigger",
@@ -145,7 +149,8 @@
                         "waitSkip": 0,
                         "zoom": 1,
                         "type": "SET_CAMERA_POS"
-                    }, {
+                    },
+                    {
                         "entity": {
                             "player": true
                         },
@@ -181,7 +186,8 @@
                             "y": 0,
                             "z": 0
                         }
-                    }, {
+                    },
+                    {
                         "entity": {
                             "global": true,
                             "name": "b"
@@ -227,7 +233,8 @@
                         "ignoreSlowDown": false,
                         "type": "WAIT",
                         "time": 0.3
-                    },          {
+                    },
+                    {
                         "changeType": "set",
                         "type": "CHANGE_VAR_BOOL",
                         "varName": "map.barrierOpen",
