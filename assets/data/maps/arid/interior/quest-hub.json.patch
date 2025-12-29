@@ -9,8 +9,8 @@
   },
   {
     "type": "IF",
-    "_comment": "Adds corresponding patch if Extra Sandwich is on",
-    "cond": "ig.vars.get('mw.options.extraQuests') >= 1",
+    "_comment": "Adds corresponding patch if Extra Quests is on",
+    "cond": "ig.vars.get('open-world.extraQuests') >= 1",
     "thenSteps": [
       { "type": "ENTER", "index": [ 45, "settings" ] },
       {
