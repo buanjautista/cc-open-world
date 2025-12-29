@@ -76,7 +76,8 @@ export default class OpenWorld {
           ig.vars.get("mw.options.meteorPassage"),
           ig.vars.get("mw.options.rhombusHubUnlock"),
           ig.vars.get("mw.options.closedGaia"),
-          ig.vars.get("mw.options.dlcActive")]
+          ig.vars.get("mw.options.dlcActive"),
+          ig.vars.get("mw.options.extraQuests")]
         addMWPatches(mwOptionList)
       }
     }
@@ -92,6 +93,7 @@ const R_METEORVW = 3 // Vermillion Wasteland locked behind Meteor Shade
 const R_EXTRABARRIER = 4; // Extra barriers and shade-accesible teleport in CrossCentral
 const R_CLOSEDGAIA = 5; // Extra barriers in Gaia's Garden
 const R_DLCACTIVE = 6; // DLC Features
+const R_EXTRAQUESTS = 7; // DLC Features
 
 
 // Multiworld Patching
@@ -155,6 +157,9 @@ function handlePatching(patchstate, patchname) {
         break;
       case R_DLCACTIVE:
         ig.vars.set("open-world.dlcActive", patchstate);
+        break;
+      case R_EXTRAQUESTS:
+        ig.vars.set("open-world.extraQuests", patchstate);
         break;
       } 
   }

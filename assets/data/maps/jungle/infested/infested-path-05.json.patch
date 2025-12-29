@@ -5,13 +5,9 @@
     },
     {
         "type": "SET_KEY",
-        "_comment": "Change the Sephisloth event to not solve quest condition to avoid crashes",
+        "_comment": "Change the Sephisloth event to not solve quest condition to fit the new quest",
         "index": 15,
-        "content": {
-            "ignoreSlowDown": false,
-            "type": "WAIT",
-            "time": 0.1
-        }
+        "content": { "type": "SOLVE_QUEST_CONDITION", "quest": { "quest": "ow-infestation", "label": "followSloth" } }
     },
     {
         "type": "EXIT",
