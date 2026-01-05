@@ -5,8 +5,16 @@
     },
     {
         "type": "ENTER",
-        "index": [ 632, "settings", "npcStates", 1]
+        "index": [ 632, "settings", "npcStates", 0]
     },
+    {
+        "_comment": "Disable first Mick state",
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "false"
+    },
+    { "type": "EXIT" },
+    { "type": "ENTER", "index": 1 },
     {
         "_comment": "Make Mick not require speaking with Black Market NPC before giving the quest or Wave",
         "type": "SET_KEY",
@@ -16,15 +24,16 @@
         "type": "EXIT",
         "count": 4
     },
-        {
+
+    {
         "type": "ENTER",
         "index": [ 633, "settings"]
     },
     {
-        "_comment": "Make Mick dialog not require speaking with Black Market NPC before giving the quest",
+        "_comment": "Make Mick xenodialog not require speaking with Black Market NPC before giving the quest",
         "type": "SET_KEY",
         "index": "spawnCondition",
-        "content": "!quest.basin-mush-1.started && !player.core.12"
+        "content": "!quest.basin-mush-1.started"
     },
     {
         "type": "EXIT",
