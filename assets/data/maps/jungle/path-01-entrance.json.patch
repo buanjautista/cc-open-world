@@ -136,15 +136,6 @@
     { "type": "EXIT", "count": 1 },
     {
         "type": "IF",
-        "_comment": "Adds corresponding patch if Extra Barriers is active",
-        "cond": "ig.vars.get('open-world.rhombusHubUnlock') >= 1",
-        "thenSteps": [{
-        "type": "INCLUDE",
-        "src": "mod:extra-patches/extra-barriers/jungle-entrance.json.patch"
-        }]
-    },
-    {
-        "type": "IF",
         "_comment": "Adds corresponding patch if Closed Gaia is active",
         "cond": "ig.vars.get('open-world.closedGaia') >= 1",
         "thenSteps": [{
