@@ -33,5 +33,20 @@
         "_comment": "Extra Sandwich", "type": "ADD_ARRAY_ELEMENT", "content": {"type":"Chest","x":1656,"y":1000,"level":1,"settings":{"name":"","chestType":"Default","item":"1","amount":2,"mapId":5000}} 
     }]},
 
+    {
+        "type": "FOR_IN",
+        "keyword": "__INDEX__",
+        "values": [704, 705],
+        "body": [
+            { "type": "ENTER", "index": ["__INDEX__",  "settings", "npcStates", 0] },
+            {
+                "_comment": "Replace DLC completion for quest",
+                "type": "SET_KEY",
+                "index": "condition",
+                "content": "open-world.dlcActive"
+            },
+            { "type": "EXIT", "count": 4 }]
+    },
+
     { "type": "EXIT", "count": 1 }  
 ]
