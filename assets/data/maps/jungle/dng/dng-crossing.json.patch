@@ -76,7 +76,7 @@
         "_comment": "Hide a few object layers from beta pass, and hidden walls from story progress",
         "type": "FOR_IN",
         "keyword": "__INDEX__",
-        "values": [348, 349, 299, 296],
+        "values": [348, 349, 299, 296, 327],
         "body": [{
                 "type": "ENTER",
                 "index": ["__INDEX__", "settings"]
