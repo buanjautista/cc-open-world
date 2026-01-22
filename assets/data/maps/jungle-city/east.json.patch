@@ -16,7 +16,7 @@
     { "type": "EXIT" },
     { "type": "ENTER", "index": 1 },
     {
-        "_comment": "Make Mick not require speaking with Black Market NPC before giving the quest or Wave",
+        "_comment": "Make Mick not require Wave, or speaking with Black Market NPC before giving the quest",
         "type": "SET_KEY",
         "index": "condition"
     },
@@ -30,10 +30,10 @@
         "index": [ 633, "settings"]
     },
     {
-        "_comment": "Make Mick xenodialog not require speaking with Black Market NPC before giving the quest",
+        "_comment": "Remove Mick xenodialog so it doesn't collide with the quest",
         "type": "SET_KEY",
         "index": "spawnCondition",
-        "content": "!quest.basin-mush-1.started"
+        "content": "false"
     },
     {
         "type": "EXIT",
