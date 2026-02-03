@@ -2,7 +2,7 @@
   { "type": "ENTER", "index": ["entities"] },
   {
     "type": "ENTER",
-    "index": [178,  "settings", "event"]
+    "index": [176,  "settings", "event"]
   },
   {
     "type": "SET_KEY",

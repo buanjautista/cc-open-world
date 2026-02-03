@@ -1,26 +1,46 @@
 [
     {
         "type": "ENTER",
-        "index": ["entities"]
+        "index": [ "entities" ]
+    },
+    {
+        "type": "ENTER",
+        "index": [ 632, "settings", "npcStates", 0]
+    },
+    {
+        "_comment": "Disable first Mick state",
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "false"
+    },
+    { "type": "EXIT" },
+    { "type": "ENTER", "index": 1 },
+    {
+        "_comment": "Make Mick not require Wave, or speaking with Black Market NPC before giving the quest",
+        "type": "SET_KEY",
+        "index": "condition"
+    },
+    {
+        "type": "EXIT",
+        "count": 4
     },
 
     {
         "type": "ENTER",
-        "index": [593, "settings", "npcStates"]
+        "index": [ 633, "settings"]
     },
     {
-        "_comment": "Make the guard NPC for Black Market area not lock you out of Sprouting Business, if you have the pass",
-        "type": "ADD_ARRAY_ELEMENT",
-        "content": { "reactType": "FIXED_POS", "face": "SOUTH", "action": [], "hidden": false, "condition": "!map.noPass", "config": "normal", "event": [ { "side": "LEFT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "basin.male-raincoat", "expression": "DEFAULT" } }, { "side": "RIGHT", "order": 0, "clearSide": false, "type": "ADD_MSG_PERSON", "person": { "person": "main.lea", "expression": "DEFAULT" } }, { "message": { "en_US": "Sorry \\c[3]Seeker\\c[0], the market is closed off for your kinda folks.", "de_DE": "Sorry, \\c[3]Seeker\\c[0], der Markt ist f\u00fcr deinesgleichen geschlossen.", "fr_FR": "fr_FR", "langUid": 11, "zh_CN": "\u62b1\u6b49\uff0c\\c[3]\u63a2\u7d22\u8005\\c[0]\uff0c\u8fd9\u91cc\u7684\u5e02\u573a\u4e0d\u5bf9\u4f60\u4eec\u8fd9\u79cd\u4eba\u5f00\u653e\u3002", "ko_KR": "\ubbf8\uc548, \\c[3]\uc2dc\ucee4\\c[0]. \uc2dc\uc7a5\uc5d0\uc11c\ub294 \ub108\ud76c\ub4e4 \uac19\uc740 \uc2dc\ucee4\ub294 \uc548 \ubc1b\uc544\uc900\ub2e4\ub124.", "ja_JP": "\\c[3]\u63a2\u7d22\u8005\\c[0]\u3055\u3093\u3001\u3059\u307e\u306a\u3044\u306d\u3002\u3053\u3053\u306e\u5e02\u5834\u306f\n\u541b\u305f\u3061\u307f\u305f\u3044\u306a\u4eba\u5411\u3051\u306b\u958b\u3044\u3066\u306a\u3044\u3093\u3060\u3002", "zh_TW": "\u62b1\u6b49\uff0c\\c[3]\u63a2\u7d22\u8005\\c[0]\uff0c\u9019\u88e1\u7684\u5e02\u5834\u4e0d\u5c0d\u4f60\u5011\u9019\u7a2e\u4eba\u958b\u653e\u3002" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "basin.male-raincoat", "expression": "DEFAULT" } }, { "message": { "en_US": "...", "de_DE": "...", "fr_FR": "fr_FR", "langUid": 12, "zh_CN": "\u2026", "ko_KR": "...", "ja_JP": "...", "zh_TW": "\u2026" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "MOPING" } }, { "message": { "en_US": "Unless you got yourself a pass, of course.", "de_DE": "Au\u00dfer nat\u00fcrlich du hast 'n Pass!", "fr_FR": "fr_FR", "langUid": 13, "zh_CN": "\u9664\u975e\u4f60\u6709\u901a\u884c\u8bc1\u3002", "ko_KR": "\ud558\uc9c0\ub9cc \ud1b5\ud589\uc99d\uc744 \uac00\uc9c0\uace0 \uc788\ub2e4\uba74 \ub9d0\uc774 \ub2ec\ub77c\uc9c0\uc9c0.", "ja_JP": "\u3082\u3061\u308d\u3093\u3001\u901a\u884c\u8a3c\u3092\u6301\u3063\u3066\u304d\u305f\u306a\u3089\n\u8a71\u306f\u5225\u3060\u3051\u3069\u306d\u3002", "zh_TW": "\u9664\u975e\u4f60\u6709\u901a\u884c\u8b49\u3002" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "basin.male-raincoat", "expression": "DEFAULT" } }, { "message": { "en_US": "...?", "de_DE": "...?", "fr_FR": "fr_FR", "langUid": 14, "zh_CN": "...?", "ko_KR": "...?", "ja_JP": "...\uff1f", "zh_TW": "...?" }, "autoContinue": false, "type": "SHOW_MSG", "person": { "person": "main.lea", "expression": "SURPRISED_AWAY" } }, { "changeType": "set", "type": "CHANGE_VAR_BOOL", "varName": "map.noPass", "value": true } ] }
+        "_comment": "Remove Mick xenodialog so it doesn't collide with the quest",
+        "type": "SET_KEY",
+        "index": "spawnCondition",
+        "content": "false"
     },
     {
         "type": "EXIT",
-        "count": 3
+        "count": 2
     },
-
     {
         "type": "EXIT",
         "count": 1
     }
-
 ]
