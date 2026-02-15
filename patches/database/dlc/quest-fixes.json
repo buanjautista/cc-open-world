@@ -46,6 +46,15 @@
 	},
 	{ "type": "EXIT", "count": 2 },
 
+    { "type": "ENTER", "index": ["jungleGreens-3-escort_2", "hubSettings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "Salty Detox",
+		"index": "condition",
+		"content": "open-world.dlcActive && quest.jungleGreens-2-plantSearch_1.solved"
+	},
+	{ "type": "EXIT", "count": 2 },
+
 	{ "type": "ENTER", "index": ["jungleGuard-3-papagang_goats_1", "hubSettings"] },
 	{
 		"type": "SET_KEY",
