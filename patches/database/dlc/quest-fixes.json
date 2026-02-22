@@ -1,10 +1,7 @@
 [
-	{
-		"type": "ENTER",
-		"index": "quests"
-	},
+	{ "type": "ENTER", "index": "quests" },
 
-	{ "type": "ENTER", "index": ["ape-battle", "hub-settings"] },
+	{ "type": "ENTER", "index": ["ape-battle", "hubSettings"] },
 	{
 		"type": "SET_KEY",
 		"_comment": "Son of the Beach",
@@ -13,7 +10,7 @@
 	},
 	{ "type": "EXIT", "count": 2 },
 
-	{ "type": "ENTER", "index": ["bg-3-goat_final", "hub-settings"] },
+	{ "type": "ENTER", "index": ["bg-3-goat_final", "hubSettings"] },
 	{
 		"type": "SET_KEY",
 		"_comment": "Wrath of Goat",
@@ -22,7 +19,7 @@
 	},
 	{ "type": "EXIT", "count": 2 },
 
-	{ "type": "ENTER", "index": ["monks-3-jump_challenge_3", "hub-settings"] },
+	{ "type": "ENTER", "index": ["monks-3-jump_challenge_3", "hubSettings"] },
 	{
 		"type": "SET_KEY",
 		"_comment": "Trial of Ascension",
@@ -31,7 +28,7 @@
 	},
 	{ "type": "EXIT", "count": 2 },
 
-	{ "type": "ENTER", "index": ["monks-jump_3_bonus", "hub-settings"] },
+	{ "type": "ENTER", "index": ["monks-jump_3_bonus", "hubSettings"] },
 	{
 		"type": "SET_KEY",
 		"_comment": "Challenge of Ascension",
@@ -40,7 +37,7 @@
 	},
 	{ "type": "EXIT", "count": 2 },
 
-	{ "type": "ENTER", "index": ["bakiTrader-3-brewing_ghosts_1", "hub-settings"] },
+	{ "type": "ENTER", "index": ["bakiTrader-3-brewing_ghosts_1", "hubSettings"] },
 	{
 		"type": "SET_KEY",
 		"_comment": "Spiritual Drinks",
@@ -49,16 +46,25 @@
 	},
 	{ "type": "EXIT", "count": 2 },
 
-	{ "type": "ENTER", "index": ["jungleGuard-3-papagang_goats_1", "hub-settings"] },
+    { "type": "ENTER", "index": ["jungleGreens-3-escort_2", "hubSettings"] },
+	{
+		"type": "SET_KEY",
+		"_comment": "Salty Detox",
+		"index": "condition",
+		"content": "open-world.dlcActive && quest.jungleGreens-2-plantSearch_1.solved"
+	},
+	{ "type": "EXIT", "count": 2 },
+
+	{ "type": "ENTER", "index": ["jungleGuard-3-papagang_goats_1", "hubSettings"] },
 	{
 		"type": "SET_KEY",
 		"_comment": "",
 		"index": "condition",
-		"content": "open-world.dlcActive && quest.jungleGuard-2-crate_rooftop_1.solved && quest.bg-3-goat_final.task.2 "
+		"content": "open-world.dlcActive && quest.jungleGuard-2-crate_rooftop_1.solved && quest.bg-3-goat_final.task.3"
 	},
 	{ "type": "EXIT", "count": 2 },
 
-	{ "type": "ENTER", "index": ["jungleTrader-3-shad_fridge_1", "hub-settings"] },
+	{ "type": "ENTER", "index": ["jungleTrader-3-shad_fridge_1", "hubSettings"] },
 	{
 		"type": "SET_KEY",
 		"_comment": "Riches with Fridges",
@@ -67,7 +73,7 @@
 	},
 	{ "type": "EXIT", "count": 2 },
 
-	{ "type": "ENTER", "index": ["seizui-quest", "hub-settings"] },
+	{ "type": "ENTER", "index": ["seizui-quest", "hubSettings"] },
 	{
 		"type": "SET_KEY",
 		"_comment": "Lost and On the Run",
@@ -76,7 +82,7 @@
 	},
 	{ "type": "EXIT", "count": 2 },
 
-	{ "type": "ENTER", "index": ["autobahn", "hub-settings"] },
+	{ "type": "ENTER", "index": ["autobahn", "hubSettings"] },
 	{
 		"type": "SET_KEY",
 		"_comment": "Trouble on the Highway",
@@ -85,7 +91,7 @@
 	},
 	{ "type": "EXIT", "count": 2 },
 
-	{ "type": "ENTER", "index": ["tremor-1", "hub-settings"] },
+	{ "type": "ENTER", "index": ["tremor-1", "hubSettings"] },
 	{
 		"type": "SET_KEY",
 		"_comment": "Tremors of the Past",
@@ -94,7 +100,7 @@
 	},
 	{ "type": "EXIT", "count": 2 },
 
-	{ "type": "ENTER", "index": ["rhg-4-maritime_smuggle_2", "hub-settings"] },
+	{ "type": "ENTER", "index": ["rhg-4-maritime_smuggle_2", "hubSettings"] },
 	{
 		"type": "SET_KEY",
 		"_comment": "Wetter Work",
@@ -102,8 +108,30 @@
 		"content": "open-world.dlcActive && quest.rhg-3-maritime_smuggle.solved"
 	},
 	{ "type": "EXIT", "count": 2 },
+	{ "type": "EXIT" },
 
-	{
-		"type": "EXIT"
-	}
+    { "type": "ENTER", "index": "commonEvents" },
+    {
+        "type": "FOR_IN",
+        "_comment": "Remove unwanted save data fixes related to DLC quests that mess with items",
+        "keyword": "__EVENT__",
+        "values": [
+            "fixRhombusPass",
+            "lostItemFix",
+            "lostItemFix2",
+            "moonchunkFix",
+            "moonchunkFix2",
+            "strawFix"
+        ],
+        "body": [
+            { "type": "ENTER", "index": "__EVENT__" },
+            {
+                "type": "SET_KEY",
+                "index": "condition",
+                "content": "false"
+            },
+            { "type": "EXIT" }
+        ]
+    },
+    { "type": "EXIT" }
 ]

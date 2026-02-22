@@ -827,7 +827,7 @@
 		"_comment": "Replace DLC completion for third quest",
 		"type": "SET_KEY",
 		"index": "condition",
-		"content": "quest.bakiTrader-2-brewing_fun_1.solved && quest.bakiTrader-2-brewing_challenge_1.solved && (plot.line >= 32000) && !quest.bakiTrader-3-brewing_ghosts_1.started && extension.post-game.active && (mw.options.dlcActive || open-world.dlcActive)"
+		"content": "open-world.dlcActive && quest.bakiTrader-2-brewing_fun_1.solved && quest.bakiTrader-2-brewing_challenge_1.solved && !quest.bakiTrader-3-brewing_ghosts_1.started"
 	},
 	{ "type": "EXIT", "count": 4 },
 
