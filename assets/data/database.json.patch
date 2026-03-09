@@ -23,6 +23,10 @@
     },
     {
         "type": "INCLUDE",
+        "src": "mod:patches/database/dlc/quest-fixes.json"
+    },
+    {
+        "type": "INCLUDE",
         "src": "mod:extra-patches/extra-quests/database/quests.json.patch"
     },
     {
@@ -36,4 +40,4 @@
     {
         "type": "EXIT"
     }
-]  
+]

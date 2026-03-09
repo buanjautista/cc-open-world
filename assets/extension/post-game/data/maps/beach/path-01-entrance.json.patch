@@ -1,0 +1,12 @@
+[
+    { "type": "ENTER", "index": [ "entities", 704, "settings", "npcStates", 0 ] },
+
+    {
+        "_comment": "Replace DLC completion for quest",
+        "type": "SET_KEY",
+        "index": "condition",
+        "content": "!quest.ape-battle.started && open-world.dlcActive"
+    },
+
+    { "type": "EXIT", "count": 5 }
+]

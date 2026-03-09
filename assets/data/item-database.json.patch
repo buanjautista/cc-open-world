@@ -8,6 +8,37 @@
         "index": "items"
     },
 
+    { "type": "ENTER", "index": 626 },
+    {
+        "type": "SET_KEY",
+        "index": "name",
+        "content": {
+            "en_US": "Azure Archi. Pass",
+            "de_DE": "Azur-Archip.-Pass",
+            "fr_FR": "Azure Archi. Pass",
+            "zh_CN": "Azure Archi. Pass",
+            "zh_TW": "Azure Archi. Pass",
+            "ja_JP": "アズール群島・パス",
+            "ko_KR": "Azure Archi. Pass",
+            "langUid": 2469
+        }
+    },
+    {
+        "type": "SET_KEY",
+        "index": "description",
+        "content": {
+            "en_US": "Grants access to Azure Archipelago.",
+            "de_DE": "Gewährt Zugang zum Azur-Archipel.",
+            "fr_FR": "Grants access to Azure Archipelago.",
+            "zh_CN": "Grants access to Azure Archipelago.",
+            "zh_TW": "Grants access to Azure Archipelago.",
+            "ja_JP": "アズール群島へのアクセス権が手に入る。",
+            "ko_KR": "Grants access to Azure Archipelago.",
+            "langUid": 2470
+        }
+    },
+    { "type": "EXIT" },
+
     {
         "_comment": "Add new keys",
         "type": "ADD_ARRAY_ELEMENT",
