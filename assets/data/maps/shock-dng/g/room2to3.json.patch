@@ -1,0 +1,12 @@
+[
+  { "type": "ENTER", "index": ["entities"] },
+	{ "type": "ENTER", "index": [3, "settings"] },
+  { 
+    "type": "SET_KEY", 
+    "_comment": "Make the key panel only spawn after the first fight ends, to avoid potential right access locks",
+		"index": "spawnCondition",
+    "content": "map.plantDonePost"
+  },
+  { "type": "EXIT", "count": 2 },	  
+	{ "type": "EXIT" }	  
+]
