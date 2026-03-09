@@ -8,5 +8,13 @@
     "content": "map.plantDonePost"
   },
   { "type": "EXIT", "count": 2 },	  
+  { "type": "ENTER", "index": [14, "settings"] },
+  { 
+    "type": "SET_KEY", 
+    "_comment": "Make the fight only start after opening the door and ending first fight, to avoid potential right access locks",
+		"index": "startCondition",
+    "content": "map.keyUsed && map.plantDonePost"
+  },
+  { "type": "EXIT", "count": 2 },	  
 	{ "type": "EXIT" }	  
 ]
