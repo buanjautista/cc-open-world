@@ -115,6 +115,34 @@
         },
         { "type": "REMOVE_MSG_PERSON", "person": "misc.blank" },
         { "type": "REMOVE_MSG_PERSON", "person": "main.lea" },
+        {
+					"type": "CHANGE_VAR_BOOL",
+					"changeType": "set",
+					"map": "forest.path-10-hidden",
+					"varName": "_mw_dummy_value",
+					"value": true
+				},
+        {
+					"type": "CHANGE_VAR_BOOL",
+					"changeType": "set",
+					"map": "forest.caves.exit-cave-01",
+					"varName": "_mw_dummy_value",
+					"value": true
+				},
+        {
+					"type": "CHANGE_VAR_BOOL",
+					"changeType": "set",
+					"map": "forest.caves.exit-cave-02",
+					"varName": "_mw_dummy_value",
+					"value": true
+				},
+        {
+					"type": "CHANGE_VAR_BOOL",
+					"changeType": "set",
+					"map": "forest.caves.exit-cave-03",
+					"varName": "_mw_dummy_value",
+					"value": true
+				},
         { "ignoreSlowDown": false, "type": "WAIT", "time": 0.1 },
         {
           "type": "SHOW_OW_AR_MSG",
