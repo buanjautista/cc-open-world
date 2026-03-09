@@ -742,23 +742,80 @@
               }
             },
             {
-              "entity": {
-                "player": true
+              "type": "IF",
+              "condition": "(open-world.shadeLock > 0 && open-world.shadeLock == 1)",
+              "withElse": true,
+              "thenStep": [
+              {
+                "entity": {
+                  "player": true
+                },
+                "text": {
+                  "en_US": "Access denied, missing bosses or shades",
+                  "de_DE": "Zutritt verweigert",
+                  "fr_FR": "fr_FR",
+                  "langUid": 34,
+                  "zh_CN": "拒绝访问",
+                  "ko_KR": "접근 거부",
+                  "ja_JP": "アクセス拒否",
+                  "zh_TW": "拒絶訪問"
+                },
+                "mode": "NO_LINE",
+                "color": "RED",
+                "time": 1.2,
+                "type": "SHOW_AR_MSG"
+              }],
+              "elseStep": [
+              {
+                "type": "IF",
+                "condition": "(open-world.shadeLock > 0 && open-world.shadeLock == 2)",
+                "thenStep": [
+                  {
+                    "entity": {
+                      "player": true
+                    },
+                    "text": {
+                      "en_US": "Access denied, missing shades",
+                      "de_DE": "Zutritt verweigert",
+                      "fr_FR": "fr_FR",
+                      "langUid": 34,
+                      "zh_CN": "拒绝访问",
+                      "ko_KR": "접근 거부",
+                      "ja_JP": "アクセス拒否",
+                      "zh_TW": "拒絶訪問"
+                    },
+                    "mode": "NO_LINE",
+                    "color": "RED",
+                    "time": 1.2,
+                    "type": "SHOW_AR_MSG"
+                  }
+                ]
               },
-              "text": {
-                "en_US": "Access denied",
-                "de_DE": "Zutritt verweigert",
-                "fr_FR": "fr_FR",
-                "langUid": 34,
-                "zh_CN": "拒绝访问",
-                "ko_KR": "접근 거부",
-                "ja_JP": "アクセス拒否",
-                "zh_TW": "拒絶訪問"
-              },
-              "mode": "NO_LINE",
-              "color": "RED",
-              "time": 1.2,
-              "type": "SHOW_AR_MSG"
+              {
+                "type": "IF",
+                "condition": "(open-world.shadeLock > 0 && open-world.shadeLock == 3)",
+                "thenStep": [
+                  {
+                    "entity": {
+                      "player": true
+                    },
+                    "text": {
+                      "en_US": "Access denied, missing bosses",
+                      "de_DE": "Zutritt verweigert",
+                      "fr_FR": "fr_FR",
+                      "langUid": 34,
+                      "zh_CN": "拒绝访问",
+                      "ko_KR": "접근 거부",
+                      "ja_JP": "アクセス拒否",
+                      "zh_TW": "拒絶訪問"
+                    },
+                    "mode": "NO_LINE",
+                    "color": "RED",
+                    "time": 1.2,
+                    "type": "SHOW_AR_MSG"
+                  }
+                ]
+              }]
             },
             {
               "entity": {
