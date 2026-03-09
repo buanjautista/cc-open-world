@@ -39,6 +39,21 @@
             "count": 1
         },
 
+        {
+            "type": "ENTER",
+            "index": 11
+        },
+        {
+            "_comment": "Replace DLC completion for fourth quest",
+            "type": "SET_KEY",
+            "index": "condition",
+            "content": "open-world.dlcActive && quest.rhg-3-maritime_smuggle.solved && !quest.rhg-4-maritime_smuggle_2.started"
+        },
+        {
+            "type": "EXIT",
+            "count": 1
+        },
+
     {
         "type": "EXIT",
         "count": 3

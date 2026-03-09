@@ -23,6 +23,20 @@
             "type": "EXIT",
             "count": 1
         },
+        {
+            "type": "ENTER",
+            "index": 9
+        },
+        {
+            "_comment": "Replace DLC completion for third quest",
+            "type": "SET_KEY",
+            "index": "condition",
+            "content": "open-world.dlcActive && quest.jungleTrader-2-snowman_thief_2.solved && !quest.jungleTrader-3-shad_fridge_1.started"
+        },
+        {
+            "type": "EXIT",
+            "count": 1
+        },
 
     {
         "type": "EXIT",

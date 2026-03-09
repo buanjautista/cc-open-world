@@ -9,5 +9,14 @@
         "body": [{ "type": "ENTER", "index": ["__INDEX__",  "settings"] },{ "type": "SET_KEY", "index": "startCondition", "content": "false" },{ "type": "EXIT", "count": 2 }]
     },
 
-    { "type": "EXIT", "count": 1 }  
+    { "type": "ENTER", "index": [4, "settings"] },
+
+    {
+        "type": "SET_KEY",
+        "_comment": "Remove story event blocking exit",
+        "index": "blockEventCondition",
+        "content": "false"
+    },
+
+    { "type": "EXIT", "count": 3 }  
 ]
