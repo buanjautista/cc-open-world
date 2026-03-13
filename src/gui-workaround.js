@@ -22,6 +22,6 @@ export function defineGUIPlease() {
   ig.lang.labels.sc.gui.options["openworld-fullQuestHub"] = {"name": "Show Full Quest Hub", "description": "Shows any available or unavailable area quests in quest hubs"};
 
   ig.lang.labels.sc.gui.menu.questHub["unavailable"] = "Unavailable";
-  ig.lang.labels.sc.gui.menu.hub.descriptions["unavailable"] = "Unavailable";
-  ig.lang.labels.sc.gui.menu.hub.titles["unavailable"] = "Unavailable";
+  ig.lang.labels.sc.gui.menu.help.hub.description["unavailable"] = "Unavailable";
+  ig.lang.labels.sc.gui.menu.help.hub.titles["unavailable"] = "Unavailable";
 }
