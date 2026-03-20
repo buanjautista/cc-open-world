@@ -1,0 +1,18 @@
+[
+    { "type": "ENTER", "index": ["entities"] },
+
+    { "type": "ENTER", "index": [5, "settings", "event"] },
+    {
+        "_comment": "Add an extra variable to detect when first ape encounter is done",
+        "type": "ADD_ARRAY_ELEMENT",
+        "content": {
+            "changeType": "set",
+            "type": "CHANGE_VAR_BOOL",
+            "varName": "g.firstApeDefeat",
+            "value": true
+        }
+    },
+    { "type": "EXIT", "count": 3 },
+
+    { "type": "EXIT", "count": 1 }
+]

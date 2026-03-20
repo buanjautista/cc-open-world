@@ -6,7 +6,7 @@
 		"type": "SET_KEY",
 		"_comment": "Son of the Beach",
 		"index": "condition",
-		"content": "open-world.dlcActive"
+		"content": "open-world.dlcActive && g.firstApeDefeat"
 	},
 	{ "type": "EXIT", "count": 2 },
 
