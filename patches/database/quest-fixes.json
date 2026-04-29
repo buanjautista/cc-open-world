@@ -165,7 +165,46 @@
 	{ "type": "ENTER", "index": ["jungleGreens-2-plantSearch_1",  "hubSettings"] },
 	{ "type": "SET_KEY", "index": "condition", "content": "quest.jungleGreens-1-escort_1.solved && (item.231.amount >= 1) && (item.286.amount >= 1)" },
 	{ "type": "EXIT", "count": 2 },
-	{
-		"type": "EXIT"
-	}
+
+	{ "type": "ENTER", "index": ["trailblaze-forest",  "tasks", 1] },
+	{ 
+		"type": "SET_KEY", 
+		"index": "task", 
+		"content": {
+			"en_US": "Return to Baxton in \\c[3]\\v[area.forest.name] - Cave Inn\\c[0] after completing all Trailblazing quests",
+			"langUid": 14191,
+			"zh_CN": "Return to Baxton in \\c[3]\\v[area.forest.name] - Cave Inn\\c[0] after completing all Trailblazing quests",
+			"ja_JP": "Return to Baxton in \\c[3]\\v[area.forest.name] - Cave Inn\\c[0] after completing all Trailblazing quests",
+			"ko_KR": "Return to Baxton in \\c[3]\\v[area.forest.name] - Cave Inn\\c[0] after completing all Trailblazing quests",
+			"de_DE": "Return to Baxton in \\c[3]\\v[area.forest.name] - Cave Inn\\c[0] after completing all Trailblazing quests",
+			"zh_TW": "Return to Baxton in \\c[3]\\v[area.forest.name] - Cave Inn\\c[0] after completing all Trailblazing quests"
+		}
+	},
+	{ "type": "EXIT", "count": 3 },
+	{ "type": "ENTER", "index": ["unknown-warrior-5",  "tasks", 1] },
+	{ 
+		"type": "SET_KEY", 
+		"index": "task", 
+		"content": {
+			"en_US": "Hand over the equipment to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
+			"de_DE": "Hand over the equipment to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
+			"zh_CN": "Hand over the equipment to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
+			"ja_JP": "Hand over the equipment to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
+			"ko_KR": "Hand over the equipment to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
+			"langUid": 16194,
+			"zh_TW": "Hand over the equipment to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests"
+		}
+	},
+	{ "type": "EXIT", "count": 2 },
+	{ "type": "EXIT" },    
+	
+	{ "type": "ENTER", "index": "commonEvents" },
+	{ "type": "ENTER", "index": ["botanicsNote"] },
+	{ 
+		"type": "SET_KEY", 
+		"index": "condition", 
+		"content": "drops.totalProgress >= 0.25 && quest.botanics.started && !quest.botanics.label.25done  && !plot.dlinkBlocked && item.285.amount >= 1"
+	},
+	{ "type": "EXIT" },
+	{ "type": "EXIT" }
 ]
