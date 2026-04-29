@@ -36,7 +36,31 @@ export function assignSteps() {
           sc.map.updateVisitedArea(this.area);
         }
       });
+
+      ig.EVENT_STEP.MAP_AND_STAMP = ig.EventStepBase.extend({
+        area: "autumn",
+        stamp: null,
+        _wm: new ig.Config({
+          attributes: {
+            area: { _type: "String", _info: "Area to mark as visited", },
+            stamp: { _type: "String", _info: "Stamp to add", }
+          }
+        }),
+  
+        init: function (settings) {
+          this.area = settings.area;
+          this.stamp = settings.stamp
+        },
+
+        start: function() {
+          sc.menu.addMapStamp(this.area, this.stamp.key, this.stamp.x, this.stamp.y, this.stamp.level);
+          sc.menu.setDirectMode(true, sc.MENU_SUBMENU.MAP);
+          sc.model.enterMenu(true);
+          sc.model.prevSubState = sc.GAME_MODEL_SUBSTATE.RUNNING;
+        },
+      });
   });
+
   
   // New event step to sync specific party member's SP level 
   ig.module("game.feature.party.party-steps2") .requires( "impact.base.action", "impact.base.event", "game.feature.party.party-steps", "game.feature.model.model-steps").defines(function () {
@@ -52,7 +76,7 @@ export function assignSteps() {
           }),
           init: function (a) {
             this.member = a.member;
-            console.log(a)
+            // console.log(a)
           },
           start: function () {
             sc.party.getPartyMemberModel(this.member).setSpLevel(sc.model.player.spLevel);

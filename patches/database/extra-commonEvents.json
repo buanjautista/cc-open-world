@@ -115,6 +115,7 @@
         },
         { "type": "REMOVE_MSG_PERSON", "person": "misc.blank" },
         { "type": "REMOVE_MSG_PERSON", "person": "main.lea" },
+        { "type": "END_PRIVATE_MSG" },
         {
 					"type": "CHANGE_VAR_BOOL",
 					"changeType": "set",
@@ -143,7 +144,13 @@
 					"varName": "_mw_dummy_value",
 					"value": true
 				},
-        { "ignoreSlowDown": false, "type": "WAIT", "time": 0.1 },
+        { "ignoreSlowDown": false, "type": "WAIT", "time": 0.3 },
+        {
+          "type": "MAP_AND_STAMP",
+          "area": "forest",
+          "stamp": { "key": "QUEST", "level": 0, "x": 475, "y": 232 }
+        },
+        { "ignoreSlowDown": false, "type": "WAIT", "time": 0.3 },
         {
           "type": "SHOW_OW_AR_MSG",
           "entity": { "player": true },
