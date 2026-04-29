@@ -22,5 +22,17 @@
     },
     { "type": "EXIT", "count": 6 },
 
+    {
+        "type": "ENTER",
+        "index": [385, "settings", "event"]
+    },
+    {
+        "_comment": "Remove perma task",
+        "type": "SET_KEY",
+        "index": 21,
+        "content": { "type": "WAIT", "time": 0.1 }
+    },
+    { "type": "EXIT", "count": 3 },
+
     { "type": "EXIT", "count": 1 }
 ]
