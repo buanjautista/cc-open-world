@@ -47,11 +47,43 @@
         "_comment": "Change barrier conditions, to not make it stop working after a point of plot (might break dream sequences if there's any remaining)",
         "type": "SET_KEY",
         "index": "startCondition",
-        "content": "!map.barrierOpen && plot.line < 30000"
+        "content": "!map.barrierOpen"
     },
     {
         "type": "EXIT",
         "count": 2
+    },
+    {
+      "type": "ADD_ARRAY_ELEMENT",
+      "_comment": "Show a sign if Schneider hasn't been met and have the mine pass",
+      "content": {
+        "type": "Prop",
+        "x": 720,
+        "y": 190,
+        "level": 2,
+        "settings": {
+          "mapId": 5060,
+          "interact": {
+            "icon": "INFO",
+            "hoverText": {
+              "en_US": "Schneider is waiting at Old Obelisk",
+              "de_DE": "Schneider is waiting at Old Obelisk",
+              "fr_FR": "Schneider is waiting at Old Obelisk",
+              "langUid": 3427,
+              "zh_CN": "Schneider is waiting at Old Obelisk",
+              "ko_KR": "Schneider is waiting at Old Obelisk",
+              "ja_JP": "Schneider is waiting at Old Obelisk",
+              "zh_TW": "Schneider is waiting at Old Obelisk"
+            }
+          },
+          "propType": {
+            "sheet": "autumn",
+            "name": "arSignCenter"
+          },
+          "propAnim": "default",
+          "spawnCondition": "plot.guildEntry < 20 && item.149.amount >= 1"
+        }
+      }
     },
     {
         "type": "EXIT",
