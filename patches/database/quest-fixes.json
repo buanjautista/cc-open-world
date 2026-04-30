@@ -186,25 +186,27 @@
 		"type": "SET_KEY", 
 		"index": "task", 
 		"content": {
-			"en_US": "Hand over the equipment to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
-			"de_DE": "Hand over the equipment to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
-			"zh_CN": "Hand over the equipment to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
-			"ja_JP": "Hand over the equipment to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
-			"ko_KR": "Hand over the equipment to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
+			"en_US": "Return to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
+			"de_DE": "Return to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
+			"zh_CN": "Return to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
+			"ja_JP": "Return to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
+			"ko_KR": "Return to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests",
 			"langUid": 16194,
-			"zh_TW": "Hand over the equipment to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests"
+			"zh_TW": "Return to D'Kar in \\c[3]\\v[area.rhombus-sqr.name] - Books 'n Worms\\c[0] after completing all A Promise is a Promise quests"
 		}
 	},
-	{ "type": "EXIT", "count": 2 },
+	{ "type": "EXIT", "count": 3 },
+
 	{ "type": "EXIT" },    
 	
 	{ "type": "ENTER", "index": "commonEvents" },
-	{ "type": "ENTER", "index": ["botanicsNote"] },
+	{ "type": "ENTER", "index": "botanicsNote" },
 	{ 
 		"type": "SET_KEY", 
 		"index": "condition", 
 		"content": "drops.totalProgress >= 0.25 && quest.botanics.started && !quest.botanics.label.25done  && !plot.dlinkBlocked && item.285.amount >= 1"
 	},
 	{ "type": "EXIT" },
+
 	{ "type": "EXIT" }
 ]
