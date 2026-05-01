@@ -147,6 +147,16 @@ You can activate these patches through the .yaml settings in the CCMultiworldRan
 
 ## VERSION CHANGES
 
+# v0.5.3
+
+New:
+- Calzone Shop only requires Pond Slums Pass now.
+- Added a sign to Guild Area entrance once you have to meet Schneider so its less prone to be missed.
+- Removed some current tasks from certain events (dojo entry, apollo first encounter)
+- Made Promise 5 and Trailblazing 5 not require the pre-reqs to see the quest / NPC (will still require for completing them)
+- Crocus Pocus requires Disc of Flora to be completed now (it didn't, interesting right?)
+- Added a small guide to the Vermillion Hidden Passage tip, marking it with a stamp in the map (can disable with Disable Open World Tips)
+
 # v0.5.0-0.5.2
 New:
 - Support for DLC (thanks hellfall for the work)
