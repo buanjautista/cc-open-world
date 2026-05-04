@@ -37,7 +37,7 @@
         "face": "NORTH",
         "action": [],
         "hidden": false,
-        "condition": "quest.unknown-warrior-5.started",
+        "condition": "quest.unknown-warrior-5.started && !(quest.unknown-warrior-1.solved && quest.unkown-warrior-2.solved && quest.unknown-warrior-3.solved && quest.unknown-warrior-4.solved)",
         "config": "normal",
         "event": [
             {
