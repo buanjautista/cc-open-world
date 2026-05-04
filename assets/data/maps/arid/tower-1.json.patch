@@ -59,6 +59,21 @@
     },
 
     {
+        "type": "ENTER",
+        "index": [273, "settings"]
+    },
+    {
+        "_comment": "Remove barrier from VT entrance",
+        "type": "SET_KEY",
+        "index": "spawnCondition",
+        "content": "false"
+    },
+    {
+        "type": "EXIT",
+        "count": 2
+    },
+
+    {
         "type": "EXIT",
         "count": 1
     }

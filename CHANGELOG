@@ -152,7 +152,8 @@ You can activate these patches through the .yaml settings in the CCMultiworldRan
 Fix:
 - Vagabond Quest trigger was replaced by mistake making the quest unobtainable
 - Removed NPCs from Ku'lero entrance when DLC is active, and added a small Ancient Shade icon to indicate you can enter.
-- A Promise is a Promise 5 was not startable due to missing requirement
+- A Promise is a Promise 5 was not startable due to missing requirement.
+- Unlocked Vermillion Tower entrance when plot is after a certain point.
 
 # v0.5.3
 
