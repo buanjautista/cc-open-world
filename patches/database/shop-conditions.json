@@ -99,26 +99,5 @@
         "values": [12,13,14],
         "body": [{ "type": "ENTER", "index": "__INDEX__" },{ "type": "SET_KEY", "index": "condition", "content": "item.376.amount >= 1" },{ "type": "EXIT" }]  
     },
-    { "type": "EXIT", "count": 4 },
-
-    {
-        "type": "ENTER",
-        "_comment": "Rhombus Square Weapons",
-        "index": ["rhombusWeapons1","pages",0,"content"]
-    },
-    {
-        "type": "FOR_IN",
-        "keyword": "__INDEX__",
-        "_comment": "Change pre-beach limit to not depend on plot-line",
-        "values": [0,1,2,3],
-        "body": [{ "type": "ENTER", "index": "__INDEX__" },{ "type": "SET_KEY", "index": "condition" },{ "type": "EXIT" }]  
-    },
-    {
-        "type": "FOR_IN",
-        "keyword": "__INDEX__",
-        "_comment": "Change beach open requirement to DLC active",
-        "values": [8,9,10,11],
-        "body": [{ "type": "ENTER", "index": "__INDEX__" },{ "type": "SET_KEY", "index": "condition", "content": "extension.post-game.active" },{ "type": "EXIT" }]  
-    },
     { "type": "EXIT", "count": 4 }
 ]
