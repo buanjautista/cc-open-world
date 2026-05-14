@@ -1,0 +1,18 @@
+[
+	{
+		"type": "ENTER",
+		"index": ["entities", 180, "settings", "event"]
+	},
+	{
+		"type": "SET_KEY",
+		"index": 31,
+		"content": {
+			"type": "TELEPORT",
+			"map": "arid-dng.second.f99.pre-server",
+			"marker": "BossEntrance"
+		}
+	},
+	{
+		"type": "EXIT", "count": 4
+	}
+]
