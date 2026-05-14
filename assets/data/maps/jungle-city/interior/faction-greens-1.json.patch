@@ -31,7 +31,7 @@
             "_comment": "Replace DLC completion for third quest",
             "type": "SET_KEY",
             "index": "condition",
-            "content": "open-world.dlcActive && quest.jungleGreens-2-plantSearch_1.solved && !quest.jungleGreens-3-escort_2.started"
+            "content": "open-world.dlcActive && quest.jungleGreens-2-plantSearch_1.solved && !quest.jungleGreens-3-escort_2.started && item.626.amount >= 1"
         },
         {
             "type": "EXIT",
