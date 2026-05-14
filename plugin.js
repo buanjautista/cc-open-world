@@ -125,7 +125,7 @@ function handlePatching(patchstate, patchname) {
         if (patchstate > 0) { 
           ig.vars.set("open-world.shadeLock", patchstate);
           ig.vars.set("open-world.towerLock", 1);
-          mod.addPatch('data/maps/arid/town-1.json', mod.baseDirectory + 'extra-patches/locked-tower/shadebosslock-vt.json.patch');
+          // mod.addPatch('data/maps/arid/town-1.json', mod.baseDirectory + 'extra-patches/locked-tower/shadebosslock-vt.json.patch');
         }
         else { ig.vars.set("open-world.towerLock", 0); }
         break;
