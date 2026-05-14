@@ -29,7 +29,7 @@
             "_comment": "Replace DLC completion for third quest",
             "type": "SET_KEY",
             "index": "condition",
-            "content": "open-world.dlcActive && quest.bg-2-goat_cave_1.solved && quest.jungleGuard-2-crate_rooftop_1.solved && !quest.bg-3-goat_final.started"
+            "content": "open-world.dlcActive && quest.bg-2-goat_cave_1.solved && quest.jungleGuard-2-crate_rooftop_1.solved && !quest.bg-3-goat_final.started && item.626.amount >= 1"
         },
         { "type": "EXIT", "count": 1 },
 

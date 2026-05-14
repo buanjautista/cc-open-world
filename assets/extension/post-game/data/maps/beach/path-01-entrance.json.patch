@@ -6,7 +6,7 @@
         "_comment": "Replace DLC completion for quest",
         "type": "SET_KEY",
         "index": "condition",
-        "content": "!quest.ape-battle.started && open-world.dlcActive && g.firstApeDefeat"
+        "content": "!quest.ape-battle.started && open-world.dlcActive && g.firstApeDefeat && item.626.amount >= 1"
     },
 
 

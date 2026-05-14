@@ -31,7 +31,7 @@
             "_comment": "Replace DLC completion for third quest",
             "type": "SET_KEY",
             "index": "condition",
-            "content": "open-world.dlcActive && quest.jungleGuard-2-crate_rooftop_1.solved && quest.bg-3-goat_final.task.3 && !quest.jungleGuard-3-papagang_goats_1.started"
+            "content": "open-world.dlcActive && quest.jungleGuard-2-crate_rooftop_1.solved && quest.bg-3-goat_final.task.3 && !quest.jungleGuard-3-papagang_goats_1.started && item.626.amount >= 1"
         },
         {
             "type": "EXIT",
