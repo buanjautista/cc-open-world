@@ -589,6 +589,89 @@
 	},
 	{
 		"type": "SET_KEY",
+		"index": "para-island",
+		"content": {
+			"name": {
+				"en_US": "Para Island",
+				"de_DE": "Para Island",
+				"zh_CN": "Para Island",
+				"zh_TW": "Para Island",
+				"ja_JP": "Para Island",
+				"ko_KR": "Para Island",
+				"langUid": 13691
+			},
+			"person": {
+				"en_US": "H'lin",
+				"de_DE": "H'lin",
+				"zh_CN": "H'lin",
+				"zh_TW": "H'lin",
+				"ja_JP": "H'lin",
+				"ko_KR": "H'lin",
+				"langUid": 13692
+			},
+			"level": 42,
+			"order": 2,
+			"description": {
+				"en_US": "Complete the Para Island Raid with the First Scholars.",
+				"de_DE": "Complete the Para Island Raid with the First Scholars.",
+				"zh_CN": "Complete the Para Island Raid with the First Scholars.",
+				"zh_TW": "Complete the Para Island Raid with the First Scholars.",
+				"ja_JP": "Complete the Para Island Raid with the First Scholars.",
+				"ko_KR": "Complete the Para Island Raid with the First Scholars.",
+				"langUid": 13694
+			},
+			"briefing": {
+				"en_US": "",
+				"de_DE": "",
+				"zh_CN": "",
+				"zh_TW": "",
+				"ja_JP": "",
+				"ko_KR": "",
+				"langUid": 13695
+			},
+			"hideRewards": false,
+			"tasks": [
+				{
+					"task": {
+						"en_US": "Reach the end of the raid.",
+						"ja_JP": "Reach the end of the raid.",
+						"ko_KR": "Reach the end of the raid.",
+						"langUid": 13724,
+						"zh_CN": "Reach the end of the raid.",
+						"de_DE": "Reach the end of the raid.",
+						"zh_TW": "Reach the end of the raid."
+					},
+					"subtasks": [
+						{
+							"label": "getToBoss",
+							"type": "CONDITION"
+						}
+					]
+				},
+				{
+					"task": {
+						"en_US": "Defeat the Raid Core",
+						"de_DE": "Defeat the Raid Core",
+						"zh_CN": "Defeat the Raid Core",
+						"ja_JP": "Defeat the Raid Core",
+						"ko_KR": "Defeat the Raid Core",
+						"langUid": 13777,
+						"zh_TW": "Defeat the Raid Core"
+					},
+					"subtasks": [
+						{
+							"amount": 1,
+							"type": "KILL",
+							"enemy": "minibosses.raid-face"
+						}
+					]
+				}
+			],
+			"area": "autumn-fall"
+		}
+	},
+	{
+		"type": "SET_KEY",
 		"index": "escargot-kill",
 		"content": {
 			"name": {
@@ -647,6 +730,90 @@
 							"amount": 1,
 							"type": "KILL",
 							"enemy": "arid.snail"
+						}
+					]
+				}
+			],
+			"area": "arid"
+		}
+	},
+	{
+		"type": "SET_KEY",
+		"index": "ultimate-experience",
+		"content": {
+			"name": {
+				"en_US": "The Ultimate Experience",
+				"de_DE": "The Ultimate Experience",
+				"zh_CN": "The Ultimate Experience",
+				"ko_KR": "The Ultimate Experience",
+				"langUid": 3781,
+				"ja_JP": "The Ultimate Experience",
+				"zh_TW": "\u79cb\u8272\u5c71\u91ce\u64ca\u7834"
+			},
+			"person": {
+				"en_US": "General",
+				"de_DE": "General",
+				"zh_CN": "\u901a\u7528<<A<<[CHANGED 2017\/10\/10]",
+				"zh_TW": "\u901a\u7528<<A<<[CHANGED 2017\/10\/10]",
+				"ja_JP": "\u5c06\u8ecd<<A<<[CHANGED 2017\/11\/04]",
+				"ko_KR": "\uac1c\uc694<<A<<[CHANGED 2017\/10\/17]",
+				"langUid": 13443
+			},
+			"level": 58,
+			"order": 3000,
+			"description": {
+				"en_US": "Defeat the Creator",
+				"de_DE": "Defeat the Creator",
+				"zh_CN": "Defeat the Creator",
+				"ko_KR": "Defeat the Creator",
+				"langUid": 3784,
+				"ja_JP": "Defeat the Creator",
+				"zh_TW": "\u901a\u904e\u64ca\u6557\u4e0d\u540c\u7684\u6575\u4eba\uff0c\u5f9e\u5176\u8eab\u4e0a\u6536\u96c6\u6a23\u672c\u3002"
+			},
+			"briefing": {
+				"en_US": "You successfully defeated The Creator",
+				"de_DE": "You successfully defeated The Creator",
+				"zh_CN": "\u4f60\u6536\u96c6\u5230\u4e86\u6240\u9700\u654c\u4eba\u7684\u6837\u54c1\u3002",
+				"ko_KR": "\uc694\uccad\ubc1b\uc740 \uc801\uc758 \uc815\ubcf4\ub97c \uc218\uc9d1\ud588\uc2b5\ub2c8\ub2e4.",
+				"langUid": 3785,
+				"ja_JP": "\u983c\u307e\u308c\u305f\u6575\u306e\u30c7\u30fc\u30bf\u3092\u96c6\u3081\u305f\u3002",
+				"zh_TW": "\u4f60\u6536\u96c6\u5230\u4e86\u6240\u9700\u6575\u4eba\u7684\u6a23\u54c1\u3002"
+			},
+			"hideRewards": false,
+			"tasks": [
+				{
+					"task": {
+						"en_US": "Enter Vermillion Tower and defeat The Creator",
+						"de_DE": "Enter Vermillion Tower and defeat The Creator",
+						"fr_FR": "Enter Vermillion Tower and defeat The Creator",
+						"zh_CN": "Enter Vermillion Tower and defeat The Creator",
+						"langUid": 3837,
+						"ja_JP": "Enter Vermillion Tower and defeat The Creator",
+						"ko_KR": "Enter Vermillion Tower and defeat The Creator",
+						"zh_TW": "\u5728\\c[3]\u79cb\u8272\u5c71\u91ce\\c[0]\u64ca\u6557\u6575\u4eba"
+					},
+					"subtasks": [
+						{
+							"amount": 1,
+							"type": "KILL",
+							"enemy": "boss.elephant"
+						}
+					]
+				},
+				{
+					"task": {
+						"en_US": "",
+						"ja_JP": "",
+						"ko_KR": "",
+						"langUid": 13724,
+						"zh_CN": "",
+						"de_DE": "",
+						"zh_TW": "\u8ddf\u96a8\u514b\u96f7\u63d0\u4e9e\u535a\u58eb\u524d\u5f80\u5979\u4f4d\u65bc\\c[3]\u9f4a\u7dad\u5854\u795e\u5edf\u5165\u53e3\\c[0]\u7684\u8fa6\u516c\u5ba4<<A<<[CHANGED 2018\/08\/01]"
+					},
+					"subtasks": [
+						{
+							"label": "disableServer",
+							"type": "CONDITION"
 						}
 					]
 				}

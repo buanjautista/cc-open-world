@@ -1,8 +1,8 @@
 [{
     "type": "FOR_IN",
-    "_comment": "Cancel start condition for all the story updates",
+    "_comment": "Cancel start condition for all the story updates and Vermillion link blocks",
     "keyword": "__INDEX__",
-    "values": ["storyUpdateA", "storyUpdateB","storyUpdateC","storyUpdateD", "contiunueStoryJungle"],
+    "values": ["storyUpdateA", "storyUpdateB","storyUpdateC","storyUpdateD", "contiunueStoryJungle", "contact-blocked", "leave-blocked", "join-blocked", "join-blocked-finale"],
     "body": [{
             "type": "ENTER",
             "index": "__INDEX__"
