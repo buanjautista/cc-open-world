@@ -428,5 +428,27 @@
         "content": "false"
     },
     { "type": "EXIT", "count": 4 },
-    { "type": "EXIT", "count": 1 }
+
+    {
+        "type": "ENTER",
+        "index": [ 603, "settings" ]
+    },
+    {
+        "type": "SET_KEY",
+        "_comment": "Reduce the size of the Last Minute Heroes barrier so it doesnt activate from the wrong side",
+        "index": "size",
+        "content": 	{
+            "x": 658,
+            "y": 376
+        }
+    },
+    { "type": "EXIT", "count": 1 },
+    {
+        "type": "SET_KEY",
+        "index": "x",
+        "content": 460
+    },
+    { "type": "EXIT", "count": 1 },
+
+    { "type": "EXIT" }
 ]
