@@ -378,6 +378,12 @@
     },
 
     {
+        "type": "INCLUDE",
+        "_comment": "Trader changes",
+        "src": "mod:patches/traders/rh-center.json"
+    },
+
+    {
         "type": "EXIT",
         "count": 1
     }  
