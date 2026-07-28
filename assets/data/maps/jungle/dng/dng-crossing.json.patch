@@ -274,7 +274,7 @@
     { 
         "type": "IF", 
         "_comment": "Adds corresponding patch if Closed Gaia is on", 
-        "cond": "ig.vars.get('open-world.closedGaia') >= 1", 
+        "cond": "ig.vars.get('mw.options.closedGaia') >= 1", 
         "thenSteps": [{ "type": "INCLUDE", "src": "mod:extra-patches/enclosed-gaia/dng/dng-crossing.json.patch" }] 
     }
 ]
