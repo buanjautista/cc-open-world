@@ -454,6 +454,10 @@
 		}
 	},
 
+	{ "type": "ENTER", "_comment": "Make creator cutscene still play on DLC plotline / change to mid-checkpoint", "index": [ 16, "settings" ] }, 
+  { "type": "SET_KEY", "index": "endCondition", "content": "map.designerDead" }, 
+  { "type": "EXIT", "count": 2 },
+
 	{
 		"type": "EXIT"
 	}

@@ -1,10 +1,5 @@
 [
-    {
-        "type": "ENTER",
-        "index": ["entities"]
-    },
-    {
-        "type": "EXIT",
-        "count": 1
-    }  
+    { 
+        "type": "INCLUDE", "src": "mod:extra-patches/tower-skip/centerf0.json.patch" 
+    }
 ]
