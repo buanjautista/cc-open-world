@@ -13,7 +13,7 @@
                 "name": "ShowPath",
                 "eventType": "PARALLEL",
                 "triggerType": "ONCE_PER_ENTRY",
-                "startCondition": "extension.post-game.active && open-world.dlcActive",
+                "startCondition": "extension.post-game.active",
                 "endCondition": "map.showPath",
                 "event": [
                     {
@@ -55,6 +55,24 @@
             }
         }
     },
+
+    { "type": "ENTER", "index": [985, "settings", "event", 1] },
+    {
+        "type": "SET_KEY",
+        "index": "text",
+        "content": {
+            "en_US": "Missing Guild Pass",
+            "de_DE": "Kein Guild Pass",
+            "fr_FR": "fr_FR",
+            "langUid": 52,
+            "zh_CN": "\u7f3a\u5c11\u901a\u884c\u8bc1<<A<<[CHANGED 2020\/06\/17]",
+            "ja_JP": "\u901a\u884c\u8a3c\u304c\u5fc5\u8981\u3067\u3059<<A<<[CHANGED 2020\/06\/17]",
+            "ko_KR": "\ud1b5\ud589\uc99d \uc5c6\uc74c<<A<<[CHANGED 2020\/06\/17]",
+            "zh_TW": "\u7f3a\u5c11\u901a\u884c\u8b49<<A<<[CHANGED 2020\/06\/15]"
+        }
+    },
+    { "type": "EXIT", "count": 4 },
+
     {
         "type": "ADD_ARRAY_ELEMENT",
         "content": {
