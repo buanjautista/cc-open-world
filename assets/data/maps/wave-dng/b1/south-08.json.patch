@@ -4,42 +4,119 @@
     "index": "entities"
   },
   {
-    "type": "FOR_IN",
-    "_comment": "Rename all regular key pillars and add cutscene variables",
-    "keyword": "__INDEX__",
-    "values": [172, 173, 174],
-    "body": [ { "type": "ENTER", "index": [ "__INDEX__", "settings" ] }, { "type": "SET_KEY", "index": "name", "content": "pillar-__INDEX__" }, { "type": "SET_KEY", "index": "onDestructIncrease", "content": "map.keysNorthUsed" }, { "type": "EXIT", "count": 2 } ]
-  },
-  {
-    "type": "FOR_IN",
-    "_comment": "Rename all regular key pillars and add cutscene variables",
-    "keyword": "__INDEX__",
-    "values": [175, 176, 177],
-    "body": [ { "type": "ENTER", "index": [ "__INDEX__", "settings" ] }, { "type": "SET_KEY", "index": "name", "content": "pillar-__INDEX__" }, { "type": "SET_KEY", "index": "onDestructIncrease", "content": "map.keysSouthUsed" }, { "type": "EXIT", "count": 2 } ]
+    "type": "ADD_ARRAY_ELEMENT",
+    "_comment": "Add new ball changer to replace Heat requirement",
+    "content": {
+			"type": "BallChanger",
+			"x": 168,
+			"y": 608,
+			"level": 1,
+			"settings": {
+				"name": "BallChangerNew2",
+				"mapId": 1350,
+				"condition": "",
+				"changerType": {
+					"type": "CHANGE_ELEMENT",
+					"settings": {
+						"element": "COLD"
+					}
+				}
+			}
+		}
   },
   {
     "type": "ADD_ARRAY_ELEMENT",
-    "_comment": "Add event to open both pillars at once",
+    "_comment": "Add new ball changer to replace Heat requirement",
     "content": {
-      "type": "EventTrigger",
-      "x": 2408,
-      "y": 320,
-      "level": 1,
-      "settings": {
-        "size": { "x": 16, "y": 16 },
-        "mapId": 718,
-        "event": [ { "type": "IF", "withElse": true, "condition": "map.keysSouthUsed", "thenStep": [ { "pos": { "x": 2528, "y": 558 }, "speed": "NORMAL", "transition": "EASE_IN_OUT", "type": "SET_CAMERA_POS", "wait": true }, { "pos": { "x": 2528, "y": 230 }, "speed": "NORMAL", "transition": "EASE_IN_OUT", "type": "SET_CAMERA_POS", "wait": true }, { "type": "DESTROY_DESTRUCTIBLE", "entity": { "global": true, "name": "pillar-174" } }, { "type": "WAIT", "time": 0.5 } ], "elseStep": [ { "pos": { "x": 2528, "y": 230 }, "speed": "NORMAL", "transition": "EASE_IN_OUT", "type": "SET_CAMERA_POS", "wait": true }, { "pos": { "x": 2528, "y": 558 }, "speed": "NORMAL", "transition": "EASE_IN_OUT", "type": "SET_CAMERA_POS", "wait": true }, { "type": "DESTROY_DESTRUCTIBLE", "entity": { "global": true, "name": "pillar-177" } }, { "type": "WAIT", "time": 0.5 } ] }, { "changeType": "set", "type": "CHANGE_VAR_BOOL", "varName": "map.pillarsOpen", "value": true } ],
-        "name": "keyOpener",
-        "eventType": "CUTSCENE",
-        "startCondition": "map.keysNorthUsed || map.keysSouthUsed",
-        "triggerType": "ALWAYS",
-        "endCondition": "map.pillarsOpen"
-      }
-    }
+			"type": "BallChanger",
+			"x": 136,
+			"y": 580,
+			"level": 1,
+			"settings": {
+				"name": "BallChangerNew1",
+				"mapId": 1351,
+				"condition": "",
+				"changerType": {
+					"type": "CHANGE_DIR",
+					"settings": {
+						"dir": "EAST"
+					}
+				}
+			}
+		}
   },
-  { "type": "ENTER", "_comment": "Make end barrier be there until gauntlet fight ends", "index": [ 243, "settings" ] }, 
-  { "type": "SET_KEY", "index": "spawnCondition", "content": "!map.keyPanelThere2" }, 
-  { "type": "EXIT", "count": 2 },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "_comment": "Add new ball changer to replace Heat requirement",
+    "content": {
+			"type": "BallChanger",
+			"x": 640,
+			"y": 608,
+			"level": 1,
+			"settings": {
+				"name": "BallChangerNew4",
+				"mapId": 1352,
+				"condition": "",
+				"changerType": {
+					"type": "CHANGE_ELEMENT",
+					"settings": {
+						"element": "HEAT"
+					}
+				}
+			}
+		}
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "_comment": "Add new ball changer to replace Heat requirement",
+    "content": {
+			"type": "BallChanger",
+			"x": 672,
+			"y": 580,
+			"level": 1,
+			"settings": {
+				"name": "BallChangerNew3",
+				"mapId": 1353,
+				"condition": "",
+				"changerType": {
+					"type": "CHANGE_DIR",
+					"settings": {
+						"dir": "WEST"
+					}
+				}
+			}
+		}
+  },
+  {
+    "type": "ADD_ARRAY_ELEMENT",
+    "_comment": "Add new ball changer to replace Heat requirement",
+    "content": {
+			"type": "BallChanger",
+			"x": 644,
+			"y": 832,
+			"level": 1,
+			"settings": {
+				"name": "BallChangerNew5",
+				"mapId": 1354,
+				"condition": "",
+				"changerType": {
+					"type": "CHANGE_ELEMENT",
+					"settings": {
+						"element": "COLD"
+					}
+				}
+			}
+		}
+  },
+
+  { "type": "ENTER", "_comment": "Move Shock ball changers", "index": 24 }, 
+  { "type": "SET_KEY", "index": "x", "content": "156" }, 
+  { "type": "SET_KEY", "index": "y", "content": "580" }, 
+  { "type": "EXIT", "count": 1 },
+  { "type": "ENTER", "_comment": "Move Shock ball changers", "index": 25 }, 
+  { "type": "SET_KEY", "index": "x", "content": "652" }, 
+  { "type": "SET_KEY", "index": "y", "content": "580" }, 
+  { "type": "EXIT", "count": 1 },
   {
     "type": "EXIT",
     "count": 1
