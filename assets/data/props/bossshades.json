@@ -7,7 +7,7 @@
       "collType": "NONE",
       "anims": {
         "sheet": {
-          "src": "media/map/bossshades.png",
+          "src": "media/map/customshades.png",
           "width": 24,
           "height": 24,
           "offX": 0,
@@ -25,7 +25,7 @@
       "collType": "NONE",
       "anims": {
         "sheet": {
-          "src": "media/map/bossshades.png",
+          "src": "media/map/customshades.png",
           "width": 24,
           "height": 24,
           "offX": 0,
@@ -43,7 +43,7 @@
       "collType": "NONE",
       "anims": {
         "sheet": {
-          "src": "media/map/bossshades.png",
+          "src": "media/map/customshades.png",
           "width": 24,
           "height": 24,
           "offX": 0,
@@ -61,7 +61,7 @@
       "collType": "NONE",
       "anims": {
         "sheet": {
-          "src": "media/map/bossshades.png",
+          "src": "media/map/customshades.png",
           "width": 24,
           "height": 24,
           "offX": 0,
