@@ -1,0 +1,408 @@
+[
+	{
+		"type": "ENTER",
+		"index": "quests"
+	},
+	{
+		"type": "SET_KEY",
+		"index": "goal-randomizer",
+		"content" : {
+			"name": {
+				"en_US": "Randomizer Goal",
+				"de_DE": "Randomizer Goal",
+				"zh_CN": "Randomizer Goal",
+				"ja_JP": "Randomizer Goal",
+				"ko_KR": "Randomizer Goal",
+				"zh_TW": "Randomizer Goal",
+				"langUid": 3706
+			},
+			"person": {
+				"en_US": "Archie P. Lago",
+				"de_DE": "Archie P. Lago",
+				"zh_CN": "Archie P. Lago",
+				"ja_JP": "Archie P. Lago",
+				"ko_KR": "Archie P. Lago",
+				"langUid": 3707,
+				"zh_TW": "\u7814\u7a76\u54e1\u4ea8\u5229"
+			},
+			"mandatory": true,
+			"hideRewards": true,
+			"order": 1003,
+			"level": 65,
+			"description": {
+				"en_US": "Filler",
+				"de_DE": "Filler",
+				"zh_CN": "Filler",
+				"ja_JP": "Filler",
+				"ko_KR": "Filler",
+				"zh_TW": "Filler",
+				"langUid": 3709
+			},
+			"briefing": {
+				"en_US": "",
+				"de_DE": "",
+				"zh_CN": "",
+				"ja_JP": "",
+				"ko_KR": "",
+				"zh_TW": "",
+				"langUid": 3710
+			},
+			"tasks": [
+				{
+					"task": {
+						"en_US": "Finish all the randomizer tasks.",
+						"de_DE": "Finish all the randomizer tasks.",
+						"fr_FR": "Finish all the randomizer tasks.",
+						"zh_CN": "Finish all the randomizer tasks.",
+						"ja_JP": "Finish all the randomizer tasks.",
+						"ko_KR": "Finish all the randomizer tasks.",
+						"zh_TW": "Finish all the randomizer tasks.",
+						"langUid": 3725
+					},
+					"subtasks": [
+						{
+							"label": "finishRando",
+							"type": "CONDITION"
+						}
+					]
+				},
+				{
+					"task": {
+						"en_US": "Return to Rookie Harbor Quest Hub to report your findings.",
+						"de_DE": "Return to Rookie Harbor Quest Hub to report your findings.",
+						"fr_FR": "Return to Rookie Harbor Quest Hub to report your findings.",
+						"zh_CN": "Return to Rookie Harbor Quest Hub to report your findings.",
+						"ja_JP": "Return to Rookie Harbor Quest Hub to report your findings.",
+						"ko_KR": "Return to Rookie Harbor Quest Hub to report your findings.",
+						"zh_TW": "Return to Rookie Harbor Quest Hub to report your findings.",
+						"langUid": 3796
+					},
+					"subtasks": [
+						{
+							"label": "done",
+							"type": "CONDITION"
+						}
+					]
+				}
+			],
+			"area": "rookie-harbor",
+			"rewards": {
+				"exp": {
+					"exp": 500,
+					"bonus": 0
+				},
+				"money": 1000
+			}
+		}
+	},
+	{
+		"type": "SET_KEY",
+		"index": "goal-dshades",
+		"content" : {
+			"parent": "goal-randomizer",
+			"name": {
+				"en_US": "Shade Collector",
+				"de_DE": "Shade Collector",
+				"zh_CN": "Shade Collector",
+				"ja_JP": "Shade Collector",
+				"ko_KR": "Shade Collector",
+				"zh_TW": "Shade Collector",
+				"langUid": 3728
+			},
+			"mandatory": true,
+			"person": {
+				"en_US": "Archie P. Lago",
+				"de_DE": "Archie P. Lago",
+				"zh_CN": "Archie P. Lago",
+				"ja_JP": "Archie P. Lago",
+				"ko_KR": "Archie P. Lago",
+				"langUid": 3729,
+				"zh_TW": "\u7814\u7a76\u54e1\u4ea8\u5229"
+			},
+			"level": 1,
+			"order": 1004,
+			"description": {
+				"en_US": "",
+				"de_DE": "",
+				"zh_CN": "",
+				"ja_JP": "",
+				"ko_KR": "",
+				"zh_TW": "",
+				"langUid": 3731
+			},
+			"briefing": {
+				"en_US": "",
+				"de_DE": "",
+				"zh_CN": "",
+				"ja_JP": "",
+				"ko_KR": "",
+				"zh_TW": "",
+				"langUid": 3732
+			},
+			"hideRewards": false,
+			"tasks": [
+				{
+					"task": {
+						"en_US": "Collect the Dungeon Shades",
+						"de_DE": "Collect the Dungeon Shades",
+						"fr_FR": "Collect the Dungeon Shades",
+						"zh_CN": "Collect the Dungeon Shades",
+						"ja_JP": "Collect the Dungeon Shades",
+						"ko_KR": "Collect the Dungeon Shades",
+						"zh_TW": "Collect the Dungeon Shades",
+						"langUid": 3815
+					},
+					"subtasks": [
+						{
+							"item": "225",
+							"amount": 1,
+							"keepItems": true,
+							"type": "COLLECT"
+						},
+						{
+							"item": "230",
+							"amount": 1,
+							"keepItems": true,
+							"type": "COLLECT"
+						},
+						{
+							"item": "231",
+							"amount": 1,
+							"keepItems": true,
+							"type": "COLLECT"
+						},
+						{
+							"item": "286",
+							"amount": 1,
+							"keepItems": true,
+							"type": "COLLECT"
+						}
+					]
+				}
+			],
+			"area": "autumn-area"
+		}
+	},
+	{
+		"type": "SET_KEY",
+		"index": "goal-dbosses",
+		"content" : {
+			"parent": "goal-randomizer",
+			"name": {
+				"en_US": "Boss Slayer",
+				"de_DE": "Boss Slayer",
+				"zh_CN": "Boss Slayer",
+				"ja_JP": "Boss Slayer",
+				"ko_KR": "Boss Slayer",
+				"zh_TW": "Boss Slayer",
+				"langUid": 3728
+			},
+			"mandatory": true,
+			"person": {
+				"en_US": "Archie P. Lago",
+				"de_DE": "Archie P. Lago",
+				"zh_CN": "Archie P. Lago",
+				"ja_JP": "Archie P. Lago",
+				"ko_KR": "Archie P. Lago",
+				"langUid": 3729,
+				"zh_TW": "\u7814\u7a76\u54e1\u4ea8\u5229"
+			},
+			"level": 50,
+			"order": 1004,
+			"description": {
+				"en_US": "",
+				"de_DE": "",
+				"zh_CN": "",
+				"ja_JP": "",
+				"ko_KR": "",
+				"zh_TW": "",
+				"langUid": 3731
+			},
+			"briefing": {
+				"en_US": "",
+				"de_DE": "",
+				"zh_CN": "",
+				"ja_JP": "",
+				"ko_KR": "",
+				"zh_TW": "",
+				"langUid": 3732
+			},
+			"hideRewards": false,
+			"tasks": [
+				{
+					"task": {
+						"en_US": "Defeat the Dungeon Bosses",
+						"de_DE": "Defeat the Dungeon Bosses",
+						"fr_FR": "Defeat the Dungeon Bosses",
+						"zh_CN": "Defeat the Dungeon Bosses",
+						"ja_JP": "Defeat the Dungeon Bosses",
+						"ko_KR": "Defeat the Dungeon Bosses",
+						"zh_TW": "Defeat the Dungeon Bosses",
+						"langUid": 3815
+					},
+					"subtasks": [
+						{
+							"amount": 1,
+							"type": "KILL",
+							"enemy": "boss-driller"
+						},
+						{
+							"amount": 1,
+							"type": "KILL",
+							"enemy": "heat.megamoth"
+						},
+						{
+							"amount": 1,
+							"type": "KILL",
+							"enemy": "jungle.shockboss"
+						},
+						{
+							"amount": 1,
+							"type": "KILL",
+							"enemy": "jungle.waveboss"
+						}
+					]
+				}
+			],
+			"area": "autumn-area"
+		}
+	},
+	{
+		"type": "SET_KEY",
+		"index": "goal-diorbis",
+		"content" : {
+			"parent": "goal-randomizer",
+			"name": {
+				"en_US": "Boss Slayer",
+				"de_DE": "Boss Slayer",
+				"zh_CN": "Boss Slayer",
+				"ja_JP": "Boss Slayer",
+				"ko_KR": "Boss Slayer",
+				"zh_TW": "Boss Slayer",
+				"langUid": 3728
+			},
+			"mandatory": true,
+			"person": {
+				"en_US": "Archie P. Lago",
+				"de_DE": "Archie P. Lago",
+				"zh_CN": "Archie P. Lago",
+				"ja_JP": "Archie P. Lago",
+				"ko_KR": "Archie P. Lago",
+				"langUid": 3729,
+				"zh_TW": "\u7814\u7a76\u54e1\u4ea8\u5229"
+			},
+			"level": 50,
+			"order": 1004,
+			"description": {
+				"en_US": "Descend \\c[3]Ku'lero Temple\\c[0] and defeat \\c[3]the Gods of Shape\\c[0].",
+				"de_DE": "Descend \\c[3]Ku'lero Temple\\c[0] and defeat \\c[3]the Gods of Shape\\c[0].",
+				"zh_CN": "Descend \\c[3]Ku'lero Temple\\c[0] and defeat \\c[3]the Gods of Shape\\c[0].",
+				"ja_JP": "Descend \\c[3]Ku'lero Temple\\c[0] and defeat \\c[3]the Gods of Shape\\c[0].",
+				"ko_KR": "Descend \\c[3]Ku'lero Temple\\c[0] and defeat \\c[3]the Gods of Shape\\c[0].",
+				"zh_TW": "Descend \\c[3]Ku'lero Temple\\c[0] and defeat \\c[3]the Gods of Shape\\c[0].",
+				"langUid": 3731
+			},
+			"briefing": {
+				"en_US": "",
+				"de_DE": "",
+				"zh_CN": "",
+				"ja_JP": "",
+				"ko_KR": "",
+				"zh_TW": "",
+				"langUid": 3732
+			},
+			"hideRewards": false,
+			"tasks": [
+				{
+					"task": {
+						"en_US": "Defeat the Dungeon Bosses",
+						"de_DE": "Defeat the Dungeon Bosses",
+						"fr_FR": "Defeat the Dungeon Bosses",
+						"zh_CN": "Defeat the Dungeon Bosses",
+						"ja_JP": "Defeat the Dungeon Bosses",
+						"ko_KR": "Defeat the Dungeon Bosses",
+						"zh_TW": "Defeat the Dungeon Bosses",
+						"langUid": 3815
+					},
+					"subtasks": [
+						{
+							"amount": 1,
+							"type": "KILL",
+							"enemy": "boss-diorbis"
+						}
+					]
+				}
+			],
+			"area": "kulero-temple"
+		}
+	},
+	{
+		"type": "SET_KEY",
+		"index": "goal-creator",
+		"content": {
+			"parent": "goal-randomizer",
+			"name": {
+				"en_US": "The Ultimate Experience",
+				"de_DE": "The Ultimate Experience",
+				"zh_CN": "The Ultimate Experience",
+				"ja_JP": "The Ultimate Experience",
+				"ko_KR": "The Ultimate Experience",
+				"zh_TW": "The Ultimate Experience",
+				"langUid": 3728
+			},
+			"mandatory": true,
+			"person": {
+				"en_US": "Archie P. Lago",
+				"de_DE": "Archie P. Lago",
+				"zh_CN": "Archie P. Lago",
+				"ja_JP": "Archie P. Lago",
+				"ko_KR": "Archie P. Lago",
+				"langUid": 3729,
+				"zh_TW": "\u7814\u7a76\u54e1\u4ea8\u5229"
+			},
+			"level": 60,
+			"order": 1004,
+			"description": {
+				"en_US": "",
+				"de_DE": "",
+				"zh_CN": "",
+				"ja_JP": "",
+				"ko_KR": "",
+				"zh_TW": "",
+				"langUid": 3731
+			},
+			"briefing": {
+				"en_US": "",
+				"de_DE": "",
+				"zh_CN": "",
+				"ja_JP": "",
+				"ko_KR": "",
+				"zh_TW": "",
+				"langUid": 3732
+			},
+			"hideRewards": false,
+			"tasks": [
+				{
+					"task": {
+						"en_US": "Defeat the Creator.",
+						"de_DE": "Defeat the Creator.",
+						"fr_FR": "Defeat the Creator.",
+						"zh_CN": "Defeat the Creator.",
+						"ja_JP": "Defeat the Creator.",
+						"ko_KR": "Defeat the Creator.",
+						"zh_TW": "Defeat the Creator.",
+						"langUid": 3796
+					},
+					"subtasks": [
+						{
+							"label": "done",
+							"type": "CONDITION"
+						}
+					]
+				}
+			],
+			"area": "autumn-area"
+		}
+	},
+	{ "type": "EXIT" }
+]

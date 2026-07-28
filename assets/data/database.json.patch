@@ -37,6 +37,10 @@
     },
     {
         "type": "INCLUDE",
+        "src": "mod:patches/database/quest-goals.json"
+    },
+    {
+        "type": "INCLUDE",
         "src": "mod:extra-patches/extra-quests/database/quests.json.patch"
     },
     {
