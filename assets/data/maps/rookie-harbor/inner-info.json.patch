@@ -55,12 +55,12 @@
                   "expression": "GLASS"
                 },
                 "message": {
-                  "en_US": "Would you like to fix any party-locked members?",
-                  "de_DE": "Would you like to fix any party-locked members?",
-                  "ja_JP": "Would you like to fix any party-locked members?",
-                  "ko_KR": "Would you like to fix any party-locked members?",
-                  "zh_CN": "Would you like to fix any party-locked members?",
-                  "zh_TW": "Would you like to fix any party-locked members?",
+                  "en_US": "Would you like to fix any party [Locked] members?",
+                  "de_DE": "Would you like to fix any party [Locked] members?",
+                  "ja_JP": "Would you like to fix any party [Locked] members?",
+                  "ko_KR": "Would you like to fix any party [Locked] members?",
+                  "zh_CN": "Would you like to fix any party [Locked] members?",
+                  "zh_TW": "Would you like to fix any party [Locked] members?",
                   "langUid": 8867
                 },
                 "type": "SHOW_MSG"
@@ -128,6 +128,12 @@
                     "type": "SET_MEMBER_LOCKED",
                     "locked": false,
                     "member": "Schneider2"
+                  },
+                  {
+                    "type": "CHANGE_VAR_BOOL",
+                    "varName": "plot.dlinkBlocked",
+                    "changeType": "set",
+                    "value": false
                   },
                   {
                     "type": "SHOW_CENTER_MSG",
