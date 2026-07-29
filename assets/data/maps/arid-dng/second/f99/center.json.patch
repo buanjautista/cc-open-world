@@ -20,17 +20,17 @@
 				"map": "arid-dng.second.f99.pre-creator",
 				"marker": "BossEntrance",
 				"teleportLabel": {
-					"en_US": "\\i[arrow-s] Down",
-					"de_DE": "\\i[arrow-s] Runter",
+					"en_US": "\\i[arrow-n] ???",
+					"de_DE": "\\i[arrow-n] ???",
 					"fr_FR": "fr_FR",
 					"langUid": 1,
-					"zh_CN": "\\i[arrow-s]\u4e0b",
-					"ko_KR": "\\i[arrow-s] \uc544\ub798\ub85c",
-					"ja_JP": "\\i[arrow-s] \u4e0b",
-					"zh_TW": "\\i[arrow-s]\u4e0b"
+					"zh_CN": "\\i[arrow-n]\u4e0b",
+					"ko_KR": "\\i[arrow-n] \uc544\ub798\ub85c",
+					"ja_JP": "\\i[arrow-n] \u4e0b",
+					"zh_TW": "\\i[arrow-n]\u4e0b"
 				},
 				"longTelCond": "false",
-				"gfxType": "AR",
+				"gfxType": "WAVE_UP",
 				"mapId": 1723,
 				"blockEventCondition": "",
 				"spawnCondition": "map.designerDead"

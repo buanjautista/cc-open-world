@@ -14,7 +14,7 @@
 	},
 	{
 		"type": "ADD_ARRAY_ELEMENT",
-		"index": 17,
+		"index": 16,
 		"content": {
 			"type": "CHANGE_VAR_BOOL",
 			"changeType": "set",
