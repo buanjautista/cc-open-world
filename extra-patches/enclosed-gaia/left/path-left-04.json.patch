@@ -16,7 +16,7 @@
     {
         "type": "IF",
         "_comment": "Lock top door with Azure Drop Shade on Full, or just West pass on minimal",
-        "cond": "ig.vars.get('open-world.closedGaia') == 1",
+        "cond": "ig.vars.get('mw.options.closedGaia') == 1",
         "thenSteps": [{
             "_comment": "Change top door entry conditions",
             "type": "SET_KEY",
@@ -40,7 +40,7 @@
     {
         "type": "IF",
         "_comment": "Lock top door with Azure Drop Shade on Full, or just West pass on minimal",
-        "cond": "ig.vars.get('open-world.closedGaia') == 2",
+        "cond": "ig.vars.get('mw.options.closedGaia') == 2",
         "thenSteps": [{
             "_comment": "Change top door entry conditions",
             "type": "SET_KEY",
@@ -131,7 +131,7 @@
     {
         "type": "IF",
         "_comment": "Lock top door with Azure Drop Shade on Full, or just West pass on minimal",
-        "cond": "ig.vars.get('open-world.closedGaia') == 1",
+        "cond": "ig.vars.get('mw.options.closedGaia') == 1",
         "thenSteps": [{
             "type": "ADD_ARRAY_ELEMENT",
             "_comment": "Add North Barrier",
@@ -146,7 +146,7 @@
     {
         "type": "IF",
         "_comment": "Lock top door with Azure Drop Shade on Full, or just West pass on minimal",
-        "cond": "ig.vars.get('open-world.closedGaia') == 2",
+        "cond": "ig.vars.get('mw.options.closedGaia') == 2",
         "thenSteps": [{
             "type": "ADD_ARRAY_ELEMENT",
             "_comment": "Add North Barrier",
