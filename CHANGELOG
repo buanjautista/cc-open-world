@@ -7,7 +7,6 @@ There's now an option to have all maps and areas visited beforehand.
 Stats enabled in Rhombus Dungeon entrance (for NG+ purposes).
 Save fixes are entirely removed.
 SP Upgrades are now incremental (+1SP per upgrade) instead of fixed (2SP in Faj'ro, 3SP in Krys'kajo, 4SP in beach)
-Added a few extra chests in the maps :)
 Party window enabled in CrossCentral. You can now invite/manage party members as soon as certain events:
 
 - Only Apollo 3 duel is active, which unlocks him and Joern as party members if you fight him
@@ -104,6 +103,8 @@ Subsequent quests in factions, are now unlocked depending on shades, rather than
 # DLC
 
 DLC areas are active by default when DLC is active (Beach, Homestedt, Upgraded shops and North of Rhombus Square, and Ku'lero Dungeon)
+Full Rhombus Pass has been changed to Azure Archipelago Pass and the entirety of Rhombus Square has been opened instead
+Homestedt is accessible with Guild Pass through its entrance in Autumn's Rise
 
 ==========================================================================================
 
@@ -115,10 +116,6 @@ You can activate these patches through the .yaml settings in the CCMultiworldRan
 
 - A condition that locks Vermillion Tower entrance until you get all 4 element shades (Azure Drop, Purple Bolt, Blue Ice, and Red Flame Shades), and beaten the 4 element dungeons (Mine, Faj'ro, So'najiz and Zir'vitar). You can also make the condition only require the bosses, or the shades.
 
-# Vermillion Tower floor skips:
-
-- Enables all Tower floors once you finish the ground floor fight. This allows skipping the entirety of Vermillion Tower up to the last fight before the boss.
-
 # Meteor Shade Wasteland:
 
 - Locks Vermillion Wasteland Tunnel behind a Meteor Shade barrier.
@@ -128,7 +125,7 @@ You can activate these patches through the .yaml settings in the CCMultiworldRan
 - Locks the Left and Right side of Gaia's Garden via West and East passes, obtained after fighting Apollo in Gaia's Garden entrance. These passes also include respective side dungeons.
 - Can further lock Grove and Infested areas by selecting the 'Full' option.
 
-# Open Faj'ro Temple:
+# Open Faj'ro Temple (unavailable yet):
 
 - Enables a few extra passages on Upper Faj'ro Temple to make it less linear. This means most puzzles must be done in reverse order to access certain locations in reverse.
   This includes:
@@ -139,13 +136,36 @@ You can activate these patches through the .yaml settings in the CCMultiworldRan
 * F4 East Pathway can now be solved from both sides (from the bottom side, you have to solve the puzzle in reverse to exit up)
 * F3 Test of Wisdom can now be accessed from F3 Bottom Chamber. This means to access F4 East Corridor through F3 Right Chamber, you have to solve the puzzle in reverse
 
-# Extra Quests:
+# Extra Quests (unavailable yet):
 
 - Adds Vermillion Trial Buildings, Vermillion Dungeon and Sephisloth quests back into the table, plus adding a new Trailblazing quest in Autumn's Fall and a new Vermillion quest.
 
 ==========================================================================================
 
 ## VERSION CHANGES
+
+# v0.5.6
+
+New: 
+- Vermillion Tower boss has a checkpoint in between. 
+- Vermillion Tower shade/boss lock has been moved right before Creator. This should allow free access of the entire tower. (Locations for randomizer not yet included)
+- So'najiz has Heat ball changers to remove Heat requirement from the dungeon. (thanks Valkhiya)
+- Middle Faj'ro is now open without Heat. Both side puzzles now have a chest reward instead.
+- Krys'kajo middle floor puzzle is active by default. Both sides completion now have a chest reward instead.
+
+Fixes:
+- Party inviting should not get stuck when starting DLC content or other content. 
+- Creator cutscene should play even if DLC content has already started.
+- Reworked the B3 East room in Ku'lero to not get stuck
+
+# v0.5.5
+
+Fix:
+- Removed access to Vermillion from the Para Island Raid (it was not supposed to from DLC entry either way)
+- Removed triggers that would not let you invite party members when entering certain dungeons or remaining plot points (from DLC content mostly)
+- Reduced size of trigger for Last Minute Heroes Flower Lake fight (to not get lock when a side barrier is up)
+- Made H'lin not despawn from guild HQ when accessing DLC content
+- Changed requirements for certain traders to match randomizer behaviors
 
 # v0.5.4
 
