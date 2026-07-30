@@ -4,6 +4,20 @@
     "index": ["entities"]
   },
   {
+    "type": "FOR_IN",
+    "_comment": "Remove left and right set of key pillars",
+    "keyword": "__INDEX__",
+    "values": [ 56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113 ],
+    "body": [
+      { "type": "ENTER", "index": [ "__INDEX__", "settings" ] },
+      { "type": "SET_KEY", "index": "spawnCondition", "content": "false" },
+      { "type": "EXIT", "count": 2 }
+    ]
+  },
+  { "type": "ENTER", "_comment": "Lower key requirement in puzzle","index": [ 140, "settings" ] },
+  { "type": "SET_KEY", "index": "startCondition", "content": "map.locksOpened >= 3" },
+  { "type": "EXIT", "count": 2 },
+  {
     "type": "EXIT",
     "count": 1
   } 

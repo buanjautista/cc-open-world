@@ -94,7 +94,7 @@
 	{ "type": "ENTER", "index": [43,"settings"] },
 	{
 		"type": "SET_KEY",
-		"_comment": "Make bottom wall green for thru player",
+		"_comment": "Make bottom wall green for thru playerd",
 		"index": "collType",
 		"content": "PBLOCK"
 	},
