@@ -125,17 +125,6 @@ You can activate these patches through the .yaml settings in the CCMultiworldRan
 - Locks the Left and Right side of Gaia's Garden via West and East passes, obtained after fighting Apollo in Gaia's Garden entrance. These passes also include respective side dungeons.
 - Can further lock Grove and Infested areas by selecting the 'Full' option.
 
-# Open Faj'ro Temple (unavailable yet):
-
-- Enables a few extra passages on Upper Faj'ro Temple to make it less linear. This means most puzzles must be done in reverse order to access certain locations in reverse.
-  This includes:
-
-* F4 South Corridor has no doors locked (you can access Test of Surprise or Test of Memory earlier)
-* F4 East Corridor can now be done in reverse
-* F4 Gateway side doors are now accesible from the top floor
-* F4 East Pathway can now be solved from both sides (from the bottom side, you have to solve the puzzle in reverse to exit up)
-* F3 Test of Wisdom can now be accessed from F3 Bottom Chamber. This means to access F4 East Corridor through F3 Right Chamber, you have to solve the puzzle in reverse
-
 # Extra Quests (unavailable yet):
 
 - Adds Vermillion Trial Buildings, Vermillion Dungeon and Sephisloth quests back into the table, plus adding a new Trailblazing quest in Autumn's Fall and a new Vermillion quest.
