@@ -144,6 +144,14 @@ You can activate these patches through the .yaml settings in the CCMultiworldRan
 
 ## VERSION CHANGES
 
+# v0.5.7
+Changes: 
+- Remove all key locks in Faj'ro Master Key puzzle room. Closed access to right side until top side is solved.
+
+Removed (open world compats):
+- Open World variables moved to mw.option and removed from plugin.
+- Removed Open Faj'ro patches
+
 # v0.5.6
 
 New: 
@@ -157,6 +165,7 @@ Fixes:
 - Party inviting should not get stuck when starting DLC content or other content. 
 - Creator cutscene should play even if DLC content has already started.
 - Reworked the B3 East room in Ku'lero to not get stuck
+- Bergen barrier should not show anymore when rhombus hub unlock is active
 
 # v0.5.5
 
