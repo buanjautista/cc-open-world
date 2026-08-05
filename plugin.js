@@ -10,7 +10,6 @@ const MENU_OW_CUSTOM = {
 export default class OpenWorld {
   async main(){
     mod = activeMods.find(e => e.name == "open-world")
-    randoOptionList = DEFAULT_OPTIONS;
 
       sc.OPTIONS_DEFINITION["openworld-visitedMaps"] = {
         type: "CHECKBOX",
