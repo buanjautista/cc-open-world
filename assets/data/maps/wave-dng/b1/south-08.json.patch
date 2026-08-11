@@ -109,14 +109,50 @@
 		}
   },
 
-  { "type": "ENTER", "_comment": "Move Shock ball changers", "index": 24 }, 
-  { "type": "SET_KEY", "index": "x", "content": "156" }, 
-  { "type": "SET_KEY", "index": "y", "content": "580" }, 
-  { "type": "EXIT", "count": 1 },
-  { "type": "ENTER", "_comment": "Move Shock ball changers", "index": 25 }, 
-  { "type": "SET_KEY", "index": "x", "content": "652" }, 
-  { "type": "SET_KEY", "index": "y", "content": "580" }, 
-  { "type": "EXIT", "count": 1 },
+	{ 
+		"type": "SET_KEY", 
+		"_comment": "Move Shock ball changers",
+		"index": 24,
+		"content": {
+			"type": "BallChanger",
+			"x": 168,
+			"y": 552,
+			"level": 1,
+			"settings": {
+				"name": "BallChangerMoved1",
+				"mapId": 2188,
+				"condition": "",
+				"changerType": {
+					"type": "CHANGE_ELEMENT",
+					"settings": {
+						"element": "SHOCK"
+					}
+				}
+			}
+		}
+	}, 
+  { 
+		"type": "SET_KEY", 
+		"_comment": "Move Shock ball changers",
+		"index": 25,
+		"content": {
+			"type": "BallChanger",
+			"x": 640,
+			"y": 552,
+			"level": 1,
+			"settings": {
+				"name": "BallChangerMoved2",
+				"mapId": 2193,
+				"condition": "",
+				"changerType": {
+					"type": "CHANGE_ELEMENT",
+					"settings": {
+						"element": "SHOCK"
+					}
+				}
+			}
+		}
+	}, 
   {
     "type": "EXIT",
     "count": 1
