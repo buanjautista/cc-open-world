@@ -6,7 +6,7 @@
     "content": {
       "frequency": "ALWAYS",
       "repeat": "ONCE",
-      "condition": "area.jungle.isCurrent && open-world.closedgaia <= 0 && !option.openworld-disabledTips",
+      "condition": "area.jungle.isCurrent && mw.options.closedgaia <= 0 && !option.openworld-disabledTips",
       "eventType": "CUTSCENE",
       "overrideSideMessage": false,
       "event": [
