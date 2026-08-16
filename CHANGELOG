@@ -133,6 +133,15 @@ You can activate these patches through the .yaml settings in the CCMultiworldRan
 
 ## VERSION CHANGES
 
+# v0.5.8
+Fix: 
+- Fixed issues with Shock Ball Changers at So'najiz.
+- Fixed missing DLC Active variables on most DLC quests.
+- Fixed Maroon Valley entrance not being affected by Rhombus Hub Unlock.
+
+Changes:
+- Added more info to the Son of the Beach quest tip.
+
 # v0.5.7
 Changes: 
 - Remove all key locks in Faj'ro Master Key puzzle room. Closed access to right side until top side is solved.
