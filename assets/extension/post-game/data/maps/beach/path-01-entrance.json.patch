@@ -28,14 +28,14 @@
 				"interact": {
 					"icon": "INFO",
 					"hoverText": {
-						"en_US": "Come back after completing the Trial of the West",
-						"de_DE": "Come back after completing the Trial of the West",
-						"fr_FR": "Come back after completing the Trial of the West",
+						"en_US": "Come back after completing the Trial of the West at Grand Krys'kajo.",
+						"de_DE": "Come back after completing the Trial of the West at Grand Krys'kajo.",
+						"fr_FR": "Come back after completing the Trial of the West at Grand Krys'kajo.",
 						"langUid": 27,
-						"zh_CN": "Come back after completing the Trial of the West",
-						"ko_KR": "Come back after completing the Trial of the West",
-						"ja_JP": "Come back after completing the Trial of the West",
-						"zh_TW": "Come back after completing the Trial of the West"
+						"zh_CN": "Come back after completing the Trial of the West at Grand Krys'kajo.",
+						"ko_KR": "Come back after completing the Trial of the West at Grand Krys'kajo.",
+						"ja_JP": "Come back after completing the Trial of the West at Grand Krys'kajo.",
+						"zh_TW": "Come back after completing the Trial of the West at Grand Krys'kajo."
 					}
 				},
 				"propType": {
