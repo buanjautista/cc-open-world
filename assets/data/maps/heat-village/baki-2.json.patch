@@ -811,6 +811,39 @@
 	{ "type": "EXIT", "count": 2 },
 
 	{
+      "type": "ADD_ARRAY_ELEMENT",
+      "_comment": "Show a sign if haven't interacted with the statue yet",
+      "content": {
+        "type": "Prop",
+        "x": 408,
+        "y": 500,
+        "level": 1,
+        "settings": {
+          "mapId": 5060,
+          "interact": {
+            "icon": "INFO",
+            "hoverText": {
+              "en_US": "Interact with the statue once you obtain the Shiny Orb",
+              "de_DE": "Interact with the statue once you obtain the Shiny Orb",
+              "fr_FR": "Interact with the statue once you obtain the Shiny Orb",
+              "langUid": 3427,
+              "zh_CN": "Interact with the statue once you obtain the Shiny Orb",
+              "ko_KR": "Interact with the statue once you obtain the Shiny Orb",
+              "ja_JP": "Interact with the statue once you obtain the Shiny Orb",
+              "zh_TW": "Interact with the statue once you obtain the Shiny Orb"
+            }
+          },
+          "propType": {
+            "sheet": "autumn",
+            "name": "arSignCenter"
+          },
+          "propAnim": "default",
+          "spawnCondition": "item.237.amount < 1 && plot.heatLine < 500"
+        }
+      }
+    },
+
+	{
 		"type": "ENTER",
 		"index": [ 826, "settings", "npcStates" ]
 	},
