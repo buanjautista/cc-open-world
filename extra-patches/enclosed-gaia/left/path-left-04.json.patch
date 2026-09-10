@@ -45,7 +45,7 @@
             "_comment": "Change top door entry conditions",
             "type": "SET_KEY",
             "index": "blockEventCondition",
-            "content": "item.286.amount < 1 && item.west-gaia-pass.amount < 1"
+            "content": "item.286.amount < 1 || item.west-gaia-pass.amount < 1"
         },
         {
             "_comment": "Change top door entry conditions",
@@ -139,7 +139,7 @@
         },
         {
             "type": "ADD_ARRAY_ELEMENT",
-            "_comment": "Add North Barrier",
+            "_comment": "Add North Barrier OL",
             "content": { "type": "ObjectLayerView", "x": 624, "y": 8, "level": 1, "settings": { "size": { "x": 112, "y": 8 }, "mapId": 1184, "layer": "object3", "collType": "NONE", "terrain": "NORMAL", "heightShape": "NONE", "shape": "RECTANGLE", "spawnCondition": "item.west-gaia-pass.amount >= 1", "name": "barrierFloor" } }
         }]
     },
@@ -150,11 +150,11 @@
         "thenSteps": [{
             "type": "ADD_ARRAY_ELEMENT",
             "_comment": "Add North Barrier",
-            "content": { "type": "ScalableProp", "x": 624, "y": 8, "level": 1, "settings": { "size": { "x": 112, "y": 4 }, "mapId": 1183, "patternOffset": { "x": 0, "y": 0 }, "propConfig": { "sheet": "dungeon-ar", "name": "blockWallH" }, "spawnCondition": "item.286.amount < 1 && item.west-gaia-pass.amount < 1" } }
+            "content": { "type": "ScalableProp", "x": 624, "y": 8, "level": 1, "settings": { "size": { "x": 112, "y": 4 }, "mapId": 1183, "patternOffset": { "x": 0, "y": 0 }, "propConfig": { "sheet": "dungeon-ar", "name": "blockWallH" }, "spawnCondition": "item.286.amount < 1 || item.west-gaia-pass.amount < 1" } }
         },
         {
             "type": "ADD_ARRAY_ELEMENT",
-            "_comment": "Add North Barrier",
+            "_comment": "Add North Barrier OL",
             "content": { "type": "ObjectLayerView", "x": 624, "y": 8, "level": 1, "settings": { "size": { "x": 112, "y": 8 }, "mapId": 1184, "layer": "object3", "collType": "NONE", "terrain": "NORMAL", "heightShape": "NONE", "shape": "RECTANGLE", "spawnCondition": "item.286.amount >= 1 && item.west-gaia-pass.amount >= 1", "name": "barrierFloor" } }
         }]
     },
