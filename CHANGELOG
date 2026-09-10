@@ -133,6 +133,16 @@ You can activate these patches through the .yaml settings in the CCMultiworldRan
 
 ## VERSION CHANGES
 
+# v0.5.9
+Fix:
+- Fixed Ku'lero ending cutscene locking your party completely and advancing the plot.
+- Minor visual fixes in Gaia's Garden barriers.
+- Fixed Garden's 'River's Bed' top barrier not correctly working with Closed Gaia Full.
+- Removed the menu from the Vermillion Wasteland tip that was prone to getting stuck.
+
+Changes:
+- Added info text to Shiny Orb statue in Ba'kii to indicate possible interaction.
+
 # v0.5.8
 Fix: 
 - Fixed issues with Shock Ball Changers at So'najiz.
