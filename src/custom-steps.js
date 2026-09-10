@@ -54,9 +54,9 @@ export function assignSteps() {
 
         start: function() {
           sc.menu.addMapStamp(this.area, this.stamp.key, this.stamp.x, this.stamp.y, this.stamp.level);
-          sc.menu.setDirectMode(true, sc.MENU_SUBMENU.MAP);
-          sc.model.enterMenu(true);
-          sc.model.prevSubState = sc.GAME_MODEL_SUBSTATE.RUNNING;
+          // sc.menu.setDirectMode(true, sc.MENU_SUBMENU.MAP);
+          // sc.model.enterMenu(true);
+          // sc.model.prevSubState = sc.GAME_MODEL_SUBSTATE.RUNNING;
         },
       });
   });
